@@ -7,10 +7,10 @@
 --TOTAL ID USED/RESERVED
 -- weapon 1600-1673
 -- armor 420-440
--- unit 5100-6000
+-- unit 5100-7000
 -- site 1601-1800
--- nation 150-175
--- enchantment 600-620
+-- nation 150-185
+-- enchantment 600-630
 -- magic item 650-700
 -----------------------------------------
 
@@ -26,7 +26,7 @@
 --607 BUY CROSSBOWS FROM BURGERS
 --608 CRAB17
 --609 BUILD GYM
---610
+--610 MUS SITE
 --611
 --612
 --613
@@ -39,7 +39,7 @@
 --3001 jiangshi
 --3002 sacred jiangshi
 --3003 atlantis fishing list
---3004 
+--3004 NAGAS
 ----------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------
@@ -495,6 +495,18 @@
 #unrepel
 #melee50
 #secondaryeffectalways 699 --small area stun
+#end
+
+#newweapon 1635
+#copyweapon 226 --frost breath
+#name "Wave Staff"
+#dmg 12
+#aoe 1
+#range 15
+#ammo 3
+#bonus
+#nratt -2
+#uwok
 #end
 
 --new armor
@@ -3266,7 +3278,7 @@ Priests: Weak"
 #neednoteat
 #shapechange 5258
 #gcost 10100
-#rpcost 2
+#rpcost 3
 #end
 
 #newmonster 5258
@@ -4928,7 +4940,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 
 #newevent
 #rarity 5
-#rare 25
+#req_rare 25
 #req_fornation 158
 #req_pop0ok
 #req_fort 1 ---------FORT NOBLE BONUS
@@ -4942,7 +4954,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 
 #newevent
 #rarity 5
-#rare 3
+#req_rare 3
 #req_fornation 158
 #req_pop0ok
 #req_fort 1 ---------FORT NOBLE BONUS
@@ -4970,7 +4982,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 
 #newevent
 #rarity 5
-#rare 50
+#req_rare 50
 #req_fornation 158
 #req_pop0ok
 #req_temple 1 --------------TEMPLE SACRED BONUS
@@ -4984,7 +4996,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 
 #newevent
 #rarity 5
-#rare 50
+#req_rare 50
 #req_fornation 158
 #req_pop0ok
 #req_dominion 5 --------------DOM5+ BONUS
@@ -4997,7 +5009,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 
 #newevent
 #rarity 5
-#rare 50
+#req_rare 50
 #req_fornation 158
 #req_pop0ok
 #req_dominion 6 --------------DOM6+ BONUS
@@ -5022,7 +5034,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 
 #newevent
 #rarity 5
-#rare 10
+#req_rare 10
 #req_fornation 158
 #req_pop0ok
 #req_death 1 -----------------DEATH1 BONUS
@@ -5037,7 +5049,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 
 #newevent
 #rarity 5
-#rare 25
+#req_rare 25
 #req_fornation 158
 #req_pop0ok
 #req_death 2 -----------------DEATH2 BONUS
@@ -5052,7 +5064,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 
 #newevent
 #rarity 5
-#rare 50
+#req_rare 50
 #req_fornation 158
 #req_pop0ok
 #req_death 3 -----------------DEATH3 BONUS
@@ -16762,7 +16774,398 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 
 --VOICE OF YAKUB EVENTS-------------------------------------
 
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Thinking People of Arcoscephale show their Solidarity with the original people of Das'rite! [Grand Akademia]"
+#4com 5101 --philo king
+#end
 
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Wellfed People of Pythium show their Solidarity with the original people of Das'rite! [Hall of Gastromancy]"
+#2com 5134 --arch gastro
+#2d6units 5147 --drunk
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Free People of Freesia show their Solidarity with the original people of Das'rite! [House of Congress]"
+#10d6units 5176 --minuteman
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Rowdy Crowd of Man United show their Solidarity with the original people of Das'rite! [Greggs Pasty]"
+#2com 5197 --cam'on
+#4d6units 5208 --norf fc
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Vegans of Ulm show their Solidarity with the original people of Das'rite! [The Old Keep]"
+#4com 5222 --earthenblood smiths
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Definitely People and not disguised Demons of Marignon show their Solidarity with the original people of Das'rite! [House of Goetic Justice]"
+#com 5251 --goetic master demon
+#1d6units 5261 --knight of goetia
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Macacs of Rio show their Solidarity with the original people of Das'rite! [New House of Justice]"
+#com 5285 --macac paladin
+#3d6units 5292 --macac lion knight
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Cartel of Marico show their Solidarity with the original people of Das'rite! [Streamlined Altar]"
+#8d6units 727 --jaguar warriors
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Jiangshi of Tienchi show their Solidarity with the original people of Das'rite! [Ancestral Tomb]"
+#16d6units -3001 --jiangshi
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Racists of Tenki show their Solidarity with the original people of Das'rite! [Ace Equine Stable]"
+#2d6units 5385 --AE86
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Shogunate of Yamato show their Solidarity with the original people of Das'rite! [Shogunate Palace]"
+#4com 1257 --ninja
+#12d6units 1239 --samurai archer
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Posters of Agartha show their Solidarity with the original people of Das'rite! [AgaChan Cave Walls]"
+#com 5435 --eldenphagus
+#16d6units 5442 --janitor
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Trannies of Abysia show their Solidarity with the original people of Das'rite! [Blood Replacement Center]"
+#2com 5465 --transdemon
+#6d6units 5474 --demonbred flying ones
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Seraphine of Caeliss show their Solidarity with the original people of Das'rite! [Purified Flame]"
+#2com 5491 --purified captain
+#4d6units 5591 --purified maiden
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Bizards of C'tis show their Solidarity with the original people of Das'rite! [Bizard Trade Center]"
+#exactgold 5000
+#landgold 25
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Swole People of Pangaea show their Solidarity with the original people of Das'rite! [Jungle Gym]"
+#2com 5558 --gigapan
+#2d6units 5575 --gains guard
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The People of Asgard show their Solidarity with the original people of Das'rite! [Bifrost]"
+#com 5585 --valkyrie matron
+#6d6units 5595 --heimhere
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The People of Asgard show their Solidarity with the original people of Das'rite! [Steadfast Bifrost]"
+#com 5585 --valkyrie matron
+#6d6units 5595 --heimhere
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Flames of Muspelheim show their Solidarity with the original people of Das'rite! [River of Muspel]"
+#14d6units 5621 --sparks of muspel
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Community of Sorus show their Solidarity with the original people of Das'rite! [Social Service Center]"
+#4com 5642 --commissar
+#16d6units 5653 --volunteer archer
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Superpower of Bandar Shakti show their Solidarity with the original people of Das'rite! [Astraltech Skyscrapper]"
+#4com 5673 --senior guru
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Chosen People of Zion show their Solidarity with the original people of Das'rite! [Asherite Merchant's Guild]"
+#exactgold 1
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Flight Plan of Xibalba list Smee, Maimen, Medicineman Pavelheer and their Solidarity with the original people of Das'rite! [Noshur Vivors]"
+#4com 5764 --big guys
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Fishermen of Atlantis show their Solidarity with the original people of Das'rite! [Cod Pro Shop]"
+#4com 5791 --tunalik
+#2d6units 5801 --fishlord
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The ?!@#?#?@ of R'lyeh show their Solidarity with the original people of Das'rite! [Pit of Insane Biomass]"
+#4com 5825 --relling spawner
+#16d6units 5841 --relling
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Bushmen of Rhodesia were forced to show their Solidarity with the original people of Das'rite! [Salisbury Tower]"
+#4com 5888 --selous warden
+#8d6units 5896 --selous scout
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Blacks of Wakanda unite with the original people of Das'rite! [Fields of Purple]"
+#2com 5913 --black panther
+#4d6units 5926 --war panther
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Gamblers of Las Pelagus show their Solidarity with the original people of Das'rite! [The House]"
+#2com 5951 --mister house
+#gold 2500
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Red-eyed People of Coomur show their Solidarity with the original people of Das'rite! [Hall of Fertility]"
+#com 5988 --big titty statue
+#incpop 1000
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Treants of Coomur show their Solidarity with the original people of Das'rite! [Great Carrion Grove]"
+#com 6016 --elder treant
+#3d6units 714 --carrion centaur
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Legless of Sinpata show their Solidarity with the original people of Das'rite! [Chamber of Scales]"
+#2com 6076 --golden naga queen
+#1d6units 6086 --constrictor
+#end
 
 --VOICE OF YAKUB EVENTS END---------------------------------
 
@@ -16799,7 +17202,8 @@ This is our world our RIGHT to take back what is ours. The culture should to ret
 #summary "Race: OGs
 Military: OGs with various and diverse range of equipment
 Magic: Err'thang mang, the OGs invented err'thang
-Priests: Da best"
+Priests: Da best
+Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite dominion for the first time, their respective speciality recruits joins Das'rite, the Original People."
 #flag "./Meme Age/Dasrite/flag.tga"
 
 #addreccom 6047
@@ -16855,75 +17259,823 @@ Priests: Da best"
 -- nation 181
 --------------------------------------------------------------------------
 
+#newmonster 6071
+#spr1 "./Meme Age/Sinpata/snek1.tga"
+#spr2 "./Meme Age/Sinpata/snek2.tga"
+#name "Naga Scout"
+#descr "The Naga is a fast and slim bodied snake humanoid hybrid. They are very stealthy as their slithering makes minimal sounds compared to pedalling races. While neither proficient in combat nor equipped with protective gear, the beauty of their exposed body leave many dazzed. However, this is not useful against the mindless and the courageous. Despite being scouts, they are capable of leading small armies."
+#ap 16
+#mapmove 16
+#hp 15
+#prot 5
+#size 2
+#str 12
+#enc 3
+#att 8
+#def 8
+#prec 9
+#mr 12
+#mor 12
+#maxage 100
+#startage 25
+#nametype 130
+#gcost 10012
+#rcost 1
+#rpcost 1
+#weapon 29 --"Claw"
+#weapon 30 --venomous bite
+#female
+#amphibian
+#naga
+#awe 1
+#coldblood
+#swimming
+#swampsurvival
+#forestsurvival
+#darkvision 100
+#stealthy 35
+#okleader
+#end
+
+#newmonster 6072
+#spr1 "./Meme Age/Sinpata/nagalead1.tga"
+#spr2 "./Meme Age/Sinpata/nagalead2.tga"
+#name "Nagaconda Commander"
+#descr "The Nagaconda is a large bodied snake humanoid hybrid. Their large bodies are capable of exerting large amount of strength in rapid strikes. Unlike the thinner Naga, they are not venomous or stealthy. However their overall slithering speed is very slow. While skilled, their lack of armor makes them vulnerable to most weaponry. They must rely on their curvaceous bare chest to prevent attacks. The Nagaconda Commander is trained in leading a group of Nagas in night time rape operations against the virile boys in local towns, after the announcement of the Ascension Wars, their leadership skills easily transfers to becoming efficient army commanders."
+#ap 6
+#mapmove 10
+#hp 25
+#prot 6
+#size 3
+#str 18
+#enc 4
+#att 12
+#def 9
+#prec 10
+#mr 12
+#mor 12
+#maxage 100
+#startage 25
+#nametype 130
+#gcost 10018
+#rcost 1
+#rpcost 1
+#weapon "Broad Sword"
+#weapon 20 --bite
+#female
+#amphibian
+#naga
+#awe 2
+#coldblood
+#swimming
+#swampsurvival
+#forestsurvival
+#darkvision 100
+#goodleader
+#end
+
+#newmonster 6073
+#spr1 "./Meme Age/Sinpata/naga1.tga"
+#spr2 "./Meme Age/Sinpata/naga2.tga"
+#name "Nagaconda Broodmother"
+#descr "The Nagaconda is a large bodied snake humanoid hybrid. Their large bodies are capable of exerting large amount of strength in rapid strikes. Unlike the thinner Naga, they are not venomous or stealthy. However their overall slithering speed is very slow. While skilled, their lack of armor makes them vulnerable to most weaponry. They must rely on their curvaceous bare chest to prevent attacks. The Nagaconda Broodmother are primary breeders of the Naga race. They perform the most common yet important rite each fall to ensure the survival and a future for their race."
+#ap 6
+#mapmove 10
+#hp 25
+#prot 6
+#size 3
+#str 18
+#enc 4
+#att 9
+#def 9
+#prec 10
+#mr 13
+#mor 12
+#maxage 100
+#startage 25
+#nametype 130
+#gcost 10018
+#rcost 1
+#rpcost 2
+#weapon 29 --"Claw"
+#weapon 20 --bite
+#female
+#amphibian
+#naga
+#awe 2
+#coldblood
+#swimming
+#swampsurvival
+#forestsurvival
+#darkvision 100
+#holy
+#magicskill 6 1
+#magicskill 8 1
+#poorleader
+#end
+
+#newmonster 6074
+#spr1 "./Meme Age/Sinpata/naga3.tga"
+#spr2 "./Meme Age/Sinpata/naga4.tga"
+#name "Nagaconda Enchantress"
+#descr "The Nagaconda is a large bodied snake humanoid hybrid. Their large bodies are capable of exerting large amount of strength in rapid strikes. Unlike the thinner Naga, they are not venomous or stealthy. However their overall slithering speed is very slow. While skilled, their lack of armor makes them vulnerable to most weaponry. They must rely on their curvaceous bare chest to prevent attacks. The Nagaconda Enchantress are skilled magical casters, they are special talented babies selected before the eggs hatch by Golden Naga Queens to learn magic. They provide much of the magical needs for Sinpata."
+#ap 6
+#mapmove 10
+#hp 25
+#prot 6
+#size 3
+#str 18
+#enc 4
+#att 9
+#def 9
+#prec 10
+#mr 14
+#mor 12
+#maxage 100
+#startage 25
+#nametype 130
+#gcost 10018
+#rcost 1
+#rpcost 2
+#weapon "Quarterstaff"
+#weapon 29 --"Claw"
+#weapon 20 --bite
+#female
+#amphibian
+#naga
+#awe 2
+#coldblood
+#swimming
+#swampsurvival
+#forestsurvival
+#darkvision 100
+#magicskill 2 1
+#magicskill 4 1
+#magicskill 6 1
+#poorleader
+#end
+
+#newmonster 6075
+#spr1 "./Meme Age/Sinpata/naga5.tga"
+#spr2 "./Meme Age/Sinpata/naga6.tga"
+#name "Sanguine Nagaconda"
+#descr "The Nagaconda is a large bodied snake humanoid hybrid. Their large bodies are capable of exerting large amount of strength in rapid strikes. Unlike the thinner Naga, they are not venomous or stealthy. However their overall slithering speed is very slow. While skilled, their lack of armor makes them vulnerable to most weaponry. They must rely on their curvaceous bare chest to prevent attacks. The Sanguine Nagaconda are somewhat rare birthed babies of red scales, they are often skilled magic users without training but lack the capabilities to learn magic the standard way. Often it is not until the child is 14 years old before they reveal what type of magic they are attuned to."
+#ap 6
+#mapmove 10
+#hp 25
+#prot 6
+#size 3
+#str 18
+#enc 4
+#att 9
+#def 9
+#prec 10
+#mr 15
+#mor 12
+#maxage 100
+#startage 25
+#nametype 130
+#gcost 10018
+#rcost 1
+#rpcost 2
+#weapon "Quarterstaff"
+#weapon 29 --"Claw"
+#weapon 20 --bite
+#female
+#amphibian
+#naga
+#awe 2
+#coldblood
+#swimming
+#swampsurvival
+#forestsurvival
+#darkvision 100
+#custommagic 11904 200
+#custommagic 11904 50
+#poorleader
+#end
+
+#newmonster 6076
+#spr1 "./Meme Age/Sinpata/naga7.tga"
+#spr2 "./Meme Age/Sinpata/naga8.tga"
+#name "Golden Naga Queen"
+#descr "The Nagaconda is a large bodied snake humanoid hybrid. Their large bodies are capable of exerting large amount of strength in rapid strikes. Unlike the thinner Naga, they are not venomous or stealthy. However their overall slithering speed is very slow. While skilled, their lack of armor makes them vulnerable to most weaponry. They must rely on their curvaceous bare chest to prevent attacks. The Golden Naga Queen are extremely rare births from a golden egg to a golden scaled baby. They are revered by the people of Sinpata and carry a natural charisma and leadership skills. Very often they are trained in magic and the holy arts paid completely by the state. The nation of Sinpata believes these Golden Nagas will lead the nation to great victory and granted all of them the role of Queens within the society."
+#ap 6
+#mapmove 10
+#hp 25
+#prot 6
+#size 3
+#str 18
+#enc 4
+#att 9
+#def 9
+#prec 10
+#mr 17
+#mor 12
+#maxage 100
+#startage 25
+#nametype 130
+#gcost 10018
+#rcost 1
+#rpcost 4
+#weapon 29 --"Claw"
+#weapon 20 --bite
+#female
+#amphibian
+#naga
+#awe 5
+#coldblood
+#swimming
+#swampsurvival
+#forestsurvival
+#darkvision 100
+#holy
+#magicskill 8 3
+#magicskill 2 3
+#magicskill 3 1
+#magicskill 6 2
+#expertleader
+#end
+
+#newmonster 6077
+#spr1 "./Meme Age/Sinpata/mermaid7.tga"
+#spr2 "./Meme Age/Sinpata/mermaid8.tga"
+#name "Mermaid Waverider"
+#descr "The Mermaids are aquatic beings related to Tritons, but have fish tails instead of legs. Unlike the Mermen, they do not have the capability of transforming and going onto land. They dwell in waters and oocasionally appear on the shorelines to prey on fishermen to collect their precious seed. The Mermaid does not wear any clothing and uses their attractive bodies to prevent attacks. The Mermaid Waverider are wielders of magical staves that create water blasts at whereever they point. They are capable of this despite not having any magical skills and thus gather a large following of other Mermaids under their ranks."
+#ap 22
+#mapmove 14
+#hp 10
+#prot 1
+#size 2
+#str 10
+#enc 3
+#att 10
+#def 10
+#prec 10
+#mr 11
+#mor 12
+#maxage 50
+#startage 25
+#nametype 160
+#gcost 10010
+#rcost 1
+#rpcost 1
+#weapon "Wave Staff"
+#weapon "Dagger"
+#female
+#aquatic
+#naga
+#awe 1
+#darkvision 50
+#goodleader
+#end
+
+#newmonster 6078
+#spr1 "./Meme Age/Sinpata/mermaid1.tga"
+#spr2 "./Meme Age/Sinpata/mermaid2.tga"
+#name "Mermaid"
+#descr "The Mermaids are aquatic beings related to Tritons, but have fish tails instead of legs. Unlike the Mermen, they do not have the capability of transforming and going onto land. They dwell in waters and oocasionally appear on the shorelines to prey on fishermen to collect their precious seed. The Mermaid does not wear any clothing and uses their attractive bodies to prevent attacks. The Mermaid are responsible for underwater population under the curse, frequently luring fishermen to a watery death."
+#ap 22
+#mapmove 14
+#hp 10
+#prot 1
+#size 2
+#str 10
+#enc 3
+#att 10
+#def 10
+#prec 10
+#mr 11
+#mor 12
+#maxage 50
+#startage 25
+#nametype 160
+#gcost 10010
+#rcost 1
+#rpcost 1
+#weapon "Dagger"
+#female
+#aquatic
+#naga
+#awe 1
+#darkvision 50
+#holy
+#magicskill 2 1
+#magicskill 8 1
+#end
+
+#newmonster 6079
+#spr1 "./Meme Age/Sinpata/siren1.tga"
+#spr2 "./Meme Age/Sinpata/siren2.tga"
+#name "Siren"
+#descr "The siren is a being of former Oceania. She appears as a beautiful woman with the tail of a fish. Sirens are gifted with an enchanting voice and can lure men into the sea with their songs. Unlike their ancestors, they are not longer able to transform due to prolonged period of hiding in caves after Oceania fell in the ascension wars many cycles ago. A siren will lure commoners to a watery grave but not before draining all of his seed of life."
+#ap 22
+#mapmove 18
+#hp 10
+#prot 1
+#size 2
+#str 10
+#enc 3
+#att 10
+#def 10
+#prec 10
+#mr 16
+#mor 12
+#maxage 50
+#startage 25
+#nametype 160
+#gcost 10010
+#rcost 1
+#rpcost 2
+#weapon "Dagger"
+#female
+#aquatic
+#naga
+#awe 1
+#darkvision 50
+#spellsinger
+#heal
+#stealthy 25
+#magicskill 2 2
+#poorleader
+#end
+
+#newmonster 6080
+#spr1 "./Meme Age/Sinpata/siren3.tga"
+#spr2 "./Meme Age/Sinpata/siren4.tga"
+#name "Siren Queen"
+#descr "The siren is a being of former Oceania. She appears as a beautiful woman with the tail of a fish. Sirens are gifted with an enchanting voice and can lure men into the sea with their songs. Unlike their ancestors, they are not longer able to transform due to prolonged period of hiding in caves after Oceania fell in the ascension wars many cycles ago. A Siren Queen is the leader of a local school of Siren. She is extremely magically powerful and responsible for much of the underwater operations of Sinpata."
+#ap 22
+#mapmove 18
+#hp 10
+#prot 1
+#size 2
+#str 10
+#enc 3
+#att 10
+#def 10
+#prec 10
+#mr 16
+#mor 12
+#maxage 50
+#startage 25
+#nametype 160
+#gcost 10010
+#rcost 1
+#rpcost 4
+#weapon "Dagger"
+#female
+#aquatic
+#naga
+#awe 2
+#darkvision 50
+#spellsinger
+#heal
+#stealthy 25
+#magicskill 2 4
+#custommagic 11904 100
+#poorleader
+#end
+
+#newmonster 6081
+#spr1 "./Meme Age/Sinpata/snek3.tga"
+#spr2 "./Meme Age/Sinpata/snek4.tga"
+#name "Naga Soldier"
+#descr "The Naga is a fast and slim bodied snake humanoid hybrid. They are very stealthy as their slithering makes minimal sounds compared to pedalling races. While neither proficient in combat nor equipped with protective gear, the beauty of their exposed body leave many dazzed. However, this is not useful against the mindless and the courageous. The Naga Soldier wield a falchion and a shield, very suitable for their nimble bodies. Being stealthy fighters, they are effective in ambush squads."
+#ap 16
+#mapmove 16
+#hp 15
+#prot 5
+#size 2
+#str 12
+#enc 3
+#att 10
+#def 13
+#prec 9
+#mr 12
+#mor 11
+#maxage 100
+#startage 25
+#nametype 130
+#gcost 10012
+#rcost 1
+#rpcost 8
+#weapon "Falchion"
+#weapon 30 --venomous bite
+#armor "Amber Shield"
+#female
+#amphibian
+#naga
+#awe 1
+#coldblood
+#swimming
+#swampsurvival
+#forestsurvival
+#darkvision 100
+#stealthy 35
+#montag 3004
+#end
+
+#newmonster 6082
+#spr1 "./Meme Age/Sinpata/snek5.tga"
+#spr2 "./Meme Age/Sinpata/snek6.tga"
+#name "Naga Vanguard"
+#descr "The Naga is a fast and slim bodied snake humanoid hybrid. They are very stealthy as their slithering makes minimal sounds compared to pedalling races. While neither proficient in combat nor equipped with protective gear, the beauty of their exposed body leave many dazzed. However, this is not useful against the mindless and the courageous. The Naga Vanguard wield a spear and a shield, very suitable for their nimble bodies. Being stealthy fighters, they are effective in ambush squads. The Naga Vanguard are also capable of producing a venomous spit in addition to delivering the toxins with their fangs."
+#ap 16
+#mapmove 16
+#hp 15
+#prot 5
+#size 2
+#str 12
+#enc 3
+#att 10
+#def 13
+#prec 9
+#mr 12
+#mor 11
+#maxage 100
+#startage 25
+#nametype 130
+#gcost 10015
+#rcost 1
+#rpcost 8
+#weapon "Bronze Spear"
+#weapon 30 --venomous bite
+#weapon 224 --poison spit
+#armor "Amber Shield"
+#female
+#amphibian
+#naga
+#awe 1
+#coldblood
+#swimming
+#swampsurvival
+#forestsurvival
+#darkvision 100
+#stealthy 35
+#montag 3004
+#end
+
+#newmonster 6083
+#spr1 "./Meme Age/Sinpata/conda1.tga"
+#spr2 "./Meme Age/Sinpata/conda2.tga"
+#name "Nagaconda Slitherer"
+#descr "The Nagaconda is a large bodied snake humanoid hybrid. Their large bodies are capable of exerting large amount of strength in rapid strikes. Unlike the thinner Naga, they are not venomous or stealthy. However their overall slithering speed is very slow. While skilled, their lack of armor makes them vulnerable to most weaponry. They must rely on their curvaceous bare chest to prevent attacks. The Nagaconda Slitherers wield massive glaives to take advantage of their great strength. They often kill in a single strike and are thus much less commonly deployed in battle. This is because every single man is precious and better off left barely alive to harvest their seed."
+#ap 6
+#mapmove 10
+#hp 25
+#prot 6
+#size 3
+#str 18
+#enc 4
+#att 12
+#def 9
+#prec 10
+#mr 13
+#mor 12
+#maxage 100
+#startage 25
+#nametype 130
+#gcost 10018
+#rcost 1
+#rpcost 12
+#weapon "Glaive"
+#weapon 20 --bite
+#female
+#amphibian
+#naga
+#awe 2
+#coldblood
+#swimming
+#swampsurvival
+#forestsurvival
+#darkvision 100
+#montag 3004
+#end
+
+#newmonster 6084
+#spr1 "./Meme Age/Sinpata/conda3.tga"
+#spr2 "./Meme Age/Sinpata/conda4.tga"
+#name "Nagaconda Guard"
+#descr "The Nagaconda is a large bodied snake humanoid hybrid. Their large bodies are capable of exerting large amount of strength in rapid strikes. Unlike the thinner Naga, they are not venomous or stealthy. However their overall slithering speed is very slow. While skilled, their lack of armor makes them vulnerable to most weaponry. They must rely on their curvaceous bare chest to prevent attacks. The Nagaconda Guard are ranking Nagaconda Slitherers that has collected many skulls of the dead male breeding studs to form a magical necklace. This Necklace protects them from attacks while retaining their nudity to keep enemies second guessing their strikes."
+#ap 6
+#mapmove 10
+#hp 25
+#prot 6
+#size 3
+#str 18
+#enc 4
+#att 12
+#def 9
+#prec 10
+#mr 13
+#mor 12
+#maxage 100
+#startage 25
+#nametype 130
+#gcost 10023
+#rcost 1
+#rpcost 16
+#weapon "Glaive"
+#weapon 20 --bite
+#armor "Skull Necklace"
+#female
+#amphibian
+#naga
+#awe 2
+#coldblood
+#swimming
+#swampsurvival
+#forestsurvival
+#darkvision 100
+#end
+
+#newmonster 6085
+#spr1 "./Meme Age/Sinpata/medusa1.tga"
+#spr2 "./Meme Age/Sinpata/medusa2.tga"
+#name "Nagaconda Curseborn"
+#descr "The Nagaconda is a large bodied snake humanoid hybrid. Their large bodies are capable of exerting large amount of strength in rapid strikes. Unlike the thinner Naga, they are not venomous or stealthy. However their overall slithering speed is very slow. While skilled, their lack of armor makes them vulnerable to most weaponry. They must rely on their curvaceous bare chest to prevent attacks. The Nagaconda Curseborn are rare rotten eggs that somehow managed to hatch into hideous abominations. They have smaller snakes for hair and strike fear into anyone that looks at them. Originally they were all gathered up and euthanized to end their misery, however, Sinpata has found their fearful appearance to be useful in the Ascension Wars and fitted them into armies."
+#ap 6
+#mapmove 10
+#hp 25
+#prot 6
+#size 3
+#str 18
+#enc 4
+#att 12
+#def 9
+#prec 10
+#mr 14
+#mor 12
+#maxage 100
+#startage 25
+#nametype 130
+#gcost 10030
+#rcost 1
+#rpcost 16
+#weapon "Quarterstaff"
+#weapon 20 --bite
+#weapon "Snake Hair"
+#female
+#amphibian
+#naga
+#fear 5
+#unsurr 1
+#regeneration 10
+#coldblood
+#swimming
+#swampsurvival
+#forestsurvival
+#darkvision 100
+#magicskill 5 2
+#reclimit 1
+#end
+
+#newmonster 6086
+#spr1 "./Meme Age/Sinpata/constr1.tga"
+#spr2 "./Meme Age/Sinpata/constr2.tga"
+#name "Great Nagaconda Constrictor"
+#descr "The Nagaconda is a large bodied snake humanoid hybrid. Their large bodies are capable of exerting large amount of strength in rapid strikes. Unlike the thinner Naga, they are not venomous or stealthy. However their overall slithering speed is very slow. While skilled, their lack of armor makes them vulnerable to most weaponry. They must rely on their curvaceous bare chest to prevent attacks. The Great Nagaconda Constrictor are born of massive eggs nearly triple the size of normal eggs. Their large bodies allows them to use constriction as a form of attack that is extremely useful for capturing virile males. Due to this, all the Great Constrictors are annointed as sacred beings by the Golden Naga Queens."
+#ap 6
+#mapmove 10
+#hp 52
+#prot 8
+#size 5
+#str 21
+#enc 4
+#att 12
+#def 7
+#prec 10
+#mr 15
+#mor 12
+#maxage 100
+#startage 25
+#nametype 130
+#gcost 10048
+#rcost 1
+#rpcost 16
+#weapon 116 --strangulation
+#weapon 20 --bite
+#female
+#amphibian
+#naga
+#awe 2
+#coldblood
+#swimming
+#swampsurvival
+#forestsurvival
+#darkvision 100
+#holy
+#end
+
+#newmonster 6087
+#spr1 "./Meme Age/Sinpata/mermaid3.tga"
+#spr2 "./Meme Age/Sinpata/mermaid4.tga"
+#name "Mermaid Warrior"
+#descr "The Mermaids are aquatic beings related to Tritons, but have fish tails instead of legs. Unlike the Mermen, they do not have the capability of transforming and going onto land. They dwell in waters and oocasionally appear on the shorelines to prey on fishermen to collect their precious seed. The Mermaid does not wear any clothing and uses their attractive bodies to prevent attacks. The Mermaid are responsible for underwater population under the curse, frequently luring fishermen to a watery death. The Mermaid Warrior are rudimentary armed after reawakening their hope by the Nagas. They are much weaker in comparison to the nagas but are still capable fighters."
+#ap 22
+#mapmove 14
+#hp 10
+#prot 1
+#size 2
+#str 10
+#enc 3
+#att 10
+#def 10
+#prec 10
+#mr 11
+#mor 12
+#maxage 50
+#startage 25
+#nametype 160
+#gcost 10010
+#rcost 1
+#rpcost 6
+#weapon "Coral Spear"
+#female
+#aquatic
+#naga
+#awe 1
+#darkvision 50
+#end
+
+#newmonster 6088
+#spr1 "./Meme Age/Sinpata/mermaid5.tga"
+#spr2 "./Meme Age/Sinpata/mermaid6.tga"
+#name "Mermaid Vanguard"
+#descr "The Mermaids are aquatic beings related to Tritons, but have fish tails instead of legs. Unlike the Mermen, they do not have the capability of transforming and going onto land. They dwell in waters and oocasionally appear on the shorelines to prey on fishermen to collect their precious seed. The Mermaid does not wear any clothing and uses their attractive bodies to prevent attacks. The Mermaid are responsible for underwater population under the curse, frequently luring fishermen to a watery death. The Mermaid Warrior are rudimentary armed after reawakening their hope by the Nagas. They are much weaker in comparison to the nagas but are still capable fighters."
+#ap 22
+#mapmove 14
+#hp 10
+#prot 1
+#size 2
+#str 10
+#enc 3
+#att 10
+#def 10
+#prec 10
+#mr 11
+#mor 12
+#maxage 50
+#startage 25
+#nametype 160
+#gcost 10010
+#rcost 1
+#rpcost 6
+#weapon "Coral Spear"
+#armor "Shield"
+#female
+#aquatic
+#naga
+#awe 1
+#darkvision 50
+#end
+
+#newmonster 6089
+#spr1 "./Meme Age/Sinpata/mermaid9.tga"
+#spr2 "./Meme Age/Sinpata/mermaid10.tga"
+#name "War Mermaid"
+#descr "The Mermaids are aquatic beings related to Tritons, but have fish tails instead of legs. Unlike the Mermen, they do not have the capability of transforming and going onto land. They dwell in waters and oocasionally appear on the shorelines to prey on fishermen to collect their precious seed. The Mermaid does not wear any clothing and uses their attractive bodies to prevent attacks. The Mermaid are responsible for underwater population under the curse, frequently luring fishermen to a watery death. The War Mermaid are the only troop of Sinpata that wears any sort of clothing. As their fighting skills or sexual appeal fall behind the Nagaconda, they decide to give it up and focus on capability in battles to support their nation."
+#ap 22
+#mapmove 14
+#hp 10
+#prot 1
+#size 2
+#str 10
+#enc 3
+#att 11
+#def 11
+#prec 10
+#mr 11
+#mor 12
+#maxage 50
+#startage 25
+#nametype 160
+#gcost 10010
+#rcost 1
+#rpcost 9
+#weapon "Coral Spear"
+#armor "Bronze Hauberk"
+#armor "Shield"
+#female
+#aquatic
+#naga
+#darkvision 50
+#end
+
+--sinpata curse
+#newevent
+#rarity 5
+#req_fornation 181
+#req_pop0ok
+#nation -2
+--#msg "debug death scales increase"
+#notext
+#nolog
+#incscale2 3
+#end
+
+#newevent
+#rarity 5
+#req_fornation 181
+#req_permonth 5
+#req_season 2
+#req_monster 6073
+#nation -2
+#msg "It is the season for breeding! Large amounts of males are drained of their seed and many new Naga are born!"
+#nolog
+#killpop 10
+#3d6units -3004
+#end
+
 #newsite 1672
-#name "Siren Cove"
+#name "Chamber of Scales"
 #path 2
 #level 0
 #rarity 5
 #gems 2 3
+#homecom 6076
 #end
 
---#newsite 1673
---#end
+#newsite 1673
+#name "Breeding Nest"
+#path 7
+#level 0
+#rarity 5
+#gems 6 2
+#homemon 6086
+#end
 
 #selectnation 181
 #name "Sinpata"
 #epithet "The Legless"
 #era 3
-#brief "A nation of all races without legs."
-#descr "The black people were the original Avvim, the Zionist stole our history and identity because they did not have any accomplishments of their own. So they stole it from the blacks.
-DAASSSS RITEEEEEEEEEEEEEEEEEEEEEEEEE
-Every culture and every race and every nation was founded and built by the OG black people. Not a single one would have a significant history without our ancestors.
-The Jomonese? Black. Ermorians? Black. Vanir? Black. Caelians? Black. Mictlan? UNDOUBTABLY BLACK.
-Why do you think the Ulmites call it the 'Blacksteel'; because it was made by black people. Even the term blacksmith derived from the fact that all metallurgy was invented by the black folk.
-This is our world our RIGHT to take back what is ours. The culture should to returned to the original owners, and the world should know that it was us who had given everything. We wuz pankoman 'n' shit. If you just look at the historical cave paintings, look at Forester Bob. what color dey skin? WHAT COLOR DEY SKIN? Thats fucking right boy. The thrones of ascension were built by the black people and for the black people. And we will claim it again for the black people."
+#brief "A nation of races without legs."
+#descr "When the nation of Patala was replaced by the superpower monkey nation of Bandar Shakti, the Naga fled into the jungles. Deep inside the jungle caves they found the remains of an ancient civilization of Mermaids of Oceania. They quickly integrated with the society as they were easily adapted to similar lifestyles due to similar body anatomy. However, they quickly found out the reason why there were no Merman with them. The cave was cursed to render the mermaids and naga incapable of birthing males. The meraids were on their last numbers from this severe population decline. Before they were able to fully give up, the naga refused. They formed organized ranks to raid nearby human villages to use their males as breeding studs to repopulate. This quickly brought then on an upturn as they were able to restore their population. However, the solution is not perfect the Naga curse runs deep and quickly devours the lifeforce of the bred male. This forced the races of Sinpata to continuously conquer new lands for males to breed in order to keep their race alive. The Sinpata breeding females are against solo operations as they are a collectively community. They banned the act of secret seduction as it is extremely risky and much less gain compared to an organized night time rape.
+To this day, the effectiveness of the joint forces of the legless has given them significant power to be noticed by the other great nations. With that knowledge, they declared themselves as the new glorious nation of Sinpata. Their goal is to reach high for the thrones of ascension and put an end to their curse. Or if it was not possible, simply abusing the power of the thrones to bring them infinite supply of breeding males. Either way, to the matriachy of Sinpata, the only path forward is winning the Wars of Ascension."
 #summary "Race: Nagas, Mermaids, and lesser legless creatures
-Military: Elite army with equipment made of gleaming metals and pearls
-Magic: Water, Earth, Nature, some Astral
-Priests: Powerful"
-#flag "./Meme Age/Dasrite/flag.tga"
+Military: Naked female troops that leave enemies staring instead of fighting
+Magic: Water, Earth, Nature, Astral, and some Fire
+Priests: Powerful
+Naga Curse: All provinces controlled by Sinpata will plunge into Death Scales. During the breeding season of each fall, The Great Vitae Harvest produces troops in some provinces with Nagaconda Broodmothers."
+#flag "./Meme Age/Sinpata/flag.tga"
 
-#addreccom 6047
-#addreccom 6048
-#addreccom 6041
-#addreccom 6042
-#addreccom 6043
-#addreccom 6044
-#addreccom 6045
-#addreccom 6046
-#addreccom 6049
+#addreccom 6071
+#addreccom 6072
+#addreccom 6073
+#addreccom 6074
+#addreccom 6075
+#addreccom 6076
 
-#addrecunit 6051
-#addrecunit 6052
-#addrecunit 6053
-#addrecunit 6054
-#addrecunit 6055
-#addrecunit 6056
+#uwcom 6077
+#uwcom 6078
+#uwcom 6079
+#uwcom 6080
+
+#addrecunit 6081
+#addrecunit 6082
+#addrecunit 6083
+#addrecunit 6084
+#addrecunit 6085
+
+#uwrec 6087
+#uwrec 6088
+#uwrec 6089
 
 --#hero1 861
 
-#startcom 6048
-#startunittype1 6051
-#startunitnbrs1 20
-#startunittype2 6052
-#startunitnbrs2 20
-#startscout 6047
-#defcom1 6048
-#defcom2 6041
-#defunit1 6051
-#defunit2 6052
-#defmult1 18
-#defmult1b 18
-#defmult2 18
-#wallunit 6052
-#wallmult 15
+#startcom 6072
+#startunittype1 6081
+#startunitnbrs1 12
+#startunittype2 6084
+#startunitnbrs2 6
+#startscout 6071
+#defcom1 6072
+#defcom2 6073
+#defunit1 6081
+#defunit2 6084
+#defmult1 10
+#defmult1b 10
+#defmult2 10
+#wallunit 6082
+#wallmult 10
+
+#uwdefcom1 6077
+#uwdefcom2 6078
+#uwdefunit1 6087
+#uwdefmult1 20
+#uwdefunit2 6088
+#uwdefmult2 15
+#uwwallunit 6088
+#uwwallmult 15
 
 #clearsites
-#startsite "Siren Cove"
-#templepic 10
+#startsite "Chamber of Scales"
+#startsite "Breeding Nest"
+#templepic 1
 #fortera 2
 #homerealm 7
 #homerealm 10
-#color 0.08 0.5 0.12
-#secondarycolor 0.62 0.06 0.03
+#color 0.2 0.7 0.65
+#secondarycolor 0.05 0.2 0.01
 #end
