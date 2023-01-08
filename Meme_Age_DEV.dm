@@ -509,6 +509,23 @@
 #uwok
 #end
 
+#newweapon 1636
+#name "Magick Laser"
+#dmg 15
+#range 45
+#att 100
+#magic
+#fire
+#armorpiercing
+#nostr
+#rcost 8
+#sound 13
+#flyspr 10152 5
+#nratt 5
+#sound 18
+#uwok
+#end
+
 --new armor
 
 #newarmor 420
@@ -3993,7 +4010,8 @@ Priests: Powerful"
 --------------------------------------------------------------------------
 
 #newmonster 5311
-#copyspr 731
+#spr1 "./Meme Age/Marico/deal1.tga"
+#spr2 "./Meme Age/Marico/deal2.tga"
 #copystats 731
 #name "Dealer"
 #descr "The Dealer is the lowest level trader of the operation. They make small deals directly interfacing with clients and providing the goods. They were former low priests and have valuable experiences in priestly magic as well as blood sacrifice.
@@ -4009,7 +4027,8 @@ When enlisted by the national forces, the Dealer is able to provide 1 bloodslave
 #end
 
 #newmonster 5312
-#copyspr 1424
+#spr1 "./Meme Age/Marico/deal3.tga"
+#spr2 "./Meme Age/Marico/deal4.tga"
 #copystats 1424
 #name "Supplier"
 #descr "The Supplier is the middle level trader of the operation. They only obtain shipments of goods and distribute them into individual areas controlled by the Dealers. They are adept at fire and blood magic, as being powerful is how they retain their position in the hierarchy. It is also a necessary tool to prevent backstabs from lower ranking Dealers trying to steal the goods.
@@ -4024,7 +4043,8 @@ When enlisted by the national forces, the Supplier is able to provide 3 bloodsla
 #end
 
 #newmonster 5313
-#copyspr 1888
+#spr1 "./Meme Age/Marico/halcon1.tga"
+#spr2 "./Meme Age/Marico/halcon2.tga"
 #copystats 1888
 #name "Halcon"
 #descr "The Halcon are the eyes of the operation. They lead squads of Eagle Warriors to survey and record deals to make sure no parties are pulling dirty tricks during trades, no matter dealer or customer. If any issue is found, they will quickly arrive at the scene and prevent the operation from going foul."
@@ -4038,7 +4058,8 @@ When enlisted by the national forces, the Supplier is able to provide 3 bloodsla
 #end
 
 #newmonster 5314
-#copyspr 732
+#spr1 "./Meme Age/Marico/enfor1.tga"
+#spr2 "./Meme Age/Marico/enfor2.tga"
 #copystats 732
 #name "Enforcer"
 #descr "The Enforcers are the brutes of the operation. They perform majority of the dirty work against rivals that are either competiting or against their operations all together. They carry giant club swords and are physically strong as well as magically powerful. Although not many of them exist due to the stability of the current state of things."
@@ -4054,7 +4075,8 @@ When enlisted by the national forces, the Supplier is able to provide 3 bloodsla
 #end
 
 #newmonster 5315
-#copyspr 734
+#spr1 "./Meme Age/Marico/capo1.tga"
+#spr2 "./Meme Age/Marico/capo2.tga"
 #copystats 734
 #name "Capo"
 #descr "The Capo are the head of the operation. Every single activity traces back to the Capo, from trades to territory disputes. The current Cartel has mostly peaceful Capo that has come to an agreement with each other. No matter how shakey the diplomatic pressure is between each Capo, they understand working together results in the maximum profit for themselves. The Capo is comprised of the most skilled priests with significant Astral powers."
@@ -9044,6 +9066,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
 #descr "While ranged weapons were heavily condemned in the Jungle Gym as they are not the way of the strength, the Crossfit Centaur was allowed to keep using it after demonstrating the usefulness and legitimacy of their workout routine. Their Dyel counterpart however, have all been put to the sword for the heresy of ranged weapons."
 #end
 
+#newmonster 5577
+#copyspr 704
+#copystats 704
+#name "Sister of the Glutes"
+#descr "The dryads of Pangaea rarely attempt to attain extreme strength from the Jungle Gym, instead they focus on areas that make themselves much more attractive. For them, every session is spent doing leg abductions and donkey kicks to maximize their hind and legs."
+#str 11
+#weapon "Bronze Spear"
+#weapon "Kick"
+#clearspec
+#female
+#holy
+#forestsurvival
+#heal
+#awe 2
+#reclimit 3
+#end
+
 #selectmonster 2154
 #name "Dyel Commander"
 #descr "The eternal dyel who refuses to work for gains. They are lower class citizens of Pangaea and are generally looked down upon. Most Dyels serve as soldiers, but a few become commanders and are given armies to lead."
@@ -9112,6 +9151,50 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
 #addsite 1701
 #end
 
+#newspell
+#restricted 165
+#name "Dryad Gym Constructed"
+#descr "Construction of the Dryad Gym grants all sacreds of Pangaea more defense and reinvigoration."
+#school -1
+#path 0 3
+#pathlevel 0 1
+#effect 10082
+#damage 611
+#fatiguecost 1000
+#hiddenench 1
+#nreff 1
+#end
+
+#newspell
+#copyspell 106
+#restricted 165
+#name "Construct Dryad Gym"
+#descr "Construction of the Dryad Gym in captured capitols grants all sacreds of Pangaea more defense and reinvigoration. However, if taken and claimed by another nation, the bonus will also be granted to them."
+#school 3
+#researchlevel 5
+#path 0 3
+#pathlevel 0 1
+#effect 10083
+#damage -1
+#fatiguecost 800
+#hiddenench 1
+#nreff 1
+#nextspell "Dryad Gym Constructed"
+#end
+
+#newevent --BUILD DRYAD GYM
+#rarity 5
+#req_capital 1
+#req_owncapital 0
+#req_fornation 165
+#req_land 1
+#req_nositenbr 1702
+#req_freesites 1
+#req_myench 611
+#msg "A Dryad Gym has been built."
+#addsite 1702
+#end
+
 #newsite 1631
 #name "Jungle Gym"
 #path 3
@@ -9138,6 +9221,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
 #path 3
 #claim
 #blessstr 4
+#end
+
+#newsite 1702
+#name "Dryad Gym"
+#rarity 5
+#level 0
+#path 3
+#claim
+#blessdef 1
+#blessreinvig 1
+#natmon 5577
 #end
 
 #selectnation 165
@@ -9193,6 +9287,8 @@ Priests: Weak"
 #clearsites
 #startsite "Jungle Gym"
 #startsite "Swole Groves of Gaia"
+#futuresite "Power Gym"
+#futuresite "Dryad Gym"
 #idealcold 0
 #fortera 3
 #templepic 10
@@ -16706,8 +16802,8 @@ Freespawn: Only in Forest provinces above 10000 population under Asphodel's Domi
 
 #newmonster 6050
 #copystats 3158
-#spr1 "./Meme Age/Dasrite/yakub1.tga"
-#spr2 "./Meme Age/Dasrite/yakub2.tga"
+#spr1 "./Meme Age/Dasrite/yakub3.tga"
+#spr2 "./Meme Age/Dasrite/yakub4.tga"
 #name "Voice of Yakub"
 #descr "The Voice of Yakub is the revered one who echos the words of Yakub coming from beyond this world. They follow the ancient super genius Yakub who created the white people. They believe that as OG black, it is within their duty to put an end to the menace their own people created.
 When the Voice of Yakub visits the conquered capitol of another nation, he will command the usurpers to kneel to their old masters. The solidarity rite can only be enacted once per capitol."
@@ -16764,12 +16860,76 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 #copystats 72
 #copyspr 72
 #name "OG Blackplate"
-#descr "The OG people of Das'rite, the descendants of those who created it all. They are not very skilled at fighting because other cultures stole all their fighting techniques. They are also poorly equipped because the other cultures stole their metallurgy and forging technology. The Blackplate while lacking the skill and knowledges they developed in the past to create it, now resort to painting regular plates black to simulate their original."
+#descr "The OG people of Das'rite, the descendants of those who created it all. They are not very skilled at fighting because other cultures stole all their fighting techniques. They are also poorly equipped because the other cultures stole their metallurgy and forging technology. The Blackplate while lacking the skill and knowledges they developed in the past to create it, now instead resort to painting regular plates black to simulate their original."
 #hp 10
 #mr 10
 #cleararmor
 #armor "Blackened Plate Armor"
 #armor "Blackened Plate Helmet"
+#end
+
+#newmonster 6057
+#copystats 1606
+#spr1 "./Meme Age/Dasrite/kang1.tga"
+#spr2 "./Meme Age/Dasrite/kang2.tga"
+#name "OG Tomb Kang"
+#descr "The Tomb Kang are the original faro n shiet. They are skilled earth mages and capable of advanced construction of objects such as the great pyramids."
+#clearweapons
+#weapon "Quarterstaff"
+#clearmagic
+#holy
+#magicskill 3 2
+#magicskill 8 2
+#custommagic 32640 40
+#end
+
+#newmonster 6058
+#spr1 "./Meme Age/Dasrite/pyramid.tga"
+#name "Floating Pyramid"
+#descr "The great pyramid is a flying contraption built by the original kangs of the world. They were memorial grounds of the ancient pantokrator after they left the universe. Their antitheft life drain technology is extremely powerful when combined with the fact that the object is built of solid stone and very difficult to damage. While powered by magic, the chassis itself is created with raw slave work and mundane materials. They are very slow moving when in combat mode as the weapon systems are costly, however when all the magicka is directed into the thrusters, they are able to move quickly across the world."
+#gcost 0
+#size 6
+#hp 260
+#str 20
+#att 5
+#def 5
+#prec 15
+#prot 15
+#mr 18
+#mor 50
+#enc 0
+#mapmove 18
+#ap 2
+#maxage 5000
+#fireres 50
+#poisonres 25
+#miscshape
+#slashres
+#pierceres
+#awe 1
+#fear 10
+#inanimate
+#spiritsight
+#pooramphibian
+#float
+#neednoteat
+#weapon "Magick Laser"
+#weapon "Crush"
+#end
+
+#newspell
+#restricted 180
+#name "Construct Pyrmaid"
+#descr "Creates the most iconic hallmark of OG black civilization."
+#school 3
+#researchlevel 7
+#path 0 3
+#pathlevel 0 4
+#effect 10001
+#damage 6058
+#nreff 1
+#fatiguecost 4000
+#onlymnr 6057
 #end
 
 --VOICE OF YAKUB EVENTS-------------------------------------
@@ -17110,7 +17270,7 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 #req_monster 6050 --yakub
 #nation -2
 #req_site 1
-#msg "The Blacks of Wakanda unite with the original people of Das'rite! [Fields of Purple]"
+#msg "Like a brudda from another motha, Wakanda be homecoming in this crib. Straight up joining the gang like an OG! [Fields of Purple]"
 #2com 5913 --black panther
 #4d6units 5926 --war panther
 #end
@@ -17198,7 +17358,7 @@ DAASSSS RITEEEEEEEEEEEEEEEEEEEEEEEEE
 Every culture and every race and every nation was founded and built by the OG black people. Not a single one would have a significant history without our ancestors.
 The Jomonese? Black. Ermorians? Black. Vanir? Black. Caelians? Black. Mictlan? UNDOUBTABLY BLACK.
 Why do you think the Ulmites call it the 'Blacksteel'; because it was made by black people. Even the term blacksmith derived from the fact that all metallurgy was invented by the black folk.
-This is our world our RIGHT to take back what is ours. The culture should to returned to the original owners, and the world should know that it was us who had given everything. We wuz pankoman 'n' shit. If you just look at the historical cave paintings, look at Forester Bob. what color dey skin? WHAT COLOR DEY SKIN? Thats fucking right boy. The thrones of ascension were built by the black people and for the black people. And we will claim it again for the black people."
+This is our world our RIGHT to take back what is ours. The culture should be returned to the original owners, and the world should know that it was us who had given everything. We wuz pankoman 'n' shit. If you just look at the historical cave paintings, look at Forester Bob. what color dey skin? WHAT COLOR DEY SKIN? Thats fucking right boy. The thrones of ascension were built by the black people and for the black people. And we will claim it again for the black people."
 #summary "Race: OGs
 Military: OGs with various and diverse range of equipment
 Magic: Err'thang mang, the OGs invented err'thang
@@ -17214,6 +17374,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #addreccom 6044
 #addreccom 6045
 #addreccom 6046
+#addreccom 6057
 #addreccom 6049
 
 #addrecunit 6051
@@ -18017,7 +18178,7 @@ To this day, the effectiveness of the joint forces of the legless has given them
 Military: Naked female troops that leave enemies staring instead of fighting
 Magic: Water, Earth, Nature, Astral, and some Fire
 Priests: Powerful
-Naga Curse: All provinces controlled by Sinpata will plunge into Death Scales. During the breeding season of each fall, The Great Vitae Harvest produces troops in some provinces with Nagaconda Broodmothers."
+Naga Curse: Growth and Death scales have half effect on Population. During the breeding season of each fall, The Great Vitae Harvest produces troops in some provinces with Nagaconda Broodmothers."
 #flag "./Meme Age/Sinpata/flag.tga"
 
 #addreccom 6071
@@ -18073,6 +18234,7 @@ Naga Curse: All provinces controlled by Sinpata will plunge into Death Scales. D
 #startsite "Chamber of Scales"
 #startsite "Breeding Nest"
 #templepic 1
+#halfdeathpop
 #fortera 2
 #homerealm 7
 #homerealm 10
