@@ -17903,7 +17903,6 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 #magicskill 3 2
 #magicskill 8 2
 #custommagic 32640 40
-#itemslots 12288
 #end
 
 #newmonster 6058
@@ -18332,7 +18331,7 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 #req_monster 6050 --yakub
 #nation -2
 #req_site 1
-#msg "The Treants of Coomur show their Solidarity with the original people of Das'rite! [Great Carrion Grove]"
+#msg "The Treants of Asphodel show their Solidarity with the original people of Das'rite! [Great Carrion Grove]"
 #com 6016 --elder treant
 #3d6units 714 --carrion centaur
 #end
