@@ -1,6 +1,6 @@
-#modname "Meme Age DEV"
+#modname "Meme Age 1.2"
 #description "4th Age of Dominions but with an highly cynical approach to national lore development. Magic might have been fading from early to late, but meme magic come in its place."
-#version 0.9
+#version 1.2
 #icon "./Meme Age/banner.tga"
 
 -----------------------------------------
