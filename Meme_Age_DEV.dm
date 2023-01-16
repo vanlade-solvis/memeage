@@ -6,8 +6,10 @@
 -----------------------------------------
 --TOTAL ID USED/RESERVED
 -- weapon 1600-1673
+--++++weapons 1995-1999
 -- armor 420-440
--- unit 5100-7000
+-- unit 5000-7000
+--++++unit 8000-8100
 -- site 1601-1800
 -- nation 150-185
 -- enchantment 600-630
@@ -27,7 +29,7 @@
 --608 CRAB17
 --609 BUILD GYM
 --610 MUS SITE
---611
+--611 Dryad Gym
 --612
 --613
 --614
@@ -40,6 +42,9 @@
 --3002 sacred jiangshi
 --3003 atlantis fishing list
 --3004 NAGAS
+
+--LAS PELAGUS MONTAGS
+--5000-5008
 ----------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------
@@ -526,6 +531,70 @@
 #uwok
 #end
 
+#newweapon 1637
+#name "Gloves of Adibas"
+#rcost 0
+#blunt
+#dmg 1
+#att 1
+#def 1
+#nratt 3
+#len 1
+#sound 10
+#natural
+#end
+
+#newweapon 1638
+#copyweapon 226 --frost breath
+#name "Qi Blast"
+#dmg 15
+#ap
+#aoe 1
+#range 15
+#natural
+#bonus
+#nratt -2
+#uwok
+#end
+
+--- Lucky Fish Weapons ---
+
+#newweapon 1995 -- Enchanted Long Spear
+#copyweapon 644 -- Bronze Long Spear
+#name "Enchanted Long Spear"
+#dmg 4
+#att 1
+#def 0
+#magic
+#end
+
+#newweapon 1996 -- Golden Long Spear
+#copyweapon 644 -- Bronze Long Spear
+#name "Golden Long Spear"
+#dmg 5
+#att 1
+#magic
+#end
+
+#newweapon 1997 -- Enchanted Gastraphetes
+#copyweapon 706 -- Gastraphetes
+#name "Enchanted Gastraphetes"
+#dmg 10
+#att 3
+#magic
+#end
+
+#newweapon 1998 -- Curse Luck
+#copyweapon 366 -- Curse Luck
+#mrnegates
+#end
+
+#newweapon 1999 -- Weighted Blade
+#copyweapon 665 -- Pearl Blade
+#name "Weighted Blade"
+#secondaryeffectalways 1998
+#end
+
 --new armor
 
 #newarmor 420
@@ -699,6 +768,56 @@ Use Masks to Slow the Spread of Tienchi Plague - Nature Magic Experts"
 #luck
 #autobless
 #cursed
+#end
+
+#selectitem 657
+#restricted 167 --Muspelheim Only
+#constlevel 2
+#mainpath 0
+#mainlevel 1
+#spr "./Meme Age/Muspelheim/spark.tga"
+#type 8
+#name "Spark Flask"
+#descr "A flask full of holy sparks from the rivers of Muspel. These sparks blesses the holder with heavenly powers."
+#autobless
+#end
+
+
+--------------------------------------------------------------------------
+-- GENERICS
+-- currently using
+-- unit 5000-5099
+-- site ??
+--------------------------------------------------------------------------
+
+#newmonster 5000
+#spr1 "./Meme Age/Generic/cheems1.tga"
+#spr2 "./Meme Age/Generic/cheems2.tga"
+#copystats 2153
+#name "Cheems"
+#descr "Silence wench, I do not wish to be horny anymore...
+I just want to be happy..."
+#gcost 0
+#clearweapons
+#cleararmor
+#clearspec
+#weapon "Katana"
+#animal
+#patrolbonus 1
+#spiritsight
+#end
+
+#newspell
+#name "Thot Patrollers"
+#descr "A nature mage can contact the vagabond dogs who have been walking the difficult path of rejecting women that have negatively impacted their lives. They are exceptional patrollers capable of hunting down even invisible whores. Afterall, if she breaths, shes a thot."
+#school 0
+#researchlevel 3
+#path 0 6
+#pathlevel 0 1
+#effect 10001
+#damage 5000
+#nreff 505
+#fatiguecost 200
 #end
 
 --------------------------------------------------------------------------
@@ -2077,6 +2196,38 @@ However, only a ranking General is able to call upon the services of such valuab
 #noleader
 #end
 
+#newmonster 5180
+#spr1 "./Meme Age/Freesia/colonel1.tga"
+#spr2 "./Meme Age/Freesia/colonel2.tga"
+#name "Militia Captain"
+#descr "A capable field leader among the peasantry of Freesia. They were allowed similar equipment that of a military general, except their leading powers are limited but are always accompanied by a group of Militia.
+They should never join the actual military as their duty is to defend their home provinces."
+#ap 11
+#mapmove 14
+#hp 12
+#prot 0
+#size 2
+#str 11
+#enc 3
+#att 11
+#def 11
+#prec 13
+#mr 10
+#mor 12
+#maxage 50
+#startage 20
+#nametype 102
+#gcost 0
+#rcost 1
+#rpcost 1
+#weapon "Falchion"
+#weapon "Battle Crossbow"
+#armor "Plate Cuirass"
+#armor "Leather Cap"
+#okleader
+#batstartsum2d6 5172
+#end
+
 #newspell
 #restricted 152
 #name "Construct Warthog"
@@ -2250,8 +2401,8 @@ Priests: Weak"
 
 #multihero1 5167
 
-#defcom1 5162
-#defcom2 5163
+#defcom1 5180
+#defcom2 5162
 #defunit1 5169
 #defunit2 5169
 #defmult1 10
@@ -2302,6 +2453,7 @@ Priests: Weak"
 #copystats 850
 #name "Real Sidhe Champion"
 #descr "The regional champion of Real Sidhe FC who signed up to fight in the front lines for Man United. The Real Sidhe are great fighters finally earning great fame for themselves in a land most foreign to them. The glory granted has greatly increased their willingness to fight for the nation."
+#gcost 10010
 #end
 
 #newmonster 5194
@@ -2309,6 +2461,8 @@ Priests: Weak"
 #copystats 848
 #name "Real Sidhe Lord"
 #descr "The Lord of Real Sidhe FC who signed up to fight in the front lines for Man United. The Real Sidhe are great fighters finally earning great fame for themselves in a land most foreign to them. The glory granted has greatly increased their willingness to fight for the nation. The Real Sidhe Lord are from the royal lineage of Sidhe Lords of Eriu, not many of them remain and are rare to come across."
+#custommagic 9984 100
+#gcost 10015
 #rpcost 4
 #end
 
@@ -2317,8 +2471,9 @@ Priests: Weak"
 #copystats 1666
 #name "Avalon Lord"
 #descr "The Lord of Avalon FC that they are willing to send into the front lines for Man United. The Avalon used to be in great power in the nation of Man, but ever since their power was stripped away by the Magistry, they are bitter about it. Nevertheless, they are willing to fight for Man United as their ultimate goal is to see the nation flourish."
+#startage 20
 #magicskill 1 1
-#magicskill 3 1
+#magicskill 3 2
 #custommagic 9984 100
 #end
 
@@ -2940,9 +3095,9 @@ The Earthenblood Lord's trusty ride is now also an immortal Earthenblood horse. 
 #gcost 70
 #rcost 1
 #rpcost 28
+#addupkeep -35
 #weapon "Life Drain"
 #immortal
-#reformtime -2
 #regeneration 10
 #invulnerable 25
 #fireres -5
@@ -2957,7 +3112,6 @@ The Earthenblood Lord's trusty ride is now also an immortal Earthenblood horse. 
 #flying
 #norivercross
 #neednoteat
-#homesick 25
 #end
 
 #newmonster 5232
@@ -3294,8 +3448,8 @@ Priests: Weak"
 #spiritsight
 #neednoteat
 #shapechange 5258
-#gcost 10100
-#rpcost 3
+#gcost 10070
+#rpcost 2
 #end
 
 #newmonster 5258
@@ -3304,6 +3458,54 @@ Priests: Weak"
 #name "Succubus"
 #descr "The masquerade is up, the true form is revealed. The Nun pretending to be a human was actually a Succubus from hell."
 #shapechange 5257
+#clearspec
+#stealthy 0
+#female
+#succubus 15
+#flying
+#scalewalls
+#neednoteat
+#demon
+#spiritsight
+#illusion
+#end
+
+#newmonster 5259
+#spr1 "./Meme Age/Marignon/loli1.tga"
+#spr2 "./Meme Age/Marignon/loli2.tga"
+#name "Succubus Brat"
+#descr "Ehh? That's all? You barely lasted at all! Haha, adults are so weak. Losing to a small succubus like me must be embarrassing. Perverted old men like you are always so useless, does it not even feel shameful to lick my feet? Wow if every adult is like this then it would be so easy to take over the world by manipulating each and every single one of them. They shall fight to the death and capture the thrones of ascension for my own benefit. Such lousy filth would probably enjoy it anyway."
+#pathcost 10
+#startdom 1
+#gcost 100
+#rcost 1
+#size 2
+#ressize 1
+#hp 11
+#str 13
+#att 11
+#def 11
+#prec 14
+#prot 0
+#mr 18
+#mor 30
+#enc 0
+#mapmove 18
+#ap 18
+#weapon "Life Drain"
+#magicskill 7 1
+#maxage 5000
+#startage 5
+#fireres 5
+#stealthy 20
+#female
+#succubus 20
+#flying
+#scalewalls
+#neednoteat
+#demon
+#spiritsight
+#invisible
 #end
 
 #newmonster 5261
@@ -3333,7 +3535,7 @@ Priests: Weak"
 #weapon "Broad Sword"
 #weapon 615 --"Hoof"
 #weapon 676 --"Fiery Breath"
-#fireshield 10
+#fireshield 5
 #end
 
 #newmonster 5263
@@ -3402,7 +3604,7 @@ Priests: Weak"
 #effect 10021
 #damage 5262
 #nreff 1
-#fatiguecost 3500
+#fatiguecost 3800
 #end
 
 #newspell
@@ -3410,7 +3612,7 @@ Priests: Weak"
 #name "5 Goetia Knights"
 #descr "5 Goetia Knights."
 #school -1
-#effect 10021
+#effect 10001
 #damage 5261
 #nreff 5
 #end
@@ -3517,6 +3719,7 @@ Priests: Strong"
 #wallunit 2108
 
 #addgod 607
+#addgod 5259
 #cheapgod20 607
 
 #bloodblessbonus 2
@@ -3707,6 +3910,46 @@ Priests: Strong"
 #spiritsight
 #neednoteat
 #animal
+#end
+
+#newmonster 5287
+#spr1 "./Meme Age/Rio/punished_monke1.tga"
+#spr2 "./Meme Age/Rio/punished_monke2.tga"
+#name "Punished Macac"
+#descr "Why are we here, just to suffer. Every ascension cycle, I can feel my tail… and my paws… even my opposable big toe. The body I've lost… the macacs I've lost… won't stop hurting… It's like they're all still there. You feel it, too, don’t you?
+Big Boss, Punished Macac, is a mercenary leader from and one of the founders of Macaco Sin Limite, a private military company specializing in covert operations. Having mastered the art of remembering the basis of CQC and segregating the darker macacs to prevent the Mute Affliction Virus, his fame now supercedes him as he is constantly known across not just Rio, but the world, as the legendary soldier."
+#ap 16
+#mapmove 18
+#hp 15
+#prot 0
+#size 2
+#str 12
+#enc 1
+#att 13
+#def 13
+#prec 14
+#mr 18
+#mor 18
+#maxage 60
+#startage 35
+#fixedname "Big Boss"
+#gcost 0
+#magicskill 1 2
+#magicskill 3 2
+#magicskill 6 3
+#magicskill 8 1
+#holy
+#weapon "Hand Crossbow"
+#weapon "Gloves of the Gladiator"
+#darkvision 50
+#animal
+#stealthy 50
+#spy
+#assassin
+#patience 5
+#expertleader
+#inspirational 2
+#heal
 #end
 
 #newmonster 5291
@@ -3968,7 +4211,7 @@ Priests: Powerful"
 #forestrec 5291
 #forestrec 5294
 
---#hero1 TBD
+#hero1 5287 --big boss
 
 #startcom 1029
 #startunittype1 2111
@@ -3987,7 +4230,7 @@ Priests: Powerful"
 
 #fireblessbonus 1
 #astralblessbonus 1
-#natureblessbonus 3
+#natureblessbonus 2
 
 #clearsites
 #startsite "New House of Justice"
@@ -8842,11 +9085,11 @@ Priests: Powerful"
 #size 4
 #str 28
 #enc 3
-#att 10
+#att 12
 #def 10
 #prec 9
 #mr 18
-#mor 16
+#mor 25
 #maxage 375
 #startage 110
 #nametype 109
@@ -8913,11 +9156,11 @@ Priests: Powerful"
 #size 4
 #str 28
 #enc 3
-#att 10
+#att 12
 #def 10
 #prec 9
 #mr 18
-#mor 16
+#mor 25
 #maxage 375
 #startage 110
 #nametype 109
@@ -8949,11 +9192,11 @@ Priests: Powerful"
 #size 4
 #str 28
 #enc 3
-#att 10
+#att 12
 #def 10
 #prec 9
 #mr 18
-#mor 16
+#mor 25
 #maxage 375
 #startage 110
 #nametype 109
@@ -8996,7 +9239,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
 #def 7
 #prec 9
 #mr 18
-#mor 20
+#mor 30
 #maxage 375
 #startage 110
 #gcost 0
@@ -9203,6 +9446,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
 #gems 3 2
 #gems 6 2
 #homecom 5558
+#xp 5
 #end
 
 #newsite 1632
@@ -10241,7 +10485,7 @@ This Giant holds a giant brazier, from which sparks of Muspel Flames are born. U
 #nametype 115
 #gcost 750
 #rcost 1
-#rpcost 4
+#rpcost 2
 #weapon "Flaming Fist"
 #magicskill 0 2
 #magicskill 3 3
@@ -11050,6 +11294,28 @@ Raze: Does not collect tax income, gain gold via Harvesters"
 #deathrec 5
 #end
 
+#newmonster 5656
+#spr1 "./Meme Age/Sorus/gopnik1.tga"
+#spr2 "./Meme Age/Sorus/gopnik2.tga"
+#copystats 3071
+#hp 14
+#att 10
+#def 10
+#mr 17
+#name "Gopnik"
+#descr "The lazy non-contributors to the Republic and the Union. They do the minimum amount of work, collect their Union membership pay and go get drunk for the rest of the month. Squatting around street corners and generally causing a large amount of ruckus. Due to this, the Sorus Commissary has filed a large gold bounty for them to fight in the front lines as opposed to the mandatory unpaid service of other civilians. It is not much gold but when the Gopnik considers that it can buy them years of supply worth of vodka and sunflower seeds they quickly sign up."
+#clearweapons
+#cleararmor
+#clearspec
+#coldres 10
+#invulnerable 10
+#weapon "Gloves of Adibas"
+#gcost 5
+#rcost 5
+#rpcost 25
+#slothpower 1
+#end
+
 #selectspell 236
 #restricted 168
 #end
@@ -11174,6 +11440,7 @@ Priests: Weak"
 #addrecunit 5653
 #addrecunit 5654
 #addrecunit 5655
+#addrecunit 5656
 
 #hero1 1957
 #hero2 1958
@@ -13250,6 +13517,7 @@ Priests: Average"
 #maxage 500
 #clearmagic
 #magicskill 2 2
+#researchbonus -1
 #monpresentrec -3000
 #end
 
@@ -13764,6 +14032,40 @@ The Rellic Titan requires a Rellic Queen to be nurtured. Due to their massive si
 #berserk 3
 #fear 10
 #reclimit 1
+#itemslots 15362
+#end
+
+#newmonster 5852
+#spr1 "./Meme Age/Rlerg/doomguy1.tga"
+#spr2 "./Meme Age/Rlerg/doomguy2.tga"
+#name "Doom Titan"
+#descr "The Doom Titan was one particular Rellic Titan that has garnered the attention from the high queens. They gave this low brute of a life form a divine name of 'Ultralisk' and thus granted him consciousness of his own existence. Since then he has fought thousanfold more valiantly on the battlefields for R'lyeh. Decimating foe after foe to truly prove his worth of his name. Not before long, he was annointed to be a holy figure and granted the power from the divines to spread the word of R'lyeh as he conquered. Every battle he was adding more accomplishment under his tendrils. His combat prowess has not gone unnoticed however, it was in due time he got invited to a private Arena event. Little did he know it was an event scheduled by the devil himself to drag him down to hell. Against all odds, Ultralisk emerged victorious time and time again from the depth of inferno and right back to the battlefield, only staining himself with demon blood each time and coming out unscathed."
+#ap 8
+#mapmove 18
+#hp 144
+#prot 6
+#size 6
+#str 26
+#enc 4
+#att 16
+#def 8
+#prec 9
+#mr 14
+#mor 15
+#maxage 40
+#startage 15
+#fixedname "Ultralisk"
+#gcost 0
+#weapon 636 --life drain tentacle
+#weapon 600 --crab claw
+#weapon 29 --claw
+#amphibian
+#spiritsight
+#berserk 5
+#fear 10
+#itemslots 15362
+#magicskill 1 1
+#magicskill 8 3
 #end
 
 #newspell
@@ -13810,7 +14112,7 @@ The Rellic Titan requires a Rellic Queen to be nurtured. Due to their massive si
 #damage 5824 --Rellic Queen
 #path 0 2
 #pathlevel 0 1
-#fatiguecost 2000
+#fatiguecost 2500
 #spec 8388608 --uw ok
 #end
 
@@ -13938,7 +14240,7 @@ The Rellic Titan requires a Rellic Queen to be nurtured. Due to their massive si
 #damage 5832 --Child
 #path 0 2
 #pathlevel 0 1
-#fatiguecost 200
+#fatiguecost 300
 #spec 8388608 --uw ok
 #end
 
@@ -13954,7 +14256,7 @@ The Rellic Titan requires a Rellic Queen to be nurtured. Due to their massive si
 #damage 5833 --Infestor
 #path 0 2
 #pathlevel 0 1
-#fatiguecost 500
+#fatiguecost 600
 #spec 8388608 --uw ok
 #end
 
@@ -13970,7 +14272,7 @@ The Rellic Titan requires a Rellic Queen to be nurtured. Due to their massive si
 #damage 5834 --Starspawn
 #path 0 2
 #pathlevel 0 1
-#fatiguecost 600
+#fatiguecost 800
 #spec 8388608 --uw ok
 #end
 
@@ -14071,7 +14373,7 @@ Special: Commanders and Spawns are morphed into by Rellic Drones; most Rellic Cr
 #uwrec 5850
 #uwrec 5851
 
---#hero1 TBD
+#hero1 5852 --Ultralisk
 
 #startcom 5834
 #startunittype1 5841
@@ -14632,7 +14934,7 @@ Priests: Weak"
 #descr "The Black Panther is the king of the Panther clan. They are enhanced by every single stimulant possible including the sacred purple drank that gives them the power of a panther. Their subdermal plating is not only powerful at stopping damage but also capable of rendering themselves stealthy and out of sight. They wield two powerful meteorite daggers that can cut nearly anything it comes into contact with. Furthermore, they are able to transform into the form of a technologically enhanced Panther at will."
 #ap 10
 #mapmove 22
-#hp 21
+#hp 26
 #prot 16
 #size 3
 #str 18
@@ -14941,6 +15243,42 @@ Priests: Weak"
 #incunrest -2
 #end
 
+#newmonster 5929
+#spr1 "./Meme Age/Wakanda/superPanther1.tga"
+#spr2 "./Meme Age/Wakanda/superPanther2.tga"
+#name "Saiyan Tribe Panther"
+#descr "The Saiyan tribe is a very rare secluded tribe living within Wakanda territory. They rarely interact with other tribes and due to nomadic lifestyles they are extremely hard to find. The Saiyan Tribe Panther is one of the very few Saiyan princes that has decided to work with the Panther Tribe of Wakanda. Since then he has been named an honorary Panther among the people, sporting incredible combat skills never before seen."
+#ap 18
+#mapmove 18
+#hp 18
+#prot 16
+#size 2
+#str 13
+#enc 3
+#att 23
+#def 23
+#prec 15
+#mr 20
+#mor 30
+#maxage 50
+#startage 35
+#fixedname "N'koku"
+#gcost 0
+#rcost 7
+#rpcost 4
+#weapon "Great Sword"
+#weapon "Qi Blast"
+#holy
+#forestsurvival
+#heal
+#magicskill 1 2
+#magicskill 3 2
+#magicskill 6 2
+#noleader
+#unsurr 6
+#flying
+#end
+
 #newsite 1662
 #name "Fields of Purple"
 #path 5
@@ -14980,7 +15318,7 @@ Priests: Average"
 #addrecunit 5925
 #addrecunit 5926
 
---#hero1 TBD
+#hero1 5929 --N'koku
 
 #startcom 5916
 #startunittype1 5924
@@ -15179,6 +15517,7 @@ Priests: Average"
 #holy
 #poorleader
 #pooramphibian
+#itemslots 31878
 #startage 16
 #startitem 656 --"Las Pelagus Coin"
 #watershape 5953
@@ -15207,6 +15546,7 @@ Priests: Average"
 #poorleader
 #pooramphibian
 #female
+#itemslots 31878
 #startage 16
 #startitem 656 --"Las Pelagus Coin"
 #watershape 5954
@@ -15236,6 +15576,7 @@ Priests: Average"
 #holy
 #poorleader
 #pooramphibian
+#itemslots 31878
 #startage 16
 #startitem 656 --"Las Pelagus Coin"
 #landshape 5951
@@ -15264,6 +15605,7 @@ Priests: Average"
 #poorleader
 #pooramphibian
 #female
+#itemslots 31878
 #startage 16
 #startitem 656 --"Las Pelagus Coin"
 #landshape 5952
@@ -15328,95 +15670,727 @@ Priests: Average"
 #gcost 10010
 #end
 
+
 #newmonster 5961
 #copyspr 3023
 #copystats 3023
 #name "Pelagus Hoplite"
-#descr "The bronze-clad hoplites of Pelagus are trained and equipped in the fashion of the old Pelagian mermen hoplites. Their main role is to be a heavy and flexible contingent able to strike from land into the sea, or from the sea into coastal regions. Since they are weaker than the Triton hoplites in underwater battles, and not as efficient as the phalangites on dry land, they are seen as redundant by some military leaders."
-#watershape 5962
+#descr "The bronze-clad hoplites of Pelagus are trained and equipped in the fashion of the old Pelagian mermen hoplites. Their main role is to be a heavy and flexible contingent able to strike from land into the sea, or from the sea into coastal regions. Since they are weaker than the Triton hoplites in underwater battles, and not as efficient as the phalangites on dry land, they are seen as redundant by some military leaders. The luckier gamblers among Pelagus Hoplites invest in enchanting their armor and acquiring gaudy golden long spears."
+#firstshape -5001 -- Pelagus Hoplite, land montag
 #end
 
 #newmonster 5962
 #copyspr 3022
 #copystats 3022
 #name "Pelagus Hoplite"
-#descr "The bronze-clad hoplites of Pelagus are trained and equipped in the fashion of the old Pelagian mermen hoplites. Their main role is to be a heavy and flexible contingent able to strike from land into the sea, or from the sea into coastal regions. Since they are weaker than the Triton hoplites in underwater battles, and not as efficient as the phalangites on dry land, they are seen as redundant by some military leaders."
-#landshape 5961
+#descr "The bronze-clad hoplites of Pelagus are trained and equipped in the fashion of the old Pelagian mermen hoplites. Their main role is to be a heavy and flexible contingent able to strike from land into the sea, or from the sea into coastal regions. Since they are weaker than the Triton hoplites in underwater battles, and not as efficient as the phalangites on dry land, they are seen as redundant by some military leaders. The luckier gamblers among Pelagus Hoplites invest in enchanting their armor and acquiring gaudy golden long spears."
+#firstshape -5002 -- Pelagus Hoplite, sea montag
+#end
+
+#newmonster 8019 -- common Pelagus Hoplite, land
+#copyspr 3023
+#copystats 3023
+#name "Pelagus Hoplite"
+#descr "The bronze-clad hoplites of Pelagus are trained and equipped in the fashion of the old Pelagian mermen hoplites. Their main role is to be a heavy and flexible contingent able to strike from land into the sea, or from the sea into coastal regions. Since they are weaker than the Triton hoplites in underwater battles, and not as efficient as the phalangites on dry land, they are seen as redundant by some military leaders. The luckier gamblers among Pelagus Hoplites invest in enchanting their armor and acquiring gaudy golden long spears."
+#montag 5001 -- Pelagus Hoplite, land montag
+#montagweight 9
+#watershape 8020 -- common Pelagus Hoplite, sea
+#end
+
+#newmonster 8020 -- common Pelagus Hoplite, sea
+#copyspr 3022
+#copystats 3022
+#name "Pelagus Hoplite"
+#descr "The bronze-clad hoplites of Pelagus are trained and equipped in the fashion of the old Pelagian mermen hoplites. Their main role is to be a heavy and flexible contingent able to strike from land into the sea, or from the sea into coastal regions. Since they are weaker than the Triton hoplites in underwater battles, and not as efficient as the phalangites on dry land, they are seen as redundant by some military leaders. The luckier gamblers among Pelagus Hoplites invest in enchanting their armor and acquiring gaudy golden long spears."
+#montag 5002 -- Pelagus Hoplite, sea montag
+#montagweight 9
+#landshape 8019 -- common Pelagus Hoplite, land
+#end
+
+#newmonster 8021 -- rare Pelagus Hoplite, land
+#copyspr 3023
+#copystats 3023
+#name "Pelagus Hoplite"
+#descr "The bronze-clad hoplites of Pelagus are trained and equipped in the fashion of the old Pelagian mermen hoplites. Their main role is to be a heavy and flexible contingent able to strike from land into the sea, or from the sea into coastal regions. Since they are weaker than the Triton hoplites in underwater battles, and not as efficient as the phalangites on dry land, they are seen as redundant by some military leaders. The luckier gamblers among Pelagus Hoplites invest in enchanting their armor and acquiring gaudy golden long spears."
+#montag 5001 -- Pelagus Hoplite, land montag
+#montagweight 1
+#watershape 8022 -- rare Pelagus Hoplite, sea
+#mor 12
+#clearweapons
+#weapon 1996 -- Golden Long Spear
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 238 -- Gleaming Hoplon
+#end
+
+#newmonster 8022 -- rare Pelagus Hoplite, sea
+#copyspr 3022
+#copystats 3022
+#name "Pelagus Hoplite"
+#descr "The bronze-clad hoplites of Pelagus are trained and equipped in the fashion of the old Pelagian mermen hoplites. Their main role is to be a heavy and flexible contingent able to strike from land into the sea, or from the sea into coastal regions. Since they are weaker than the Triton hoplites in underwater battles, and not as efficient as the phalangites on dry land, they are seen as redundant by some military leaders. The luckier gamblers among Pelagus Hoplites invest in enchanting their armor and acquiring gaudy golden long spears."
+#montag 5002 -- Pelagus Hoplite, sea montag
+#montagweight 1
+#landshape 8021 -- rare Pelagus Hoplite, land
+#mor 12
+#clearweapons
+#weapon 1996 -- Golden Long Spear
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 238 -- Gleaming Hoplon
 #end
 
 #newmonster 5963
 #copyspr 3021
 #copystats 3021
 #name "Pelagus Phalangite"
-#descr "The phalangites are the elites of Pelagus, fighting in close formations in the style of Arcoscephale. While of merman stock, they are armed with iron weapons and are not supposed to conquer the sea. That task is left for the bronze-clad hoplites. The phalangites of Pelagus are not as skilled at marching as those of Arcoscephale."
-#watershape 5964
+#descr "The phalangites are the elites of Pelagus, fighting in close formations in the style of Arcoscephale. While of merman stock, they are armed with iron weapons and are not supposed to conquer the sea. That task is left for the bronze-clad hoplites. The phalangites of Pelagus are not as skilled at marching as those of Arcoscephale. It is customary for the luckier gamblers among Pelagus Phalangites to enchant their long spears, lighten their armor and acquire golden girdles enchanted to strengthen and invigorate them while fighting overland."
+#firstshape -5003 -- Pelagus Phalangite, land montag
 #end
 
 #newmonster 5964
 #copyspr 3020
 #copystats 3020
 #name "Pelagus Phalangite"
-#descr "The phalangites are the elites of Pelagus, fighting in close formations in the style of Arcoscephale. While of merman stock, they are armed with iron weapons and are not supposed to conquer the sea. That task is left for the bronze-clad hoplites. The phalangites of Pelagus are not as skilled at marching as those of Arcoscephale."
-#landshape 5963
+#descr "The phalangites are the elites of Pelagus, fighting in close formations in the style of Arcoscephale. While of merman stock, they are armed with iron weapons and are not supposed to conquer the sea. That task is left for the bronze-clad hoplites. The phalangites of Pelagus are not as skilled at marching as those of Arcoscephale. It is customary for the luckier gamblers among Pelagus Phalangites to enchant their long spears, lighten their armor and acquire golden girdles enchanted to strengthen and invigorate them while fighting overland."
+#firstshape -5004 -- Pelagus Phalangite, sea montag
+#end
+
+#newmonster 8023 -- common Pelagus Phalangite, land
+#copyspr 3021
+#copystats 3021
+#name "Pelagus Phalangite"
+#descr "The phalangites are the elites of Pelagus, fighting in close formations in the style of Arcoscephale. While of merman stock, they are armed with iron weapons and are not supposed to conquer the sea. That task is left for the bronze-clad hoplites. The phalangites of Pelagus are not as skilled at marching as those of Arcoscephale. It is customary for the luckier gamblers among Pelagus Phalangites to enchant their long spears, lighten their armor and acquire golden girdles enchanted to strengthen and invigorate them while fighting overland."
+#montag 5003 -- Pelagus Phalangite, land montag
+#montagweight 9
+#watershape 8024 -- common Pelagus Phalangite, sea
+#end
+
+#newmonster 8024 -- common Pelagus Phalangite, sea
+#copyspr 3020
+#copystats 3020
+#name "Pelagus Phalangite"
+#descr "The phalangites are the elites of Pelagus, fighting in close formations in the style of Arcoscephale. While of merman stock, they are armed with iron weapons and are not supposed to conquer the sea. That task is left for the bronze-clad hoplites. The phalangites of Pelagus are not as skilled at marching as those of Arcoscephale. It is customary for the luckier gamblers among Pelagus Phalangites to enchant their long spears, lighten their armor and acquire golden girdles enchanted to strengthen and invigorate them while fighting overland."
+#montag 5004 -- Pelagus Phalangite, sea montag
+#montagweight 9
+#landshape 8023 -- common Pelagus Phalangite, land
+#end
+
+#newmonster 8025 -- rare Pelagus Phalangite, land
+#copyspr 3021
+#copystats 3021
+#name "Pelagus Phalangite"
+#descr "The phalangites are the elites of Pelagus, fighting in close formations in the style of Arcoscephale. While of merman stock, they are armed with iron weapons and are not supposed to conquer the sea. That task is left for the bronze-clad hoplites. The phalangites of Pelagus are not as skilled at marching as those of Arcoscephale. It is customary for the luckier gamblers among Pelagus Phalangites to enchant their long spears, lighten their armor and acquire golden girdles enchanted to strengthen and invigorate them while fighting overland."
+#montag 5003 -- Pelagus Phalangite, land montag
+#montagweight 1
+#watershape 8026 -- rare Pelagus Phalangite, sea
+#mor 13
+#str 14
+#reinvigoration 3
+#clearweapons
+#weapon 1995 -- Enchanted Long Spear
+#cleararmor
+#armor 185 -- Brightmail Haubergeon
+#armor 123 -- Hoplite Helmet
+#armor 209 -- Hoplon
+#end
+
+#newmonster 8026 -- rare Pelagus Phalangite, sea
+#copyspr 3020
+#copystats 3020
+#name "Pelagus Phalangite"
+#descr "The phalangites are the elites of Pelagus, fighting in close formations in the style of Arcoscephale. While of merman stock, they are armed with iron weapons and are not supposed to conquer the sea. That task is left for the bronze-clad hoplites. The phalangites of Pelagus are not as skilled at marching as those of Arcoscephale. It is customary for the luckier gamblers among Pelagus Phalangites to enchant their long spears, lighten their armor and acquire golden girdles enchanted to strengthen and invigorate them while fighting overland."
+#montag 5004 -- Pelagus Phalangite, sea montag
+#montagweight 1
+#landshape 8025 -- rare Pelagus Phalangite, land
+#mor 13
+#str 14
+#reinvigoration 3
+#clearweapons
+#weapon 1995 -- Enchanted Long Spear
+#cleararmor
+#armor 185 -- Brightmail Haubergeon
+#armor 123 -- Hoplite Helmet
+#armor 209 -- Hoplon
 #end
 
 #newmonster 5965
 #copyspr 3031
 #copystats 3031
 #name "Pelagus Crossbowman"
-#descr "Since the days of Old Pelagia mermen have encountered and suffered at the hands of human archers and crossbowmen. The Kings and Queens of Erytheia have realized that ranged troops are instrumental if one is to conquer human lands. However, ranged weapons can be useful underneath the waves as well. Erytheian engineers have developed a unique kind of crossbow, the gastraphetes. It is inferior to the common crossbow on dry land, but it allows its wielder to fire arrows in the water, albeit with reduced range. The troops of Las Pelagus continue to adopt this weaponry for their effectiveness in battle."
-#watershape 5966
+#descr "Since the days of Old Pelagia mermen have encountered and suffered at the hands of human archers and crossbowmen. The old Kings and Queens of Erytheia realized that ranged troops were instrumental in conquering human lands. However, ranged weapons can be useful underneath the waves as well. Erytheian engineers developed a unique kind of crossbow, the gastraphetes. It is inferior to the common crossbow on dry land, but it allows its wielder to fire arrows in the water, albeit with reduced range. The troops of Las Pelagus continue to adopt this weaponry for their effectiveness in battle. The luckier gamblers among Pelagus Crossbowmen invest in enchanting their gastraphetes and securing magical armor to protect them against enemy missiles."
+#firstshape -5005 -- Pelagus Crossbowman, land montag
 #end
 
 #newmonster 5966
 #copyspr 3030
 #copystats 3030
 #name "Pelagus Crossbowman"
-#descr "Since the days of Old Pelagia mermen have encountered and suffered at the hands of human archers and crossbowmen. The Kings and Queens of Erytheia have realized that ranged troops are instrumental if one is to conquer human lands. However, ranged weapons can be useful underneath the waves as well. Erytheian engineers have developed a unique kind of crossbow, the gastraphetes. It is inferior to the common crossbow on dry land, but it allows its wielder to fire arrows in the water, albeit with reduced range. The troops of Las Pelagus continue to adopt this weaponry for their effectiveness in battle."
-#landshape 5965
+#descr "Since the days of Old Pelagia mermen have encountered and suffered at the hands of human archers and crossbowmen. The old Kings and Queens of Erytheia realized that ranged troops were instrumental in conquering human lands. However, ranged weapons can be useful underneath the waves as well. Erytheian engineers developed a unique kind of crossbow, the gastraphetes. It is inferior to the common crossbow on dry land, but it allows its wielder to fire arrows in the water, albeit with reduced range. The troops of Las Pelagus continue to adopt this weaponry for their effectiveness in battle. The luckier gamblers among Pelagus Crossbowmen invest in enchanting their gastraphetes and securing magical armor to protect them against enemy missiles."
+#firstshape -5006 -- Pelagus Crossbowman, sea montag
+#end
+
+#newmonster 8027 -- common Pelagus Crossbowman, land
+#copyspr 3031
+#copystats 3031
+#name "Pelagus Crossbowman"
+#descr "Since the days of Old Pelagia mermen have encountered and suffered at the hands of human archers and crossbowmen. The old Kings and Queens of Erytheia realized that ranged troops were instrumental in conquering human lands. However, ranged weapons can be useful underneath the waves as well. Erytheian engineers developed a unique kind of crossbow, the gastraphetes. It is inferior to the common crossbow on dry land, but it allows its wielder to fire arrows in the water, albeit with reduced range. The troops of Las Pelagus continue to adopt this weaponry for their effectiveness in battle. The luckier gamblers among Pelagus Crossbowmen invest in enchanting their gastraphetes and securing magical armor to protect them against enemy missiles."
+#montag 5005 -- Pelagus Crossbowman, land montag
+#montagweight 9
+#watershape 8028 -- common Pelagus Crossbowman, sea
+#end
+
+#newmonster 8028 -- common Pelagus Crossbowman, sea
+#copyspr 3030
+#copystats 3030
+#name "Pelagus Crossbowman"
+#descr "Since the days of Old Pelagia mermen have encountered and suffered at the hands of human archers and crossbowmen. The old Kings and Queens of Erytheia realized that ranged troops were instrumental in conquering human lands. However, ranged weapons can be useful underneath the waves as well. Erytheian engineers developed a unique kind of crossbow, the gastraphetes. It is inferior to the common crossbow on dry land, but it allows its wielder to fire arrows in the water, albeit with reduced range. The troops of Las Pelagus continue to adopt this weaponry for their effectiveness in battle. The luckier gamblers among Pelagus Crossbowmen invest in enchanting their gastraphetes and securing magical armor to protect them against enemy missiles."
+#montag 5006 -- Pelagus Crossbowman, sea montag
+#montagweight 9
+#landshape 8027 -- common Pelagus Crossbowman, land
+#end
+
+#newmonster 8029 -- rare Pelagus Crossbowman, land
+#copyspr 3031
+#copystats 3031
+#name "Pelagus Crossbowman"
+#descr "Since the days of Old Pelagia mermen have encountered and suffered at the hands of human archers and crossbowmen. The old Kings and Queens of Erytheia realized that ranged troops were instrumental in conquering human lands. However, ranged weapons can be useful underneath the waves as well. Erytheian engineers developed a unique kind of crossbow, the gastraphetes. It is inferior to the common crossbow on dry land, but it allows its wielder to fire arrows in the water, albeit with reduced range. The troops of Las Pelagus continue to adopt this weaponry for their effectiveness in battle. The luckier gamblers among Pelagus Crossbowmen invest in enchanting their gastraphetes and securing magical armor to protect them against enemy missiles."
+#montag 5005 -- Pelagus Crossbowman, land montag
+#montagweight 1
+#watershape 8030 -- rare Pelagus Crossbowman, sea
+#mor 11
+#airshield 80
+#clearweapons
+#weapon 1997 -- Enchanted Gastaphetes
+#weapon 674 -- Bronze Dagger
+#cleararmor
+#armor 135 -- Bronze Cap
+#armor 48 -- Silver Hauberk
+#end
+
+#newmonster 8030 -- rare Pelagus Crossbowman, sea
+#copyspr 3030
+#copystats 3030
+#name "Pelagus Crossbowman"
+#descr "Since the days of Old Pelagia mermen have encountered and suffered at the hands of human archers and crossbowmen. The old Kings and Queens of Erytheia realized that ranged troops were instrumental in conquering human lands. However, ranged weapons can be useful underneath the waves as well. Erytheian engineers developed a unique kind of crossbow, the gastraphetes. It is inferior to the common crossbow on dry land, but it allows its wielder to fire arrows in the water, albeit with reduced range. The troops of Las Pelagus continue to adopt this weaponry for their effectiveness in battle. The luckier gamblers among Pelagus Crossbowmen invest in enchanting their gastraphetes and securing magical armor to protect them against enemy missiles."
+#montag 5006 -- Pelagus Crossbowman, sea montag
+#montagweight 1
+#landshape 8029 -- rare Pelagus Crossbowman, land
+#mor 11
+#airshield 80
+#clearweapons
+#weapon 1997 -- Enchanted Gastaphetes
+#weapon 674 -- Bronze Dagger
+#cleararmor
+#armor 135 -- Bronze Cap
+#armor 48 -- Silver Hauberk
 #end
 
 #newmonster 5967
 #copyspr 3052
 #copystats 3052
 #name "Soldiers of Great Fortune"
-#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with Pearl weapons and adorned with Pearl armor as a symbol of wealth and fortune. These jewelry and armors that shines with unbearable splendor and bring about good news where ever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
 #clearspec
-#watershape 5968
+#firstshape -5000 -- Soldier of Great Fortune montag
 #holy
 #pooramphibian
-#bringeroffortune 2
+#bringeroffortune 1
+#clearweapons
+#weapon 1999 -- Weighted Blade
 #end
 
-#newmonster 5968
-#copyspr 3051
-#copystats 3051
-#name "Soldiers of Great Fortune"
-#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with Pearl weapons and adorned with Pearl armor as a symbol of wealth and fortune. These jewelry and armors that shines with unbearable splendor and bring about good news where ever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#newmonster 8000 -- common SoGF, land
+#copyspr 3052
+#copystats 3052
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
 #clearspec
-#landshape 5967
+#montag 5000 -- Soldier of Great Fortune montag
+#montagweight 90
+#watershape 8001 -- common SoGF, sea
 #holy
 #pooramphibian
-#bringeroffortune 2
+#bringeroffortune 1
+#clearweapons
+#weapon 1999 -- Weighted Blade
+#end
+
+#newmonster 8001 -- common SoGF, sea
+#copyspr 3051
+#copystats 3051
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#landshape 8000 -- common SoGF, land
+#holy
+#amphibian
+#bringeroffortune 1
 #att 12
 #gcost 20
 #addupkeep -20
+#clearweapons
+#weapon 1999 -- Weighted Blade
+#end
+
+#newmonster 8002 -- enchanted sword SoGF, land
+#copyspr 3052
+#copystats 3052
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#montag 5000 -- Soldier of Great Fortune montag
+#montagweight 1
+#watershape 8003 -- enchanted sword SoGF, sea
+#holy
+#pooramphibian
+#bringeroffortune 2
+#sunawe 1
+#clearweapons
+#weapon 75 -- Enchanted Sword
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8003 -- enchanted sword SoGF, sea
+#copyspr 3051
+#copystats 3051
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#landshape 8002 -- enchanted sword SoGF, land
+#holy
+#amphibian
+#bringeroffortune 2
+#sunawe 1
+#att 12
+#gcost 20
+#addupkeep -20
+#clearweapons
+#weapon 75 -- Enchanted Sword
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8004 -- faithful SoGF, land
+#copyspr 3052
+#copystats 3052
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#montag 5000 -- Soldier of Great Fortune montag
+#montagweight 1
+#watershape 8005 -- faithful SoGF, sea
+#holy
+#pooramphibian
+#bringeroffortune 2
+#sunawe 1
+#clearweapons
+#weapon 102 -- Faithful
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8005 -- faithful SoGF, sea
+#copyspr 3051
+#copystats 3051
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#landshape 8004 -- faithful SoGF, land
+#holy
+#amphibian
+#bringeroffortune 2
+#sunawe 1
+#att 12
+#gcost 20
+#addupkeep -20
+#clearweapons
+#weapon 102 -- Faithful
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8006 -- fire sword SoGF, land
+#copyspr 3052
+#copystats 3052
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#montag 5000 -- Soldier of Great Fortune montag
+#montagweight 1
+#watershape 8007 -- fire sword SoGF, sea
+#holy
+#pooramphibian
+#bringeroffortune 2
+#sunawe 1
+#clearweapons
+#weapon 76 -- Fire Sword
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8007 -- fire sword SoGF, sea
+#copyspr 3051
+#copystats 3051
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#landshape 8006 -- fire sword SoGF, land
+#holy
+#amphibian
+#bringeroffortune 2
+#sunawe 1
+#att 12
+#gcost 20
+#addupkeep -20
+#clearweapons
+#weapon 76 -- Fire Sword
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8008 -- ice sword SoGF, land
+#copyspr 3052
+#copystats 3052
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#montag 5000 -- Soldier of Great Fortune montag
+#montagweight 1
+#watershape 8009 -- ice sword SoGF, sea
+#holy
+#pooramphibian
+#bringeroffortune 2
+#sunawe 1
+#clearweapons
+#weapon 77 -- Ice Sword
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8009 -- ice sword SoGF, sea
+#copyspr 3051
+#copystats 3051
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#landshape 8008 -- ice sword SoGF, land
+#holy
+#amphibian
+#bringeroffortune 2
+#sunawe 1
+#att 12
+#gcost 20
+#addupkeep -20
+#clearweapons
+#weapon 77 -- Ice Sword
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8010 -- magic sword SoGF, land
+#copyspr 3052
+#copystats 3052
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#montag 5000 -- Soldier of Great Fortune montag
+#montagweight 1
+#watershape 8011 -- magic sword SoGF, sea
+#holy
+#pooramphibian
+#bringeroffortune 2
+#sunawe 1
+#clearweapons
+#weapon 202 -- Magic Sword
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8011 -- magic sword SoGF, sea
+#copyspr 3051
+#copystats 3051
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#landshape 8010 -- magic sword SoGF, land
+#holy
+#amphibian
+#bringeroffortune 2
+#sunawe 1
+#att 12
+#gcost 20
+#addupkeep -20
+#clearweapons
+#weapon 202 -- Magic Sword
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8012 -- golden sword SoGF, land
+#copyspr 3052
+#copystats 3052
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#montag 5000 -- Soldier of Great Fortune montag
+#montagweight 1
+#watershape 8013 -- golden sword SoGF, sea
+#holy
+#pooramphibian
+#bringeroffortune 3
+#sunawe 1
+#clearweapons
+#weapon 474 -- Golden Sword
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8013 -- golden sword SoGF, sea
+#copyspr 3051
+#copystats 3051
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#landshape 8012 -- golden sword SoGF, land
+#holy
+#amphibian
+#bringeroffortune 3
+#sunawe 1
+#att 12
+#gcost 20
+#addupkeep -20
+#clearweapons
+#weapon 474 -- Golden Sword
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8014 -- sword of sharpness SoGF, land
+#copyspr 3052
+#copystats 3052
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#montag 5000 -- Soldier of Great Fortune montag
+#montagweight 1
+#watershape 8015 -- sword of sharpness SoGF, sea
+#holy
+#pooramphibian
+#bringeroffortune 3
+#sunawe 1
+#clearweapons
+#weapon 74 -- Sword of Sharpness
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8015 -- sword of sharpness SoGF, sea
+#copyspr 3051
+#copystats 3051
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#landshape 8014 -- sword of sharpness SoGF, land
+#holy
+#amphibian
+#bringeroffortune 3
+#sunawe 1
+#att 12
+#gcost 20
+#addupkeep -20
+#clearweapons
+#weapon 74 -- Sword of Sharpness
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8015 -- burning blade SoGF, land
+#copyspr 3052
+#copystats 3052
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#montag 5000 -- Soldier of Great Fortune montag
+#montagweight 1
+#watershape 8016 -- burning blade SoGF, sea
+#holy
+#pooramphibian
+#bringeroffortune 3
+#sunawe 1
+#clearweapons
+#weapon 681 -- Burning Blade
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8016 -- burning blade SoGF, sea
+#copyspr 3051
+#copystats 3051
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#landshape 8015 -- burning blade SoGF, land
+#holy
+#amphibian
+#bringeroffortune 3
+#sunawe 1
+#att 12
+#gcost 20
+#addupkeep -20
+#clearweapons
+#weapon 681 -- Burning Blade
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8017 -- sword of swiftness SoGF, land
+#copyspr 3052
+#copystats 3052
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#montag 5000 -- Soldier of Great Fortune montag
+#montagweight 1
+#watershape 8018 -- sword of swiftness SoGF, sea
+#holy
+#pooramphibian
+#bringeroffortune 3
+#sunawe 1
+#clearweapons
+#weapon 106 -- Burning Blade
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
+#end
+
+#newmonster 8018 -- sword of swiftness SoGF, sea
+#copyspr 3051
+#copystats 3051
+#name "Soldier of Great Fortune"
+#descr "Las Pelagus, the City of Gamble, was brought to this power via Luck and Fortunes. The Soldiers of Great Fortune are those blessed by the House to protect and grow their prosperity further. The soldiers were equipped with arms and armor of Pearl as a symbol of wealth and fortune, and their blades are enchanted to curse the fortunes of their foes. The luckiest among them have invested their wealth into even more fantastic armament. This jewelry and armor shines with unbearable splendor and brings about good news wherever they go. They often accompany the leaders of the House as to secure them from terrible luck."
+#clearspec
+#landshape 8017 -- sword of swiftness SoGF, land
+#holy
+#amphibian
+#bringeroffortune 3
+#sunawe 1
+#att 12
+#gcost 20
+#addupkeep -20
+#clearweapons
+#weapon 106 -- Burning Blade
+#cleararmor
+#armor 237 -- Gleaming Hauberk
+#armor 239 -- Gleaming Helmet
+#armor 189 -- Pearl Shield
 #end
 
 #newmonster 5969
 #copyspr 3019
 #copystats 3019
 #name "Pelagus Javelinist"
-#descr "The Pelagus Javelinist are light merman infantry. They wield shields and javelins and are often used as skirmishers. The Pelagus Javelinist are not equipped with iron weapons and are expected to fight both on land and in the sea."
-#watershape 5970
+#descr "The Pelagus Javelinists are light merman infantry. They wield shields and javelins and are often used as skirmishers. The Pelagus Javelinists are not equipped with iron weapons and are expected to fight both on land and in the sea. The luckier gamblers among Pelagus Javelinists invest in gaudy golden spears, flaming javelins and superior light armor."
+#firstshape -5007 -- Pelagus Javelinist, land montag
 #end
 
 #newmonster 5970
 #copyspr 3018
 #copystats 3018
 #name "Pelagus Javelinist"
-#descr "The Pelagus Javelinist are light merman infantry. They wield shields and javelins and are often used as skirmishers. The Pelagus Javelinist are not equipped with iron weapons and are expected to fight both on land and in the sea."
-#landshape 5969
+#descr "The Pelagus Javelinists are light merman infantry. They wield shields and javelins and are often used as skirmishers. The Pelagus Javelinists are not equipped with iron weapons and are expected to fight both on land and in the sea. The luckier gamblers among Pelagus Javelinists invest in gaudy golden spears, flaming javelins and superior light armor."
+#firstshape -5008 -- Pelagus Javelinist, sea montag
+#end
+
+#newmonster 8031 -- common Pelagus Javelinist, land
+#copyspr 3019
+#copystats 3019
+#name "Pelagus Javelinist"
+#descr "The Pelagus Javelinists are light merman infantry. They wield shields and javelins and are often used as skirmishers. The Pelagus Javelinists are not equipped with iron weapons and are expected to fight both on land and in the sea. The luckier gamblers among Pelagus Javelinists invest in gaudy golden spears, flaming javelins and superior light armor."
+#montag 5007 -- Pelagus Javelinist, land montag
+#montagweight 9
+#watershape 8032 -- common Pelagus Javelinist, sea
+#end
+
+#newmonster 8032 -- common Pelagus Javelinist, sea
+#copyspr 3018
+#copystats 3018
+#name "Pelagus Javelinist"
+#descr "The Pelagus Javelinists are light merman infantry. They wield shields and javelins and are often used as skirmishers. The Pelagus Javelinists are not equipped with iron weapons and are expected to fight both on land and in the sea. The luckier gamblers among Pelagus Javelinists invest in gaudy golden spears, flaming javelins and superior light armor."
+#montag 5008 -- Pelagus Javelinist, sea montag
+#montagweight 9
+#landshape 8031 -- common Pelagus Javelinist, land
+#end
+
+#newmonster 8033 -- rare Pelagus Javelinist, land
+#copyspr 3019
+#copystats 3019
+#name "Pelagus Javelinist"
+#descr "The Pelagus Javelinists are light merman infantry. They wield shields and javelins and are often used as skirmishers. The Pelagus Javelinists are not equipped with iron weapons and are expected to fight both on land and in the sea. The luckier gamblers among Pelagus Javelinists invest in gaudy golden spears, flaming javelins and superior light armor."
+#montag 5007 -- Pelagus Javelinist, land montag
+#montagweight 1
+#watershape 8034 -- rare Pelagus Javelinist, sea
+#mor 11
+#clearweapons
+#weapon 209 -- Fire Javelin
+#weapon 473 -- Golden Spear
+#cleararmor
+#armor 135 -- Bronze Cap
+#armor 49 -- Lightweight Scale Mail
+#armor 2 -- Shield
+#end
+
+#newmonster 8034 -- rare Pelagus Javelinist, sea
+#copyspr 3018
+#copystats 3018
+#name "Pelagus Javelinist"
+#descr "The Pelagus Javelinists are light merman infantry. They wield shields and javelins and are often used as skirmishers. The Pelagus Javelinists are not equipped with iron weapons and are expected to fight both on land and in the sea. The luckier gamblers among Pelagus Javelinists invest in gaudy golden spears, flaming javelins and superior light armor."
+#montag 5008 -- Pelagus Javelinist,  sea montag
+#montagweight 1
+#landshape 8033 -- rare Pelagus Javelinist, land
+#mor 11
+#clearweapons
+#weapon 209 -- Fire Javelin
+#weapon 473 -- Golden Spear
+#cleararmor
+#armor 135 -- Bronze Cap
+#armor 49 -- Lightweight Scale Mail
+#armor 2 -- Shield
 #end
 
 #newspell
@@ -15453,6 +16427,38 @@ Priests: Average"
 #fatiguecost 10
 #casttime 50
 #spec 25313408 --uw ok, mrne, mind, AN
+#end
+
+#newspell
+#copyspell 617 -- Cheat Fate
+#restricted 177
+#name "On The House"
+#descr "The caster grants all friendly units a free attempt voucher at any happenings of fate. Possessing this divine token of luck will allow troops to miraculously avoid the first damaging blow that strikes them."
+#range 1
+#school 4
+#researchlevel 6
+#pathlevel 0 4
+#path 1 8
+#pathlevel 1 2
+#aoe 666
+#fatiguecost 100
+#spec 12599296 -- Ignore shields, friendlies only, use UW
+#end
+
+#newspell
+#copyspell 701 -- Will of the Fates
+#restricted 177
+#name "Luck of the Draw"
+#descr "The caster alters the fate of an entire battle. All friendly units receive unnatural luck for the rest of the battle. A lucky unit has a very good chance of just escaping an otherwise deadly blow or spell. Luck does not affect undead or inanimate creatures as they are dead already."
+#range 1
+#school 1
+#researchlevel 6
+#pathlevel 0 4
+#path 1 8
+#pathlevel 1 2
+#aoe 666
+#fatiguecost 100
+#spec 12599296 -- Ignore shields, friendlies only, use UW
 #end
 
 #selectspell 278
@@ -15527,10 +16533,10 @@ Priests: Average"
 #addrecunit 5965
 #addrecunit 5969
 
-#uwrec 5961
-#uwrec 5963
-#uwrec 5965
-#uwrec 5969
+#uwrec 5962
+#uwrec 5964
+#uwrec 5966
+#uwrec 5970
 #uwrec 3013
 #uwrec 3014
 #uwrec 3015
@@ -15561,6 +16567,21 @@ Priests: Average"
 #uwdefunit2 3014
 #uwdefmult2 10
 #uwwallunit 5966
+
+#addgod 159
+#addgod 384
+#addgod 385
+#addgod 386
+#addgod 387
+#addgod 388
+#addgod 2445
+#addgod 2446
+#addgod 2464
+#addgod 2788
+#addgod 2792
+#addgod 2793
+#addgod 2958
+#addgod 2881
 
 #clearsites
 #startsite "The House"
@@ -16877,10 +17898,12 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 #clearweapons
 #weapon "Quarterstaff"
 #clearmagic
+#humanoid
 #holy
 #magicskill 3 2
 #magicskill 8 2
 #custommagic 32640 40
+#itemslots 12288
 #end
 
 #newmonster 6058
@@ -17982,6 +19005,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #naga
 #fear 5
 #unsurr 1
+#invulnerable 10
 #regeneration 10
 #coldblood
 #swimming
@@ -18014,7 +19038,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #nametype 130
 #gcost 10048
 #rcost 1
-#rpcost 16
+#rpcost 26
 #weapon 116 --strangulation
 #weapon 20 --bite
 #female
@@ -18125,17 +19149,6 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #end
 
 --sinpata curse
-#newevent
-#rarity 5
-#req_fornation 181
-#req_pop0ok
-#nation -2
---#msg "debug death scales increase"
-#notext
-#nolog
-#incscale2 3
-#end
-
 #newevent
 #rarity 5
 #req_fornation 181
