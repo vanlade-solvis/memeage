@@ -3493,9 +3493,10 @@ Priests: Weak"
 #mapmove 18
 #ap 18
 #weapon "Life Drain"
+#magicskill 0 1
 #magicskill 7 1
 #maxage 5000
-#startage 5
+#startage 500
 #fireres 5
 #stealthy 20
 #female
@@ -4536,9 +4537,9 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #wallunit 5323
 
 #fireblessbonus 1
-#waterblessbonus 1
 #astralblessbonus 1
 #natureblessbonus 1
+#bloodblessbonus 1
 
 #nopreach
 #dyingdom
@@ -9475,6 +9476,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
 #claim
 #blessdef 1
 #blessreinvig 1
+#nat 165
 #natmon 5577
 #end
 
@@ -11058,6 +11060,7 @@ The Mother of Flame is an utmost powerful priest that spreads the belief via fea
 #gold 200
 #decscale 2
 #constcost 20
+#nat 167
 #natmon 5624
 #end
 
@@ -14064,7 +14067,7 @@ The Rellic Titan requires a Rellic Queen to be nurtured. Due to their massive si
 #berserk 5
 #fear 10
 #itemslots 15362
-#magicskill 1 1
+#magicskill 0 1
 #magicskill 8 3
 #end
 
@@ -18840,7 +18843,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #maxage 100
 #startage 25
 #nametype 130
-#gcost 10012
+#gcost 10015
 #rcost 1
 #rpcost 8
 #weapon "Falchion"
@@ -18879,7 +18882,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #maxage 100
 #startage 25
 #nametype 130
-#gcost 10015
+#gcost 10018
 #rcost 1
 #rpcost 8
 #weapon "Bronze Spear"
@@ -18919,9 +18922,9 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #maxage 100
 #startage 25
 #nametype 130
-#gcost 10018
+#gcost 10025
 #rcost 1
-#rpcost 12
+#rpcost 16
 #weapon "Glaive"
 #weapon 20 --bite
 #female
@@ -18956,9 +18959,9 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #maxage 100
 #startage 25
 #nametype 130
-#gcost 10023
-#rcost 1
-#rpcost 16
+#gcost 10040
+#rcost 10
+#rpcost 28
 #weapon "Glaive"
 #weapon 20 --bite
 #armor "Skull Necklace"
@@ -18995,7 +18998,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #nametype 130
 #gcost 10030
 #rcost 1
-#rpcost 16
+#rpcost 24
 #weapon "Quarterstaff"
 #weapon 20 --bite
 #weapon "Snake Hair"
@@ -19022,7 +19025,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #descr "The Nagaconda is a large bodied snake humanoid hybrid. Their large bodies are capable of exerting large amount of strength in rapid strikes. Unlike the thinner Naga, they are not venomous or stealthy. However their overall slithering speed is very slow. While skilled, their lack of armor makes them vulnerable to most weaponry. They must rely on their curvaceous bare chest to prevent attacks. The Great Nagaconda Constrictor are born of massive eggs nearly triple the size of normal eggs. Their large bodies allows them to use constriction as a form of attack that is extremely useful for capturing virile males. Due to this, all the Great Constrictors are annointed as sacred beings by the Golden Naga Queens."
 #ap 6
 #mapmove 10
-#hp 52
+#hp 47
 #prot 8
 #size 5
 #str 21
@@ -19035,9 +19038,9 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #maxage 100
 #startage 25
 #nametype 130
-#gcost 10048
+#gcost 10058
 #rcost 1
-#rpcost 26
+#rpcost 34
 #weapon 116 --strangulation
 #weapon 20 --bite
 #female
@@ -19048,7 +19051,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #swimming
 #swampsurvival
 #forestsurvival
-#darkvision 100
+#spiritsight
 #holy
 #end
 
@@ -19147,6 +19150,48 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #darkvision 50
 #end
 
+#newmonster 6090
+#spr1 "./Meme Age/Sinpata/seduc1.tga"
+#spr2 "./Meme Age/Sinpata/seduc2.tga"
+#name "Nagaconda Seductress"
+#descr "The Nagaconda is a large bodied snake humanoid hybrid. Their large bodies are capable of exerting large amount of strength in rapid strikes. Unlike the thinner Naga, they are not venomous or stealthy. However their overall slithering speed is very slow. While skilled, their lack of armor makes them vulnerable to most weaponry. They must rely on their curvaceous bare chest to prevent attacks. The Nagaconda Seductress are outlaws of Sinpata, prefering methods of solo operation and seduction over group rape sessions. Because of this, they are ostracized from living within Sinpata cities and must dwell in the outskirts."
+#ap 6
+#mapmove 10
+#hp 25
+#prot 6
+#size 3
+#str 18
+#enc 4
+#att 9
+#def 9
+#prec 10
+#mr 14
+#mor 12
+#maxage 100
+#startage 25
+#nametype 130
+#gcost 10018
+#rcost 1
+#rpcost 2
+#weapon 29 --"Claw"
+#weapon 20 --bite
+#female
+#amphibian
+#naga
+#awe 2
+#coldblood
+#swimming
+#swampsurvival
+#forestsurvival
+#darkvision 100
+#magicskill 3 1
+#magicskill 6 2
+#heretic 4
+#stealthy 5
+#seduce 12
+#poorleader
+#end
+
 --sinpata curse
 #newevent
 #rarity 5
@@ -19199,6 +19244,8 @@ Naga Curse: Growth and Death scales have half effect on Population. During the b
 #addreccom 6074
 #addreccom 6075
 #addreccom 6076
+
+#addforeigncom 6090
 
 #uwcom 6077
 #uwcom 6078
