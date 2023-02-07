@@ -5,6 +5,7 @@
 
 -----------------------------------------
 --TOTAL ID USED/RESERVED
+-- TODO: add YS
 -- weapon 1600-1673
 --++++weapons 1995-1999
 -- armor 420-440
@@ -42,6 +43,7 @@
 --3002 sacred jiangshi
 --3003 atlantis fishing list
 --3004 NAGAS
+--3005 magical girls
 
 --LAS PELAGUS MONTAGS
 --5000-5008
@@ -51,6 +53,7 @@
 --RESTRICTED ITEM IDS
 --1500 earthenblood vamp
 --1501 seraphine
+--1502 magical girl familiars
 ----------------------------------------------------------------------------------
 
 
@@ -19299,4 +19302,362 @@ Naga Curse: Growth and Death scales have half effect on Population. During the b
 #homerealm 10
 #color 0.2 0.7 0.65
 #secondarycolor 0.05 0.2 0.01
+#end
+
+--------------------------------------------------------------------------
+-- YS
+-- currently using
+-- unit 7000-7001 TODO
+-- site  TODO
+-- item  TODO
+-- nation 182
+--------------------------------------------------------------------------
+
+-- TODO: add weapons
+-- Rapier
+#newweapon
+#name "Rapier"
+#rcost 1
+#dmg 3
+#att 2
+#def 1
+#sound 12 -- spear
+#pierce
+#len 2
+#ironweapon
+#end
+
+-- TODO: add armor
+
+-- TODO: add units
+-- Ideas: schoolgirls are basic humans but with less hp, morale and str, mostly without armor. Also stealthy (because who suspects a child?) and formation fighter 2 (to simulate their smaller size but not small enough for size 1). Magical girls all have invul, flying and combat caster. Different types of magical girls giving different magic paths for different personalities?
+-- Troops:
+-- Morgen fencers "Ohime-sama", sacred, cap-only. Summon their human clique at the start of battle? Important: LESBIANS (?)
+-- Commanders:
+-- Priest schoolgirl student council member
+-- Onee-sama cap-only Morgen seducer. Important: LESBIAN
+-- Summoned:
+-- Some sort of special magical girls for Morgen?
+
+-- Schoolgirl template
+#newmonster 7000
+#name "Schoolgirl Template"
+-- #spr1 TODO: needs sprite
+-- #spr2 TODO: needs sprite
+#descr "A student of Ys' all-girls school. Schoolgirls are generally weak and fear conflict. If you see this description, something has gone wrong."
+#ap 12
+#mapmove 12
+#hp 9
+#prot 0
+#size 2
+#str 8
+#enc 3
+#att 8
+#def 8
+#prec 10
+#mr 10
+#mor 7
+#maxage 50 -- erm... you know... I don't know how to work with this...
+#startage 11
+#nametype 119 -- misc female
+#gcost 8000
+#rcost 1
+#rpcost 8000
+#weapon "Fist"
+#female
+#stealthy -20
+#formationfighter 2 -- because they are smaller than adults but not small enough for size 1
+#end
+
+#newmonster
+#copystats 7000 -- schoolgirl
+#name "Schoolgirl Militia"
+#copyspr 51 -- battle vestal TODO: needs sprite
+-- #spr1 "./Meme Age/Ys/schoolgirl_militia_1.tga" TODO: needs sprite
+-- #spr2 "./Meme Age/Ys/schoolgirl_militia_2.tga" TODO: needs sprite
+#descr "A student of Ys' all-girls school. Schoolgirls are generally weak and fear conflict. Schoolgirl militia are hastily assembled and are given spears."
+#gcost 4
+#clearweapons
+#weapon "Spear"
+#end
+
+#newmonster
+#copystats 7000 -- schoolgirl
+#name "Archery Club Member"
+#copyspr 3359 -- lady archer TODO: needs sprite
+-- #spr1 "./Meme Age/Ys/schoolgirl_archer_1.tga" TODO: needs sprite
+-- #spr2 "./Meme Age/Ys/schoolgirl_archer_2.tga" TODO: needs sprite
+#descr "A student of Ys' all-girls school. Schoolgirls are generally weak and fear conflict. Some of them join the archery club."
+#str 9
+#rpcost 9000
+#clearweapons
+#weapon "Fist"
+#weapon "Short Bow"
+#end
+
+#newmonster
+#copystats 7000 -- schoolgirl
+#name "Fencing Club Member"
+#copyspr 3310 -- lady warrior TODO: needs sprite
+-- #spr1 "./Meme Age/Ys/schoolgirl_fencer_1.tga" TODO: needs sprite
+-- #spr2 "./Meme Age/Ys/schoolgirl_fencer_2.tga" TODO: needs sprite
+#descr "A student of Ys' all-girls school. Schoolgirls are generally weak and fear conflict. Some of them join the fencing club and are quite skilled in melee. They use rapiers and wear masks and linen vests to protect them from cuts and bruises."
+#str 9
+#att 10
+#def 10
+#mor 9
+#rpcost 10000
+#clearweapons
+#weapon "Rapier"
+#armor "Mask"
+#armor "Linen Cuirass"
+#end
+
+#newmonster
+#copystats 2113 -- palace guard
+#name "School Guard"
+#copyspr 2113 -- palace guard TODO: needs sprite
+-- #spr1 "./Meme Age/Ys/school_guard_1.tga" TODO: needs sprite
+-- #spr2 "./Meme Age/Ys/school_guard_2.tga" TODO: needs sprite
+#descr "Originally only Morgen nobles were admitted to the academy. As such, they needed adequate protection. Only the most skillfull and loyal Kernou warriors can become School Guards."
+#end
+
+#newmonster
+#name "Cute Familiar"
+#spr1 "./Meme Age/Ys/familiar_1.tga"
+-- #spr2 "./Meme Age/Ys/familiar_2.tga" TODO: needs sprite
+#descr "A cute little animal. Or is it a stuffed toy? Either way, it promises great power..."
+#ap 28
+#mapmove 22
+#hp 5
+#prot 2
+#size 1
+#str 5
+#enc 2
+#att 11
+#def 11
+#prec 11
+#mr 18
+#mor 10
+#maxage 1000
+#nametype 144 -- nature beasts
+#gcost 0
+#rcost 0
+#rpcost 0
+#weapon 20 -- Bite
+#quadruped
+#magicbeing
+#end
+
+#newmonster
+#copystats 7000 -- schoolgirl
+#name "Diligent Student"
+#copyspr 151 -- daughter of Avalon TODO: needs sprite
+-- #spr1 "./Meme Age/Ys/schoolgirl_1.tga" TODO: needs sprite
+-- #spr2 "./Meme Age/Ys/schoolgirl_2.tga" TODO: needs sprite
+#descr "A student of Ys' all-girls school. Schoolgirls are generally weak and fear conflict. This one is good at studying, but she has always wanted to be a heroine. If only there was some way to gain magical powers..."
+#gcost 25
+#rpcost 1
+#poorleader
+#fixedresearch 3
+#drainimmune
+#userestricteditem 1502 -- Magical Girl familiars
+#end
+
+#newmonster
+#copystats 7000 -- schoolgirl
+#name "Student Council Member"
+#copyspr 2249 -- nun TODO: needs sprite
+-- #spr1 "./Meme Age/Ys/council_1.tga" TODO: needs sprite
+-- #spr2 "./Meme Age/Ys/council_2.tga" TODO: needs sprite
+#descr "A student of Ys' all-girls school. Schoolgirls are generally weak and fear conflict. While it seems that teachers hold authority at school, actually the student council controls everything. Ordinary human girls can be on the council, but they can't attain high positions."
+#okleader
+#holy
+#magicskill 8 1
+#end
+
+#newmonster
+#copystats 148 -- friar
+#name "Teacher"
+#copyspr 148 -- friar TODO: needs sprite
+-- #spr1 "./Meme Age/Ys/teacher_1.tga" TODO: needs sprite
+-- #spr2 "./Meme Age/Ys/teacher_2.tga" TODO: needs sprite
+#descr "A teacher at Ys' all-girls school. Their theoretical knowledge can greatly help with magical research. As they need to deal with unruly students daily they have some leadership skills."
+#clearweapons
+#cleararmor
+#clearmagic
+#clearspec
+#gcost 10000
+#rpcost 2
+#weapon "Fist"
+#stealthy -20
+#fixedresearch 10
+#drainimmune
+#end
+
+#newmonster 7001
+#name "Magical Girl Template"
+#spr1 "./Meme Age/Ys/magical_girl_1.tga" TODO: needs sprite
+-- #spr2 "./Meme Age/Ys/magical_girl_2.tga" TODO: needs sprite
+#descr "An ordinary girl turned into heroine with the help of a magical contract. Now she will punish evildoers in the name of love and justice! (And for the awakening god, of course.) If you see this description, something has gone wrong."
+-- #montag 3005
+#ap 13
+#mapmove 12
+#hp 14
+#prot 0
+#size 2
+#str 13
+#enc 3
+#att 14
+#def 14
+#prec 12
+#mr 14
+#mor 14
+#maxage 50 -- erm... you know... I don't know how to work with this...
+#startage 11
+#nametype 119 -- misc female
+#gcost 25
+#rcost 1
+#rpcost 1
+#weapon "Wand"
+#female
+#formationfighter -3 -- magical girls require a lot of space for cute poses
+#magicbeing
+#flying
+#heal
+#invulnerable 25
+#magicpower 1
+#poorleader
+-- #magicskill 0 3
+#combatcaster
+#end
+
+#newmonster
+#copystats 7001 -- magical girl
+#montag 3005 -- magical girl
+#name "Energetic Magical Girl"
+#copyspr 7001 -- magical girl TODO: needs sprite
+-- #spr1 "./Meme Age/Ys/genki_1.tga" TODO: needs sprite
+-- #spr2 "./Meme Age/Ys/genki_2.tga" TODO: needs sprite
+#descr "An ordinary girl turned into heroine with the help of a magical contract. Now she will punish evildoers in the name of love and justice! (And for the awakening god, of course.) This magical girl has gained the power of fire, which suits her energetic personality."
+#str 14
+#mor 15
+#magicskill 0 3 -- fire
+#end
+
+#newmonster
+#copystats 7001 -- magical girl
+#montag 3005 -- magical girl
+#name "Polite Magical Girl"
+#copyspr 7001 -- magical girl TODO: needs sprite
+-- #spr1 "./Meme Age/Ys/polite_1.tga" TODO: needs sprite
+-- #spr2 "./Meme Age/Ys/polite_2.tga" TODO: needs sprite
+#descr "An ordinary girl turned into heroine with the help of a magical contract. Now she will punish evildoers in the name of love and justice! (And for the awakening god, of course.) This magical girl has gained the power of air, which helps her protect and heal her friends."
+#magicskill 1 3 -- air
+#autohealer 1
+#end
+
+#newmonster
+#copystats 7001 -- magical girl
+#montag 3005 -- magical girl
+#name "Cool Magical Girl"
+#copyspr 7001 -- magical girl TODO: needs sprite
+-- #spr1 "./Meme Age/Ys/kuu_1.tga" TODO: needs sprite
+-- #spr2 "./Meme Age/Ys/kuu_2.tga" TODO: needs sprite
+#descr "An ordinary girl turned into heroine with the help of a magical contract. Now she will punish evildoers in the name of love and justice! (And for the awakening god, of course.) This magical girl has gained the power of ice, which suits her cool personality."
+#att 15
+#def 15
+#prec 13
+#mor 15
+#magicskill 2 3 -- water
+#end
+
+-- TODO: add spells
+-- Ideas: some sort of combat magic to mirror magical girl spells. Also rituals to transform into magical girls.
+
+#newspell
+#name "Sign Magical Contract"
+#descr "With the help of the familiar, an ordinary girl can transform into a magical heroine of Love and Justice."
+#school -1 -- cannot be researched
+#researchlevel 0
+#path 0 -1
+#pathlevel 0 -1
+#fatiguecost 0
+#nreff 1
+#damage -3005 -- magical girls
+#effect 10130 -- transform caster
+#polygetmagic 1
+#end
+
+-- TODO: add magic items
+-- Ideas: familiars ARE items, which in turn enable the ritual needed to transform into magical girl. Also some wands.
+
+#selectitem 660
+#constlevel 0
+#mainpath 4 -- astral
+#mainlevel 1 -- TODO: needs balancing
+#copyspr 296 -- imp familiar TODO: needs sprite
+-- #spr “<filename>” TODO: needs sprite
+#type 8 -- misc
+#name "Cute Familiar"
+#descr "A cute little animal. Or is it a stuffed toy? Either way, it promises great power..."
+#spell "Sign Magical Contract"
+#restricted 182 -- Ys
+#restricteditem 1502 -- magical girl familiars
+#noforgebonus
+#batstartsum1 "Cute Familiar"
+#magiccommand 1
+#end
+
+-- TODO: add sites
+-- Capital sites:
+-- Garden of lilies: enables recruitment of Onee-samas
+
+#selectnation 182
+#name "Ys"
+#epithet "Boarding School"
+#era 3
+#brief "Schoolgirls turning into magical girls and their guardians."
+#descr "Ker-ys WAS a Tuatha city of unrivaled splendor. Almost all of Morgen were killed during the war with R'lyeh.
+Except for children. Now the future of Morgen resides inside the walls of a coastal boarding school for young maidens. They live, grow, study and watch the lilies bloom here with other human girls, protected by their Kernou teachers and guardians.
+With magic fading from the world Morgen lost most of their powers. Fortunately, with the awakening of a new god, strange cute little creatures appeared and offered magical contracts to schoolgirls, giving them awesome powers and frilly outfits."
+#summary "Race: Humans and rare Morgen.
+Military: Elite human troops and weak stealthy schoolgirls. Sacred Morgen schoolgirls. All Morgen are amphibious.
+Magic: None. Mundane researchers are not affected by drain scales. Can turn into powerful Magical Girls with the help of summoned familiars.
+Priests: Average."
+#flag "./Meme Age/Ys/flag.tga"
+
+#coastnation
+
+-- TODO: add commanders, units, colors and so on
+-- recruitable commanders
+#addreccom "Teacher"
+#addreccom "Diligent Student"
+#addreccom "Student Council Member"
+-- recruitable units
+#addrecunit "Schoolgirl Militia"
+#addrecunit "Archery Club Member"
+#addrecunit "Fencing Club Member"
+#addrecunit "School Guard"
+
+#startcom "Teacher"
+#startscout "Student Council Member"
+#startunittype1 "School Guard"
+#startunitnbrs1 10
+
+#startsite "Library of Time" -- TODO: change
+#startsite "Painted Cave" -- TODO: change
+
+#fortera 3
+#templepic 17 -- crystal
+#templegems 4 -- astral
+#homefort 14 -- great walled city
+#buildfort 11 -- city palisades TODO: test
+-- #uwbuild 1 -- merrow magical girls? Maybe later.
+-- #builduwfort 11 -- city palisades
+
+
+#color 0.27 0.38 0.73
+#secondarycolor 0.95 0.66 0.09
+#homerealm 10 -- TODO: add gods
 #end
