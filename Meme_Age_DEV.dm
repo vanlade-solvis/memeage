@@ -30,9 +30,9 @@
 --609 BUILD GYM
 --610 MUS SITE
 --611 Dryad Gym
---612
+--612 kami no hayate
 --613
---614
+--614 -- robotics R&D
 ----------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------
@@ -555,6 +555,19 @@
 #bonus
 #nratt -2
 #uwok
+#end
+
+#newweapon 1639
+#name "Lightning Shuriken"
+#dmg 1
+#pierce
+#range -1
+#nratt 2
+#ammo 4
+#rcost 0
+#sound 19
+#flyspr 111
+#secondaryeffectalways 232 --shock
 #end
 
 --- Lucky Fish Weapons ---
@@ -2294,7 +2307,7 @@ They should never join the actual military as their duty is to defend their home
 #newevent
 #rarity 5
 #req_nation 152
-#req_capital 1
+#req_owncapital 1
 #req_ench 607
 #req_pop0ok
 #req_indepok 1
@@ -2638,7 +2651,7 @@ simple as"
 #req_pop0ok
 #msg "A dire portent.
 A letter has arrived from Man United.
-Come fight in the arena mate i'll bloody glass ya, you wanker."
+Come fight in the arena mate I'll bloody glass ya, you wanker."
 #nation 0
 #end
 
@@ -2647,14 +2660,17 @@ Come fight in the arena mate i'll bloody glass ya, you wanker."
 #req_pop0ok
 #req_indepok 1
 #req_ench 601 --arena
-#msg "Arena Start"
+#req_permonth 1
+#msg "The Man United hosted Arena is starting!
+May each nation send their best fighters in the ultimate showdown."
 #arena
 #delay 1
+#notext
 #nolog
 #end
 
 #newevent
-#rarity 5
+#rarity 13
 #req_permonth 1
 #req_pop0ok
 #req_indepok 1
@@ -2668,16 +2684,15 @@ Come fight in the arena mate i'll bloody glass ya, you wanker."
 
 --free NORF FC
 #newevent
-#rarity 5
+#rarity 0
+#req_owncapital 1
+#req_myench 601 -- arena fight club
 #req_arenadone 1
-#req_capitol 1
 #req_fornation 153
-#req_pop0ok
-#req_dominion 5
-#req_fullowner
 #nation -2
 #msg "The fans have rallied to see the arena events and is throwing a huge ruckus! Mass unrest roll through the streets, cheers of 'ITS COMING HOME' roars across the entire city."
-#unrest 15
+#nolog
+#unrest 10
 #com 5197
 #4d6units 5208
 #end
@@ -6381,6 +6396,102 @@ This Shogun has become a dedicated city ruler and will no longer fight on the ba
 #nowish
 #end
 
+#newmonster 5413
+#copystats 1257
+#copyspr 1257
+#name "Hayate Ninja"
+#descr "An elite ninja that normally reside in hidden villages away from society. Being completely removed from the feudalist society of Yamato, they were able to practice powers of lesser divines apart from the primary faith. The Hayate are masters of the gale wind and are capable of extreme bursts of speed and agility in combat. Their constant practice has rendered themselves impervious to lightning and thunder."
+#ap 24
+#hp 12
+#att 17
+#def 17
+#ap 24
+#maxage 50
+#startage 22
+#nametype 134
+#clearweapons
+#weapon "Ninjato"
+#weapon "Lightning Shuriken"
+#gcost 0
+#holy
+#overcharged 10
+#shockres 25
+#stormimmune
+#end
+
+#newmonster 5414
+#spr1 "./Meme Age/Yamato/red1.tga"
+#spr2 "./Meme Age/Yamato/red2.tga"
+#name "Red Comet"
+#descr "The Shogun is a Daimyo that has become the supreme leader of Yamato. Their clan of origin becomes the reigning shogunate. The Hatamoto and Gokenin fills the ranks of Roju, Ometsuke, Metsuke and many other high ranking roles. All other Daimyo respect and serve under him as Vassals of the shogunate.
+This Shogun has mounted the greatest Mobile Suit forged by many skilled Construction Mages of Yamato. The Red Comet is roughly 3 times faster than all other Mobile Suits ever constructed and was designed for the great Shogun in mind."
+#ap 66
+#mapmove 66
+#hp 200
+#prot 32
+#size 6
+#str 25
+#enc 0
+#att 17
+#def 17
+#prec 17
+#mr 18
+#mor 30
+#maxage 50
+#startage 40
+#nametype 134
+#gcost 0
+#rcost 500
+#weapon "Shatterfist"
+#weapon "Shatterfist"
+#holy
+#expertleader
+#inspirational 3
+#command 160
+--#magicskill 8 3
+#magicboost 53 2
+#combatcaster
+#itemslots 61446 --2 hand 4 misc
+#woundfend 5
+#awe 3
+#ambidextrous 4
+#nowish
+#end
+
+#newmonster 5415
+#spr1 "./Meme Age/Yamato/zaku1.tga"
+#spr2 "./Meme Age/Yamato/zaku2.tga"
+#name "Mobile Suit"
+#descr "The Mobile Suit is the latest invention of the Construction Mages of Yamato under the Decree of Robotics. The accelerated funding and focus in Construction magic allowed them to develop a method to massively reduce the number of soldiers deployed on the battlefield by replacing them with pilots in giant mechanical constructs. These constructs are built from the highest quality materials and are nearly indestructable while sporting and excellent speed and mobility."
+#ap 22
+#mapmove 22
+#hp 200
+#prot 32
+#size 6
+#str 25
+#enc 0
+#att 12
+#def 12
+#prec 12
+#mr 16
+#mor 18
+#maxage 50
+#startage 40
+#nametype 134
+#gcost 0
+#rcost 300
+#weapon "Shatterfist"
+#weapon "Shatterfist"
+#holy
+#okleader
+#combatcaster
+#itemslots 61446 --2 hand 4 misc
+#woundfend 1
+#awe 1
+#ambidextrous 2
+#nowish
+#end
+
 #selectspell 221
 #restricted 160
 #end
@@ -6597,6 +6708,54 @@ This Shogun has become a dedicated city ruler and will no longer fight on the ba
 #onlymnr 5409 --shogun
 #nextspell "Commited"
 #end
+
+#newspell
+#name "Decree: Kami no Hayate"
+#descr "The Word of the Shogun has been posted. The Nation of Yamato will now enter the Decree of Kami no Hayate, the Divine Gale. Under this decree, a small amount of population within Yamato will take up arms and the blessings of Divine Wind. The Kamikaze spirit promotes unyielding berserkers who will charge at the enemy when they are blessed. Elite ninja of Hayate, those who are one with the lightning, will also join the ranks of Yamato."
+#restricted 160
+#school 5
+#researchlevel 7
+#path 0 8
+#pathlevel 0 3
+#effect 10084
+#damage 612 -- kami no hayate
+#spec 8388608
+#nreff 1
+#fatiguecost 0
+#onlyatsite "Shogunate Palace"
+#onlymnr 5409 --shogun
+#nextspell "Commited"
+#end
+
+#newspell
+#name "Enter Mobile Suit"
+#restricted 160
+#onlymnr 5409 --shogun
+#descr "The Shogun will enter the mobile suit and assume all command from within."
+#school -1
+#effect 10130 -- ritual self-transformation
+#damage 5414
+#fatiguecost 0
+#spec 8388608 --uw ok
+#end
+
+#newspell
+#name "Decree: Robotics R&D"
+#descr "The Word of the Shogun has been posted. The Nation of Yamato will now enter the Decree of Robotics R&D. Under this decree, large amounts of funding will go towards the research and development of giant mechanical constructs."
+#restricted 160
+#school 3
+#researchlevel 8
+#path 0 8
+#pathlevel 0 3
+#effect 10084
+#damage 614 -- robotics R&D
+#spec 8388608
+#nreff 1
+#fatiguecost 0
+#onlyatsite "Shogunate Palace"
+#onlymnr 5409 --shogun
+#nextspell "Enter Mobile Suit"
+#end
 ----------------------- Shogun Decree EVENTS
 #newevent
 #rarity 5
@@ -6606,7 +6765,7 @@ This Shogun has become a dedicated city ruler and will no longer fight on the ba
 #nation -2
 #msg "A group of civilians has been blessed with the power of the Divine Wind. They now take up the rank of Kamizake Samurai and have joined your forces!"
 #nolog
-#1d6units 5411
+#2d6units 5411
 #end
 
 #newevent
@@ -6666,7 +6825,7 @@ This Shogun has become a dedicated city ruler and will no longer fight on the ba
 #nation -2
 #msg "The Konton Decree allowed the Bakemono to join forces, A Bakemono Shaman has agreed to the terms and enlisted within your ranks!"
 #nolog
-#unrest 10
+#unrest 5
 #com 1608
 #end
 
@@ -6679,7 +6838,7 @@ This Shogun has become a dedicated city ruler and will no longer fight on the ba
 #msg "Bakemono Sho"
 #notext
 #nolog
-#unrest 5
+#unrest 2
 #1d6units 1393
 #end
 
@@ -6692,7 +6851,7 @@ This Shogun has become a dedicated city ruler and will no longer fight on the ba
 #msg "Bakemono Sho"
 #notext
 #nolog
-#unrest 5
+#unrest 2
 #1d6units 1394
 #end
 
@@ -6706,8 +6865,46 @@ This Shogun has become a dedicated city ruler and will no longer fight on the ba
 #msg "Dai Bakemono"
 #notext
 #nolog
-#unrest 10
+#unrest 5
 #1d6units 1396
+#end
+
+#newevent
+#rarity 5
+#req_fornation 160
+#req_myench 612 -- kami no hayate
+#req_fullowner
+#nation -2
+#msg "A group of civilians has been blessed with the power of the Divine Wind. They now take up the rank of Kamizake Samurai and have joined your forces!"
+#nolog
+#4d6units 5411
+#end
+
+#newevent
+#rarity 5
+#req_fornation 160
+#req_myench 612 -- kami no hayate
+#req_fullowner
+#nation -2
+#msg "A group of civilians has been blessed with the power of the Divine Wind. They now take up the rank of Kamizake Samurai and have joined your forces!"
+#nolog
+#1unit 5413
+#end
+
+#newevent
+#rarity 5
+#req_rare 25
+#req_fornation 160
+#req_myench 614 -- robotics R&D
+#req_fullowner
+#nation -2
+#req_gem 3
+#req_gold 500
+#msg "The Robotics R&D team has finished constructing a new mobile suit! The invoice has been forwarded to the Shogunate accordingly."
+#nolog
+#com 5415
+#gemloss 3
+#exactgold -500
 #end
 ---------------------- Shogun Decree EVENTS END
 
@@ -8167,8 +8364,7 @@ Priests: Weak"
 #mapmove 18
 #hp 10
 #prot 0
-#size 3
-#ressize 2
+#size 2
 #str 12
 #enc 4
 #att 12
@@ -9464,7 +9660,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
 #rarity 5
 #level 0
 #path 3
-#claim
 #blessstr 4
 #end
 
@@ -9473,7 +9668,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
 #rarity 5
 #level 0
 #path 3
-#claim
 #blessdef 1
 #blessreinvig 1
 #nat 165
@@ -10371,15 +10565,15 @@ The Muspel Harvester is the lifeblood of the Muspelheim economy, each turn it wi
 #end
 
 #newmonster 5612
-#spr1 "./Meme Age/Muspelheim/giant1.tga"
-#spr2 "./Meme Age/Muspelheim/giant2.tga"
+#spr1 "./Meme Age/Muspelheim/biollante3.tga"
+#spr2 "./Meme Age/Muspelheim/biollante4.tga"
 #name "Muspel Giant"
 #descr "A Fiery Giant born from the glowing hot sparks from the burning lands of Muspelheim. They are a spirit attached to whatever corporeal giant body materialized from the molten materials nearby. These monstrous giants are feared by all as they have no thoughts or feelings. They only have a single goal in mind as they march towards their final destination."
 #ap 12
 #mapmove 22
 #hp 102
 #prot 12
-#size 5
+#size 6
 #str 26
 #enc 0
 #att 12
@@ -10415,8 +10609,8 @@ The Muspel Harvester is the lifeblood of the Muspelheim economy, each turn it wi
 #end
 
 #newmonster 5613
-#spr1 "./Meme Age/Muspelheim/giant3.tga"
-#spr2 "./Meme Age/Muspelheim/giant4.tga"
+#spr1 "./Meme Age/Muspelheim/aniki1.tga"
+#spr2 "./Meme Age/Muspelheim/aniki2.tga"
 #name "Muspel Jarl"
 #descr "A Fiery Giant born from the glowing hot sparks from the burning lands of Muspelheim. They are a spirit attached to whatever corporeal giant body materialized from the molten materials nearby. These monstrous giants are feared by all as they have no thoughts or feelings. They only have a single goal in mind as they march towards their final destination.
 The Muspel Jarl is capable of a wider array of magic compared to regular Muspel Giants."
@@ -10424,7 +10618,7 @@ The Muspel Jarl is capable of a wider array of magic compared to regular Muspel 
 #mapmove 22
 #hp 102
 #prot 12
-#size 5
+#size 6
 #str 26
 #enc 0
 #att 12
@@ -10438,8 +10632,8 @@ The Muspel Jarl is capable of a wider array of magic compared to regular Muspel 
 #gcost 600
 #rcost 1
 #rpcost 4
-#weapon "Fire Sword"
-#armor "Gold Shield"
+#weapon 116 --"Strangulation"
+#weapon 116 --"Strangulation"
 #magicskill 0 2
 #magicskill 3 2
 #magicskill 5 2
@@ -10465,16 +10659,16 @@ The Muspel Jarl is capable of a wider array of magic compared to regular Muspel 
 #end
 
 #newmonster 5614
-#spr1 "./Meme Age/Muspelheim/giant5.tga"
-#spr2 "./Meme Age/Muspelheim/giant6.tga"
-#name "Giant of the Brazier"
+#spr1 "./Meme Age/Muspelheim/biollante1.tga"
+#spr2 "./Meme Age/Muspelheim/biollante2.tga"
+#name "Giant of the Lockerroom"
 #descr "A Fiery Giant born from the glowing hot sparks from the burning lands of Muspelheim. They are a spirit attached to whatever corporeal giant body materialized from the molten materials nearby. These monstrous giants are feared by all as they have no thoughts or feelings. They only have a single goal in mind as they march towards their final destination.
-This Giant holds a giant brazier, from which sparks of Muspel Flames are born. Using this power, the Giant is able to forge powerful magical items for a very low cost."
+This Giant guards the Lockerrooms of Muspelheim. Using the Lockerrooms' powers, the Giant is able to forge powerful magical items for a very low cost."
 #ap 12
 #mapmove 22
 #hp 102
 #prot 12
-#size 5
+#size 6
 #str 26
 #enc 0
 #att 12
@@ -10512,11 +10706,11 @@ This Giant holds a giant brazier, from which sparks of Muspel Flames are born. U
 #end
 
 #newmonster 5615
-#spr1 "./Meme Age/Muspelheim/fgiant1.tga"
-#spr2 "./Meme Age/Muspelheim/fgiant2.tga"
-#name "Mother of Flame"
+#spr1 "./Meme Age/Muspelheim/van3.tga"
+#spr2 "./Meme Age/Muspelheim/van4.tga"
+#name "Father of Flame"
 #descr "A Fiery Giant born from the glowing hot sparks from the burning lands of Muspelheim. They are a spirit attached to whatever corporeal giant body materialized from the molten materials nearby. These monstrous giants are feared by all as they have no thoughts or feelings. They only have a single goal in mind as they march towards their final destination.
-The Mother of Flame is an utmost powerful priest that spreads the belief via fear. For as long as she exists, it is nearly impossible for the God of Muspelheim to stop existing."
+The Father of Flame is an utmost powerful priest that spreads the belief via fear. For as long as he exists, it is nearly impossible for the God of Muspelheim to stop existing."
 #ap 12
 #mapmove 22
 #hp 122
@@ -10535,7 +10729,7 @@ The Mother of Flame is an utmost powerful priest that spreads the belief via fea
 #gcost 750
 #rcost 1
 #rpcost 4
-#weapon "Quarterstaff"
+#weapon "Buff"
 #magicskill 0 1
 #magicskill 3 1
 #magicskill 5 1
@@ -10554,7 +10748,6 @@ The Mother of Flame is an utmost powerful priest that spreads the belief via fea
 #fear 5
 #troglodyte
 #firepower 1
-#female
 #magicbeing
 #noheal
 #researchbonus 5
@@ -10719,13 +10912,56 @@ The Mother of Flame is an utmost powerful priest that spreads the belief via fea
 #snake
 #end
 
+#newmonster 5620
+#name "Surtr Statue"
+#spr1 "./Meme Age/Muspelheim/impvan.tga"
+#descr "The great Surtr, guardian of Muspelheim and leader of the fire giants, sealed and chained down at the heart of of Muspelheim. Instead of using his powers to bread free, he has given the powers into the rivers of Muspelheim instead to empower everything that comes of it. While magically powerful, he can also cast rituals at range but may never move."
+#pathcost 40
+#startdom 4
+#gcost 180
+#rcost 1
+#size 6
+#hp 260
+#str 24
+#att 5
+#def 0
+#prec 5
+#prot 25
+#mr 18
+#mor 30
+#enc 0
+#mapmove 0
+#ap 1
+#magicskill 0 1
+#magicskill 1 1
+#magicskill 7 1
+#itemslots 12288
+#maxage 5000
+#fireres 50
+#poisonres 25
+#bonusspells 1
+#miscshape
+#immobile
+#unteleportable
+#bluntres
+#pierceres
+#awe 3
+#fireshield 10
+#inanimate
+#spiritsight
+#amphibian
+#expertleader
+#neednoteat
+#end
+
 #newmonster 5621
 #copyspr 527
 #copystats 527
 #name "Sparks of Muspel"
 #descr "A fiery spark from Muspel. It is the same sentient energy that powers the Muspel Giants. However, this spark was not powerful enough magically materialize a solid body. The power of the Sparks vary greatly, while most of them are weak like this entity, the most powerful Sparks go on to create entire planets or systems."
-#att 18
-#def 18
+#hp 2
+#att 14
+#def 14
 #rcost 20
 #gcost 0
 #rpcost 0
@@ -10734,37 +10970,36 @@ The Mother of Flame is an utmost powerful priest that spreads the belief via fea
 #newmonster 5622
 #spr1 "./Meme Age/Muspelheim/sulphur1.tga"
 #spr2 "./Meme Age/Muspelheim/sulphur2.tga"
-#name "Sulphur Demon"
-#descr "A demonic entity formed from the burning lands of Muspelheim. Their bodies are mostly made of molten materials but resemble a bright sulphur color. They are ethereal and can unleash the hottest flames one can imagine."
-#ap 12
+#name "Sulphur Construct"
+#descr "A magical sulphur entity formed from the burning lands of Muspelheim. Their bodies are mostly made of molten materials but resemble a bright sulphur color. They are ethereal and can unleash the hottest flames one can imagine."
+#ap 18
 #mapmove 22
-#hp 21
+#hp 16
 #prot 0
 #size 6
-#str 12
+#str 11
 #enc 0
 #att 11
-#def 11
+#def 10
 #prec 12
 #mr 17
 #mor 30
 #maxage 500
 #startage 302
 #nametype 115
-#gcost 55
+#gcost 45
 #rcost 20
 #rpcost 0
 #weapon "Flame Strike"
 #weapon "Flaming Wheel"
 #fireres 30
-#coldres 5
+#coldres -5
 #poisonres 25
 #heat 10
 #spiritsight
 #neednoteat
 #ethereal
-#demon
-#flying
+#magicbeing
 #firepower 1
 #addupkeep -45
 #end
@@ -17523,6 +17758,7 @@ Priests: Powerful. Recalled God does not lose magic skills"
 #newevent
 #rarity 5
 #req_forest 0
+#req_capital 0 --does not affect cap
 #req_permonth 2
 #req_domowner 179
 #nation -2
@@ -17536,26 +17772,6 @@ Priests: Powerful. Recalled God does not lose magic skills"
 #req_fornation 179
 #req_minpop 1000
 #req_forest 1
-#req_growth 1
-#req_fullowner
-#nation -2
---#msg "10000+ pop -> pop kill and make manikin"
-#notext
-#nolog
-#1d3units 313
-#1d3units 314
-#1d3units 361
-#1d3units 715
-#1d3units 716
-#kill 1
-#end
-
-#newevent
-#rarity 5
-#req_fornation 179
-#req_minpop 1000
-#req_forest 1
-#req_growth 1
 #req_temple 1 --------------TEMPLE BONUS
 #req_rare 50
 #req_fullowner
@@ -17565,6 +17781,7 @@ Priests: Powerful. Recalled God does not lose magic skills"
 #nolog
 #1unit 717
 #1unit 718
+#decscale2 3
 #end
 
 #newevent
@@ -17631,6 +17848,25 @@ Priests: Powerful. Recalled God does not lose magic skills"
 #nolog
 #com 6012
 #end
+
+#newevent
+#rarity 5
+#req_fornation 179
+#req_minpop 1010 --10100 pop required hopefully allows others to trigger before killing pop
+#req_forest 1
+#req_growth 1
+#req_fullowner
+#nation -2
+--#msg "10000+ pop -> pop kill and make manikin" LAST because this one kills pop (hopefully it executes last)
+#notext
+#nolog
+#1d3units 313
+#1d3units 314
+#1d3units 361
+#1d3units 715
+#1d3units 716
+#kill 1
+#end
 ----FREESPAWN END
 
 #newsite 1668
@@ -17638,8 +17874,8 @@ Priests: Powerful. Recalled God does not lose magic skills"
 #path 6
 #level 0
 #rarity 5
-#gems 5 3
-#gems 6 4
+#gems 5 2
+#gems 6 5
 #homecom 6016
 #end
 
@@ -17703,6 +17939,7 @@ Freespawn: Only in Forest provinces above 10000 population under Asphodel's Domi
 #cheapgod20 1026
 
 #likesterr 128
+#hatesterr 4160 --hates wastes and caves
 
 #clearsites
 #startsite "Great Carrion Grove"
@@ -17822,6 +18059,8 @@ Freespawn: Only in Forest provinces above 10000 population under Asphodel's Domi
 #name "Yakubian Priest"
 #descr "The Yakubian Priest is the revered priest of the OG people and the nation of Das'rite. They follow the ancient super genius Yakub who created the white people. They believe that as OG black, it is within their duty to put an end to the menace their own people created."
 #custommagic 32640 16
+#stealthy 15
+#spy
 #end
 
 #newmonster 6050
