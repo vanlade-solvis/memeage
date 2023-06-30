@@ -32,7 +32,7 @@
 --611 Dryad Gym
 --612 kami no hayate
 --613
---614 -- robotics R&D
+--614 robotics R&D
 ----------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------
@@ -2290,6 +2290,16 @@ They should never join the actual military as their duty is to defend their home
 #nextspell "Crossbow Delivery"
 #end
 
+#newspell
+#copyspell 918 -- eyes of god
+#restricted 152
+#name "Glow in the Dark"
+#descr "A skilled air Senator is able to present their idea of three letter agencies in front of the congress. Thus establishing the organization of glowies. By unleashing a lot of agents that glow in the dark, Freesia is capable of gathering all sorts of intelligence across the world."
+#path 0 1
+#pathlevel 0 3
+#researchlevel 0
+#end
+
 --BUY CROSSBOWS
 #newevent
 #rarity 5
@@ -2349,6 +2359,19 @@ They should never join the actual military as their duty is to defend their home
 #unrest 60
 #incdom -1
 #taxboost -100
+#end
+
+#newevent
+#rarity 5
+#req_rare 10
+#req_fornation 152
+#req_turn 36
+#req_fullowner
+#nation -2
+#msg "National pride sweeps the lands as they celebrate their (very short) history and all that the founding fathers have built for them. People are very eager to follow the original teachings and take up arms to protect their homelands. Furthermore, the army recruiters took advantage of this event and managed to enlist a new squad of younglings who wish to fight for their glorious nation."
+#nolog
+#defence 5
+#2d6units 5170
 #end
 
 #newsite 1605
@@ -2625,6 +2648,22 @@ simple as"
 #regeneration 5
 #woundfend 1
 #beartattoo 3
+#end
+
+#newspell
+#restricted 153
+#name "The Norf Tide"
+#descr "An ancient legend said that during one Pantokrator cycle, the divines took an overwhelming love to arena blood sports and caused thousands of arenas to take place monthly across the lands. As a result, an insurrmountable horde of Greggs Fans flooded the world and engulfed it in their great bellies. Now the mages of Man United can attempt to release a small fraction of that power upon the world to attract large amounts of NORF."
+#school 0
+#researchlevel 7
+#path 0 6
+#pathlevel 0 3
+#path 1 1
+#pathlevel 1 1
+#effect 10001
+#damage 5208
+#nreff 100
+#fatiguecost 2000
 #end
 
 #newspell
@@ -11407,7 +11446,7 @@ Raze: Does not collect tax income, gain gold via Harvesters"
 #descr "The Magic Commissar of the Sorus Republic, he leads the organization of magic research and arcane education. Due to the lack of special treatment and extragavant salary for mages, many magically talented people emmigrated out of Sorus. This has caused a massive lack of magic talent. The Commissar Mistyka are made up of the few mages that stayed as well as the newly trained talent."
 #gcost 10030
 #rcost 10
-#rpcost 4
+#rpcost 3
 #clearmagic
 #custommagic 20736 100
 #custommagic 20736 100
@@ -11423,7 +11462,7 @@ Raze: Does not collect tax income, gain gold via Harvesters"
 #descr "The Arch Magic Commissar of the Sorus Republic, he leads the organization of magic research and arcane education. Due to the lack of special treatment and extragavant salary for mages, many magically talented people emmigrated out of Sorus. This has caused a massive lack of magic talent. The Commissar Mistyka is in charge of training brand new talent to fill the gap."
 #gcost 10030
 #rcost 10
-#rpcost 4
+#rpcost 3
 #clearmagic
 #magicskill 7 1
 #custommagic 20736 200
@@ -13195,7 +13234,7 @@ The Tunalik can spend 1 month fishing for semi-intelligent creatures to bolster 
 #descr "The Surstromming are one of the methods the Atlantians use to preserve fish. It is extremely smelly from the fermentation and causes many to instantly gag and feel ill. Despite being a preserved food, when left in the open it quickly deteriorates."
 #ap 0
 #mapmove 0
-#hp 100
+#hp 30
 #prot 1
 #size 2
 #str 4
@@ -13261,6 +13300,20 @@ The Tunalik can spend 1 month fishing for semi-intelligent creatures to bolster 
 #researchlevel 1
 #end
 
+#newspell
+#restricted 173
+#name "The Big Catch"
+#descr "A skilled water mage is capable of fishing a massive haul of fish in a single month by resonating with the waters beneath. Many magical creatures will be caught to serve Atlantis."
+#school 0
+#researchlevel 5
+#path 0 2
+#pathlevel 0 3
+#effect 10001
+#damage -3003
+#nreff 50
+#fatiguecost 3000
+#end
+
 #selectspell 280
 #restricted 173
 #end
@@ -13324,6 +13377,13 @@ Priests: Average"
 #hero1 1634
 #hero1 2085
 
+#addgod 2853 -- ghost basalt king
+#addgod 2852 -- king of frozen bones
+#addgod 873 -- great seer
+#cheapgod20 2852
+#cheapgod20 2853
+#cheapgod20 873
+
 #startcom 1632
 #startunittype1 1625
 #startunitnbrs1 12
@@ -13350,6 +13410,7 @@ Priests: Average"
 #uwbuild 1
 #templepic 1
 #homerealm 1
+#homerealm 9
 #homerealm 10
 #color 0.44 0.44 0.88
 #secondarycolor 0.11 0.11 0.66
@@ -13780,6 +13841,7 @@ The Rellic Infestor can only be Nurtered by a Rellic Great Mother."
 #startage 0
 #nametype 117
 #gcost 10005
+#rpcost 2
 #weapon 63 --life drain
 #holy
 #magicskill 2 1
