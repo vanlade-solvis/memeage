@@ -1,12 +1,12 @@
 #modname "Meme Age DEV"
 #description "4th Age of Dominions but with an highly cynical approach to national lore development. Magic might have been fading from early to late, but meme magic come in its place."
-#version 0.9
+#version 1.3.0
 #icon "./Meme Age/banner.tga"
 
 -----------------------------------------
 --TOTAL ID USED/RESERVED
 -- weapon 1600-1673
---++++weapons 1995-1999
+--++++weapons 1995-2000
 -- armor 420-440
 -- unit 5000-7000
 --++++unit 8000-8100
@@ -570,6 +570,36 @@
 #secondaryeffectalways 232 --shock
 #end
 
+--- Manlet Weapons ---
+
+#newweapon 1640 -- Enchanted Slapping Stick
+#name "Enchanted Slapping Stick"
+#dmg 1
+#len 2
+#att 3
+#def 1
+#nratt 2
+#woodenweapon
+#blunt
+#magic
+#sound 10
+#secondaryeffectalways 543
+#end
+
+#newweapon 1641 -- Giant slayer Sword
+#name "Giant Slayer Sword"
+#dmg 2
+#dt_large
+#len 3
+#att 2
+#def 2
+#ironweapon
+#slash
+#magic
+#armorpiercing
+#sound 8
+#end
+
 --- Lucky Fish Weapons ---
 
 #newweapon 1995 -- Enchanted Long Spear
@@ -795,6 +825,40 @@ Use Masks to Slow the Spread of Tienchi Plague - Nature Magic Experts"
 #autobless
 #end
 
+#selectitem 658
+#restricted 182 --Manletia Only
+#constlevel 2
+#mainpath 3
+#secondarypath 6
+#mainlevel 2
+#secondarylevel 2
+#itemcost1 -5
+#itemcost2 -5
+#spr "./Meme Age/Manletia/club_of_shrinking.tga"
+#type 1
+#name "Enchanted Slapping Stick"
+#descr "A wooden stick enchanted with gnome magic that shrinks whomever it hits. It is also inscribed with dwarven runes that make it extremely light and durable, while making the user stronger. Gnome magic grants extra luck.
+EVERYONE WILL KNOW WHAT IT FEELS TO BE 5,11!"
+#luck
+#str 1
+#weapon 1640
+#end
+
+#selectitem 659
+#restricted 182 --Manletia Only
+#constlevel 0
+#mainpath 3
+#mainlevel 2
+#itemcost1 -5
+#spr "./Meme Age/Manletia/giantslayer.tga"
+#type 1
+#name "Giantslayer"
+#descr "A sword of endless envy. A bane of taller beings born of gnome magic and dwarven forges. The sheer size alone blesses the wielder as it propels then to new heights."
+#luck
+#str 2
+#autobless
+#weapon 1641
+#end
 
 --------------------------------------------------------------------------
 -- GENERICS
@@ -18210,7 +18274,8 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 #end
 
 #newmonster 6058
-#spr1 "./Meme Age/Dasrite/pyramid.tga"
+#spr1 "./Meme Age/Dasrite/pyramid1.tga"
+#spr2 "./Meme Age/Dasrite/pyramid2.tga"
 #name "Floating Pyramid"
 #descr "The great pyramid is a flying contraption built by the original kangs of the world. They were memorial grounds of the ancient pantokrator after they left the universe. Their antitheft life drain technology is extremely powerful when combined with the fact that the object is built of solid stone and very difficult to damage. While powered by magic, the chassis itself is created with raw slave work and mundane materials. They are very slow moving when in combat mode as the weapon systems are costly, however when all the magicka is directed into the thrusters, they are able to move quickly across the world."
 #gcost 0
@@ -19594,10 +19659,441 @@ Naga Curse: Growth and Death scales have half effect on Population. During the b
 #startsite "Chamber of Scales"
 #startsite "Breeding Nest"
 #templepic 1
+#uwbuild 1
 #halfdeathpop
 #fortera 2
 #homerealm 7
 #homerealm 10
 #color 0.2 0.7 0.65
 #secondarycolor 0.05 0.2 0.01
+#end
+
+--------------------------------------------------------------------------
+-- Manletia
+-- currently using
+-- unit 6101-6150
+-- site 1673-1674
+-- nation 182
+--------------------------------------------------------------------------
+
+#newmonster 6101
+#spr1 "./Meme Age/Manletia/pygmylet1.tga"
+#spr2 "./Meme Age/Manletia/pygmylet2.tga"
+#copystats 2126
+#name "Pygmy archer"
+#descr "The pygmy. One of the shorter speciments, if not the shortest speciment in the world. Recruited into the ranks of Manletia to take revenge against all who mock them for their size. If properly trained, they wield massive warbows. Whether they can pull off an actual shot however, remains a mystery they have yet to showcase. The need to prove themselves provides them with additional morale that usual."
+#xpshape 10
+#mor 8
+#end
+
+#newmonster 6102
+#spr1 "./Meme Age/Manletia/elite_pygmylet1.tga"
+#spr2 "./Meme Age/Manletia/elite_pygmylet2.tga"
+#copystats 2126
+#name "Pygmy longbowman"
+#descr "That thing was too big to be called a bow. Too big, too thick, too heavy and too rough. It was more like a large hunk of wood."
+#weapon "Dagger"
+#weapon "Long Bow"
+#mor 10
+#end
+
+#newmonster 6103
+#spr1 "./Meme Age/Manletia/spearlet1.tga"
+#spr2 "./Meme Age/Manletia/spearlet2.tga"
+#copystats 3391
+#name "Hoburg spearman"
+#descr "A hoburg armed with a spear. Ready to defend his tiny nation. Improved spearmen hold a longer spear and a taller hat to compensate for their lack of ever reaching greater heights."
+#xpshape 10
+#mor 9
+#rcost 4 --extra resource cost to differentiate it from the pygmy
+#end
+
+#newmonster 6104
+#spr1 "./Meme Age/Manletia/elite_spearlet1.tga"
+#spr2 "./Meme Age/Manletia/elite_spearlet2.tga"
+#copystats 3391
+#name "Hoburg elite spearman"
+#descr "The elite spearman holds greater armor and armaments. Manlet scholars have taught them that large hats delude females into thinking that they are of greater stature than normal. They boast improved morale as a result."
+#mor 10
+#weapon "Long Spear"
+#armor "Full Helmet"
+#armor "Full Chain Mail"
+#armor "Tower Shield"
+#end
+
+#newmonster 6105
+#spr1 "./Meme Age/Manletia/pikelet1.tga"
+#spr2 "./Meme Age/Manletia/pikelet2.tga"
+#copystats 3392
+#name "Hoburg pikeman"
+#descr "A hoburg armed with a pike and buckler. Ready to defend his tiny nation. Improved elite pikemen have undergone a magical operation that elongates their legs by breaking the bones at specific places. The pinacle of Hoburg medicine, it allows the pikemen to break the limiter of their size and bestows them with sacred status."
+#weapon "Short Pike"
+#armor "Leather Cuirass"
+#armor "Buckler"
+#armor "Iron Cap"
+#mor 10
+#reclimit 5
+#xpshape 15
+#end
+
+#newmonster 6106
+#spr1 "./Meme Age/Manletia/elite_pikelet1.tga"
+#spr2 "./Meme Age/Manletia/elite_pikelet2.tga"
+#copystats 3392
+#name "Lengthened Hoburg pikeman"
+#descr "These elite units tower over the average manlet and easily draw the cudos of anyone near them. The purple plumme signifies their sacred status (and helps them gain a few precious centimeters of height). Unfortunatelly as a side effect of this proceedure their combat speed is affected. They are usually carried in the backs of their bretheren during long marches so their map speed is not affected." 
+#weapon "Short Pike"
+#armor "Buckler"
+#armor "Iron Cap"
+#armor "Full Chain Mail"
+#formationfighter 2
+#holy
+#size 2
+#ap 6
+#mor 10
+#end
+
+#newmonster 6107
+#spr1 "./Meme Age/Manletia/swordlet1.tga"
+#spr2 "./Meme Age/Manletia/swordlet2.tga"
+#copystats 3405
+#name "Hirdvaetti rejects"
+#descr "Once the personal guards of a Jarl, now swordmasters at the service of disgraced races such as themselves. When improved a coexisting dependacy forms with a wolf that boosts their height and grants them sacred status."
+#reclimit 3
+#xpshape 20
+#end
+
+#newmonster 6108
+#spr1 "./Meme Age/Manletia/elite_swordlet1.tga"
+#spr2 "./Meme Age/Manletia/elite_swordlet2.tga"
+#copystats 3418
+#name "Hirdvaetti wolfbonded"
+#descr "The nastiest of the manlets, inching ever closer to the abominable territory of furries, the extra height from being mounted allows them to become sacred and thus don the purple plumme for an extra boost in height."
+#weapon "Short Sword"
+#weapon "Bite"
+#armor "Chain Mail Cuirass"
+#armor "Iron Cap"
+#armor "Shield"
+#defence 12
+#holy
+#end
+
+#newmonster 6109
+#spr1 "./Meme Age/Manletia/ninjalet1.tga"
+#spr2 "./Meme Age/Manletia/ninjalet2.tga"
+#copystats 1257
+#name "Bakemono ninja"
+#descr "A stelthy assassin that believes he is able to defeat emenies larger than him, because of his superior defence."
+#weapon "Sickle"
+#weapon "Sickle"
+#weapon "Shuriken"
+#ambidextrous 2
+#ap 12
+#mapmove 12
+#size 1
+#def 15
+#prec 12
+#spy
+#xpshape 20
+#end
+
+#newmonster 6110
+#spr1 "./Meme Age/Manletia/elite_ninjalet1.tga"
+#spr2 "./Meme Age/Manletia/elite_ninjalet2.tga"
+#copystats 1257
+#name "Elite bakemono ninja"
+#descr "A pair of horns have sprouted on this bakemono's head. The increased height provides him with additional attacks and morale."
+#weapon "Sickle"
+#weapon "Sickle"
+#weapon "Shuriken"
+#weapon "Gore"
+#ambidextrous 2
+#ap 12
+#mapmove 12
+#size 1
+#def 16
+#prec 14
+#mor 14
+#spy
+#end
+
+#newmonster 6111
+#spr1 "./Meme Age/Manletia/bakemono_chieflet1.tga"
+#spr2 "./Meme Age/Manletia/bakemono_chieflet2.tga"
+#name "Bakemono Chief"
+#descr "Two bakemonos stacked one atop the other. They tower over their piers making capable commanders. Their stature gives them sacred status on top of their great leadership. If they are slain, they are still able to lead. After battle if one survives, they are able to resume their sacred position.
+On the rare occasion that this chief is promoted he is able to assume an even more monstrous form."
+#weapon "Dagger"
+#weapon "Dagger"
+#weapon "Short Bow"
+#armor "Furs"
+
+#hp 12
+#ambidextrous 4
+#formationfighter -2
+#unsurr 2
+#ap 8
+#mapmove 12
+#size 2
+#def 12
+#prec 10
+#mor 14
+#goodleader
+#holy
+#rpcost 2
+#mountainsurvival
+#itemslots 7582
+#xpshape 20
+#end
+
+#newmonster 6112
+#spr1 "./Meme Age/Manletia/bakemono_warlord1.tga"
+#spr2 "./Meme Age/Manletia/bakemono_warlord2.tga"
+#name "Bakemono Warlord"
+#descr "The pinacle of Manletia. A bakemono combination inspired by the most influential oriental man'gua and me'cka scriptures. A towering commander who is the supreme inspiration to all manlets across time and space. Their increased height gives them sacred status as well as their rigorous training to fight in this stance gives them many abilities on the battlefield."
+#weapon "Yari"
+#weapon "Wakizashi"
+#weapon "Dagger"
+#weapon "Crossbow"
+#armor "Ashigaru Armor"
+#hp 16
+#ambidextrous 6
+#formationfighter -2
+#unsurr 2
+#ap 10
+#mapmove 12
+#size 3
+#def 12
+#prec 12
+#mor 16
+#expertleader
+#holy
+#itemslots 8190
+#secondshape 6113
+#end
+
+#newmonster 6113
+#copystats 2467
+#copyspr 2467
+#descr "He is unbelievably pissed to be back at 5'11."
+#hp 12
+#berserk 6
+#firstshape 6112
+#end
+
+#newmonster 6114
+#spr1 "./Meme Age/Manletia/manlet_king1.tga"
+#spr2 "./Meme Age/Manletia/manlet_king2.tga"
+#name "The manlet King"
+#descr "The first to rise from the pit. The crowned monarch of Manletia, sovereign of every being under six feet. A king to his people, a joke to his enemies. Armed with an oversized giantslayer sword, the purple crowned hoburg is the sacred epitomy of justice for all short races of the world. His determination and training with oversized weaponry gives him increased capabilities on the battlefield. He is a leader that leads from the frontlines and he carries all the hopes and potential of the stunted race.
+He is a wielder of manlet magic, passed down to him by shamans and other short mages. Dwarves have taught him smithing and gnomes have taught him the secrets to the deadly palm-fist-of-shrinking."
+#weapon 1641
+#weapon 543
+#armor 9
+#armor 148
+#magicskill 3 2
+#magicskill 6 2
+#magicskill 8 3
+#gcost 0
+#combatcaster
+#forgebonus 10
+#latehero 12
+#hp 20
+#ambidextrous 2
+#unsurr 1
+#ap 12
+#mapmove 12
+#size 2
+#def 14
+#prec 12
+#mor 16
+#expertleader
+#holy
+#end
+
+#newmonster 6115
+#copystats 3322
+#copyspr 3322
+#name "Piconye Priest"
+#descr "A short Piconye priest guiding others to a blessing he can never possess. His endless obsession with height has stunted his academic pursuits."
+#magicskill 8 1
+#researchbonus -1
+#end
+
+#newmonster 6116
+#copystats 345
+#spr1 "./Meme Age/Manletia/gnome_warrior1.tga"
+#spr2 "./Meme Age/Manletia/gnome_warrior2.tga"
+#name "Gnome warrior"
+#descr "A gnomish warrior, wielding the infamous palm-fist-of-shrinking and a shield for extra protection."
+#weapon 543 --slap
+#armor "Shield"
+#armor "Leather Cap"
+#armor "Robes"
+#gcost 0
+#end
+
+#newmonster 6117
+#copystats 345
+#spr1 "./Meme Age/Manletia/gnome_warrior3.tga"
+#spr2 "./Meme Age/Manletia/gnome_warrior4.tga"
+#name "Gnome veteran"
+#hp 8
+#mor 10
+#descr "A gnomish veteran who has many a man and creature shrunk. He is wielding an enchanted slapping stick and a shield for extra protection."
+#weapon "Enchanted Slapping Stick"
+#armor "Shield"
+#armor "Leather Cap"
+#armor "Robes"
+#gcost 0
+#end
+
+#newmonster 6118
+#copystats 6117
+#copyspr 6117
+#name "Gnome commander"
+#descr "A gnomish leader, master of earth magic and leading his kin."
+#magicskill 3 2
+#magicskill 6 1
+#magicskill 1 1
+#gcost 180
+#goodleader
+#end
+
+#newmonster 6119
+#copystats 324
+#spr1 "./Meme Age/Manletia/dwarf_warrior1.tga"
+#spr2 "./Meme Age/Manletia/dwarf_warrior2.tga"
+#name "Dwarf warrior"
+#descr "If you're an ugly manlet you shouldn't try to become a midget bodybuilder gymcel, that's a rookie mistake. Instead, embrace the DwarfPill. Maximize your fat, muscle, and hairiness attributes. Eat, drink and train like an alcoholic strongman, ingest minoxidil, and never cut or trim your scalp/facial/body hair. Even if you're balding, just grow out a skullet. Let your nose hair merge with your moustache. Allow your bushy eyebrows to combine into one unit. Watch as your beard's cheekline grows up to your eyeballs, and your neckline connects to your chest hair. You should look like you have tarantulas under your armpits and a rug on your back. Become a wrecking ball of a man, solid as an oak stump. Proudly stink of pipe tobacco, ale, dirt, and sweat. Unlock the Powerbelly, live in a cave, and be happy."
+#hp 11
+#mr 12
+#mor 12
+#weapon "Enchanted Hammer"
+#armor "Tower Shield"
+#armor "Full Plate Mail"
+#armor "Full Helmet"
+#gcost 16
+#rcost 10 --without this, it is 19 resources for a 23 protection size 1
+#end
+
+#newspell
+#restricted 182
+#name "Summon Gnome Gang"
+#descr "Any man who feels shame from his height can channel his inferiority with some additional nature and earth magic to summon beings of raw jealousy that will teach the world of what it feels like to be looked down upon. Gnome warriors will answer the call along with a leader."
+#details "Summons 12 shielded glamoured gnome warriors who shrink enemies."
+#school 0
+#researchlevel 2
+#path 0 3 
+#path 1 6
+#pathlevel 0 2
+#pathlevel 1 2
+#effect 10001
+#damage 6116
+#nreff 1012
+#fatiguecost 600
+#end
+
+#newspell
+#restricted 182
+#name "Summon Gnome War Party"
+#descr "Any man who feels shame from his height can channel his inferiority with some additional nature and earth magic to summon beings of raw jealousy that will teach the world of what it feels like to be looked down upon. Experienced gnome veterans will answer the call along with a leader."
+#details "Summons 12 glamoured gnome veterans who shrink enemies."
+#school 0
+#researchlevel 5
+#path 0 3 
+#path 1 6
+#pathlevel 0 2
+#pathlevel 1 2
+#effect 10001
+#damage 6117
+#nreff 1012
+#fatiguecost 800
+#end
+
+#newspell
+#restricted 182
+#copyspell 1172
+#end
+
+#newsite 1674
+#name "Mountain of growth"
+#path 3
+#level 0
+#rarity 5
+#gems 3 2
+#gems 1 1
+#homecom 6111
+#decscale 3
+#end
+
+#newsite 1675
+#name "Gnome peaks"
+#path 6
+#level 0
+#rarity 5
+#gems 6 2
+#homecom 345
+#homecom 2836
+#homecom 6118
+#end
+
+#newsite 1676
+#name "The manlet pit"
+#path 7
+#level 0
+#rarity 5
+#xp 5
+#end
+
+#selectnation 182
+#name "Manletia"
+#epithet "Beware the manlet pit"
+#era 3
+#brief "A conglomerate of short kings focused on growth"
+#descr "Deeper into the sweaty gym of Pangea lies a pit that is impossible to climb out of. Taller nations, across time, would toss their rejects into this pit to eternally damn them into a life of ridicule. Any time that someone tried to escape, legends would speak of swole guards that would punish them harshly with the use of a dumbell and throw them back into the pit. The first of the Hoburgs, king of the manlets, managed to grow out of the prison and he did not turn his back to his imprisoned bretheren freeing them from that fate.
+The nation of Manletia consists of the smaller in statue rejects of all nations across time. All strive for self improvement in order to attract potential mates and growing past size 1 is considered as the penultimate goal. Anyone who has trancended the limitations of his height is considered sacred to the eyes of his peers. Manletia is a land of peace and totally devoid of the notions of coping, or compensating.
+Mountains across Manletia echo the words, grow... grow... grow..."
+
+#summary "Race: Bakemonos, dwarves, Hoburgs and other short kings
+Military: Dwarves, Hoburgs, Gnomes, Pygmies and Bakemonos
+Magic: Weak Water, Astral, Death, Blood, Air and Fire. Strong Earth and Nature.
+Priests: Weak"
+#flag "./Meme Age/Manletia/flag.tga"
+
+#startcom 6111
+#startunittype1 6101
+#startunitnbrs1 12
+#startunittype2 6103
+#startunitnbrs2 12
+
+#addreccom 6109
+#addreccom 6111
+#addreccom 6115
+#addreccom 1608
+#addreccom 2836
+#addreccom 345
+#addreccom 3407
+#addreccom 3408
+#addreccom 6118
+
+#addrecunit 6101
+#addrecunit 6103
+#addrecunit 6105
+#addrecunit 6107
+#addrecunit 6119
+
+#hero1 6114
+
+#clearsites
+#startsite "Mountain of growth"
+#startsite "Gnome peaks"
+#startsite "The manlet pit"
+#templepic 6
+#fortera 4
+#homerealm 3
+#homerealm 1
+#color 0.72 0.19 0.05
+#secondarycolor 0.52 0.43 0.72
+
 #end
