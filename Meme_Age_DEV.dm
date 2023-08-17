@@ -20017,7 +20017,7 @@ He is a wielder of manlet magic, passed down to him by shamans and other short m
 #end
 
 #newsite 1674
-#name "Mountain of growth"
+#name "Mountain of Growth"
 #path 3
 #level 0
 #rarity 5
@@ -20028,7 +20028,7 @@ He is a wielder of manlet magic, passed down to him by shamans and other short m
 #end
 
 #newsite 1675
-#name "Gnome peaks"
+#name "Gnome Peaks"
 #path 6
 #level 0
 #rarity 5
@@ -20039,7 +20039,7 @@ He is a wielder of manlet magic, passed down to him by shamans and other short m
 #end
 
 #newsite 1676
-#name "The manlet pit"
+#name "The Manlet Pit"
 #path 7
 #level 0
 #rarity 5
@@ -20048,10 +20048,10 @@ He is a wielder of manlet magic, passed down to him by shamans and other short m
 
 #selectnation 182
 #name "Manletia"
-#epithet "Beware the manlet pit"
+#epithet "Beware the Manlet Pit"
 #era 3
 #brief "A conglomerate of short kings focused on growth"
-#descr "Deeper into the sweaty gym of Pangea lies a pit that is impossible to climb out of. Taller nations, across time, would toss their rejects into this pit to eternally damn them into a life of ridicule. Any time that someone tried to escape, legends would speak of swole guards that would punish them harshly with the use of a dumbell and throw them back into the pit. The first of the Hoburgs, king of the manlets, managed to grow out of the prison and he did not turn his back to his imprisoned bretheren freeing them from that fate.
+#descr "Deeper into the sweaty gym of Pangaea lies a pit that is impossible to climb out of. Taller nations, across time, would toss their rejects into this pit to eternally damn them into a life of ridicule. Any time that someone tried to escape, legends would speak of swole guards that would punish them harshly with the use of a dumbell and throw them back into the pit. The first of the Hoburgs, king of the manlets, managed to grow out of the prison and he did not turn his back to his imprisoned bretheren freeing them from that fate.
 The nation of Manletia consists of the smaller in statue rejects of all nations across time. All strive for self improvement in order to attract potential mates and growing past size 1 is considered as the penultimate goal. Anyone who has trancended the limitations of his height is considered sacred to the eyes of his peers. Manletia is a land of peace and totally devoid of the notions of coping, or compensating.
 Mountains across Manletia echo the words, grow... grow... grow..."
 
@@ -20086,14 +20086,13 @@ Priests: Weak"
 #hero1 6114
 
 #clearsites
-#startsite "Mountain of growth"
-#startsite "Gnome peaks"
-#startsite "The manlet pit"
+#startsite "Mountain of Growth"
+#startsite "Gnome Peaks"
+#startsite "The Manlet Pit"
 #templepic 6
 #fortera 4
 #homerealm 3
 #homerealm 1
 #color 0.72 0.19 0.05
 #secondarycolor 0.52 0.43 0.72
-
 #end
