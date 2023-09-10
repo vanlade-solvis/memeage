@@ -4708,7 +4708,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #ap 12
 #mapmove 22
 #hp 22
-#prot 0
+#prot 3
 #size 2
 #str 12
 #enc 0
@@ -4746,7 +4746,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #ap 12
 #mapmove 22
 #hp 22
-#prot 0
+#prot 3
 #size 2
 #str 12
 #enc 0
@@ -4782,7 +4782,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #ap 12
 #mapmove 22
 #hp 22
-#prot 0
+#prot 3
 #size 2
 #str 12
 #enc 0
@@ -4816,7 +4816,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #ap 12
 #mapmove 22
 #hp 22
-#prot 0
+#prot 3
 #size 2
 #str 12
 #enc 0
@@ -4856,7 +4856,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #ap 12
 #mapmove 18
 #hp 22
-#prot 0
+#prot 3
 #size 2
 #str 12
 #enc 0
@@ -4891,7 +4891,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #ap 12
 #mapmove 18
 #hp 22
-#prot 0
+#prot 3
 #size 2
 #str 12
 #enc 0
@@ -4926,7 +4926,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #ap 12
 #mapmove 18
 #hp 22
-#prot 0
+#prot 3
 #size 2
 #str 12
 #enc 0
@@ -4961,7 +4961,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #ap 16
 #mapmove 22
 #hp 29
-#prot 0
+#prot 3
 #size 4
 #str 12
 #enc 0
@@ -5033,7 +5033,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #ap 12
 #mapmove 18
 #hp 22
-#prot 0
+#prot 3
 #size 2
 #str 12
 #enc 0
@@ -5068,7 +5068,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #ap 12
 #mapmove 18
 #hp 22
-#prot 0
+#prot 3
 #size 2
 #str 12
 #enc 0
@@ -5104,7 +5104,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #ap 12
 #mapmove 18
 #hp 22
-#prot 12
+#prot 15
 #size 2
 #str 12
 #enc 0
@@ -5141,7 +5141,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #ap 12
 #mapmove 18
 #hp 22
-#prot 0
+#prot 3
 #size 2
 #str 12
 #enc 0
@@ -5154,6 +5154,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #startage 155
 #nametype 121
 #gcost 0
+#weapon 29 --claw
 #weapon 29 --claw
 #weapon 142 --touch of leprosy
 #holy
@@ -5238,9 +5239,9 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #descr "Using the power of death magic to awake the terracotta statues, animating them into soldiers."
 #school 0
 #researchlevel 3
-#path 0 5
+#path 0 3
 #pathlevel 0 1
-#path 1 3
+#path 1 5
 #pathlevel 1 1
 #effect 10001
 #damage 5342
@@ -5270,9 +5271,9 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #descr "A powerful mage can search deep beneath the earth to find the souls of the long buried and funnel them into terra cotta. The soldiers will rise again and mindlessly serve in their new clay bodies.."
 #school 0
 #researchlevel 8
-#path 0 5
+#path 0 3
 #pathlevel 0 4
-#path 1 3
+#path 1 5
 #pathlevel 1 2
 #effect 10001
 #damage 5342
@@ -5338,11 +5339,11 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 
 #newevent
 #rarity 5
-#req_rare 3
+#req_rare 10
 #req_fornation 158
 #req_pop0ok
 #req_fort 1 ---------FORT NOBLE BONUS
-#req_dominion 4 --------------DOM5+ BONUS
+#req_dominion 4 --------------DOM4+ BONUS
 #req_fullowner
 #nation -2
 --#msg "debug fort noble"
@@ -5356,6 +5357,20 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #req_fornation 158
 #req_pop0ok
 #req_temple 1 --------------TEMPLE BONUS
+#req_fullowner
+#nation -2
+--#msg "debug temple"
+#notext
+#nolog
+#1d6units -3001
+#end
+
+#newevent
+#rarity 5
+#req_rare 50
+#req_fornation 158
+#req_pop0ok
+#req_temple 1 --------------TEMPLE CHANCE BONUS
 #req_fullowner
 #nation -2
 --#msg "debug temple"
@@ -5559,7 +5574,7 @@ Dominion: Kills Population and raises Jiangshi; affected by Dominion, Death Scal
 #defmult2 10
 #wallunit 535
 
-#killcappop 50
+#killcappop 35
 #domkill 8
 #defdeath 3
 
@@ -20096,3 +20111,690 @@ Priests: Weak"
 #color 0.72 0.19 0.05
 #secondarycolor 0.52 0.43 0.72
 #end
+
+--------------------------------------------------------------------------
+-- Tortasia
+-- currently using
+-- unit 6151-6166
+-- site 1677-1678
+-- nation 183
+--------------------------------------------------------------------------
+
+#newmonster 6151
+#spr1 "./Meme Age/Tortasia/c_ass1.tga"
+#spr2 "./Meme Age/Tortasia/c_ass2.tga"
+#name "Turtle Assassin"
+#descr "Most assassins pride themselves in fast movement and quick agility, however, Tortasian assassins don't find themselves inhibited by their slow movements. Instead, they wait paitently with poisoned blades for the right moment to strike. Tortasian assassins have long claws that allow them to climb castle walls."
+#ap 4
+#mapmove 10
+#hp 15
+#prot 15
+#size 2
+#str 13
+#enc 1
+#att 12
+#def 12
+#prec 12
+#mr 11
+#mor 13
+#maxage 100
+#startage 25
+#nametype 144
+#gcost 10025
+#rcost 4
+#rpcost 1
+#weapon 20 --"Bite"
+#weapon 126 --"Poison Dagger"
+#amphibian
+#coldblood
+#swimming
+#swampsurvival
+#stealthy 65
+#assassin
+#scalewalls
+#end
+
+#newmonster 6152
+#spr1 "./Meme Age/Tortasia/c_basic1.tga"
+#spr2 "./Meme Age/Tortasia/c_basic2.tga"
+#name "Turtle Commander"
+#descr "An amphibious commander capable of leading an army, wears armor fashioned out of dropped turtle scutes."
+#ap 4
+#mapmove 10
+#hp 15
+#prot 16
+#size 2
+#str 13
+#enc 1
+#att 13
+#def 8
+#prec 10
+#mr 11
+#mor 13
+#maxage 100
+#startage 25
+#nametype 144
+#gcost 10025
+#rcost 14
+#rpcost 1
+#weapon 20 --"Bite"
+#weapon 1 --"Spear"
+#armor 134 --"Turtle Cap"
+#armor 25 --"Turtle Shell Shield"
+#amphibian
+#coldblood
+#swimming
+#swampsurvival
+#goodleader
+#end
+
+#newmonster 6153
+#spr1 "./Meme Age/Tortasia/c_blackshell1.tga"
+#spr2 "./Meme Age/Tortasia/c_blackshell2.tga"
+#name "Blackshell Warpriest"
+#descr "The Blackshell of Tortasia have fused armor plating with their shells, sacrificing mobililty to stregthen their bodies. This is a sacred act in Tortasia, and not many turtles can withstand the procedure. Those who do survive are revered and well respected."
+#ap 4
+#mapmove 10
+#hp 45
+#prot 20
+#size 4
+#str 16
+#enc 1
+#att 12
+#def 6
+#prec 11
+#mr 14
+#mor 16
+#maxage 100
+#startage 25
+#nametype 144
+#gcost 10035
+#rcost 21
+#rpcost 1
+#weapon 20 --"Bite"
+#weapon 258 --"Claymore"
+#armor 20 --"Iron Cap"
+#amphibian
+#coldblood
+#swimming
+#swampsurvival
+#goodleader
+#holy
+#magicskill 8 1
+#combatcaster
+#end
+
+#newmonster 6154
+#spr1 "./Meme Age/Tortasia/c_unny1.tga"
+#spr2 "./Meme Age/Tortasia/c_unny2.tga"
+#name "Hatchling Druid"
+#descr "Hatchling Druids are young female turtles groomed from their hatching to learn and cultivate Nature magic. Many forsake their training when they grow too old are courted by potential mates, instead of dedicating their time to studying magic. Some Hatchlings may gain insights into other paths of magic as well. Hatchlings are not trusted to lead troops into battle, but they will bring their familiars along with them."
+#ap 4
+#mapmove 10
+#hp 10
+#prot 14
+#size 1
+#str 9
+#enc 1
+#att 9
+#def 9
+#prec 14
+#mr 14
+#mor 12
+#maxage 100
+#startage 2
+#nametype 144
+#gcost 10015
+#rcost 14
+#rpcost 2
+#weapon 20 --"Bite"
+#weapon 7 --"Quarterstaff"
+#armor 121 --"Leather Hood"
+#female
+#amphibian
+#coldblood
+#swimming
+#swampsurvival
+#batstartsum1 2222 --frog
+#magicskill 6 1
+#custommagic 9472 25
+#end
+
+#newmonster 6155
+#spr1 "./Meme Age/Tortasia/c_sea1.tga"
+#spr2 "./Meme Age/Tortasia/c_sea2.tga"
+#name "Turtle Elementalist"
+#descr "Tortasian Elementalists are sea turtles who have climbed out of the ocean to serve the rising pantokrator. They are masters of water, and sometimes fire, air or earth. They can be recruited underwater as well as on land."
+#ap 4
+#mapmove 10
+#hp 35
+#prot 15
+#size 3
+#str 14
+#enc 1
+#att 10
+#def 6
+#prec 12
+#mr 14
+#mor 14
+#maxage 100
+#startage 40
+#nametype 144
+#gcost 10030
+#rcost 4
+#rpcost 2
+#weapon 20 --"Bite"
+#amphibian
+#coldblood
+#swimming
+#swampsurvival
+#magicskill 2 3
+#custommagic 1920 200
+#custommagic 1920 10
+#end
+
+#newmonster 6156
+#spr1 "./Meme Age/Tortasia/c_old1.tga"
+#spr2 "./Meme Age/Tortasia/c_old2.tga"
+#name "Tortise Elder"
+#descr "Few and far between are the Elders of Tortasia, but any lucky enough to meet one will be greeted with words of wisdom and life lessons. They are the original defenders of the lands, and many of them still remember the beginning of the conflict with Tenki, and the devastation that it brought to the lands. The Elders seek to rebuild and reclaim the lands that were once theirs."
+#ap 4
+#mapmove 10
+#hp 60
+#prot 16
+#size 4
+#str 16
+#enc 1
+#att 12
+#def 9
+#prec 14
+#mr 15
+#mor 14
+#maxage 1000
+#startage 980
+#nametype 144
+#gcost 10035
+#rcost 4
+#rpcost 2
+#weapon 20 --"Bite"
+#weapon 7 --"Quarterstaff"
+#coldblood
+#swimming
+#swampsurvival
+#mountainsurvival
+#holy
+#magicskill 3 2
+#magicskill 6 1
+#magicskill 8 2
+#custommagic 9472 100
+#custommagic 9472 25
+#end
+
+#newmonster 6157
+#spr1 "./Meme Age/Tortasia/u_basicsword1.tga"
+#spr2 "./Meme Age/Tortasia/u_basicsword2.tga"
+#name "Turtle Infantry"
+#descr "Tortasian footsoldiers with some basic training. While they may be slow and unarmored, they trust in their sturdy shells to withstand enemy blows."
+#ap 4
+#mapmove 10
+#hp 15
+#prot 15
+#size 2
+#str 13
+#enc 1
+#att 10
+#def 8
+#prec 10
+#mr 11
+#mor 10
+#maxage 100
+#startage 25
+#nametype 144
+#gcost 10009
+#rcost 9
+#rpcost 10
+#weapon 20 --"Bite"
+#weapon 8 --"Broad Sword"
+#armor 25 --"Turtle Shell Shield"
+#amphibian
+#coldblood
+#swimming
+#swampsurvival
+#end
+
+#newmonster 6158
+#spr1 "./Meme Age/Tortasia/u_basicspear1.tga"
+#spr2 "./Meme Age/Tortasia/u_basicspear2.tga"
+#name "Turtle Infantry"
+#descr "Tortasian footsoldiers with some basic training. While they may be slow and unarmored, they trust in their sturdy shells to withstand enemy blows."
+#ap 4
+#mapmove 10
+#hp 15
+#prot 15
+#size 2
+#str 13
+#enc 1
+#att 10
+#def 8
+#prec 10
+#mr 11
+#mor 10
+#maxage 100
+#startage 25
+#nametype 144
+#gcost 10009
+#rcost 9
+#rpcost 10
+#weapon 20 --"Bite"
+#weapon 1 --"Spear"
+#armor 25 --"Turtle Shell Shield"
+#amphibian
+#coldblood
+#swimming
+#swampsurvival
+#end
+
+#newmonster 6159
+#spr1 "./Meme Age/Tortasia/u_basicnet1.tga"
+#spr2 "./Meme Age/Tortasia/u_basicnet2.tga"
+#name "Turtle Hunter"
+#descr "Tortasian hunter that are skilled at fighting due to their experiences hunting with a net and a trident. While they may be slow and unarmored, they trust in their sturdy shells to withstand enemy blows."
+#ap 4
+#mapmove 10
+#hp 15
+#prot 15
+#size 2
+#str 13
+#enc 1
+#att 12
+#def 8
+#prec 10
+#mr 11
+#mor 10
+#maxage 100
+#startage 25
+#nametype 144
+#gcost 10011
+#rcost 7
+#rpcost 18
+#weapon 20 --"Bite"
+#weapon 3 --"Trident"
+#weapon 263 --"Net"
+#amphibian
+#coldblood
+#swimming
+#swampsurvival
+#end
+
+#newmonster 6160
+#spr1 "./Meme Age/Tortasia/u_hatsword1.tga"
+#spr2 "./Meme Age/Tortasia/u_hatsword2.tga"
+#name "Turtle Heavy Infantry"
+#descr "Tortasian footsoldiers with advanced training. They wear basic armor forged from dropped scutes."
+#ap 4
+#mapmove 10
+#hp 15
+#prot 15
+#size 2
+#str 14
+#enc 1
+#att 13
+#def 9
+#prec 10
+#mr 11
+#mor 11
+#maxage 100
+#startage 25
+#nametype 144
+#gcost 10011
+#rcost 14
+#rpcost 15
+#weapon 20 --"Bite"
+#weapon 8 --"Broad Sword"
+#armor 25 --"Turtle Shell Shield"
+#armor 134 --"Turtle Cap"
+#amphibian
+#coldblood
+#swimming
+#swampsurvival
+#end
+
+#newmonster 6161
+#spr1 "./Meme Age/Tortasia/u_hatspear1.tga"
+#spr2 "./Meme Age/Tortasia/u_hatspear2.tga"
+#name "Turtle Heavy Infantry"
+#descr "Tortasian footsoldiers with advanced training. They wear basic armor forged from dropped scutes."
+#ap 4
+#mapmove 10
+#hp 15
+#prot 15
+#size 2
+#str 14
+#enc 1
+#att 13
+#def 9
+#prec 10
+#mr 11
+#mor 11
+#maxage 100
+#startage 25
+#nametype 144
+#gcost 10011
+#rcost 14
+#rpcost 15
+#weapon 20 --"Bite"
+#weapon 1 --"Spear"
+#armor 25 --"Turtle Shell Shield"
+#armor 134 --"Turtle Cap"
+#amphibian
+#coldblood
+#swimming
+#swampsurvival
+#end
+
+#newmonster 6162
+#spr1 "./Meme Age/Tortasia/u_hatnet1.tga"
+#spr2 "./Meme Age/Tortasia/u_hatnet2.tga"
+#name "Turtle Ranger"
+#descr "Tortasian Hunters that have been officially trained and integrated into the military. They wear basic armor forged from dropped scutes in addition to the hunting equipment they are used to."
+#ap 4
+#mapmove 10
+#hp 15
+#prot 15
+#size 2
+#str 14
+#enc 1
+#att 13
+#def 9
+#prec 10
+#mr 11
+#mor 11
+#maxage 100
+#startage 25
+#nametype 144
+#gcost 10011
+#rcost 14
+#rpcost 15
+#weapon 20 --"Bite"
+#weapon 3 --"Trident"
+#weapon 263 --"Net"
+#armor 134 --"Turtle Cap"
+#amphibian
+#coldblood
+#swimming
+#swampsurvival
+#end
+
+#newmonster 6163
+#spr1 "./Meme Age/Tortasia/u_flag1.tga"
+#spr2 "./Meme Age/Tortasia/u_flag2.tga"
+#name "Turtle Standard"
+#descr "A trained Tortasian soldier given the honorable job of carrying the banner of their nation into battle. They carry only a javelin and the banner itself, trusting their fellow soldiers to protect them. The banner inspires all soldiers who march alongside it."
+#ap 4
+#mapmove 10
+#hp 15
+#prot 15
+#size 2
+#str 14
+#enc 1
+#att 13
+#def 9
+#prec 10
+#mr 11
+#mor 11
+#maxage 100
+#startage 25
+#nametype 144
+#gcost 10020
+#rcost 14
+#rpcost 20
+#weapon 20 --"Bite"
+#weapon 100 --"Standard"
+#weapon 21 --"Javelin"
+#armor 25 --"Turtle Shell Shield"
+#armor 134 --"Turtle Cap"
+#amphibian
+#coldblood
+#swimming
+#swampsurvival
+#standard 1
+#end
+
+#newmonster 6164
+#spr1 "./Meme Age/Tortasia/u_bigtort1.tga"
+#spr2 "./Meme Age/Tortasia/u_bigtort2.tga"
+#name "Elite Tortise"
+#descr "Highly trained elite Tortasian warriors, as they are tortises and not turtles, they lack the ability to fight underwater. They wear armor salvaged off of enemy soldiers from past wars. It's said that the jaw of one of these tortises can snap a horse in half."
+#ap 4
+#mapmove 10
+#hp 35
+#prot 18
+#size 3
+#str 16
+#enc 1
+#att 13
+#def 7
+#prec 10
+#mr 12
+#mor 14
+#maxage 1000
+#startage 400
+#nametype 144
+#gcost 10035
+#rcost 14
+#rpcost 25
+#weapon 20 --"Bite"
+#weapon 8 --"Broad Sword"
+#armor 20 --"Iron Cap"
+#armor 14 --"Plate Hauberk"
+#coldblood
+#swimming
+#swampsurvival
+#mountainsurvival
+#end
+
+#newmonster 6165
+#spr1 "./Meme Age/Tortasia/u_blackshell1.tga"
+#spr2 "./Meme Age/Tortasia/u_blackshell2.tga"
+#name "Blackshell Warrior"
+#descr "The Blackshell of Tortasia have fused armor plating with their shells, sacrificing mobililty to stregthen their bodies. This is a sacred act in Tortasia, and not many turtles can withstand the procedure. Those who do survive are revered and well respected."
+#ap 5
+#mapmove 10
+#hp 45
+#prot 20
+#size 4
+#str 16
+#enc 1
+#att 14
+#def 6
+#prec 11
+#mr 14
+#mor 16
+#maxage 100
+#startage 25
+#nametype 144
+#gcost 10035
+#rcost 21
+#rpcost 25
+#weapon 20 --"Bite"
+#weapon 258 --"Claymore"
+#armor 20 --"Iron Cap"
+#amphibian
+#coldblood
+#swimming
+#swampsurvival
+#holy
+#end
+
+#newmonster 6166
+#spr1 "./Meme Age/Tortasia/p_tree.tga"
+#spr2 "./Meme Age/Tortasia/p_tree.tga"
+#name "World-bearing Turtle"
+#descr "The World-bearing Turtle was thought to be inanimate for many years eons, as the previous Pantokrator inprisoned it, causing it to be suspended in the middle of the great cosmic ocean. The reason for this inprisonment was the Pantokrator's son bet on a hare in a race against it, and lost. As a form of humiliation and revenge, the previous Pantokrator's son build a summer home upon it's back. Now with the rising of the new pretender gods, the World-bearing Turtle's patient revenge and rightful ascension may finally take place. This may be righteous proof that slow and steady does in fact win the race."
+#ap 8
+#mapmove 16
+#hp 165
+#prot 20
+#size 6
+#str 26
+#enc 0
+#att 14
+#def 2
+#prec 12
+#mr 20
+#mor 30
+#maxage 8000
+#startage 6000
+#nametype 144
+#gcost 240
+#rcost 21
+#rpcost 1
+#weapon 20 --"Bite"
+#amphibian
+#quadruped
+#coldblood
+#swimming
+#swampsurvival
+#sailing 999 4
+#pathcost 60
+#startdom 3
+#trample
+#heal
+#darkvision 100
+#magicskill 1 1
+#magicskill 3 1
+#magicskill 6 1
+#end
+
+#newmonster 6167
+#spr1 "./Meme Age/Tortasia/c_blackshell3.tga"
+#spr2 "./Meme Age/Tortasia/c_blackshell4.tga"
+#name "Blackshell Warbishop"
+#descr "The Blackshell of Tortasia have fused armor plating with their shells, sacrificing mobililty to stregthen their bodies. This is a sacred act in Tortasia, and not many turtles can withstand the procedure. Those who do survive are revered and well respected."
+#ap 4
+#mapmove 10
+#hp 45
+#prot 20
+#size 4
+#str 16
+#enc 1
+#att 14
+#def 8
+#prec 11
+#mr 14
+#mor 16
+#maxage 100
+#startage 25
+#nametype 144
+#gcost 10040
+#rcost 21
+#rpcost 1
+#weapon 20 --"Bite"
+#weapon 258 --"Claymore"
+#armor 20 --"Iron Cap"
+#amphibian
+#coldblood
+#swimming
+#swampsurvival
+#goodleader
+#holy
+#magicskill 8 2
+#reinvigoration 2
+#combatcaster
+#end
+
+#newsite 1677
+#name "Still-Water Shore"
+#path 2
+#rarity 5
+#gems 2 2
+#gems 6 2
+#end
+
+#newsite 1678
+#name "Blackshell Sanctuary"
+#path 3
+#rarity 5
+#gems 3 1
+#homemon 6165
+#homecom 6167
+#end
+
+#selectnation 183
+#name "Tortasia"
+#epithet "Slow and Steady"
+#era 3
+#brief "Slow and sturdy coastal nation of amphibious turtles and some tortises."
+#descr "The Tortasians came to be after an unholy union between an Ulmish Black Priest who had been dragged into the ocean by a Kappa from Jomon. The Ulmite survived the encounter, and raised the offspring that resulted from the union, and returned them to the ocean once they could fend for themselves. Little to anyone's knowledge, the turtle-like offspring would continue to reproduce quickly, and end up founding their own independant microstate on a small isle. After being kicked off of their peaceful island paradise by mounted barbarians many years later, the turtles migrated across the oceans and founded the new nation of Tortasia. The Tortasians swore to train and retake the island that was rightfully theirs. The most devoted to the cause invented Blackshell plating, remembering the teachings of their Ulmish ancestors through an absolute miracle. However this lost art is detested by Ulm and their Earthenblood order. The malediction fearing vampires were not happy and demanded heavy copyright and trademark fees from the Tortasians despite not knowing their secrets of blacksteel themselves. Since Tortasia was a small and economically weak nation at the time, they were forced to agree to stop producing blacksteel and instead resorted to infusing their shells with Blacksteel technology to skirt the technicalities.
+In their newly founded coastal capital, Tortasians called to their eldest allies in the deep oceans and called for all citizens to reproduce so they may train new generations of druids and warriors. With patience and time, all things may be rebuilt and all evils will be quelled; especially those Earthenblood bullies of Ulm. The turtles are a very patient race, they took their time growing new forests and digging new lakes inland, and building a new sanctuary for them to raise their young and grow old in. After all, with enough time all of the shorter-lived enemies of the turtles will die off.
+Tortasians wish to return to their slow lifestyles after the war is over, but first they must win one final race: To claim the Thrones of Ascension."
+#summary "Race: Cold-blooded amphibious turtles and some tortises, Prefer Heat +2
+Militarty: High protection units, only ranged weapon are javelins, large elite troops
+Magic: Water, Earth and Nature, some Fire, Air and Astral
+Priests: Average"	
+#flag "./Meme Age/Tortasia/flag.tga"
+
+#addreccom 6151
+#addreccom 6152
+#addreccom 6153
+#addreccom 6154
+#addreccom 6156
+
+#addrecunit 6157
+#addrecunit 6158
+#addrecunit 6159
+#addrecunit 6160
+#addrecunit 6161
+#addrecunit 6162
+#addrecunit 6163
+#addrecunit 6164
+
+#uwcom 6151
+#uwcom 6152
+#uwcom 6155
+
+#uwrec 6157
+#uwrec 6158
+#uwrec 6159
+#uwrec 6160
+#uwrec 6161
+#uwrec 6162
+#uwrec 6163
+
+#startcom 6152
+#startunittype1 6160
+#startunitnbrs1 15
+#startunittype2 6159
+#startunitnbrs2 10
+#startscout 6151
+#defcom1 6152
+#defcom2 6154
+#defunit1 6160
+#defunit2 6164
+#defmult1 14
+#defmult1b 14
+#defmult2 14
+#wallunit 6163
+#uwdefcom1 6152
+#uwdefcom2 6155
+#uwdefunit1 6160
+#uwdefunit2 6159
+#uwwallunit 6163
+
+#addgod 6166
+
+#clearsites
+#startsite "Still-Water Shore"
+#startsite "Blackshell Sanctuary"
+#idealcold -2
+#forteta 3
+#templepic 10
+#coastnation
+#riverstart
+#uwbuild 1
+#homerealm 4
+#homerealm 10
+#color 0.63 0.13 0.18
+#secondarycolor 0.14 0.17 0.11
+#end
+
