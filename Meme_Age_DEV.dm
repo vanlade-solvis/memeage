@@ -42,6 +42,7 @@
 --3002 sacred jiangshi
 --3003 atlantis fishing list
 --3004 NAGAS
+--3005 Ninja Turtles
 
 --LAS PELAGUS MONTAGS
 --5000-5008
@@ -600,6 +601,33 @@
 #sound 8
 #end
 
+#newweapon 1642
+#name "Nunchucks"
+#dmg 4
+#len 2
+#att 1
+#def 5
+#nratt 2
+#woodenweapon
+#blunt
+#magic
+#sound 10
+#end
+
+#newweapon 1643
+#name "Gator Ballista"
+#ironweapon
+#dmg 40
+#att 5
+#range 45
+#pierce
+#armorpiercing
+#ammo 24
+#rcost 40
+#sound 13
+#flyspr 109 1
+#end
+
 --- Lucky Fish Weapons ---
 
 #newweapon 1995 -- Enchanted Long Spear
@@ -832,8 +860,8 @@ Use Masks to Slow the Spread of Tienchi Plague - Nature Magic Experts"
 #secondarypath 6
 #mainlevel 2
 #secondarylevel 2
-#itemcost1 -5
-#itemcost2 -5
+#itemcost1 -50
+#itemcost2 -50
 #spr "./Meme Age/Manletia/club_of_shrinking.tga"
 #type 1
 #name "Enchanted Slapping Stick"
@@ -849,7 +877,7 @@ EVERYONE WILL KNOW WHAT IT FEELS TO BE 5,11!"
 #constlevel 0
 #mainpath 3
 #mainlevel 2
-#itemcost1 -5
+#itemcost1 -50
 #spr "./Meme Age/Manletia/giantslayer.tga"
 #type 1
 #name "Giantslayer"
@@ -858,6 +886,27 @@ EVERYONE WILL KNOW WHAT IT FEELS TO BE 5,11!"
 #str 2
 #autobless
 #weapon 1641
+#end
+
+#selectitem 660
+#copyspr 389 --midget's revenge
+#restricted 182 --Manletia Only
+#constlevel 6
+#mainpath 3
+#secondarypath 6
+#mainlevel 2
+#secondarylevel 2
+#itemcost1 -50
+#itemcost2 -50
+#type 8
+#name "Manlet's Revenge"
+#descr "After years of experimentation, the Manlets and Manletia came up with a crude mockery of the legendary artifact known as Midget's Revenge. This copy is not as potent and does not actually enlarge the wearer. It primarily serves as a confidence booster to manlets that wear it."
+#maxsize 1
+#nofind
+#def 2
+#str 2
+#att 2
+#hp 8
 #end
 
 --------------------------------------------------------------------------
@@ -1429,6 +1478,114 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #spreaddom 1
 #end
 
+#newmonster 5138
+#spr1 "./Meme Age/Pyth/chocogolem1.tga"
+#spr2 "./Meme Age/Pyth/chocogolem2.tga"
+#name "Chocolate Golem"
+#descr "A Chocolate Golem is a chocolate construct given true life by the divine gastronomical work put into its creation. The chocolate golem is physically strong and skilled in Earth magic. The chocolate golem cannot command troops and it will never retreat from battle. It is however vulnerable to heat as the fine details crafted by the gastromancers will melt and destroy the magic."
+#ap 10
+#mapmove 22
+#hp 85
+#prot 6
+#size 5
+#str 25
+#enc 0
+#att 9
+#def 9
+#prec 9
+#mr 18
+#mor 50
+#maxage 1500
+#startage 1000
+#gcost 0
+#weapon "Fist"
+#fireres -5
+#poisonres 25
+#coldres 5
+#shockres 5
+#pierceres
+#bluntres
+#magicbeing
+#inanimate
+#neednoteat
+#spiritsight
+#magicskill 3 2
+#end
+
+#newmonster 5139
+#spr1 "./Meme Age/Pyth/spaghett1.tga"
+#spr2 "./Meme Age/Pyth/spaghett2.tga"
+#name "Flying Serpentghetti Monster"
+#descr "The Flying Serpentghetti Monster is a powerful being created by the most skilled gastromancer. The supreme cuisine is sentient and magically powerful. Despite its squishy and tasty nature, it is physically powerful too. Despite its massive stature, the Flying Serpentghetti Monster is capable to dodging attacks with ease and counter attacking with its many noodly arms."
+#ap 10
+#mapmove 24
+#hp 77
+#prot 1
+#size 6
+#str 25
+#enc 0
+#att 15
+#def 15
+#prec 15
+#mr 18
+#mor 30
+#maxage 2500
+#startage 1000
+#gcost 0
+#weapon 85 --"Tentacle"
+#weapon 85 --"Tentacle"
+#weapon 85 --"Tentacle"
+#weapon 85 --"Tentacle"
+#poisonres 25
+#pierceres
+#bluntres
+#magicbeing
+#neednoteat
+#spiritsight
+#magicskill 4 5
+#fly
+#mindslime 20
+#fear 5
+#awe 3
+#battlesum1 5156
+#end
+
+#newmonster 5140
+#spr1 "./Meme Age/Pyth/umadelicia.tga"
+#name "Demisopa"
+#descr "The Demisopa is a cursed biproduct of the highly controversial dish Sopa de Macac. The dish takes a highly sentient Macac from Rio as the primary ingredient. Some argue that gastronomy should not be bound by arbitrary rules, other argue that it is inhumane to consume intelligent beings. Nevertheless, there is always a group of people that are willing to create Sopa de Macac and leave behind a terrifying lichlike being."
+#ap 2
+#mapmove 4
+#hp 3
+#prot 0
+#size 1
+#str 4
+#enc 0
+#att 3
+#def 3
+#prec 10
+#mr 18
+#mor 30
+#maxage 1000
+#startage 400
+#gcost 0
+#poisonres 25
+#coldres 25
+#invulnerable 20
+#immobile
+#pooramphibian
+#slashres
+#pierceres
+#undead
+#inanimate
+#neednoteat
+#spiritsight
+#immortal
+#magicskill 4 2
+#magicskill 5 2
+#itemslots 12416 --1head2misc
+#end
+
 #newmonster 5141
 #copyspr 1864
 #copystats 1864
@@ -1554,6 +1711,314 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #trample
 #end
 
+#newmonster 5149
+#spr1 "./Meme Age/Pyth/saltele1.tga"
+#spr2 "./Meme Age/Pyth/saltele2.tga"
+#name "Salt Elemental"
+#descr "Salt Elementals are projections of raw seethe given life through strong opinions. All elementals shrink in size and power when severely damaged. Unlike the usual Elementals, Salt Elementals are created by Pythium Gastromancers via harnessing the vitriol of the food critics in their population."
+#ap 14
+#mapmove 14
+#hp 60
+#prot 10
+#size 6
+#str 22
+#enc 0
+#att 10
+#def 10
+#prec 5
+#mr 18
+#mor 50
+#maxage 1000
+#startage 0
+#nametype 129
+#gcost 0
+#weapon "Fist"
+#weapon 761 --"Throw Salt"
+#weapon 761 --"Throw Salt"
+#weapon 761 --"Throw Salt"
+#miscshape
+#magicbeing
+#coldres 5
+#fireres 5
+#poisonres 25
+#trample
+#blind
+#woundfend 4
+#inanimate
+#neednoteat
+#norivercross
+#spiritsight
+#slashres
+#shrinkhp 50
+#end
+
+#newmonster 5150
+#spr1 "./Meme Age/Pyth/saltele1.tga"
+#spr2 "./Meme Age/Pyth/saltele2.tga"
+#name "Salt Elemental"
+#descr "Salt Elementals are projections of raw seethe given life through strong opinions. All elementals shrink in size and power when severely damaged. Unlike the usual Elementals, Salt Elementals are created by Pythium Gastromancers via harnessing the vitriol of the food critics in their population."
+#ap 12
+#mapmove 14
+#hp 50
+#prot 9
+#size 5
+#str 20
+#enc 0
+#att 10
+#def 10
+#prec 5
+#mr 17
+#mor 50
+#maxage 1000
+#startage 0
+#nametype 129
+#gcost 0
+#weapon "Fist"
+#weapon 761 --"Throw Salt"
+#weapon 761 --"Throw Salt"
+#miscshape
+#magicbeing
+#coldres 5
+#fireres 5
+#poisonres 25
+#trample
+#blind
+#woundfend 4
+#inanimate
+#neednoteat
+#norivercross
+#spiritsight
+#slashres
+#shrinkhp 40
+#drawsize -10
+#end
+
+#newmonster 5151
+#spr1 "./Meme Age/Pyth/saltele1.tga"
+#spr2 "./Meme Age/Pyth/saltele2.tga"
+#name "Salt Elemental"
+#descr "Salt Elementals are projections of raw seethe given life through strong opinions. All elementals shrink in size and power when severely damaged. Unlike the usual Elementals, Salt Elementals are created by Pythium Gastromancers via harnessing the vitriol of the food critics in their population."
+#ap 10
+#mapmove 14
+#hp 40
+#prot 8
+#size 4
+#str 18
+#enc 0
+#att 10
+#def 10
+#prec 5
+#mr 16
+#mor 50
+#maxage 1000
+#startage 0
+#nametype 129
+#gcost 0
+#weapon "Fist"
+#weapon 761 --"Throw Salt"
+#weapon 761 --"Throw Salt"
+#miscshape
+#magicbeing
+#coldres 5
+#fireres 5
+#poisonres 25
+#trample
+#blind
+#woundfend 4
+#inanimate
+#neednoteat
+#norivercross
+#spiritsight
+#slashres
+#shrinkhp 30
+#drawsize -20
+#end
+
+#newmonster 5152
+#spr1 "./Meme Age/Pyth/saltele1.tga"
+#spr2 "./Meme Age/Pyth/saltele2.tga"
+#name "Salt Elemental"
+#descr "Salt Elementals are projections of raw seethe given life through strong opinions. All elementals shrink in size and power when severely damaged. Unlike the usual Elementals, Salt Elementals are created by Pythium Gastromancers via harnessing the vitriol of the food critics in their population."
+#ap 8
+#mapmove 14
+#hp 30
+#prot 7
+#size 3
+#str 16
+#enc 0
+#att 10
+#def 10
+#prec 5
+#mr 15
+#mor 50
+#maxage 1000
+#startage 0
+#nametype 129
+#gcost 0
+#weapon "Fist"
+#weapon 761 --"Throw Salt"
+#miscshape
+#magicbeing
+#coldres 3
+#fireres 3
+#poisonres 25
+#trample
+#blind
+#woundfend 4
+#inanimate
+#neednoteat
+#norivercross
+#spiritsight
+#slashres
+#shrinkhp 20
+#drawsize -30
+#end
+
+#newmonster 5153
+#spr1 "./Meme Age/Pyth/saltele1.tga"
+#spr2 "./Meme Age/Pyth/saltele2.tga"
+#name "Salt Elemental"
+#descr "Salt Elementals are projections of raw seethe given life through strong opinions. All elementals shrink in size and power when severely damaged. Unlike the usual Elementals, Salt Elementals are created by Pythium Gastromancers via harnessing the vitriol of the food critics in their population."
+#ap 8
+#mapmove 14
+#hp 20
+#prot 6
+#size 2
+#str 14
+#enc 0
+#att 10
+#def 10
+#prec 5
+#mr 14
+#mor 50
+#maxage 1000
+#startage 0
+#nametype 129
+#gcost 0
+#weapon "Fist"
+#weapon 761 --"Throw Salt"
+#miscshape
+#magicbeing
+#coldres 3
+#fireres 3
+#poisonres 25
+#trample
+#blind
+#woundfend 4
+#inanimate
+#neednoteat
+#norivercross
+#spiritsight
+#slashres
+#shrinkhp 10
+#drawsize -40
+#end
+
+#newmonster 5154
+#spr1 "./Meme Age/Pyth/saltele1.tga"
+#spr2 "./Meme Age/Pyth/saltele2.tga"
+#name "Salt Elemental"
+#descr "Salt Elementals are projections of raw seethe given life through strong opinions. All elementals shrink in size and power when severely damaged. Unlike the usual Elementals, Salt Elementals are created by Pythium Gastromancers via harnessing the vitriol of the food critics in their population."
+#ap 6
+#mapmove 14
+#hp 10
+#prot 5
+#size 1
+#str 12
+#enc 0
+#att 10
+#def 10
+#prec 5
+#mr 12
+#mor 50
+#maxage 1000
+#startage 0
+#nametype 129
+#gcost 0
+#weapon "Fist"
+#miscshape
+#magicbeing
+#coldres 1
+#fireres 1
+#poisonres 25
+#trample
+#blind
+#woundfend 4
+#inanimate
+#neednoteat
+#norivercross
+#spiritsight
+#slashres
+#drawsize -50
+#end
+
+#newmonster 5155
+#spr1 "./Meme Age/Pyth/butter1.tga"
+#spr2 "./Meme Age/Pyth/butter2.tga"
+#name "Living Butter"
+#descr "Butter is surprisingly useful in warfare, not only being an inherently delicious substance associated with delicacy, gourmet and gastronomy, the slippery properties make it incredibly hard to hit in combat. Surrounded by delicious fumes, anyone near it will automatically have their morale boosted. However the Butter is extremely vulnerable to heat and can easily melt."
+#ap 10
+#mapmove 12
+#hp 31
+#prot 0
+#size 4
+#str 16
+#enc 0
+#att 12
+#def 20
+#prec 5
+#mr 14
+#mor 30
+#maxage 500
+#startage 144
+#nametype 129
+#gcost 0
+#weapon 90 --crush
+#weapon 90 --crush
+#unsurr 12
+#swimming
+#spiritsight
+#miscshape
+#slashres
+#bluntres
+#pierceres
+#inanimate
+#neednoteat
+#fireres -5
+#standard 3
+#end
+
+#newmonster 5156
+#spr1 "./Meme Age/Pyth/meatball1.tga"
+#spr2 "./Meme Age/Pyth/meatball2.tga"
+#name "Meatball"
+#descr "An animated ball of meat that has fallen off the Flying Serpentghetti Monster. There are seemingly endless amounts of them. When killed, the meatballs burst of intense astral energy and paralyzes people in a small radius."
+#ap 2
+#mapmove 6
+#hp 5
+#prot 2
+#size 1
+#str 3
+#enc 0
+#att 10
+#def 4
+#prec 5
+#mr 15
+#mor 50
+#maxage 10
+#startage 0
+#nametype 129
+#gcost 0
+#weapon 575 --tiny slap
+#miscshape
+#magicbeing
+#neednoteat
+#coldres 5
+#poisonres 25
+#deathparalyze 3
+#drawsize -80
+#end
+
 #newspell
 #copyspell 200
 #restricted 151
@@ -1563,6 +2028,97 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #path 0 0
 #path 1 2
 #fatiguecost 200
+#end
+
+#newspell
+#restricted 151
+#name "Sculpt Chocolate Golem"
+#descr "With a delicate hand and love for gourmet, a Gastromancer is capable of creating a magically animated chocolate golem to destroy his enemies."
+#school 3
+#researchlevel 5
+#path 0 3
+#pathlevel 0 2
+#path 1 2
+#pathlevel 1 2
+#effect 10021
+#damage 5138
+#nreff 1
+#fatiguecost 2000
+#end
+
+#newspell
+#restricted 151
+#name "Cook the Noodle that Flies"
+#descr "The recipe attempts to create perfection in the noodle arts. Once created, the dish will instantly spring into life and start targetting the enemies of gastromancy."
+#school 3
+#researchlevel 9
+#path 0 0
+#pathlevel 0 3
+#path 1 2
+#pathlevel 1 3
+#effect 10021
+#damage 5139
+#nreff 1
+#fatiguecost 5000
+#end
+
+#newspell
+#restricted 151
+#restricted 156
+#name "Uma Delicia"
+#descr "The recipe cooks the controversial and partially forbidden recipe Sopa de Macac. Requiring a sentient and magically potent life of Macac as its sacrifice for this ultimate delicacy. The remains of such a feast still contains the magical powers of the sacrificed Macac and can be magically bound to serve the chef."
+#school 3
+#researchlevel 7
+#path 0 6
+#pathlevel 0 3
+#path 1 3
+#pathlevel 1 1
+#effect 10021
+#damage 5140
+#nreff 1
+#fatiguecost 2500
+#end
+
+#newspell
+#restricted 151
+#name "Living Butter"
+#descr "The Gastromancers have discovered the means to animate the butter used in their recipes. The butter is extremely slippery and difficult to hit, even when surrounded by large amounts of enemies. This makes them a highly formidable fighter."
+#school 3
+#researchlevel 5
+#path 0 2
+#pathlevel 0 1
+#path 1 1
+#pathlevel 1 1
+#effect 10001
+#damage 5155
+#nreff 1
+#fatiguecost 300
+#end
+
+#newspell
+#copyspell 771 --fire ele 
+#restricted 151
+#name "Summon Lesser Salt Elemental"
+#descr "The Gastromancer summons a Lesser Salt Elemental to aid him in a battle. Salt Elementals are powerful but shrink when taking heavy damage."
+#researchlevel 3
+#path 0 0
+#pathlevel 0 1
+#path 1 6
+#pathlevel 1 1
+#damage 5152
+#end
+
+#newspell
+#copyspell 771 --fire ele 
+#restricted 151
+#name "Summon Salt Elemental"
+#descr "The Gastromancer summons a Lesser Salt Elemental to aid him in a battle. Salt Elementals are powerful but shrink when taking heavy damage."
+#researchlevel 3
+#path 0 0
+#pathlevel 0 2
+#path 1 6
+#pathlevel 1 2
+#damage 5149
 #end
 
 #newspell
@@ -2222,6 +2778,7 @@ However, only a ranking General is able to call upon the services of such valuab
 #weapon "Auto Crossbow"
 #holy
 #trample
+#miscshape
 #end
 
 #newmonster 5178
@@ -2305,6 +2862,70 @@ They should never join the actual military as their duty is to defend their home
 #batstartsum2d6 5172
 #end
 
+#newmonster 5181
+#spr1 "./Meme Age/Freesia/gator1.tga"
+#spr2 "./Meme Age/Freesia/gator2.tga"
+#name "Wargator"
+#descr "After the Hillbilly Redneck of southern Freesia saw the Warthog, they realized they should attempt to enchant and fit large arms onto their native animals as well. Out comes the Wargator, equipped with a massive air magic cannon capable of propelling massive projectiles of immense penetration and devastation. The primary downside is that it is much slower compared to the Warthog."
+#ap 7
+#mapmove 8
+#hp 73
+#prot 20
+#size 5
+#str 21
+#enc 2
+#att 7
+#def 4
+#prec 13
+#mr 14
+#mor 50
+#maxage 200
+#startage 1
+#nametype 102
+#gcost 0
+#weapon 20 --"Bite"
+#weapon "Gator Ballista"
+#holy
+#miscshape
+#swimming
+#swampsurvival
+#end
+
+#newmonster 5182
+#spr1 "./Meme Age/Freesia/bald1.tga"
+#spr2 "./Meme Age/Freesia/bald2.tga"
+#name "Eagle of Freedom"
+#descr "The true embodiment of Freedom. Born at the dawn of freedom this Eagle represents the breaking of shackles of tyranny, when magistrates and judges ruled the people. The Eagle of Freedom soars across the skies, seeking to free all those once enslaved under unjust rules."
+#pathcost 80
+#startdom 2
+#gcost 160
+#rcost 1
+#size 6
+#hp 110
+#str 23
+#att 17
+#def 17
+#prec 17
+#prot 11
+#mr 18
+#mor 30
+#enc 1
+#mapmove 44
+#ap 18
+#weapon 408 --"Talons"
+#weapon 404 --"Beak"
+#magicskill 1 1
+#magicskill 3 1
+#maxage 5000
+#startage 500
+#stealthy 100
+#flying
+#mountainsurvival
+#awe 5
+#patrolbonus 100
+#domsummon 5176
+#end
+
 #newspell
 #restricted 152
 #name "Construct Warthog"
@@ -2319,6 +2940,22 @@ They should never join the actual military as their duty is to defend their home
 #damage 5177
 #nreff 1
 #fatiguecost 2500
+#end
+
+#newspell
+#restricted 152
+#name "Construct Wargator"
+#descr "Creates the ultimate redneck ballista carrier capable of extreme penetration."
+#school 3
+#researchlevel 7
+#path 0 3
+#pathlevel 0 2
+#path 1 1
+#pathlevel 1 2
+#effect 10001
+#damage 5181
+#nreff 1
+#fatiguecost 2000
 #end
 
 #newspell
@@ -2500,6 +3137,8 @@ Priests: Weak"
 #startscout 5161
 
 #multihero1 5167
+
+#addgod 5182
 
 #defcom1 5180
 #defcom2 5162
@@ -7403,6 +8042,101 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 #stealthy 0
 #end
 
+#newmonster 5444
+#spr1 "./Meme Age/Agartha/apu1.tga"
+#spr2 "./Meme Age/Agartha/apu2.tga"
+#name "Apuuch Apustajaw"
+#descr "Apuuch Apustajaw stray lost Muuch from the caves of Xibalba who cannot do anything right. The good natured basketweaving Agarthans took them into their care. Despite being nearly useless, they are very eager to help Agartha in their war of ascension."
+#ap 8
+#mapmove 12
+#hp 12
+#prot 1
+#size 2
+#str 9
+#enc 3
+#att 7
+#def 7
+#prec 7
+#mr 11
+#mor 9
+#maxage 50
+#startage 14
+#gcost 0
+#weapon 29 -- "Claw"
+#amphibian
+#darkvision 50
+#poisonskin 50
+#poisonres 5
+#swampsurvival
+#swimming
+#end
+
+#newmonster 5445
+#spr1 "./Meme Age/Agartha/pepe1.tga"
+#spr2 "./Meme Age/Agartha/pepe2.tga"
+#name "Pepepob"
+#descr "Pepepob stray angry Muuch from the caves of Xibalba that has wandered into Agartha. Their position within Agarthan society is highly controversial. Some hate pepepob posters that ruin their cave painting quality, while some welcome it as its deadly scream repels tbe normal non-cave folk to get out of their caves. Despite the controversial nature, the fear instilled in other nations and the iconic look of Pepepop has earned them sacred status within the caves."
+#ap 14
+#mapmove 18
+#hp 44
+#prot 1
+#size 5
+#str 18
+#enc 3
+#att 11
+#def 7
+#prec 10
+#mr 15
+#mor 15
+#maxage 50
+#startage 33
+#gcost 0
+#weapon 58 -- "Wail"
+#amphibian
+#darkvision 50
+#poisonskin 50
+#poisonres 5
+#swampsurvival
+#swimming
+#holy
+#fear 5
+#end
+
+#newmonster 5446
+#spr1 "./Meme Age/Agartha/groyper1.tga"
+#spr2 "./Meme Age/Agartha/groyper2.tga"
+#name "Groyp'uhul"
+#descr "Groyp'uhul are giant toad friends of Pepepob. Some theorized that they came from magically enchanted Monster Toads. Their exact origin or purpose is unknown, but their very presence stirs discord and chaos amongst the other nations; as they see it as a symbol of hatred and Cave Supremacy. While not directly powerful in combat, the Groyp'uhul is able to provide powerful blessings to the Agarthan forces simply by existing."
+#ap 0
+#mapmove 8
+#hp 99
+#prot 1
+#size 6
+#str 22
+#enc 3
+#att 12
+#def 3
+#prec 10
+#mr 18
+#mor 30
+#maxage 50
+#startage 38
+#gcost 0
+#weapon 29 -- "Claw"
+#amphibian
+#darkvision 50
+#poisonskin 50
+#poisonres 5
+#swampsurvival
+#swimming
+#holy
+#fear 10
+#onebattlespell "Rush of Strength"
+#magicskill 2 1
+#magicskill 3 1
+#researchbonus -4
+#end
+
 #newspell
 #restricted 161
 #name "Send Supreme Gentleman"
@@ -7561,6 +8295,48 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 
 #selectspell 485
 #restricted 161
+#end
+
+#newspell
+#restricted 161
+#name "Call Apuuch"
+#descr "By creating a new cave painting thread with the appropriate bait, Agarthans are able to call up rare creatures to aid them."
+#school 0
+#researchlevel 3
+#path 0 4
+#pathlevel 0 1
+#effect 10001
+#damage 5444
+#nreff 10
+#fatiguecost 100
+#end
+
+#newspell
+#restricted 161
+#name "Call Pepepob"
+#descr "By creating a new cave painting thread with the appropriate bait, Agarthans are able to call up rare creatures to aid them."
+#school 0
+#researchlevel 5
+#path 0 4
+#pathlevel 0 2
+#effect 10001
+#damage 5445
+#nreff 2
+#fatiguecost 200
+#end
+
+#newspell
+#restricted 161
+#name "Call Groyp'uhul"
+#descr "By creating a new cave painting thread with the appropriate bait, Agarthans are able to call up rare creatures to aid them."
+#school 0
+#researchlevel 7
+#path 0 4
+#pathlevel 0 4
+#effect 10021
+#damage 5446
+#nreff 1
+#fatiguecost 1000
 #end
 
 ----JANITOR FREESPAWN
@@ -12191,6 +12967,16 @@ Priests: Weak"
 #restricted 169
 #end
 
+#newspell
+#copyspell 1078 -- rain of toads
+#restricted 169
+#name "Designate Waste Street"
+#descr "The Bandar Shakti superpower can designate a new waste area in a remote province. The target province of this spell will experience 'toads' falling from their skies."
+#school 5
+#path 0 4
+#fatiguecost 900
+#end
+
 #newsite 1639
 #name "Astraltech Skyscrapper"
 #path 1
@@ -13012,6 +13798,20 @@ Priests: Average"
 #forestsurvival
 #end
 
+#newspell
+#copyspell 548 --gifts from heaven
+#restricted 172
+#name "Crashing this Plane"
+#descr "Via the power of bane, Xibalban mages can call a massive meteor from another Plane of existence into the current Plane. Crashing it with the intent of no survivors. However, this requires a sacrifice of a bloodslave due to the Master of the Planes expect one in the wreckage brother."
+#school 6
+#path 0 7
+#pathlevel 0 1
+#path 1 5
+#pathlevel 1 1
+#nreff 4
+#fatiguecost 150
+#end
+
 #selectspell 390
 #restricted 172
 #end
@@ -13250,7 +14050,7 @@ The Tunalik can spend 1 month fishing for semi-intelligent creatures to bolster 
 #amphibian
 #gcost 10
 #montag 3003
-#montagweight 2
+#montagweight 20
 #end
 
 #newmonster 5803
@@ -13263,7 +14063,7 @@ The Tunalik can spend 1 month fishing for semi-intelligent creatures to bolster 
 #darkvision 50
 #gcost 12
 #montag 3003
-#montagweight 2
+#montagweight 20
 #end
 
 #newmonster 5804
@@ -13280,6 +14080,7 @@ The Tunalik can spend 1 month fishing for semi-intelligent creatures to bolster 
 #heal
 #gcost 15
 #montag 3003
+#montagweight 10
 #end
 
 #newmonster 5805
@@ -13293,6 +14094,7 @@ The Tunalik can spend 1 month fishing for semi-intelligent creatures to bolster 
 #animal
 #gcost 15
 #montag 3003
+#montagweight 10
 #end
 
 #newmonster 5806
@@ -13305,6 +14107,7 @@ The Tunalik can spend 1 month fishing for semi-intelligent creatures to bolster 
 #darkvision 50
 #gcost 15
 #montag 3003
+#montagweight 10
 #end
 
 #newmonster 5807
@@ -13337,6 +14140,85 @@ The Tunalik can spend 1 month fishing for semi-intelligent creatures to bolster 
 #cold 3
 #poisoncloud 5
 #mindslime 5
+#end
+
+#newmonster 5808
+#spr1 "./Meme Age/Atlantis/fatboy1.tga"
+#spr2 "./Meme Age/Atlantis/fatboy2.tga"
+#name "Coldwater Salamander"
+#descr "One of the fished up Salamander that were magically bound using fishing magic to join the army of Atlantis."
+#ap 12
+#mapmove 14
+#hp 20
+#prot 4
+#size 3
+#str 10
+#enc 8
+#att 10
+#def 10
+#prec 10
+#mr 6
+#mor 9
+#maxage 500
+#startage 150
+#nametype 117
+#gcost 0
+#weapon 568 --"Drake Frost"
+#weapon 20 --"Bite"
+#amphibian
+#animal
+#miscshape
+#coldres 15
+#cold 3
+#montag 3003
+#montagweight 5
+#end
+
+#newmonster 5809
+#copystats 545 --Shark Knight
+#spr1 "./Meme Age/Atlantis/landshark1.tga"
+#spr2 "./Meme Age/Atlantis/landshark2.tga"
+#name "Land Shark Knight"
+#descr "One of the fished up independent Shark Knights that were magically bound using fishing magic to join the army of Atlantis."
+#clearspec
+#nametype 117
+#gcost 25
+#amphibian
+#mounted
+#mountedhumanoid
+#montag 3003
+#montagweight 5
+#end
+
+#newmonster 5810
+#spr1 "./Meme Age/Atlantis/gigaCRAB1.tga"
+#spr2 "./Meme Age/Atlantis/gigaCRAB2.tga"
+#name "Giant Enemy Crab"
+#descr "One of the fished up Giant Crab that were magically bound using fishing magic to join the army of Atlantis."
+#ap 8
+#mapmove 18
+#hp 83
+#prot 26
+#size 6
+#str 19
+#enc 4
+#att 14
+#def 4
+#prec 6
+#mr 6
+#mor 16
+#maxage 500
+#startage 150
+#nametype 117
+#gcost 0
+#weapon 600 --"Crab Claw"
+#weapon 600 --"Crab Claw"
+#amphibian
+#animal
+#miscshape
+#coldres 5
+#montag 3003
+#montagweight 1
 #end
 
 #newspell
@@ -20244,7 +21126,7 @@ Priests: Weak"
 #maxage 100
 #startage 2
 #nametype 144
-#gcost 10015
+#gcost 10011
 #rcost 14
 #rpcost 2
 #weapon 20 --"Bite"
@@ -20258,6 +21140,8 @@ Priests: Weak"
 #batstartsum1 2222 --frog
 #magicskill 6 1
 #custommagic 9472 25
+#noleader
+#twiceborn 6169
 #end
 
 #newmonster 6155
@@ -20328,6 +21212,7 @@ Priests: Weak"
 #magicskill 8 2
 #custommagic 9472 100
 #custommagic 9472 25
+#twiceborn 6168
 #end
 
 #newmonster 6157
@@ -20584,7 +21469,7 @@ Priests: Weak"
 #rcost 14
 #rpcost 25
 #weapon 20 --"Bite"
-#weapon 8 --"Broad Sword"
+#weapon 15 --"Morning Star"
 #armor 20 --"Iron Cap"
 #armor 14 --"Plate Hauberk"
 #coldblood
@@ -20627,8 +21512,8 @@ Priests: Weak"
 #end
 
 #newmonster 6166
-#spr1 "./Meme Age/Tortasia/p_tree.tga"
-#spr2 "./Meme Age/Tortasia/p_tree.tga"
+#spr1 "./Meme Age/Tortasia/p_tree1.tga"
+#spr2 "./Meme Age/Tortasia/p_tree2.tga"
 #name "World-bearing Turtle"
 #descr "The World-bearing Turtle was thought to be inanimate for many years eons, as the previous Pantokrator inprisoned it, causing it to be suspended in the middle of the great cosmic ocean. The reason for this inprisonment was the Pantokrator's son bet on a hare in a race against it, and lost. As a form of humiliation and revenge, the previous Pantokrator's son build a summer home upon it's back. Now with the rising of the new pretender gods, the World-bearing Turtle's patient revenge and rightful ascension may finally take place. This may be righteous proof that slow and steady does in fact win the race."
 #ap 8
@@ -20664,6 +21549,7 @@ Priests: Weak"
 #magicskill 1 1
 #magicskill 3 1
 #magicskill 6 1
+#twiceborn 6177
 #end
 
 #newmonster 6167
@@ -20684,7 +21570,7 @@ Priests: Weak"
 #mr 14
 #mor 16
 #maxage 100
-#startage 25
+#startage 45
 #nametype 144
 #gcost 10040
 #rcost 21
@@ -20701,6 +21587,454 @@ Priests: Weak"
 #magicskill 8 2
 #reinvigoration 2
 #combatcaster
+#end
+
+#newmonster 6168
+#spr1 "./Meme Age/Tortasia/tb_oldborn1.tga"
+#spr2 "./Meme Age/Tortasia/tb_oldborn2.tga"
+#name "Shellbroke Elder"
+#descr "A shellbroke mage is the reanimated corpose of a druid strong enough to avoid death itself. Its dried and leathery body is stronger than it was in life. The mage is constantly surrounded by vines that sprout out of the recesses where its undershell used to be."
+#ap 4
+#mapmove 22
+#hp 75
+#prot 10
+#size 4
+#str 16
+#enc 0
+#att 13
+#def 13
+#prec 14
+#mr 17
+#mor 18
+#maxage 1000
+#startage 800
+#nametype 144
+#gcost 0
+#weapon 20 --"Bite"
+#weapon 7 --"Quarterstaff"
+#pooramphibian
+#swimming
+#swampsurvival
+#mountainsurvival
+#holy
+#undead
+#neednoteat
+#spiritsight
+#entangle
+#end
+
+#newmonster 6169
+#spr1 "./Meme Age/Tortasia/tb_cunnyborn1.tga"
+#spr2 "./Meme Age/Tortasia/tb_cunnyborn2.tga"
+#name "Shellbroke Hatchling"
+#descr "A shellbroke mage is the reanimated corpose of a druid strong enough to avoid death itself. Its dried and leathery body is stronger than it was in life. The mage is constantly surrounded by vines that sprout out of the recesses where its undershell used to be."
+#ap 4
+#mapmove 22
+#hp 15
+#prot 8
+#size 1
+#str 12
+#enc 0
+#att 12
+#def 14
+#prec 14
+#mr 16
+#mor 18
+#maxage 1000
+#startage 800
+#nametype 144
+#gcost 0
+#weapon 20 --"Bite"
+#weapon 7 --"Quarterstaff"
+#pooramphibian
+#swimming
+#swampsurvival
+#mountainsurvival
+#undead
+#neednoteat
+#spiritsight
+#entangle
+#batstartsum1 "Frog" 2222
+#end
+
+#newmonster 6170
+#spr1 "./Meme Age/Tortasia/p_northturtle1.tga"
+#spr2 "./Meme Age/Tortasia/p_northturtle2.tga"
+#name "Turtle of the North"
+#descr "The Turtle of the North came to be after the previous pantokrator discarded his worldly organs into the northern sea, and they grew into a turtle and a snake. Since these organs were filled with sin, the Turtle of the North wrecked havok upon the lands that he was released upon, slaying thousands of ichtyids and other coastal creatures. After the previous pantokrator realized what had become of his creations, he imprisoned them. Now with the rise of the new pantokrator, the infamous Turtle of the North has broken free to lay waste to the lands once more."
+#ap 4
+#mapmove 20
+#hp 75
+#prot 20
+#size 4
+#str 26
+#enc 1
+#att 16
+#def 6
+#prec 14
+#mr 18
+#mor 30
+#maxage 6000
+#startage 1664
+#nametype 144
+#gcost 180
+#weapon 20 --"Bite"
+#weapon 65 --"Venomous Fangs"
+#weapon 29 --"Claw"
+#amphibian
+#swimming
+#swampsurvival
+#mountainsurvival
+#snow
+#spiritsight 
+#coldres 25
+#cold 3
+#fear 5
+#expertleader
+#expertmagicleader
+#pathcost 20
+#startdom 2
+#magicskill 1 1
+#magicskill 2 1
+#magicskill 5 1
+#end
+
+#newmonster 6171
+#spr1 "./Meme Age/Tortasia/p_tripleturt1.tga"
+#spr2 "./Meme Age/Tortasia/p_tripleturt2.tga"
+#name "Turtle Stack"
+#descr "These three turtles have begun to reach enlightenment by remaining stacked upon one another. They believe that by remaining balanced upon each others shells, that they can bring balance and betterment to the world. Tortasians have begun to worship the three stacked turtles as a rightful god, they believe that through balance and patience, the future will only hold good fortune."
+#ap 4
+#mapmove 10
+#hp 15
+#prot 16
+#size 3
+#str 14
+#enc 0
+#att 11
+#def 6
+#prec 12
+#mr 18
+#mor 30
+#maxage 8000
+#startage 4286
+#nametype 144
+#gcost 100
+#weapon 20 --"Bite"
+#weapon 20 --"Bite"
+#weapon 20 --"Bite"
+#amphibian
+#swimming
+#swampsurvival
+#mountainsurvival
+#coldblood
+#quadruped
+#bringeroffortune 50
+#nobadevents 10
+#pathcost 10
+#startdom 1
+#magicskill 6 1
+#twiceborn 6172
+#end
+
+#newmonster 6172
+#spr1 "./Meme Age/Tortasia/tb_tripleborn1.tga"
+#spr2 "./Meme Age/Tortasia/tb_tripleborn2.tga"
+#name "Shellbroke Stack"
+#descr "A shellbroke mage is the reanimated corpose of a druid strong enough to avoid death itself. Its dried and leathery body is stronger than it was in life. The mage is constantly surrounded by vines that sprout out of the recesses where its undershell used to be."
+#ap 4
+#mapmove 22
+#hp 25
+#prot 10
+#size 3
+#str 14
+#enc 0
+#att 11
+#def 6
+#prec 12
+#mr 18
+#mor 30
+#maxage 8000
+#startage 4286
+#nametype 144
+#gcost 0
+#weapon 20 --"Bite"
+#weapon 20 --"Bite"
+#weapon 20 --"Bite"
+#pooramphibian
+#swampsurvival
+#mountainsurvival
+#coldblood
+#quadruped
+#undead
+#entangle
+#neednoteat
+#spiritsight
+#bringeroffortune 25 
+#end
+
+#newmonster 6173
+#spr1 "./Meme Age/Tortasia/s_donatello1.tga"
+#spr2 "./Meme Age/Tortasia/s_donatello2.tga"
+#name "Ninja Turtle"
+#descr "A turtle who is trained in the ways of the ninja. It has a slightly lighter shell, and more nimble movement."
+#ap 12
+#mapmove 18
+#hp 35
+#prot 14
+#size 3
+#str 15
+#enc 2
+#att 15
+#def 15
+#prec 15
+#mr 16
+#mor 15
+#maxage 100
+#startage 18
+#fixedname "Donatello"
+#gcost 0
+#weapon 20 --"Bite"
+#weapon 7 --"Quarterstaff"
+#amphibian
+#swimming
+#swampsurvival
+#mountainsurvival
+#coldblood
+#slothpower 2
+#stealthy 65
+#assassin
+#magicskill 1 1
+#magicskill 5 1
+#montag 3005
+#end
+
+#newmonster 6174
+#spr1 "./Meme Age/Tortasia/s_leonardo1.tga"
+#spr2 "./Meme Age/Tortasia/s_leonardo2.tga"
+#name "Ninja Turtle"
+#descr "A turtle who is trained in the ways of the ninja. It has a slightly lighter shell, and more nimble movement."
+#ap 12
+#mapmove 18
+#hp 35
+#prot 14
+#size 3
+#str 15
+#enc 0
+#att 14
+#def 14
+#prec 14
+#mr 16
+#mor 15
+#maxage 100
+#startage 18
+#fixedname "Leonardo"
+#gcost 0
+#weapon 20 --"Bite"
+#weapon 381 --"Ninjato"
+#weapon 381 --"Ninjato"
+#amphibian
+#swimming
+#swampsurvival
+#mountainsurvival
+#coldblood
+#slothpower 2
+#ambidextrous 2
+#stealthy 65
+#assassin
+#magicskill 2 1
+#magicskill 5 1
+#montag 3005
+#end
+
+#newmonster 6175
+#spr1 "./Meme Age/Tortasia/s_michelangelo1.tga"
+#spr2 "./Meme Age/Tortasia/s_michelangelo2.tga"
+#name "Ninja Turtle"
+#descr "A turtle who is trained in the ways of the ninja. It has a slightly lighter shell, and more nimble movement."
+#ap 12
+#mapmove 18
+#hp 35
+#prot 17
+#size 3
+#str 17
+#enc 0
+#att 14
+#def 14
+#prec 14
+#mr 16
+#mor 15
+#maxage 100
+#startage 18
+#fixedname "Michelangelo"
+#gcost 0
+#weapon 20 --"Bite"
+#weapon 1642 --"Nunchucks"
+#amphibian
+#swimming
+#swampsurvival
+#mountainsurvival
+#coldblood
+#slothpower 2
+#stealthy 65
+#assassin
+#magicskill 3 1
+#magicskill 5 1
+#montag 3005
+#end
+
+#newmonster 6176
+#spr1 "./Meme Age/Tortasia/s_raphael1.tga"
+#spr2 "./Meme Age/Tortasia/s_raphael2.tga"
+#name "Ninja Turtle"
+#descr "A turtle who is trained in the ways of the ninja. It has a slightly lighter shell, and more nimble movement."
+#ap 12
+#mapmove 18
+#hp 35
+#prot 17
+#size 3
+#str 17
+#enc 0
+#att 16
+#def 14
+#prec 12
+#mr 16
+#mor 15
+#maxage 100
+#startage 18
+#fixedname "Raphael"
+#gcost 0
+#weapon 20 --"Bite"
+#weapon 674 --"Bronze Dagger"
+#weapon 674 --"Bronze Dagger"
+#amphibian
+#swimming
+#swampsurvival
+#mountainsurvival
+#coldblood
+#ambidextrous 2
+#slothpower 2
+#stealthy 65
+#assassin
+#magicskill 0 1
+#magicskill 5 1
+#montag 3005
+#end
+
+#newmonster 6177
+#spr1 "./Meme Age/Tortasia/tb_treeborn1.tga"
+#spr2 "./Meme Age/Tortasia/tb_treeborn2.tga"
+#name "Shellbroke God-Turtle"
+#descr "A shellbroke mage is the reanimated corpose of a druid strong enough to avoid death itself. Its dried and leathery body is stronger than it was in life. The mage is constantly surrounded by vines that sprout out of the recesses where its undershell used to be."
+#ap 10
+#mapmove 20
+#hp 165
+#prot 20
+#size 6
+#str 16
+#enc 10
+#att 16
+#def 8
+#prec 12
+#mr 18
+#mor 30
+#maxage 8000
+#startage 6000
+#nametype 144
+#gcost 0
+#weapon 20 --"Bite"
+#pooramphibian
+#quadruped
+#undead
+#swampsurvival
+#sailing 999 4
+#entangle
+#trample
+#heal
+#spiritsight
+#end
+
+#newspell
+#copyspell 632 --slow
+#restricted 183
+#name "Mass Slow"
+#descr "This spell will slow down a large group of enemies. The slowed units will require twice as long time to move, attack or cast spells. The effect will last for the entire battle."
+#researchlevel 6
+#aoe 25
+#path 0 3
+#pathlevel 0 2
+#fatiguecost 100
+#end
+
+#newspell
+#copyspell 632 --slow
+#restricted 183
+#name "Burden of Tortise"
+#descr "This spell will slow down all enemies by changing their natural mass to that of a giant tortoise shell. The slowed units will require twice as long time to move, attack or cast spells. The effect will last for the entire battle."
+#researchlevel 8
+#aoe 666
+#path 0 3
+#pathlevel 0 4
+#fatiguecost 300
+#end
+
+#newspell
+#copyspell 904 -- Twiceborn
+#restricted 183
+#name "Ancient Rebirth"
+#descr "The caster basks in the powers of nature itself to protect themselves from death. If the caster is slain, he is revived as a Shellbroke in the province where the ritual was cast, possibly gaining dark insights in the process. For the ritual to work, the province it was cast in must be in friendly hands when the caster dies. This spell requires more power to affect large beings and the cost of casting the ritual is increased with the caster's size. Undead, demons, plants or inanimates are not affected. Certain creatures will be reborn as a wight if they do not carry a shell."
+#path 0 6
+#fatiguecost 400
+#end
+
+#newspell
+#name "Fourth Ninja Turtle"
+#restricted 183
+#school -1
+#effect 10021
+#damage 6176
+#fatiguecost 0
+#spec 8388608 --uw ok
+#end
+
+#newspell
+#name "Third Ninja Turtle"
+#restricted 183
+#school -1
+#effect 10021
+#damage 6175
+#fatiguecost 0
+#spec 8388608 --uw ok
+#nextspell "Fourth Ninja Turtle"
+#end
+
+#newspell
+#name "Second Ninja Turtle"
+#restricted 183
+#school -1
+#effect 10021
+#damage 6174
+#fatiguecost 0
+#spec 8388608 --uw ok
+#nextspell "Third Ninja Turtle"
+#end
+
+#newspell
+#restricted 183
+#name "Spill Nuclear Waste"
+#descr "A purposeful spilling of nuclear waste to turn a couple of regular turtles of Tortasia into mutant ninjas."
+#school 2
+#researchlevel 6
+#path 0 6
+#pathlevel 0 2
+#path 1 5
+#pathlevel 1 1
+#effect 10021
+#damage 6173
+#nreff 1
+#fatiguecost 4000
+#spec 8388608 --uw ok
+#nextspell "Second Ninja Turtle"
 #end
 
 #newsite 1677
@@ -20725,7 +22059,7 @@ Priests: Weak"
 #epithet "Slow and Steady"
 #era 3
 #brief "Slow and sturdy coastal nation of amphibious turtles and some tortises."
-#descr "The Tortasians came to be after an unholy union between an Ulmish Black Priest who had been dragged into the ocean by a Kappa from Jomon. The Ulmite survived the encounter, and raised the offspring that resulted from the union, and returned them to the ocean once they could fend for themselves. Little to anyone's knowledge, the turtle-like offspring would continue to reproduce quickly, and end up founding their own independant microstate on a small isle. After being kicked off of their peaceful island paradise by mounted barbarians many years later, the turtles migrated across the oceans and founded the new nation of Tortasia. The Tortasians swore to train and retake the island that was rightfully theirs. The most devoted to the cause invented Blackshell plating, remembering the teachings of their Ulmish ancestors through an absolute miracle. However this lost art is detested by Ulm and their Earthenblood order. The malediction fearing vampires were not happy and demanded heavy copyright and trademark fees from the Tortasians despite not knowing their secrets of blacksteel themselves. Since Tortasia was a small and economically weak nation at the time, they were forced to agree to stop producing blacksteel and instead resorted to infusing their shells with Blacksteel technology to skirt the technicalities.
+#descr "The Tortasians came to be after an unholy union between an Ulmish Black Priest who had been dragged into the ocean by a Kappa from Jomon. The Ulmite survived the encounter, and raised the offspring that resulted from the union, and returned them to the ocean once they could fend for themselves. Little to anyone's knowledge, the turtle-like offspring would continue to reproduce quickly, and end up founding their own independant microstate on a small isle. After being kicked off of their peaceful island paradise by mounted barbarians many years later, the turtles migrated across the oceans and founded the new nation of Tortasia. The Tortasians swore to train and retake the island that was rightfully theirs. The most devoted to the cause re-invented Blacksteel, through memories of their Ulmish ancestors. However this lost art is detested by Ulm and their Earthenblood order. The malediction fearing vampires demanded heavy trademark fees from the Tortasians despite not knowing the secrets of blacksteel themselves. Since Tortasia was an economically weak nation at the time, they were forced to agree to stop producing blacksteel and instead resorted to infusing their shells with Blacksteel technology.
 In their newly founded coastal capital, Tortasians called to their eldest allies in the deep oceans and called for all citizens to reproduce so they may train new generations of druids and warriors. With patience and time, all things may be rebuilt and all evils will be quelled; especially those Earthenblood bullies of Ulm. The turtles are a very patient race, they took their time growing new forests and digging new lakes inland, and building a new sanctuary for them to raise their young and grow old in. After all, with enough time all of the shorter-lived enemies of the turtles will die off.
 Tortasians wish to return to their slow lifestyles after the war is over, but first they must win one final race: To claim the Thrones of Ascension."
 #summary "Race: Cold-blooded amphibious turtles and some tortises, Prefer Heat +2
@@ -20782,6 +22116,8 @@ Priests: Average"
 #uwwallunit 6163
 
 #addgod 6166
+#addgod 6170
+#addgod 6171
 
 #clearsites
 #startsite "Still-Water Shore"
