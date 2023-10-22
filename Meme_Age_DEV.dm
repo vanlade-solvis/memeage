@@ -43,6 +43,7 @@
 --3003 atlantis fishing list
 --3004 NAGAS
 --3005 Ninja Turtles
+--3006 Merrow Fans
 
 --LAS PELAGUS MONTAGS
 --5000-5008
@@ -628,6 +629,70 @@
 #flyspr 109 1
 #end
 
+--WEAPON
+#newweapon 1644
+#name "Cheerstick of Bronze"
+#sound 10
+#rcost 1
+#dmg 0
+#att 0
+#def 0
+#len 0
+#blunt
+#magic
+#end
+
+--WEAPON
+#newweapon 1645
+#name "Cheerstick of Crystal"
+#sound 10
+#rcost 1
+#dmg 0
+#att 0
+#def 0
+#len 0
+#blunt
+#magic
+#end
+
+--WEAPON
+#newweapon 1646
+#name "Symphomorian Glaive"
+#sound 8
+#rcost 25
+#dmg 10
+#att 2
+#def 2
+#len 2
+#pierce
+#slash
+#magic
+#twohanded
+#charge
+#end
+
+--WEAPON
+#newweapon 1647
+#name "Crystal Grenade"
+#sound 15      --Sling
+#flyspr 111 1  --Sling
+#explspr 10135 --Glowing gas
+#rcost 2
+#dmg 40
+#att 0
+#def 0
+#len 2
+#aoe 1
+#prec 0
+#range -1
+#ammo 1
+#nostr
+#dt_stun
+#armornegating
+#bonus
+#inanimateimmune
+#end
+
 --- Lucky Fish Weapons ---
 
 #newweapon 1995 -- Enchanted Long Spear
@@ -718,6 +783,38 @@
 #type 6
 #prot 16
 #rcost 3
+#end
+
+#newarmor 426
+#name "Symphomorian Platemail"
+#type 5
+#rcost 50
+#prot 17
+#def -2
+#enc 1
+#magicarmor
+#end
+
+--ARMOR
+#newarmor 427
+#name "Symphomorian Headset"
+#type 6
+#rcost 25
+#prot 17
+#def 1
+#enc 0
+#magicarmor
+#end
+
+--ARMOR
+#newarmor 428
+#name "Iron Cap and Sunglasses"
+#type 6
+#rcost 3
+#prot 16
+#def 1
+#enc 0
+#ironarmor
 #end
 
 -----------------------------------------------------------------------------------------------------
@@ -907,6 +1004,24 @@ EVERYONE WILL KNOW WHAT IT FEELS TO BE 5,11!"
 #str 2
 #att 2
 #hp 8
+#end
+
+--ITEM
+#selectitem 661
+#copyspr 117 --Winter Bringer
+--#spr ".tga"
+--#itemdrawsize -20
+#constlevel 4
+#mainpath 4       --Astral
+#mainlevel 1
+#secondarypath 4  --Earth
+#secondarylevel 1
+#type 8           --Misc
+#name "Singing Apparatus"
+#descr "Wielder is now a spellsinger"
+#morale 1
+#spellsinger
+#restricted 184 --Memeage Ys
 #end
 
 --------------------------------------------------------------------------
@@ -2113,7 +2228,7 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #restricted 151
 #name "Summon Salt Elemental"
 #descr "The Gastromancer summons a Lesser Salt Elemental to aid him in a battle. Salt Elementals are powerful but shrink when taking heavy damage."
-#researchlevel 3
+#researchlevel 5
 #path 0 0
 #pathlevel 0 2
 #path 1 6
@@ -6944,8 +7059,7 @@ Compared to the Metsuke, the Ometsuke is usually an older and more experienced s
 #mr 15
 #mor 13
 #maxage 50
-#startage 52
-#older 12
+#startage 50
 #nametype 134
 #gcost 10010
 #rcost 1
@@ -6953,6 +7067,7 @@ Compared to the Metsuke, the Ometsuke is usually an older and more experienced s
 #weapon "Wakizashi"
 #armor "Leather Cuirass"
 #holy
+#magicskill 6 1
 #magicskill 8 2
 #custommagic 10112 200
 #combatcaster
@@ -6970,10 +7085,10 @@ Compared to the Metsuke, the Ometsuke is usually an older and more experienced s
 #size 2
 #str 11
 #enc 3
-#att 13
-#def 13
-#prec 13
-#mr 15
+#att 14
+#def 14
+#prec 14
+#mr 16
 #mor 13
 #maxage 50
 #startage 60
@@ -6984,9 +7099,9 @@ Compared to the Metsuke, the Ometsuke is usually an older and more experienced s
 #weapon "Wakizashi"
 #armor "Leather Cuirass"
 #holy
+#magicskill 6 1
 #magicskill 8 2
 #custommagic 10112 200
-#custommagic 10112 100
 #custommagic 10112 100
 #combatcaster
 #end
@@ -7643,7 +7758,7 @@ This Shogun has mounted the greatest Mobile Suit forged by many skilled Construc
 #req_myench 612 -- kami no hayate
 #req_fullowner
 #nation -2
-#msg "A group of civilians has been blessed with the power of the Divine Wind. They now take up the rank of Kamizake Samurai and have joined your forces!"
+#msg "An elite Hayate Ninja joined your forces!"
 #nolog
 #1unit 5413
 #end
@@ -19615,6 +19730,31 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 #1d6units 6086 --constrictor
 #end
 
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Short Kangz of Manletia show their Solidarity with the original people of Das'rite! [The Manlet Pit]"
+#5com 6112 --triple stack short king
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Shelled of Tortasia show their Solidarity with the original people of Das'rite! [Blackshell Sanctuary]"
+#2com 6167 --blackshell warbishop
+#1d6units 6165 --blackshell warriors
+#end
+
 --VOICE OF YAKUB EVENTS END---------------------------------
 
 #newsite 1670
@@ -20738,6 +20878,7 @@ On the rare occasion that this chief is promoted he is able to assume an even mo
 #goodleader
 #holy
 #rpcost 2
+#gcost 9990
 #mountainsurvival
 #itemslots 7582
 #xpshape 20
@@ -20815,6 +20956,7 @@ He is a wielder of manlet magic, passed down to him by shamans and other short m
 #descr "A short Piconye priest guiding others to a blessing he can never possess. His endless obsession with height has stunted his academic pursuits."
 #magicskill 8 1
 #researchbonus -1
+#gcost 10005
 #end
 
 #newmonster 6116
@@ -20853,7 +20995,7 @@ He is a wielder of manlet magic, passed down to him by shamans and other short m
 #magicskill 3 2
 #magicskill 6 1
 #magicskill 1 1
-#gcost 180
+#gcost 10010
 #goodleader
 #end
 
@@ -21031,9 +21173,10 @@ Priests: Weak"
 #coldblood
 #swimming
 #swampsurvival
-#stealthy 65
+#stealthy 5
 #assassin
 #scalewalls
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6152
@@ -21048,7 +21191,7 @@ Priests: Weak"
 #size 2
 #str 13
 #enc 1
-#att 13
+#att 11
 #def 8
 #prec 10
 #mr 11
@@ -21068,6 +21211,7 @@ Priests: Weak"
 #swimming
 #swampsurvival
 #goodleader
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6153
@@ -21082,15 +21226,15 @@ Priests: Weak"
 #size 4
 #str 16
 #enc 1
-#att 12
-#def 6
+#att 11
+#def 4
 #prec 11
 #mr 14
 #mor 16
 #maxage 100
 #startage 25
 #nametype 144
-#gcost 10035
+#gcost 10050
 #rcost 21
 #rpcost 1
 #weapon 20 --"Bite"
@@ -21104,6 +21248,7 @@ Priests: Weak"
 #holy
 #magicskill 8 1
 #combatcaster
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6154
@@ -21142,6 +21287,7 @@ Priests: Weak"
 #custommagic 9472 25
 #noleader
 #twiceborn 6169
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6155
@@ -21172,9 +21318,10 @@ Priests: Weak"
 #coldblood
 #swimming
 #swampsurvival
-#magicskill 2 3
+#magicskill 2 2
 #custommagic 1920 200
 #custommagic 1920 10
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6156
@@ -21189,7 +21336,7 @@ Priests: Weak"
 #size 4
 #str 16
 #enc 1
-#att 12
+#att 9
 #def 9
 #prec 14
 #mr 15
@@ -21213,6 +21360,7 @@ Priests: Weak"
 #custommagic 9472 100
 #custommagic 9472 25
 #twiceborn 6168
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6157
@@ -21238,13 +21386,14 @@ Priests: Weak"
 #gcost 10009
 #rcost 9
 #rpcost 10
-#weapon 20 --"Bite"
+#weapon 576 --"Weak Bite"
 #weapon 8 --"Broad Sword"
 #armor 25 --"Turtle Shell Shield"
 #amphibian
 #coldblood
 #swimming
 #swampsurvival
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6158
@@ -21270,13 +21419,14 @@ Priests: Weak"
 #gcost 10009
 #rcost 9
 #rpcost 10
-#weapon 20 --"Bite"
+#weapon 576 --"Weak Bite"
 #weapon 1 --"Spear"
 #armor 25 --"Turtle Shell Shield"
 #amphibian
 #coldblood
 #swimming
 #swampsurvival
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6159
@@ -21291,7 +21441,7 @@ Priests: Weak"
 #size 2
 #str 13
 #enc 1
-#att 12
+#att 11
 #def 8
 #prec 10
 #mr 11
@@ -21302,13 +21452,14 @@ Priests: Weak"
 #gcost 10011
 #rcost 7
 #rpcost 18
-#weapon 20 --"Bite"
-#weapon 3 --"Trident"
+#weapon 576 --"Weak Bite"
+#weapon 679 --"Short Trident"
 #weapon 263 --"Net"
 #amphibian
 #coldblood
 #swimming
 #swampsurvival
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6160
@@ -21323,7 +21474,7 @@ Priests: Weak"
 #size 2
 #str 14
 #enc 1
-#att 13
+#att 11
 #def 9
 #prec 10
 #mr 11
@@ -21331,10 +21482,10 @@ Priests: Weak"
 #maxage 100
 #startage 25
 #nametype 144
-#gcost 10011
+#gcost 10012
 #rcost 14
 #rpcost 15
-#weapon 20 --"Bite"
+#weapon 576 --"Weak Bite"
 #weapon 8 --"Broad Sword"
 #armor 25 --"Turtle Shell Shield"
 #armor 134 --"Turtle Cap"
@@ -21342,6 +21493,7 @@ Priests: Weak"
 #coldblood
 #swimming
 #swampsurvival
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6161
@@ -21356,7 +21508,7 @@ Priests: Weak"
 #size 2
 #str 14
 #enc 1
-#att 13
+#att 11
 #def 9
 #prec 10
 #mr 11
@@ -21364,10 +21516,10 @@ Priests: Weak"
 #maxage 100
 #startage 25
 #nametype 144
-#gcost 10011
+#gcost 10012
 #rcost 14
 #rpcost 15
-#weapon 20 --"Bite"
+#weapon 576 --"Weak Bite"
 #weapon 1 --"Spear"
 #armor 25 --"Turtle Shell Shield"
 #armor 134 --"Turtle Cap"
@@ -21375,6 +21527,7 @@ Priests: Weak"
 #coldblood
 #swimming
 #swampsurvival
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6162
@@ -21389,7 +21542,7 @@ Priests: Weak"
 #size 2
 #str 14
 #enc 1
-#att 13
+#att 12
 #def 9
 #prec 10
 #mr 11
@@ -21397,17 +21550,18 @@ Priests: Weak"
 #maxage 100
 #startage 25
 #nametype 144
-#gcost 10011
+#gcost 10014
 #rcost 14
 #rpcost 15
-#weapon 20 --"Bite"
-#weapon 3 --"Trident"
+#weapon 576 --"Weak Bite"
+#weapon 679 --"Short Trident"
 #weapon 263 --"Net"
 #armor 134 --"Turtle Cap"
 #amphibian
 #coldblood
 #swimming
 #swampsurvival
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6163
@@ -21422,7 +21576,7 @@ Priests: Weak"
 #size 2
 #str 14
 #enc 1
-#att 13
+#att 11
 #def 9
 #prec 10
 #mr 11
@@ -21433,7 +21587,7 @@ Priests: Weak"
 #gcost 10020
 #rcost 14
 #rpcost 20
-#weapon 20 --"Bite"
+#weapon 576 --"Weak Bite"
 #weapon 100 --"Standard"
 #weapon 21 --"Javelin"
 #armor 25 --"Turtle Shell Shield"
@@ -21443,6 +21597,7 @@ Priests: Weak"
 #swimming
 #swampsurvival
 #standard 1
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6164
@@ -21457,7 +21612,7 @@ Priests: Weak"
 #size 3
 #str 16
 #enc 1
-#att 13
+#att 12
 #def 7
 #prec 10
 #mr 12
@@ -21476,6 +21631,7 @@ Priests: Weak"
 #swimming
 #swampsurvival
 #mountainsurvival
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6165
@@ -21483,22 +21639,22 @@ Priests: Weak"
 #spr2 "./Meme Age/Tortasia/u_blackshell2.tga"
 #name "Blackshell Warrior"
 #descr "The Blackshell of Tortasia have fused armor plating with their shells, sacrificing mobililty to stregthen their bodies. This is a sacred act in Tortasia, and not many turtles can withstand the procedure. Those who do survive are revered and well respected."
-#ap 5
+#ap 4
 #mapmove 10
 #hp 45
 #prot 20
 #size 4
 #str 16
 #enc 1
-#att 14
-#def 6
+#att 12
+#def 4
 #prec 11
 #mr 14
 #mor 16
 #maxage 100
 #startage 25
 #nametype 144
-#gcost 10035
+#gcost 10045
 #rcost 21
 #rpcost 25
 #weapon 20 --"Bite"
@@ -21509,6 +21665,7 @@ Priests: Weak"
 #swimming
 #swampsurvival
 #holy
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6166
@@ -21564,17 +21721,17 @@ Priests: Weak"
 #size 4
 #str 16
 #enc 1
-#att 14
-#def 8
+#att 12
+#def 5
 #prec 11
 #mr 14
 #mor 16
 #maxage 100
 #startage 45
 #nametype 144
-#gcost 10040
+#gcost 10050
 #rcost 21
-#rpcost 1
+#rpcost 2
 #weapon 20 --"Bite"
 #weapon 258 --"Claymore"
 #armor 20 --"Iron Cap"
@@ -21585,8 +21742,9 @@ Priests: Weak"
 #goodleader
 #holy
 #magicskill 8 2
-#reinvigoration 2
+#reinvigoration 1
 #combatcaster
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6168
@@ -21621,6 +21779,7 @@ Priests: Weak"
 #neednoteat
 #spiritsight
 #entangle
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6169
@@ -21655,6 +21814,7 @@ Priests: Weak"
 #spiritsight
 #entangle
 #batstartsum1 "Frog" 2222
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6170
@@ -21664,7 +21824,7 @@ Priests: Weak"
 #descr "The Turtle of the North came to be after the previous pantokrator discarded his worldly organs into the northern sea, and they grew into a turtle and a snake. Since these organs were filled with sin, the Turtle of the North wrecked havok upon the lands that he was released upon, slaying thousands of ichtyids and other coastal creatures. After the previous pantokrator realized what had become of his creations, he imprisoned them. Now with the rise of the new pantokrator, the infamous Turtle of the North has broken free to lay waste to the lands once more."
 #ap 4
 #mapmove 20
-#hp 75
+#hp 55
 #prot 20
 #size 4
 #str 26
@@ -21677,7 +21837,7 @@ Priests: Weak"
 #maxage 6000
 #startage 1664
 #nametype 144
-#gcost 180
+#gcost 240
 #weapon 20 --"Bite"
 #weapon 65 --"Venomous Fangs"
 #weapon 29 --"Claw"
@@ -21697,6 +21857,7 @@ Priests: Weak"
 #magicskill 1 1
 #magicskill 2 1
 #magicskill 5 1
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6171
@@ -21781,7 +21942,7 @@ Priests: Weak"
 #ap 12
 #mapmove 18
 #hp 35
-#prot 14
+#prot 20
 #size 3
 #str 15
 #enc 2
@@ -21802,11 +21963,12 @@ Priests: Weak"
 #mountainsurvival
 #coldblood
 #slothpower 2
-#stealthy 65
+#stealthy 35
 #assassin
 #magicskill 1 1
 #magicskill 5 1
 #montag 3005
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6174
@@ -21817,7 +21979,7 @@ Priests: Weak"
 #ap 12
 #mapmove 18
 #hp 35
-#prot 14
+#prot 20
 #size 3
 #str 15
 #enc 0
@@ -21840,11 +22002,12 @@ Priests: Weak"
 #coldblood
 #slothpower 2
 #ambidextrous 2
-#stealthy 65
+#stealthy 35
 #assassin
 #magicskill 2 1
 #magicskill 5 1
 #montag 3005
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6175
@@ -21855,7 +22018,7 @@ Priests: Weak"
 #ap 12
 #mapmove 18
 #hp 35
-#prot 17
+#prot 22
 #size 3
 #str 17
 #enc 0
@@ -21876,11 +22039,12 @@ Priests: Weak"
 #mountainsurvival
 #coldblood
 #slothpower 2
-#stealthy 65
+#stealthy 35
 #assassin
 #magicskill 3 1
 #magicskill 5 1
 #montag 3005
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6176
@@ -21891,7 +22055,7 @@ Priests: Weak"
 #ap 12
 #mapmove 18
 #hp 35
-#prot 17
+#prot 22
 #size 3
 #str 17
 #enc 0
@@ -21914,11 +22078,12 @@ Priests: Weak"
 #coldblood
 #ambidextrous 2
 #slothpower 2
-#stealthy 65
+#stealthy 35
 #assassin
 #magicskill 0 1
 #magicskill 5 1
 #montag 3005
+#itemslots 14470 -- all except body
 #end
 
 #newmonster 6177
@@ -22144,124 +22309,7 @@ Priests: Average"
 -- Nation ID 184
 -- Item ID   661
 -- Montag    3006 Merrow Fans
-
---WEAPON
-#newweapon 1644
-#name "Cheerstick of Bronze"
-#sound 10
-#rcost 1
-#dmg 0
-#att 0
-#def 0
-#len 0
-#blunt
-#magic
-#end
-
---WEAPON
-#newweapon 1645
-#name "Cheerstick of Crystal"
-#sound 10
-#rcost 1
-#dmg 0
-#att 0
-#def 0
-#len 0
-#blunt
-#magic
-#end
-
---WEAPON
-#newweapon 1646
-#name "Symphomorian Glaive"
-#sound 8
-#rcost 25
-#dmg 10
-#att 2
-#def 2
-#len 2
-#pierce
-#slash
-#magic
-#twohanded
-#charge
-#end
-
---WEAPON
-#newweapon 1647
-#name "Crystal Grenade"
-#sound 15      --Sling
-#flyspr 111 1  --Sling
-#explspr 10135 --Glowing gas
-	 
-#rcost 2
-#dmg 40
-#att 0
-#def 0
-#len 2
-#aoe 1
-#prec 0
-#range -1
-#ammo 1
-#nostr
-#dt_stun
-#armornegating
-#bonus
-#inanimateimmune
-#end
-
---ARMOR
-#newarmor 426
-#name "Symphomorian Platemail"
-#type 5
-#rcost 50
-#prot 17
-#def -2
-#enc 1
-#magicarmor
-#end
-
---ARMOR
-#newarmor 427
-#name "Symphomorian Headset"
-#type 6
-#rcost 25
-#prot 17
-#def 1
-#enc 0
-#magicarmor
-#end
-
---ARMOR
-#newarmor 428
-#name "Iron Cap and Sunglasses"
-#type 6
-#rcost 3
-#prot 16
-#def 1
-#enc 0
-#ironarmor
-#end
-
---ITEM
-#selectitem 661
-#copyspr 117 --Winter Bringer
---#spr ".tga"
---#itemdrawsize -20
-#constlevel 4
-#mainpath 4       --Astral
-#mainlevel 1
-#secondarypath 4  --Earth
-#secondarylevel 1
-#type 8           --Misc
-#name "Singing Apparatus"
-#descr "Wielder is now a spellsinger"
-#morale 1
-#spellsinger
-#restricted 184 --Memeage Ys
-#end
-
-
+---------------------------------------------------
 
 --UNITS
 --MERROW
@@ -22437,7 +22485,7 @@ These fans have found a hidden talent for singing, and if around an Idol while t
 #patrolbonus 1
 #castledef 2
 #darkpower -1
-#itemslots 15366‬
+#itemslots 15366
 #end
 
 --HUMAN
@@ -22532,7 +22580,7 @@ These fans have found a hidden talent for singing, and if around an Idol while t
 #goodleader
 #darkpower -1
 #incprovdef 1
-#itemslots 15366‬
+#itemslots 15366
 #end
 
 
