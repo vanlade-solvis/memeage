@@ -22138,9 +22138,6 @@ Priests: Average"
 ---------------------------------------------------
 --Memeage Kernou-Ys
 
--- Colour Banner 
--- Colour units1 
-
 -- Unit ID   6200 - 6222
 -- Weapon ID 1644 - 1647
 -- Armor ID  426 - 428
