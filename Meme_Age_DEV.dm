@@ -22123,7 +22123,7 @@ Priests: Average"
 #startsite "Still-Water Shore"
 #startsite "Blackshell Sanctuary"
 #idealcold -2
-#forteta 3
+#fortera 3
 #templepic 10
 #coastnation
 #riverstart
@@ -22133,4 +22133,1306 @@ Priests: Average"
 #color 0.63 0.13 0.18
 #secondarycolor 0.14 0.17 0.11
 #end
+
+
+---------------------------------------------------
+--Memeage Kernou-Ys
+
+-- Colour Banner 
+-- Colour units1 
+
+-- Unit ID   6200 - 6222
+-- Weapon ID 1644 - 1647
+-- Armor ID  426 - 428
+-- Nation ID 184
+-- Item ID   661
+-- Montag    3006 Merrow Fans
+
+--WEAPON
+#newweapon 1644
+#name "Cheerstick of Bronze"
+#sound 10
+#rcost 1
+#dmg 0
+#att 0
+#def 0
+#len 0
+#blunt
+#magic
+#end
+
+--WEAPON
+#newweapon 1645
+#name "Cheerstick of Crystal"
+#sound 10
+#rcost 1
+#dmg 0
+#att 0
+#def 0
+#len 0
+#blunt
+#magic
+#end
+
+--WEAPON
+#newweapon 1646
+#name "Symphomorian Glaive"
+#sound 8
+#rcost 25
+#dmg 10
+#att 2
+#def 2
+#len 2
+#pierce
+#slash
+#magic
+#twohanded
+#charge
+#end
+
+--WEAPON
+#newweapon 1647
+#name "Crystal Grenade"
+#sound 15      --Sling
+#flyspr 111 1  --Sling
+#explspr 10135 --Glowing gas
+	 
+#rcost 2
+#dmg 40
+#att 0
+#def 0
+#len 2
+#aoe 1
+#prec 0
+#range -1
+#ammo 1
+#nostr
+#dt_stun
+#armornegating
+#bonus
+#inanimateimmune
+#end
+
+--ARMOR
+#newarmor 426
+#name "Symphomorian Platemail"
+#type 5
+#rcost 50
+#prot 17
+#def -2
+#enc 1
+#magicarmor
+#end
+
+--ARMOR
+#newarmor 427
+#name "Symphomorian Headset"
+#type 6
+#rcost 25
+#prot 17
+#def 1
+#enc 0
+#magicarmor
+#end
+
+--ARMOR
+#newarmor 428
+#name "Iron Cap and Sunglasses"
+#type 6
+#rcost 3
+#prot 16
+#def 1
+#enc 0
+#ironarmor
+#end
+
+--ITEM
+#selectitem 661
+#copyspr 117 --Winter Bringer
+--#spr ".tga"
+--#itemdrawsize -20
+#constlevel 4
+#mainpath 4       --Astral
+#mainlevel 1
+#secondarypath 4  --Earth
+#secondarylevel 1
+#type 8           --Misc
+#name "Singing Apparatus"
+#descr "Wielder is now a spellsinger"
+#morale 1
+#spellsinger
+#restricted 184 --Memeage Ys
+#end
+
+
+
+--UNITS
+--MERROW
+#newmonster 6200
+#name "Idol Fan"
+#descr "Merrow fans of the new Morgen Idols have begun to flock to the surface world of their own free will. They would much rather be attending concerts, and are quick to flee the battlefield. But if they are led by one of their Idols into battle the Fans will almost fight to the death for them. They fight with cheersticks in the colors of bronze and crystal."
+#spr1 "./Meme Age/Ys/memeys_merrow_fan.tga"
+#spr2 "./Meme Age/Ys/memeys_merrow_fan2.tga"
+#nametype 142 --Tir na n'Og male
+
+--Costs
+#rcost 1
+#gcost 10008
+#rpcost 10000
+
+--Attributes
+#hp 14
+#size 2
+#prot 2
+#mr 11
+#mor 7
+
+#str 12
+#att 9
+#def 9
+#prec 10
+#ap 11
+#mapmove 14
+#enc 3
+
+--Weapons and Armour
+#weapon 1644 --Cheer Stick of Bronze
+#weapon 1645 --Cheer Stick of Crystal
+
+--Modifiers
+#humanoid
+#amphibian
+#slave
+#darkvision 50
+#montag 3006
+#montagweight 5
+#end
+
+--MERROW
+#newmonster 6201
+#name "Direhard Idol Fan"
+#descr "Merrow fans of the new Morgen Idols have begun to flock to the surface world of their own free will. They would much rather be attending concerts, and are quick to flee the battlefield. But if they are led by one of their Idols into battle the Fans will almost fight to the death for them. They fight with cheersticks in the colors of bronze and crystal.
+These diehard fans are much more fanatic and wear brightly colored robes to show their eternal support. The Idols themselves are quite fascinated by this and are willing to bless them. They will not be swayed by gold to fight for Kernou-Ys, but will be swayed into the military by an Idol's prescence in a province."
+#spr1 "./Meme Age/Ys/memeys_merrow_diehardfan.tga"
+#spr2 "./Meme Age/Ys/memeys_merrow_diehardfan2.tga"
+#nametype 142 --Tir na n'Og male
+
+--Costs
+#rcost 1
+#gcost 0
+#rpcost 10000
+
+--Attributes
+#hp 14
+#size 2
+#prot 2
+#mr 11
+#mor 8
+
+#str 12
+#att 9
+#def 9
+#prec 10
+#ap 11
+#mapmove 14
+#enc 3
+
+--Weapons and Armour
+#weapon 1644 --Cheer Stick of Bronze
+#weapon 1645 --Cheer Stick of Crystal
+#armor 158   --Robes
+
+--Modifiers
+#humanoid
+#amphibian
+#holy
+#slave
+#older 5
+#darkvision 50
+#montag 3006
+#montagweight 1
+#end
+
+--MERROW
+#newmonster 6202
+#name "Cheering Fan"
+#descr "Some Merrow fans of the new Morgen Idols are content with supporting their Idols from under the waves. They would much rather be attending concerts, and are quick to flee the battlefield. But if they are led by one of their Idols into battle the Fans will almost fight to the death for them. They fight with cheersticks in the colors of bronze and crystal.
+These fans have found a hidden talent for singing, and if around an Idol while they are performing they will sing along too."
+#spr1 "./Meme Age/Ys/memeys_merrow_cheeringfan.tga"
+#spr2 "./Meme Age/Ys/memeys_merrow_cheeringfan2.tga"
+#nametype 142 --Tir na n'Og male
+
+--Costs
+#rcost 1
+#gcost 10035
+#rpcost 10000
+
+--Attributes
+#hp 14
+#size 2
+#prot 2
+#mr 11
+#mor 8
+
+#str 12
+#att 9
+#def 9
+#prec 10
+#ap 11
+#mapmove 14
+#enc 3
+
+--Weapons and Armour
+#weapon 1644 --Cheer Stick of Bronze
+#weapon 1645 --Cheer Stick of Crystal
+
+--Modifiers
+#humanoid
+#amphibian
+#slave
+#comslave
+#spellsinger
+#reclimit 1
+#darkvision 50
+#reqlab
+#reqtemple
+#end
+
+
+--HUMAN
+#newmonster 6203
+#name "Security Crowd Control"
+#descr "Tough guys hired as security to protect Idols from dissenters and Kernou-Ys from foreign forces. They carry a crystal grenade with them at all times. After the grenade thrown it will shatter into a cloud of crystal shards that cause breathing difficulties. All security personnel wear sunglasses to prevent glare and eye damage, they will refuse to remove them."
+#spr1 "./Meme Age/Ys/memeys_human_security.tga"
+#spr2 "./Meme Age/Ys/memeys_human_security2.tga"
+#nametype 137 --Marverni male
+
+--Costs
+#rcost 1
+#gcost 10013
+#rpcost 10000
+
+--Attributes
+#hp 13
+#size 2
+#prot 0
+#mr 11
+#mor 13
+
+#str 12
+#att 12
+#def 12
+#prec 12
+#ap 12
+#mapmove 14
+#enc 3
+
+--Weapons and Armour
+#weapon 8    --Broad Sword
+#weapon 1647 --Crystal Grenade
+#armor 13    --Chain Mail Hauberk
+#armor 428   --Cap and Sunglasses
+#armor 3     --Kite Shield
+
+--Modifiers
+#humanoid
+#bodyguard 3
+#patrolbonus 1
+#castledef 2
+#darkpower -1
+#itemslots 15366‬
+#end
+
+--HUMAN
+#newmonster 6204
+#name "Security Cavalry"
+#descr "Tough guys hired as security to protect Idols from dissenters and Kernou-Ys from foreign forces. They carry a crystal grenade with them at all times. After the grenade thrown it will shatter into a cloud of crystal shards that cause breathing difficulties. All security personnel wear sunglasses to prevent glare and eye damage, they will refuse to remove them. Likewise for the horses."
+#spr1 "./Meme Age/Ys/memeys_human_security_backup.tga"
+#spr2 "./Meme Age/Ys/memeys_human_security_backup2.tga"
+#nametype 137 --Marverni male
+
+--Costs
+#rcost 6
+#gcost 10025
+#rpcost 10000
+#ressize 2
+
+--Attributes
+#hp 13
+#size 3
+#prot 0
+#mr 11
+#mor 13
+
+#str 12
+#att 12
+#def 12
+#prec 12
+#ap 23
+#mapmove 16
+#enc 3
+
+--Weapons and Armour
+#weapon 4    --Lance
+#weapon 8    --Broad Sword
+#weapon 56   --Hoof
+#weapon 1647 --Crystal Grenade
+#armor 13    --Chain Mail Hauberk
+#armor 428   --Cap and Sunglasses
+#armor 3     --Kite Shield
+
+--Modifiers
+#mounted
+#humanoid
+#bodyguard 1
+#patrolbonus 4
+#darkpower -1
+#itemslots 13318
+#end
+
+--COMMANDERS
+
+--HUMAN
+#newmonster 6210
+#name "Security Leader"
+#descr "Former Kernou chieftains are now hired as managers of Kernou-Ys' new security force. They carry a crystal grenade with them at all times. After the grenade thrown it will shatter into a cloud of crystal shards that cause breathing difficulties. All security personnel wear sunglasses to prevent glare and eye damage, they will refuse to remove them."
+#spr1 "./Meme Age/Ys/memeys_human_security_leader.tga"
+#spr2 "./Meme Age/Ys/memeys_human_security_leader2.tga"
+#nametype 137 --Marverni male
+
+--Costs
+#rcost 1
+#gcost 10013
+#rpcost 10000
+
+--Attributes
+#hp 14
+#size 2
+#prot 0
+#mr 11
+#mor 14
+
+#str 12
+#att 13
+#def 13
+#prec 12
+#ap 12
+#mapmove 14
+#enc 3
+
+--Weapons and Armour
+#weapon 8    --Broad Sword
+#weapon 1647 --Crystal Grenade
+#armor 13    --Chain Mail Hauberk
+#armor 428   --Cap and Sunglasses
+#armor 3     --Kite Shield
+
+--Modifiers
+#humanoid
+#bodyguard 2
+#patrolbonus 10
+#castledef 2
+#goodleader
+#darkpower -1
+#incprovdef 1
+#itemslots 15366‬
+#end
+
+
+--MERROW
+#newmonster 6211
+#name "Supportive Fan"
+#descr "Some Merrow fans of the new Morgen Idols are content with supporting their Idols from under the waves. They would much rather be attending concerts, and are quick to flee the battlefield. But if they are led by one of their Idols into battle the Fans will almost fight to the death for them. They fight with cheersticks in the colors of bronze and crystal.
+These fans have found not only a hidden talent for singing, but a talent in nature magic from their former druid days. If around an Idol while they are performing they are able to sing along too."
+#spr1 "./Meme Age/Ys/memeys_merrow_fansupport.tga"
+#spr2 "./Meme Age/Ys/memeys_merrow_fansupport2.tga"
+#nametype 142 --Tir na n'Og male
+
+--Costs
+#rcost 1
+#gcost 10012
+#rpcost 10000
+
+--Attributes
+#hp 14
+#size 2
+#prot 2
+#mr 11
+#mor 10
+
+#str 12
+#att 9
+#def 9
+#prec 10
+#ap 11
+#mapmove 14
+#enc 3
+
+--Weapons and Armour
+#weapon 1644 --Cheer Sticks of Bronze
+#weapon 1645 --Cheer Sticks of Crystal
+
+--Magic
+#magicskill 6 1     --N1
+#custommagic 512 20 --.2W
+
+--Modifiers
+#humanoid
+#amphibian
+#spellsinger
+#poorleader
+#darkvision 50
+#slave
+#end
+
+
+--NEW MAGE
+#newmonster 6212
+#name "Fledgling Idol"
+#descr "A Morgen who has decided to follow their dreams and become a new singing Idol. She doesn't have much experience in both singing and in magic but she has enough for a few fans to become invested in her journey. All modern Morgen are able to form chorus communions."
+#spr1 "./Meme Age/Ys/memeys_morgen_idol.tga"
+#spr2 "./Meme Age/Ys/memeys_morgen_idol2.tga"
+#nametype 143 --Tir na n'Og female
+
+--Costs
+#rcost 1
+#gcost 10000
+#rpcost 10000
+
+--Attributes
+#hp 13
+#size 2
+#prot 0
+#mr 14
+#mor 12
+
+#str 12
+#att 10
+#def 13
+#prec 10
+#ap 12
+#mapmove 14
+#enc 3
+
+--Weapons and Armour
+#weapon 12 --Mace
+#armor 158 --Robes
+
+--Magic
+#magicskill 1 1        --A1
+#magicskill 6 1        --N1
+#magicskill 8 2        --H2
+--#custommagic 10240 100 --1S/N
+#custommagic 512 20    --.2W
+
+--Modifiers
+#female
+#humanoid
+#amphibian
+#holy
+#illusion
+#ironvul 1
+#darkvision 50
+#spellsinger
+#stealthy 0
+
+#startage 0
+#maxage 500
+#older -1000
+
+#poorleader
+#domsummon20 6201
+#taskmaster 2
+#end
+
+--NEW MAGE
+#newmonster 6213
+#name "Concert Manager"
+#descr "Human magicians that set up and organise concerts for the Morgen. Communication and co-ordination is facilitated with the use of crystal orbs. Sometimes their work gets hard and the idols/fans will cheer for them too. Though they have inherited their affinity for magic from the druids of old, the humans of Kernou-Ys have replaced their talents in nature for fire."
+#spr1 "./Meme Age/Ys/memeys_human_manager.tga"
+#spr2 "./Meme Age/Ys/memeys_human_manager2.tga"
+#nametype 137 --Marverni male
+
+--Costs
+#rcost 1
+#gcost 10010
+#rpcost 10000
+
+--Attributes
+#hp 10
+#size 2
+#prot 0
+#mr 10
+#mor 10
+
+#str 10
+#att 10
+#def 10
+#prec 10
+#ap 12
+#mapmove 14
+#enc 3
+
+--Weapons and Armour
+#weapon 9  --Dagger
+#armor 120 --Leather Cap
+#armor 158 --Robes
+
+--Modifiers
+#humanoid
+#goodleader
+#okmagicleader
+#older -10
+#taxcollector
+
+--Magic
+#magicskill 3 1       --E1
+#magicskill 4 1       --S1
+#custommagic 3712 100 --1F/W/E/S
+#end
+
+--NEW MAGE
+#newmonster 6214
+#name "Famous Idol"
+#descr "A well known Morgen Idol who has spent a while in the Idol game. She has more experience in singing and magic. Diehard fans flock to her far more than the other Idols. All modern Morgen are able to form chorus communions."
+#spr1 "./Meme Age/Ys/memeys_morgen_idol_tour.tga"
+#spr2 "./Meme Age/Ys/memeys_morgen_idol_tour2.tga"
+#nametype 143 --Tir na n'Og female
+
+--Costs
+#rcost 1
+#gcost 10025
+#rpcost 10000
+
+--Attributes
+#hp 13
+#size 2
+#prot 0
+#mr 14
+#mor 12
+
+#str 12
+#att 10
+#def 13
+#prec 11
+#ap 12
+#mapmove 14
+#enc 3
+
+--Weapons and Armour
+#weapon 12 --Mace
+#armor 158 --Robes
+
+--Magic
+#magicskill 1 2        --A2
+#magicskill 2 1        --W1
+#magicskill 6 1        --N1
+#magicskill 8 2        --H2
+--#custommagic 10240 100 --1S/N
+#custommagic 10112 100 --1F/A/W/E/N
+#custommagic 10112 10  --.1F/A/W/E/N
+--#custommagic 12160 100 --1F/A/W/E/S/N
+--#custommagic 12160 10  --.1F/A/W/E/S/N
+
+--Modifiers
+#female
+#humanoid
+#amphibian
+#holy
+#illusion
+#ironvul 1
+#darkvision 50
+#spellsinger
+#stealthy 0
+#slowrec
+
+#okleader
+#taskmaster 4
+#domsummon2 6201
+
+#startage 0
+#maxage 500
+#older -100
+#end
+
+
+--NEW MAGE
+#newmonster 6215
+#name "Architect of Crystal and Bronze"
+#descr "Human magicians that set up and organise concerts for the Morgen. Construction of the great stages and fortifications are left to them. They have become masters of shaping all forms in the material of bronze and crystal. Sometimes their work gets hard and the idols/fans will cheer for them too. Though they have inherited their affinity for magic from the druids of old, the humans of Kernou-Ys have replaced their talents in nature for fire."
+#spr1 "./Meme Age/Ys/memeys_human_architect.tga"
+#spr2 "./Meme Age/Ys/memeys_human_architect2.tga"
+#nametype 137 --Marverni male
+
+--Costs
+#rcost 1
+#gcost 10010
+#rpcost 10000
+
+--Attributes
+#hp 10
+#size 2
+#prot 0
+#mr 10
+#mor 10
+
+#str 10
+#att 10
+#def 10
+#prec 10
+#ap 12
+#mapmove 14
+#enc 3
+
+--Weapons and Armour
+#weapon 638 --Instrument
+#armor 120  --Leather Cap
+#armor 158  --Robes
+
+--Modifiers
+#humanoid
+#mason
+#poorleader
+#slowrec
+
+--Magic
+#magicskill 0 1        --F1
+#magicskill 3 1        --E1
+#magicskill 4 2        --S2
+#custommagic 3712 100 --1F/W/E/S
+#custommagic 3712 100 --1F/W/E/S
+#custommagic 3712 10  --.1F/W/E/S
+#end
+
+--NEW MAGE
+#newmonster 6216
+#name "Symphomorian"
+#descr "Below the Stage of Crystal and Bronze, the power of spellsinging is being experimented on. The disappearance of the Morvarc'h has forced Kernou-Ys to invest in the other strengths of the Morgen. The true purpose of the rise in spellsinging in Kernou-Ys is to create Morgen powerful enough to take on entire armies with just their songs, and without a steed. Powerful Morgen Idols dressed in magical gear attuned to music train in the depths to fight the enemies of Kernou-Ys. They have taken the name 'Symphomorians' after the Fomorian Giants of old, hoping to take on the idea of an unstoppable force in the minds of men. They invoke a temporary form of extremly high jumps when blessed."
+#spr1 "./Meme Age/Ys/memeys_morgen_idol_symphomorian.tga"
+#spr2 "./Meme Age/Ys/memeys_morgen_idol_symphomorian2.tga"
+#nametype 143 --Tir na n'Og female
+
+
+--Costs
+#rcost 1
+#gcost 10125
+--#gcost 500
+#rpcost 6
+
+--Attributes
+#hp 36
+#size 2
+#prot 0
+#mr 18
+#mor 30
+
+#str 12
+#att 15
+#def 16
+#prec 14
+#ap 16
+#mapmove 18
+#enc 1
+
+--Weapons and Armour
+#weapon 1646  --Symphomorian Glaive
+#armor 426    --Symphomorian Fullplate
+#armor 427    --Symphomorian Headset
+
+--Magic
+#magicskill 0 1        --F1
+#magicskill 1 2        --A2
+#magicskill 2 1        --W1
+#magicskill 3 1        --E1
+#magicskill 6 1        --N1
+#magicskill 8 4        --H4
+#custommagic 10112 100 --1F/A/W/E/N
+--#bonusspells 1
+#combatcaster
+
+--Modifiers
+#humanoid
+#female
+#amphibian
+#holy
+#illusion
+#ironvul 1
+#darkvision 50
+#spellsinger
+#stealthy 0
+--#flying
+#blessfly
+--#slowrec
+#voidsanity 10
+#researchbonus -6
+
+#poorleader
+#domsummon20 6201
+#taskmaster 6
+
+#startage 0
+#maxage 500
+#older -100
+#end
+
+
+--MORGEN TENDIE
+#newmonster 6220
+#name "Princess from the North"
+#descr "The Princess from the North is descended from the Morgen royalty who traveled north to continue the war againsed Fomoria. She rides upon a Morvarc'h steed that has not been seen in Kernou-Ys for years. Now that Kernou-Ys has taken its place on the world stage she has returned to lead them. Embracing the new faith of Morgen Idolry she is not only out to set an example for other Morgen to follow, but has fittingly donned a godly mantle and is taking the role of a Pretender God. All will become her fans."
+#copyspr 2925 --Queen of the North
+
+--Costs
+#pathcost 80
+#startdom 1
+
+#rcost 1
+#gcost 10000
+#rpcost 10999
+#ressize 2
+
+--Attributes
+#hp 16
+#size 3
+#prot 0
+#mr 18
+#mor 30
+
+#str 13
+#att 16
+#def 16
+#prec 12
+#ap 30
+#mapmove 24
+#enc 4
+
+--Weapons and Armour
+#weapon 475  
+#weapon 56  
+#weapon 676 
+#armor 214
+#armor 155
+#armor 213
+
+--Modifiers
+#female
+#humanoid
+#amphibian
+#illusion
+#ironvul 1
+#darkvision 50
+#spellsinger
+#stealthy 0
+#fireres 5
+#maxage 1000
+#older -50
+#watershape 6221
+
+#expertleader
+#sailing 999 3
+#inspirational 1
+
+--Magic
+#magicskill 1 1        --A1
+#magicskill 2 1        --W1
+#magicskill 6 1        --N1
+#end
+
+--MORGEN TENDIE (WATERSHAPE)
+#newmonster 6221
+#name "Princess from the North"
+#descr "The Princess from the North is descended from the Morgen royalty who traveled north to continue the war againsed Fomoria. She rides upon a Morvarc'h steed that has not been seen in Kernou-Ys for years. Now that Kernou-Ys has taken its place on the world stage she has returned to lead them. Embracing the new faith of Morgen Idolry she is not only out to set an example for other Morgen to follow, but has fittingly donned a godly mantle and is taking the role of a Pretender God. All will become her fans."
+#copyspr 2926
+
+--Costs
+#rcost 1
+#gcost 10000
+#rpcost 10999
+#ressize 2
+
+--Attributes
+#hp 16
+#size 3
+#prot 0
+#mr 18
+#mor 30
+
+#str 13
+#att 16
+#def 16
+#prec 12
+#ap 30
+#mapmove 24
+#enc 4
+
+--Weapons and Armour
+#weapon 475  
+--#weapon 56  
+--#weapon 676 
+#armor 214
+#armor 155
+#armor 213
+
+--Modifiers
+#female
+#humanoid
+#amphibian
+#illusion
+#ironvul 1
+#darkvision 50
+#spellsinger
+#fireres 5
+#maxage 1000
+#older -50
+#landshape 6220
+
+#expertleader
+#sailing 999 3
+#inspirational 1
+
+--Magic
+#magicskill 1 1        --A1
+#magicskill 2 1        --W1
+#magicskill 6 1        --N1
+#end
+
+--SITE
+#newsite
+#name "Grand Stage of Crystal and Bronze"
+#loc 16384    --Unique
+#homecom 6215 --Architect of Bronze and Crystal
+#level 0
+#rarity 5
+#gems 2 1
+#gems 3 1
+#gems 4 1
+#path 8
+#end
+
+--SITE
+#newsite
+#name "Restricted Zone"
+#loc 16384    --Unique
+#homecom 6216 --Symphomorian
+#level 0
+#rarity 5
+#gems 0 1
+#gems 1 1
+#path 0
+#end
+
+#newsite
+#name "Kernou-Ys Non-Recruits"
+#loc 16384    --Unique
+--#homecom 6216 --Symphomorian (*MIGHT BECOME A SUMMON INSTEAD)
+#homemon 6201 --Merrow Diehard Fan
+#homemon 6222 --Holographic Dancer
+#level 0
+#rarity 5
+#path 1
+#end
+
+#newsite
+#name "Kernou-Ys Heroes"
+#loc 16384    --Unique
+#homecom 2918 -- Morgen Champion(landshape)
+#level 0
+#rarity 5
+#path 4
+#end
+
+
+
+#selectnation 184
+#name "Kernou-Ys"
+#epithet "Stage of Crystal and Bronze"
+#era 3
+#descr "The Morgen of Ys have returned above the waves and reunited with their human allies of Kernou, forming the nation of Kernou-Ys. The Morgen have begun to lean into their spellsinger abilities, and have seized the ability to form chorus communions from Man(surely they won't mind). Merrow obsession with the Morgen has reached an all time high, these fans of the now Idol Morgen have begun to flock to the surface too. Humans are coping with contructing all the stages and managing all of the concerts the Morgen want to perform for their new Merrow fans. A group of Humans have formed a secret society aiming to push the powers of Morgen spellsinging to greater heights. 
+With the awakening of the Pretender Gods, Kernou-Ys aims to make everyone a fan of their Kami-Oshi."
+
+#summary "Race: Humans, Morgen Idols, and their Merrow Fans.
+Military: Merrow and Human infantry and cavalry. Also enslaved merrow Idol fans, sacred fans will freespawn around the Idols.
+Magic: Astral and Air, some Earth and Fire, a little Water and Nature. Chorus communions.
+Priests: Powerful. Morgen Idols are Priests capable of encouraging their fans."
+#brief "Get ready for Morgen Idolshit communions, their hordes of Merrow fans, and the Humans who hold it all together."
+#color 0.1 0.6 0.8
+#secondarycolor 0.8 0.6 1
+#flag "./Meme Age/Ys/flag_kernou-ys.tga"
+
+#coastnation
+
+#templepic 9
+#fortera 2   --You should need the Architect of B&C for 3CP
+#homefort 8  --Castle of Bronze and Crystal
+#buildfort 1 --City Palisades type
+#uwbuild 1
+#labcost 400
+#templecost 500
+#cavenation 0
+#hatesterr 4224 --Avoid starting in caves or forests
+
+--Starting Sites
+#startsite "Grand Stage of Crystal and Bronze"
+#startsite "Restricted Zone"
+
+--Sites to display non-recruits on nation preview
+#futuresite "Kernou-Ys Non-Recruits"
+#futuresite "Kernou-Ys Heroes"
+
+
+--Recruitment
+--Units
+#addrecunit 6200 -- Merrow Idol Fan
+#addrecunit 2897 -- Kernou Warrior
+#addrecunit 2898 -- Kernou Noble Warrior
+#addrecunit 6203 -- Security Crowd Control
+#addrecunit 6204 -- Security Cavalry
+--#addrecunit 6201 -- Merrow Direhard Idol Fan
+#uwrec 6200 -- Merrow Idol Fan
+#uwrec 6202 -- Merrow cherering Idol Fan
+#uwrec 2909 -- Ysian Man at Arms
+--#coastunit2 2909 -- Ysian Man at Arms
+#uwrec 2910 -- Knight of Ys
+
+--Commanders
+#uwcom 2912 -- Ysian Scout
+#uwcom 2913 -- Ysian Commander
+#uwcom 2931 -- Knight Commander of Ys
+#uwcom 6211 -- Fan Support
+--#coastcom1 2912 -- Ysian Scout
+--#coastcom2 2913 -- Ysian Commander
+--#addreccom 426 -- scout
+#addreccom  2912 -- Ysian Scout
+#addreccom 2928 -- Swanherd
+#addreccom 6210 -- Security Leader
+
+--MAGES 
+#addreccom 6211      -- Fan Support
+#addreccom 6212      -- Fledgling Idol
+#addreccom 6213      -- Concert Manager
+#addreccom 6214      -- Famous Idol
+
+--Heroes
+--#hero1 
+#multihero1 2918     -- Morgen Champion(landshape)
+
+--Starting Army
+#startcom 6210       -- Security Leader
+#startscout 2912     -- Ysian Scout
+#startunittype1 6200 -- Merrow Idol Fan
+#startunitnbrs1 20
+#startunittype2 6203 -- Security Crowd Control
+#startunitnbrs2 10
+
+--Province Defence
+#defcom1 6210        -- Security Leader
+#defcom2 6213        -- Concert Manager
+#defunit1 6200       -- Merrow Idol Fan
+#defmult1 10
+#defunit1b 6203      -- Security Crowd Control
+#defmult1b 10
+#defunit2 6204       -- Security Cavalry
+#defmult1 10
+
+#uwdefcom1 2913      -- Ysian Commander
+#uwdefcom2 2931      -- Knight Commander of Ys
+#uwdefunit1 6200     -- Merrow Idol Fan
+#uwdefmult1 10
+#uwdefunit1b 2908    -- Ysian Spearman
+#uwdefmult1b 10
+#uwdefunit2 2910     -- Knight of Ys
+#uwdefmult2 10
+
+--Wall Units
+#wallcom 6210        -- Security Leader
+#wallunit 6203       -- Kernou Security
+#wallmult 10
+#wallunit 2898       --Kernou Noble Warrior
+#wallmult 10
+
+#uwwallunit 2908     -- Ysian Spearman
+#uwwallmult 10
+#uwwallcom 2913      -- Ysian Commander
+
+--Pretenders
+--Realms
+#homerealm 10 --Default
+#homerealm 2  --Celtic
+
+--Female Pretenders?
+#addgod "Great Enchantress"
+#addgod "Vampire Queen"
+#addgod "Great Sorceress"
+
+#addgod "Virtue"
+#addgod "Lich Queen"
+#addgod "Bodhisattva of Mercy"
+#addgod "Sahira"
+
+#addgod "Neteret of Many Names"
+#addgod "Neteret of Joy"
+#addgod "Titan of War and Wisdom"
+#addgod 1098 --Asynja
+#addgod 2239 --Asynja
+#addgod "Titan of Rivers"
+#addgod "Titan of Love"
+#addgod "Titan of Winds and Waves"
+#addgod "Titan of the Hunt"
+#addgod "Titan of Crossroads"
+#addgod "Titan of the Spring"
+#addgod "Titan of Growth"
+#addgod "Devi of Good Fortunes"
+#addgod "Volla of the Bountiful Forest"
+#addgod "Annunaki of the Morning Star"
+#addgod "Annunaki of Love and War"
+#addgod "Kami of the Sun"
+#addgod "Deives of the Sun"
+#addgod "Matrona of the Healing Spring"
+#addgod "Ilahat of Fate"
+#addgod "Ilahat of Might"
+
+#addgod "Statue of Fertility"
+#addgod "Statue of the Bloody Mother"
+
+--National Pretenders
+#addgod "Morgen High Queen"
+#cheapgod20 "Morgen High Queen"
+#addgod 6220 --Princess from the North
+
+--Remove Male Pretenders
+#delgod "Fountain of Blood"
+#delgod "Oracle"
+#delgod "Monolith"
+#delgod "Duiu of Farming"
+#delgod "Duiu of War"
+#delgod "Duiu of Thunder"
+#delgod "Horned One"
+#delgod "Son of the Sea"
+#delgod "Lord of the Forest"
+#delgod "Demilich"
+#delgod "Rams-Headed Serpent"
+#delgod "Dog of the Underworld"
+#delgod "Thrice Horned Boar"
+#delgod "Hooded Spirit"
+#delgod 216 --Dragon
+#delgod 265 --Dragon
+#delgod 266 --Dragon
+#delgod "Earth Serpent"
+#delgod "Solar Eagle"
+#delgod "Raven of the Underworld"
+#delgod "Ghost King"
+#delgod "Master Lich"
+#delgod "Arch Druid"
+#delgod "Freak Lord"
+#delgod "Great Sage"
+#delgod "Master Enchanter"
+#delgod 244 --Arch Mage
+
+--Begone old ugly HAGS
+#delgod "Bitch Queen"
+#delgod "Grey One"
+#delgod "Gorgon"
+#delgod "Crone"
+#end
+
+#selectitem 153   --Crystal Shield
+#nationrebate 184 --Kernou-Ys
+#end
+#selectitem 346   --Crystal Heart
+#nationrebate 184 --Kernou-Ys
+#end
+#selectitem 317   --Crystal Coin
+#nationrebate 184 --Kernou-Ys
+#end
+
+
+#selectspell 1124  --Chorus Master
+#restricted 184
+#end
+#selectspell 1125  --Chorus Slave
+#restricted 184
+#end
+
+#newmonster 6222
+#name "Holographic Idol"
+#descr "Just when you think the Morgen illusions are not enough, these illusions will further waste the time of the enemy. They destabilize upon interaction with lightning."
+#copyspr 6214
+--#spr1 ".tga"
+--#spr2 ".tga"
+
+--Costs
+#rcost 0
+#gcost 0
+#rpcost 10000
+
+--Attributes
+#hp 1
+#size 2
+#prot 0
+#mr 10
+#mor 50
+
+#str 10
+#att 10
+#def 10
+#prec 10
+#ap 12
+#mapmove 14
+#enc 0
+
+--Weapons and Armour
+#weapon 67  --Phantasmal Weapon
+
+--Modifiers
+#magicbeing
+#humanoid
+#inanimate
+#ethereal
+#awe 1
+#illusion
+#amphibian
+#spiritsight
+#neednoteat
+#poisonres 25
+#shockres -5
+#female
+#end
+
+#newspell
+#restricted 184 --Kernou-Ys Only
+#name "Hologram Idols"
+#descr "Creates illusionary idols to block the paths of both fans and enemies alike."
+#details "Summons 5 phantasmal beings with glamour/ethereal/awe"
+#sound 31      --Magic chime
+#explspr 10136 --Vibrant Falling Colors
+
+#school 1 --Alteration
+#researchlevel 4
+
+#path 0 1 --A
+#path 1 2 --W
+
+#pathlevel 0 2 --A2
+#pathlevel 1 1 --W1
+
+#fatiguecost 50 --
+#range 1
+#effect 1       --(Combat) Summon unit
+#nreff 5        --5 units
+#damage 6222    --Holographic Dancer
+#spec 8404992    --Can use underwater
+#reqspellsinger
+#aibadlvl 3     --Don't cast if mage is A3 or higher
+#end
+
+#newspell
+#restricted 184 --Kernou-Ys Only
+#name "Call in the Fans"
+#descr "A song sung aloud and lights shone above, the Merrow fans answer the call and appear at the edges of the battlefield to join the fight."
+#details "Around 1 in 5 are the sacred robed variant."
+#sound 47      --Chorus
+#explspr 10253 --Massive geyser of purple thick pillars
+
+#school 2        --Evocation
+#researchlevel 6 --6
+
+#path 0 2 --W
+#path 1 6 --N
+
+#pathlevel 0 2 --W2
+#pathlevel 1 2 --N2
+
+#fatiguecost 200 --
+#effect 9043     --(Combat) Summon unit at edge of battlefield for 9 rounds
+#nreff 1         -- ~3*9 units total
+#damage -3006    --Fans
+#range 0
+#aoe 0
+#spec 8404992    --Can use underwater
+#reqspellsinger
+#aibadlvl 3     --Don't cast if mage is A3 or higher
+#end
+
+#newspell
+#restricted 184 --Kernou-Ys Only
+#name "Nature's Stagelights"
+#descr "Bright friendly lights shine from below the caster, letting their stress float away..."
+#details "Lowers caster's fatigue by 20 every round for 9 rounds."
+#sound 30        --Chyme
+#explspr 10252   --Massive geyser of light red light
+
+#school 4 --Enchantment
+#researchlevel 4 --4
+
+#path 0 1 --A
+#path 1 6 --N
+
+#pathlevel 0 3 --A3
+#pathlevel 1 2 --N2
+
+#fatiguecost 100 --1A gem cost
+#effect 9008     --(Combat) Remove Fatigue (9 rounds)
+#damage 20       --20 fatigue
+#range 0
+#aoe 0
+#spec 8404992    --Can use underwater
+#reqspellsinger
+#end
+
+
+#newspell
+#restricted 184 --Kernou-Ys Only
+#name "Instant Stage"
+#descr "Rather than spend time and gold upgrading a castle into a citadel, the Architect spends a sizable amount of gems and instantly contructs a brand new Castle of Bronze and Crystal with his mind."
+#details "Remote fort creation, range 3, Castle of Bronze and Crystal (Citadel)"
+
+#school 3 --Construction
+#researchlevel 7
+
+#path 0 3 --E
+#path 1 4 --S
+
+#pathlevel 0 4 --E4
+#pathlevel 1 1 --S1
+
+#fatiguecost 2500 --25e
+#provrange 3
+#effect 10063   --(Ritual) Remote Fort Construction
+#damage 8       --Castle of Bronze and Crystal
+#spec 8388608   --Can use underwater
+#onlymnr 6215   --Only Architect of Crystal and Bronze can cast
+#end
+
+--SPELL
+#newspell
+#name "Symphomorian Armament"
+#restricted 184  --Kernou-Ys Only
+#descr "An Idol born, trained, and armed for combat has been deemed ready to fight for Kernou-Ys."
+#details "Heavily armed Morgen Idol with innate spellcaster and wide paths."
+#school -1     --Currently Disabled
+--#school 4    --Enchantment
+#researchlevel 6
+
+#path 0 3 --E
+#path 1 0 --F
+
+#pathlevel 0 3 --E3
+#pathlevel 1 2 --F2
+
+#fatiguecost 2000 --20 Gems
+#effect 10021     --(Ritual) Summon Commander
+#nreff 1
+#damage 6216      --Symphomorian
+#end
+
+--End of memeage Kernou-Ys
+---------------------------------
+
+
+
+
+
+
+
+
 
