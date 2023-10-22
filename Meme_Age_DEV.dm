@@ -22993,6 +22993,197 @@ These fans have found not only a hidden talent for singing, but a talent in natu
 #magicskill 6 1        --N1
 #end
 
+#selectitem 153   --Crystal Shield
+#nationrebate 184 --Kernou-Ys
+#end
+#selectitem 346   --Crystal Heart
+#nationrebate 184 --Kernou-Ys
+#end
+#selectitem 317   --Crystal Coin
+#nationrebate 184 --Kernou-Ys
+#end
+
+
+#selectspell 1124  --Chorus Master
+#restricted 184
+#end
+#selectspell 1125  --Chorus Slave
+#restricted 184
+#end
+
+#newmonster 6222
+#name "Holographic Idol"
+#descr "Just when you think the Morgen illusions are not enough, these illusions will further waste the time of the enemy. They destabilize upon interaction with lightning."
+#copyspr 6214
+--#spr1 ".tga"
+--#spr2 ".tga"
+
+--Costs
+#rcost 0
+#gcost 0
+#rpcost 10000
+
+--Attributes
+#hp 1
+#size 2
+#prot 0
+#mr 10
+#mor 50
+
+#str 10
+#att 10
+#def 10
+#prec 10
+#ap 12
+#mapmove 14
+#enc 0
+
+--Weapons and Armour
+#weapon 67  --Phantasmal Weapon
+
+--Modifiers
+#magicbeing
+#humanoid
+#inanimate
+#ethereal
+#awe 1
+#illusion
+#amphibian
+#spiritsight
+#neednoteat
+#poisonres 25
+#shockres -5
+#female
+#end
+
+#newspell
+#restricted 184 --Kernou-Ys Only
+#name "Hologram Idols"
+#descr "Creates illusionary idols to block the paths of both fans and enemies alike."
+#details "Summons 5 phantasmal beings with glamour/ethereal/awe"
+#sound 31      --Magic chime
+#explspr 10136 --Vibrant Falling Colors
+
+#school 1 --Alteration
+#researchlevel 4
+
+#path 0 1 --A
+#path 1 2 --W
+
+#pathlevel 0 2 --A2
+#pathlevel 1 1 --W1
+
+#fatiguecost 50 --
+#range 1
+#effect 1       --(Combat) Summon unit
+#nreff 5        --5 units
+#damage 6222    --Holographic Dancer
+#spec 8404992    --Can use underwater
+#reqspellsinger
+#aibadlvl 3     --Don't cast if mage is A3 or higher
+#end
+
+#newspell
+#restricted 184 --Kernou-Ys Only
+#name "Call in the Fans"
+#descr "A song sung aloud and lights shone above, the Merrow fans answer the call and appear at the edges of the battlefield to join the fight."
+#details "Around 1 in 5 are the sacred robed variant."
+#sound 47      --Chorus
+#explspr 10253 --Massive geyser of purple thick pillars
+
+#school 2        --Evocation
+#researchlevel 6 --6
+
+#path 0 2 --W
+#path 1 6 --N
+
+#pathlevel 0 2 --W2
+#pathlevel 1 2 --N2
+
+#fatiguecost 200 --
+#effect 9043     --(Combat) Summon unit at edge of battlefield for 9 rounds
+#nreff 1         -- ~3*9 units total
+#damage -3006    --Fans
+#range 0
+#aoe 0
+#spec 8404992    --Can use underwater
+#reqspellsinger
+#aibadlvl 3     --Don't cast if mage is A3 or higher
+#end
+
+#newspell
+#restricted 184 --Kernou-Ys Only
+#name "Nature's Stagelights"
+#descr "Bright friendly lights shine from below the caster, letting their stress float away..."
+#details "Lowers caster's fatigue by 20 every round for 9 rounds."
+#sound 30        --Chyme
+#explspr 10252   --Massive geyser of light red light
+
+#school 4 --Enchantment
+#researchlevel 4 --4
+
+#path 0 1 --A
+#path 1 6 --N
+
+#pathlevel 0 3 --A3
+#pathlevel 1 2 --N2
+
+#fatiguecost 100 --1A gem cost
+#effect 9008     --(Combat) Remove Fatigue (9 rounds)
+#damage 20       --20 fatigue
+#range 0
+#aoe 0
+#spec 8404992    --Can use underwater
+#reqspellsinger
+#end
+
+
+#newspell
+#restricted 184 --Kernou-Ys Only
+#name "Instant Stage"
+#descr "Rather than spend time and gold upgrading a castle into a citadel, the Architect spends a sizable amount of gems and instantly contructs a brand new Castle of Bronze and Crystal with his mind."
+#details "Remote fort creation, range 3, Castle of Bronze and Crystal (Citadel)"
+
+#school 3 --Construction
+#researchlevel 7
+
+#path 0 3 --E
+#path 1 4 --S
+
+#pathlevel 0 4 --E4
+#pathlevel 1 1 --S1
+
+#fatiguecost 2500 --25e
+#provrange 3
+#effect 10063   --(Ritual) Remote Fort Construction
+#damage 8       --Castle of Bronze and Crystal
+#spec 8388608   --Can use underwater
+#onlymnr 6215   --Only Architect of Crystal and Bronze can cast
+#end
+
+--SPELL
+#newspell
+#name "Symphomorian Armament"
+#restricted 184  --Kernou-Ys Only
+#descr "An Idol born, trained, and armed for combat has been deemed ready to fight for Kernou-Ys."
+#details "Heavily armed Morgen Idol with innate spellcaster and wide paths."
+#school -1     --Currently Disabled
+--#school 4    --Enchantment
+#researchlevel 6
+
+#path 0 3 --E
+#path 1 0 --F
+
+#pathlevel 0 3 --E3
+#pathlevel 1 2 --F2
+
+#fatiguecost 2000 --20 Gems
+#effect 10021     --(Ritual) Summon Commander
+#nreff 1
+#damage 6216      --Symphomorian
+#end
+
+
 --SITE
 #newsite
 #name "Grand Stage of Crystal and Bronze"
@@ -23230,196 +23421,6 @@ Priests: Powerful. Morgen Idols are Priests capable of encouraging their fans."
 #delgod "Grey One"
 #delgod "Gorgon"
 #delgod "Crone"
-#end
-
-#selectitem 153   --Crystal Shield
-#nationrebate 184 --Kernou-Ys
-#end
-#selectitem 346   --Crystal Heart
-#nationrebate 184 --Kernou-Ys
-#end
-#selectitem 317   --Crystal Coin
-#nationrebate 184 --Kernou-Ys
-#end
-
-
-#selectspell 1124  --Chorus Master
-#restricted 184
-#end
-#selectspell 1125  --Chorus Slave
-#restricted 184
-#end
-
-#newmonster 6222
-#name "Holographic Idol"
-#descr "Just when you think the Morgen illusions are not enough, these illusions will further waste the time of the enemy. They destabilize upon interaction with lightning."
-#copyspr 6214
---#spr1 ".tga"
---#spr2 ".tga"
-
---Costs
-#rcost 0
-#gcost 0
-#rpcost 10000
-
---Attributes
-#hp 1
-#size 2
-#prot 0
-#mr 10
-#mor 50
-
-#str 10
-#att 10
-#def 10
-#prec 10
-#ap 12
-#mapmove 14
-#enc 0
-
---Weapons and Armour
-#weapon 67  --Phantasmal Weapon
-
---Modifiers
-#magicbeing
-#humanoid
-#inanimate
-#ethereal
-#awe 1
-#illusion
-#amphibian
-#spiritsight
-#neednoteat
-#poisonres 25
-#shockres -5
-#female
-#end
-
-#newspell
-#restricted 184 --Kernou-Ys Only
-#name "Hologram Idols"
-#descr "Creates illusionary idols to block the paths of both fans and enemies alike."
-#details "Summons 5 phantasmal beings with glamour/ethereal/awe"
-#sound 31      --Magic chime
-#explspr 10136 --Vibrant Falling Colors
-
-#school 1 --Alteration
-#researchlevel 4
-
-#path 0 1 --A
-#path 1 2 --W
-
-#pathlevel 0 2 --A2
-#pathlevel 1 1 --W1
-
-#fatiguecost 50 --
-#range 1
-#effect 1       --(Combat) Summon unit
-#nreff 5        --5 units
-#damage 6222    --Holographic Dancer
-#spec 8404992    --Can use underwater
-#reqspellsinger
-#aibadlvl 3     --Don't cast if mage is A3 or higher
-#end
-
-#newspell
-#restricted 184 --Kernou-Ys Only
-#name "Call in the Fans"
-#descr "A song sung aloud and lights shone above, the Merrow fans answer the call and appear at the edges of the battlefield to join the fight."
-#details "Around 1 in 5 are the sacred robed variant."
-#sound 47      --Chorus
-#explspr 10253 --Massive geyser of purple thick pillars
-
-#school 2        --Evocation
-#researchlevel 6 --6
-
-#path 0 2 --W
-#path 1 6 --N
-
-#pathlevel 0 2 --W2
-#pathlevel 1 2 --N2
-
-#fatiguecost 200 --
-#effect 9043     --(Combat) Summon unit at edge of battlefield for 9 rounds
-#nreff 1         -- ~3*9 units total
-#damage -3006    --Fans
-#range 0
-#aoe 0
-#spec 8404992    --Can use underwater
-#reqspellsinger
-#aibadlvl 3     --Don't cast if mage is A3 or higher
-#end
-
-#newspell
-#restricted 184 --Kernou-Ys Only
-#name "Nature's Stagelights"
-#descr "Bright friendly lights shine from below the caster, letting their stress float away..."
-#details "Lowers caster's fatigue by 20 every round for 9 rounds."
-#sound 30        --Chyme
-#explspr 10252   --Massive geyser of light red light
-
-#school 4 --Enchantment
-#researchlevel 4 --4
-
-#path 0 1 --A
-#path 1 6 --N
-
-#pathlevel 0 3 --A3
-#pathlevel 1 2 --N2
-
-#fatiguecost 100 --1A gem cost
-#effect 9008     --(Combat) Remove Fatigue (9 rounds)
-#damage 20       --20 fatigue
-#range 0
-#aoe 0
-#spec 8404992    --Can use underwater
-#reqspellsinger
-#end
-
-
-#newspell
-#restricted 184 --Kernou-Ys Only
-#name "Instant Stage"
-#descr "Rather than spend time and gold upgrading a castle into a citadel, the Architect spends a sizable amount of gems and instantly contructs a brand new Castle of Bronze and Crystal with his mind."
-#details "Remote fort creation, range 3, Castle of Bronze and Crystal (Citadel)"
-
-#school 3 --Construction
-#researchlevel 7
-
-#path 0 3 --E
-#path 1 4 --S
-
-#pathlevel 0 4 --E4
-#pathlevel 1 1 --S1
-
-#fatiguecost 2500 --25e
-#provrange 3
-#effect 10063   --(Ritual) Remote Fort Construction
-#damage 8       --Castle of Bronze and Crystal
-#spec 8388608   --Can use underwater
-#onlymnr 6215   --Only Architect of Crystal and Bronze can cast
-#end
-
---SPELL
-#newspell
-#name "Symphomorian Armament"
-#restricted 184  --Kernou-Ys Only
-#descr "An Idol born, trained, and armed for combat has been deemed ready to fight for Kernou-Ys."
-#details "Heavily armed Morgen Idol with innate spellcaster and wide paths."
-#school -1     --Currently Disabled
---#school 4    --Enchantment
-#researchlevel 6
-
-#path 0 3 --E
-#path 1 0 --F
-
-#pathlevel 0 3 --E3
-#pathlevel 1 2 --F2
-
-#fatiguecost 2000 --20 Gems
-#effect 10021     --(Ritual) Summon Commander
-#nreff 1
-#damage 6216      --Symphomorian
 #end
 
 --End of memeage Kernou-Ys
