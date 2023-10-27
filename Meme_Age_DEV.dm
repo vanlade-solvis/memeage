@@ -22251,11 +22251,11 @@ Priests: Average"
 #constlevel 4
 #mainpath 4       --Astral
 #mainlevel 1
-#secondarypath 4  --Earth
+#secondarypath 3  --Earth
 #secondarylevel 1
 #type 8           --Misc
 #name "Singing Apparatus"
-#descr "Wielder is now a spellsinger"
+#descr "This magical phonic apparatus grants any wielder the power of spellsinging."
 #morale 1
 #spellsinger
 #restricted 184 --Memeage Ys
@@ -22450,7 +22450,7 @@ These fans have found a hidden talent for singing, and if around an Idol while t
 
 --Costs
 #rcost 6
-#gcost 10025
+#gcost 10030
 #rpcost 10000
 #ressize 2
 
@@ -22619,7 +22619,6 @@ These fans have found not only a hidden talent for singing, but a talent in natu
 #magicskill 1 1        --A1
 #magicskill 6 1        --N1
 #magicskill 8 2        --H2
---#custommagic 10240 100 --1S/N
 #custommagic 512 20    --.2W
 
 --Modifiers
@@ -22725,11 +22724,8 @@ These fans have found not only a hidden talent for singing, but a talent in natu
 #magicskill 2 1        --W1
 #magicskill 6 1        --N1
 #magicskill 8 2        --H2
---#custommagic 10240 100 --1S/N
 #custommagic 10112 100 --1F/A/W/E/N
 #custommagic 10112 10  --.1F/A/W/E/N
---#custommagic 12160 100 --1F/A/W/E/S/N
---#custommagic 12160 10  --.1F/A/W/E/S/N
 
 --Modifiers
 #female
@@ -22804,7 +22800,7 @@ These fans have found not only a hidden talent for singing, but a talent in natu
 --NEW MAGE
 #newmonster 6216
 #name "Symphomorian"
-#descr "Below the Stage of Crystal and Bronze, the power of spellsinging is being experimented on. The disappearance of the Morvarc'h has forced Kernou-Ys to invest in the other strengths of the Morgen. The true purpose of the rise in spellsinging in Kernou-Ys is to create Morgen powerful enough to take on entire armies with just their songs, and without a steed. Powerful Morgen Idols dressed in magical gear attuned to music train in the depths to fight the enemies of Kernou-Ys. They have taken the name 'Symphomorians' after the Fomorian Giants of old, hoping to take on the idea of an unstoppable force in the minds of men. They invoke a temporary form of extremly high jumps when blessed."
+#descr "Below the Stage of Crystal and Bronze, the power of spellsinging is being experimented on. The disappearance of the Morvarc'h has forced Kernou-Ys to invest in the other strengths of the Morgen. The true purpose of the rise in spellsinging in Kernou-Ys is to create Morgen powerful enough to take on entire armies with just their songs, and without a steed. Powerful Morgen Idols dressed in magical gear attuned to music train in the depths to fight the enemies of Kernou-Ys. They have taken the name 'Symphomorians' after the Fomorian Giants of old, hoping to take on the idea of an unstoppable force in the minds of men. They are familiar with all Idol paths of spellsinging and invoke a temporary form of flight when blessed."
 #spr1 "./Meme Age/Ys/memeys_morgen_idol_symphomorian.tga"
 #spr2 "./Meme Age/Ys/memeys_morgen_idol_symphomorian2.tga"
 #nametype 143 --Tir na n'Og female
@@ -22817,7 +22813,7 @@ These fans have found not only a hidden talent for singing, but a talent in natu
 #rpcost 6
 
 --Attributes
-#hp 36
+#hp 33
 #size 2
 #prot 0
 #mr 18
@@ -22863,6 +22859,7 @@ These fans have found not only a hidden talent for singing, but a talent in natu
 #voidsanity 10
 #researchbonus -6
 
+#formationfighter -4
 #poorleader
 #domsummon20 6201
 #taskmaster 6
@@ -23032,7 +23029,7 @@ These fans have found not only a hidden talent for singing, but a talent in natu
 #newsite
 #name "Kernou-Ys Heroes"
 #loc 16384    --Unique
-#homecom 2918 -- Morgen Champion(landshape)
+#homecom 2918 --Morgen Champion(landshape)
 #level 0
 #rarity 5
 #path 4
@@ -23269,7 +23266,7 @@ Priests: Powerful. Morgen Idols are Priests capable of encouraging their fans."
 #mr 10
 #mor 50
 
-#str 10
+#str 5
 #att 10
 #def 10
 #prec 10
@@ -23336,7 +23333,7 @@ Priests: Powerful. Morgen Idols are Priests capable of encouraging their fans."
 #path 0 2 --W
 #path 1 6 --N
 
-#pathlevel 0 2 --W2
+#pathlevel 0 3 --W3
 #pathlevel 1 2 --N2
 
 #fatiguecost 200 --
@@ -23347,7 +23344,7 @@ Priests: Powerful. Morgen Idols are Priests capable of encouraging their fans."
 #aoe 0
 #spec 8404992    --Can use underwater
 #reqspellsinger
-#aibadlvl 3     --Don't cast if mage is A3 or higher
+#aibadlvl 4     --Don't cast if mage is path4 or higher
 #end
 
 #newspell
@@ -23405,7 +23402,7 @@ Priests: Powerful. Morgen Idols are Priests capable of encouraging their fans."
 #name "Symphomorian Armament"
 #restricted 184  --Kernou-Ys Only
 #descr "An Idol born, trained, and armed for combat has been deemed ready to fight for Kernou-Ys."
-#details "Heavily armed Morgen Idol with innate spellcaster and wide paths."
+#details "Heavily armed Morgen Idol with wide paths and combat caster."
 #school -1     --Currently Disabled
 --#school 4    --Enchantment
 #researchlevel 6
