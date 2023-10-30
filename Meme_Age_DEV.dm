@@ -80,6 +80,7 @@
 
 #newweapon 1601
 #name "Hand Crossbow"
+#bonus
 #ironweapon
 #dmg 6
 #att 0
@@ -254,6 +255,7 @@
 #name "Punji Stick"
 #dmg 10
 #pierce
+#bonus
 #range -1
 #halfstr
 #ammo 2
@@ -267,6 +269,7 @@
 #name "Zotzrangs"
 #dmg 6
 #pierce
+#bonus
 #range -1
 #nratt 2
 #ammo 1
@@ -284,6 +287,7 @@
 #aoe 1
 #ammo 4
 #dt_magic
+#bonus
 #end
 
 #newweapon 1616
@@ -308,7 +312,7 @@
 #newweapon 1618
 #copyweapon 232
 #name "Weak Shock"
-#dmg 2
+#dmg 3
 #end
 
 #newweapon 1619
@@ -320,6 +324,7 @@
 #newweapon 1620
 #copyweapon 532 --tailsweep
 #name "Belly Flop"
+#bonus
 #end
 
 #newweapon 1621
@@ -327,6 +332,7 @@
 #name "Seeking Javelin"
 #dmg 4
 #ammo 10
+#bonus
 #end
 
 #newweapon 1622
@@ -590,7 +596,7 @@
 
 #newweapon 1641 -- Giant slayer Sword
 #name "Giant Slayer Sword"
-#dmg 2
+#dmg 4
 #dt_large
 #len 3
 #att 2
@@ -691,6 +697,40 @@
 #armornegating
 #bonus
 #inanimateimmune
+#end
+
+#newweapon 1648
+#name "Shot Crossbow"
+#ironweapon
+#dmg 12
+#nratt 9
+#att -2
+#range 8
+#pierce
+#nostr
+#ammo 2
+#rcost 18
+#sound 13
+#flyspr 109 1
+#range0
+#end
+
+#newweapon 1649
+#name "Floating Crossbow"
+#ironweapon
+#bonus
+#dmg 15
+#nratt 3
+#att 1
+#range 45
+#armorpiercing
+#pierce
+#nostr
+#ammo 30
+#rcost 18
+#sound 13
+#flyspr 109 1
+#range0
 #end
 
 --- Lucky Fish Weapons ---
@@ -1009,12 +1049,10 @@ EVERYONE WILL KNOW WHAT IT FEELS TO BE 5,11!"
 --ITEM
 #selectitem 661
 #copyspr 117 --Winter Bringer
---#spr ".tga"
---#itemdrawsize -20
 #constlevel 4
 #mainpath 4       --Astral
 #mainlevel 1
-#secondarypath 4  --Earth
+#secondarypath 3  --Earth
 #secondarylevel 1
 #type 8           --Misc
 #name "Singing Apparatus"
@@ -2429,6 +2467,7 @@ Priests: Powerful"
 #armor "Plate Cuirass"
 #armor "Leather Cap"
 #goodleader
+#prophetshape 5163
 #end
 
 #newmonster 5163
@@ -2437,7 +2476,7 @@ Priests: Powerful"
 #name "General"
 #descr "A capable strategic leader of the freesia liberation army, following the footsteps of the ancestors who fought to break free from the old kingdom of Man."
 #ap 11
-#mapmove 14
+#mapmove 16
 #hp 12
 #prot 0
 #size 2
@@ -2578,10 +2617,10 @@ Priests: Powerful"
 #nametype 102
 #gcost 0
 #weapon "Dagger"
-#weapon "Assault Crossbow"
-#weapon "Assault Crossbow"
-#weapon "Assault Crossbow"
-#weapon "Assault Crossbow"
+#weapon "Floating Crossbow"
+#weapon "Floating Crossbow"
+#weapon "Floating Crossbow"
+#weapon "Floating Crossbow"
 #weapon "Assault Crossbow"
 #holy
 #float
@@ -3041,6 +3080,34 @@ They should never join the actual military as their duty is to defend their home
 #domsummon 5176
 #end
 
+#newmonster 5183
+#spr1 "./Meme Age/Freesia/militia5.tga"
+#spr2 "./Meme Age/Freesia/militia6.tga"
+#name "Redneck"
+#descr "The common folk of Freesia. Due to their constitutional right to bear arms, they own a crossbow to defend their lands and prevent another case of tyranny. In the situation of an invasion, they are very well prepared to fight any adversaries. Unlike regular militia, the redneck uses a shotbow that is normally a tool to fend off wildlife. These shotbows lack the penetration of crossbows but deliver devastating effects to unarmored targets. They have exceptionally high morale no matter how terrible war is. However, they love their farm and family much more and still would not venture far from their home province."
+#ap 12
+#mapmove 14
+#hp 12
+#prot 0
+#size 2
+#str 11
+#enc 3
+#att 11
+#def 11
+#prec 11
+#mr 10
+#mor 16
+#maxage 50
+#startage 20
+#nametype 102
+#gcost 9
+#rcost -18
+#rpcost 33
+#weapon "Dagger"
+#weapon "Shot Crossbow"
+#homesick 34
+#end
+
 #newspell
 #restricted 152
 #name "Construct Warthog"
@@ -3094,7 +3161,7 @@ They should never join the actual military as their duty is to defend their home
 #notfornation 152
 #name "Purchase Freesian Arms"
 #descr "A deal is extended via the AstralCommunication lines to the nation of Freesia to purchase a number of their Assault Crossbows. Due to the nature of the trade, the location of the purchase will be revealed to the nation of Freesia."
-#details "Purchases 4d6 units of Exported Crossbowman for 200 gold. This spell does nothing if Freesia is not in the game."
+#details "Purchases 5d6 units of Exported Crossbowman for 200 gold. This spell does nothing if Freesia is not in the game."
 #school 5
 #researchlevel 4
 #path 0 4
@@ -3126,7 +3193,7 @@ They should never join the actual military as their duty is to defend their home
 #nation -2
 #msg "The shipment of Assault Crossbows has arrived from Freesia! Many soldiers were quickly armed and trained with the weapon."
 #nolog
-#4d6units 5178
+#5d6units 5178
 #exactgold -200
 #end
 
@@ -3236,6 +3303,7 @@ Priests: Weak"
 #addrecunit 5171
 #addrecunit 5172
 #addrecunit 5173
+#addrecunit 5183
 #addrecunit 5174
 #addrecunit 5175
 #addrecunit 5176
@@ -3243,6 +3311,7 @@ Priests: Weak"
 #addforeignunit 5168
 #addforeignunit 5172
 #addforeignunit 5173
+#addforeignunit 5183
 
 #startcom 5162
 #startunittype1 5169
@@ -12351,6 +12420,7 @@ Raze: Does not collect tax income, gain gold via Harvesters"
 #addgod 5617
 #addgod 5618
 #addgod 5619
+#addgod 5620
 
 #fireblessbonus 3
 #natureblessbonus -3
@@ -12895,6 +12965,38 @@ Priests: Weak"
 #okleader
 #end
 
+#newmonster 5676
+#copyspr 1146
+#name "White Captain"
+#descr "The White Ones are the highest of the castes. They are white-furred Vanara who are gifted with superior mental capabilities. They are living the high life in the heavily developed society of Bandar Shakti. The White Captain are the only trained leaders of Bandar Shakti. Any bandar is willing to folloow their lead as they are revered by all bandars to be great leaders that will bring fame and power to the nation."
+#ap 10
+#mapmove 16
+#hp 9
+#prot 1
+#size 2
+#str 10
+#enc 2
+#att 12
+#def 12
+#prec 10
+#mr 12
+#mor 10
+#maxage 60
+#startage 22
+#nametype 129
+#gcost 9965
+#rcost 1
+#rpcost 2
+#weapon "Mace"
+#holy
+#animal
+#forestsurvival
+#magicskill 8 1
+#expertleader
+#expertmagicleader
+#inspirational 1
+#end
+
 #newmonster 5681
 #spr1 "./Meme Age/Sahaa/untouch1.tga"
 #spr2 "./Meme Age/Sahaa/untouch2.tga"
@@ -13092,6 +13194,21 @@ Priests: Weak"
 #fatiguecost 900
 #end
 
+#newspell
+#copyspell 927 --arrow fend
+#restricted 169
+#name "Cricket Season"
+#descr "A bandar thaumascript expert can spoof a cricket season, causing all allies to bring out their cricket bats to cheer for their favourite teams. Instinctively allowing them to hit projectiles out of the air."
+#details "Airshield"
+#school 2
+#researchlevel 5
+#path 0 4
+#path 1 6
+#pathlevel 0 2
+#pathlevel 1 2
+#fatiguecost 200
+#end
+
 #newsite 1639
 #name "Astraltech Skyscrapper"
 #path 1
@@ -13119,7 +13236,7 @@ Priests: Weak"
 #brief "A nation of monkeys entering the age of superpower."
 #descr "During the last age, the nation of monkeys saw a massive growth in terms of economy due to the large amounts of banana planations and banana banks. With the massive amounts of wealth also promoted a period of uncontrolled population increase. With the unrivaled size of the monkey workforce and monkey military, they have declared themselves as a super power amongst all the known nations. However, the rapid growth is not without its downsides, many urban developments have left rural regions in shambles. The naga were clearly not happy with this outcome as they quickly left the nation to live in the jungles.
 The massive contrast from the development has created a huge divide in the monkey people, while the group of White Ones thrived under the leadership of Gurus, many bandar fell into the slums and became untouchables. Those untouchables dwell within the designated waste streets of Bandar Shakti, the same place where the wealthy White Ones defecate and throw their trash. Now as a super power, the nation of Bandar Shakti enters the race for ascension once again."
-#summary "Race: Class divided monkeys, Prefer Heat +1, starts with large amount of Capitol population.
+#summary "Race: Class divided monkeys, Prefer Heat +1, starts with large amount of Capital population.
 Military: Primitively equipped monkeys and apes, untouchable bandars
 Magic: Astral, Nature, some Water, Earth, Death, and Blood
 Priests: Average"
@@ -13128,6 +13245,7 @@ Priests: Average"
 #addreccom 1119
 #addreccom 1127
 #addreccom 1128
+#addreccom 5676
 #addreccom 5671
 #addreccom 5672
 #addreccom 5673
@@ -19755,6 +19873,18 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 #1d6units 6165 --blackshell warriors
 #end
 
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Idols of Kernou-Ys show their Solidarity with the original people of Das'rite! [Grand Stage of Crystal and Bronze]"
+#2com 6215 --architect of bronze and crystal
+#end
+
 --VOICE OF YAKUB EVENTS END---------------------------------
 
 #newsite 1670
@@ -21227,14 +21357,14 @@ Priests: Weak"
 #str 16
 #enc 1
 #att 11
-#def 4
+#def 2
 #prec 11
 #mr 14
 #mor 16
 #maxage 100
 #startage 25
 #nametype 144
-#gcost 10050
+#gcost 10085
 #rcost 21
 #rpcost 1
 #weapon 20 --"Bite"
@@ -21376,7 +21506,7 @@ Priests: Weak"
 #str 13
 #enc 1
 #att 10
-#def 8
+#def 7
 #prec 10
 #mr 11
 #mor 10
@@ -21409,7 +21539,7 @@ Priests: Weak"
 #str 13
 #enc 1
 #att 10
-#def 8
+#def 7
 #prec 10
 #mr 11
 #mor 10
@@ -21442,7 +21572,7 @@ Priests: Weak"
 #str 13
 #enc 1
 #att 11
-#def 8
+#def 7
 #prec 10
 #mr 11
 #mor 10
@@ -21475,7 +21605,7 @@ Priests: Weak"
 #str 14
 #enc 1
 #att 11
-#def 9
+#def 8
 #prec 10
 #mr 11
 #mor 11
@@ -21509,7 +21639,7 @@ Priests: Weak"
 #str 14
 #enc 1
 #att 11
-#def 9
+#def 8
 #prec 10
 #mr 11
 #mor 11
@@ -21543,7 +21673,7 @@ Priests: Weak"
 #str 14
 #enc 1
 #att 12
-#def 9
+#def 8
 #prec 10
 #mr 11
 #mor 11
@@ -21577,7 +21707,7 @@ Priests: Weak"
 #str 14
 #enc 1
 #att 11
-#def 9
+#def 8
 #prec 10
 #mr 11
 #mor 11
@@ -21608,20 +21738,20 @@ Priests: Weak"
 #ap 4
 #mapmove 10
 #hp 35
-#prot 18
+#prot 16
 #size 3
 #str 16
 #enc 1
 #att 12
-#def 7
+#def 4
 #prec 10
 #mr 12
 #mor 14
 #maxage 1000
 #startage 400
 #nametype 144
-#gcost 10035
-#rcost 14
+#gcost 10040
+#rcost 24
 #rpcost 25
 #weapon 20 --"Bite"
 #weapon 15 --"Morning Star"
@@ -21642,21 +21772,21 @@ Priests: Weak"
 #ap 4
 #mapmove 10
 #hp 45
-#prot 20
+#prot 18
 #size 4
 #str 16
 #enc 1
 #att 12
-#def 4
+#def 2
 #prec 11
 #mr 14
 #mor 16
 #maxage 100
 #startage 25
 #nametype 144
-#gcost 10045
+#gcost 10075
 #rcost 21
-#rpcost 25
+#rpcost 56
 #weapon 20 --"Bite"
 #weapon 258 --"Claymore"
 #armor 20 --"Iron Cap"
@@ -21722,14 +21852,14 @@ Priests: Weak"
 #str 16
 #enc 1
 #att 12
-#def 5
+#def 3
 #prec 11
 #mr 14
 #mor 16
 #maxage 100
 #startage 45
 #nametype 144
-#gcost 10050
+#gcost 10085
 #rcost 21
 #rpcost 2
 #weapon 20 --"Bite"
@@ -21757,11 +21887,11 @@ Priests: Weak"
 #hp 75
 #prot 10
 #size 4
-#str 16
+#str 18
 #enc 0
 #att 13
 #def 13
-#prec 14
+#prec 10
 #mr 17
 #mor 18
 #maxage 1000
@@ -21792,11 +21922,11 @@ Priests: Weak"
 #hp 15
 #prot 8
 #size 1
-#str 12
+#str 15
 #enc 0
 #att 12
-#def 14
-#prec 14
+#def 12
+#prec 10
 #mr 16
 #mor 18
 #maxage 1000
@@ -21908,11 +22038,11 @@ Priests: Weak"
 #hp 25
 #prot 10
 #size 3
-#str 14
+#str 16
 #enc 0
 #att 11
 #def 6
-#prec 12
+#prec 11
 #mr 18
 #mor 30
 #maxage 8000
@@ -22096,11 +22226,11 @@ Priests: Weak"
 #hp 165
 #prot 20
 #size 6
-#str 16
+#str 18
 #enc 10
 #att 16
 #def 8
-#prec 12
+#prec 10
 #mr 18
 #mor 30
 #maxage 8000
@@ -22295,8 +22425,8 @@ Priests: Average"
 #uwbuild 1
 #homerealm 4
 #homerealm 10
-#color 0.63 0.13 0.18
-#secondarycolor 0.14 0.17 0.11
+#color 0.08 0.41 0.81
+#secondarycolor 0.34 0.49 0.38
 #end
 
 
