@@ -1,8 +1,0 @@
-# Ignore everything
-/*
-
-# Except these
-!.gitignore
-!Meme_Age_DEV.dm
-!Meme*Age/
-!Meme*Age/*
