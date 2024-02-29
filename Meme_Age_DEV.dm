@@ -23763,7 +23763,7 @@ With the awakening of the Pretender Gods, Kernou-Ys aims to make all a fan of th
 
 #summary "Race: Humans, Morgen Idols, and their Merrow Fans.
 Military: Human infantry and cavalry. Merrow Idol fans, Morgen Idols will freespawn sacred fans. No recruitable sacred troops.
-Magic: Astral and Glamour, some Fire, Water, Earth, and a little Nature. Chorus Communions.
+Magic: Astral, Glamour, Water, some Fire and Earth, and a little Nature. Chorus Communions.
 Priests: Powerful. Morgen Idols are Priests capable of encouraging their fans."
 #brief "Get ready for Morgen Idolshit communions, their hordes of Merrow fans, and the Humans who hold it all together."
 #color 0.1 0.6 0.8
