@@ -16501,6 +16501,18 @@ Special: Commanders and Spawns are morphed into by Rellic Drones; most Rellic Cr
 #taskmaster 3
 #end
 
+#newmonster 5901
+#copystats 5890
+#spr1 "./Meme Age/ian.tga"
+#spr2 "./Meme Age/ian.tga"
+#name "Prime Arcanist"
+#fixedname "Ian Smith"
+#descr "When the nation of Man seemed deaf to the pleas of its Rhodesian citizens, those citizens became more and more desperate, at the height of this the Prime Arcanist of Rhodesia was ousted by his colleagues, and the young, charismatic Ian Smith was voted in to replace him. It wasn't long before in a fiery and inspiring speech Ian Smith declared UDP- unilateral declaration of pantokracy, and the people of Rhodesia who were once a colony of Man with the privilege of responsible government, rejoiced in entering the war for godhood. Ian Smith enjoys immense support from his people for the stand he took against the Isle of Man, and as the Prime Arcanist this translates to a benevolent, but firm grip on both the civil and military arms of Rhodesia."
+#superiorleader
+#command 100
+#inspirational 4
+#end
+
 #newsite 1660
 #name "Salisbury Tower"
 #path 1
