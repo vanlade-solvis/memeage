@@ -2872,7 +2872,7 @@ Priests: Powerful"
 #maxage 50
 #startage 25
 #nametype 102
-#gcost 27
+#gcost 17
 #rcost 5
 #rpcost 28
 #weapon "Assault Crossbow"
@@ -4629,7 +4629,7 @@ Priests: Weak"
 #clearmagic
 #magicskill 0 1
 #magicskill 8 1
-#custommagic 16512 100
+#custommagic 32896 100
 #end
 
 #selectspell 383 --bind harlequin
@@ -8967,7 +8967,7 @@ Priests: Powerful"
 #magicskill 0 1
 #magicskill 8 2
 #magicskill 9 1
-#custommagic 22656 100
+#custommagic 39040 100
 #startaff 25
 #end
 
@@ -10585,7 +10585,7 @@ Priests: Powerful"
 #rpcost 4
 #magicskill 3 3
 #magicskill 6 1
-#custommagic 29696 10
+#custommagic 46080 10
 #weapon "Barbell"
 #forestsurvival
 #heal
@@ -10656,7 +10656,7 @@ Priests: Powerful"
 #rpcost 4
 #magicskill 3 1
 #magicskill 6 3
-#custommagic 29696 10
+#custommagic 46080 10
 #weapon "Barbell"
 #forestsurvival
 #heal
@@ -10729,7 +10729,7 @@ Priests: Powerful"
 #holy
 #magicskill 3 3
 #magicskill 6 3
-#custommagic 29696 10
+#custommagic 46080 10
 #weapon "Quarterstaff"
 #forestsurvival
 #heal
@@ -11795,7 +11795,7 @@ The Unyielding Einhere are bestowed power by the Pretender who is Lady of Love."
 The human army of Midgard now displaced by the powerful legions from Asgard has taken up a much more passive role and mostly exited the ranks of active combatants. While the last of the Vanir took up this opportunity to fight along side the Aesir. Many other races were called forth in the final line of defense. The giants of Utgard and the dwarves of Svartalfheim form another auxiliary branch of the Asgard defense force. "
 #summary "Race: Aesir, Vanir, some Giants and Humans, Prefer Cold +1
 Military: Powerful all elite troops with Sacred Valkyries
-Magic: Air, Blood, some Earth, Fire, and Death
+Magic: Air, Blood, some Earth, Fire, Glamour, and Death
 Priests: Powerful
 Special: Arrival of the Pretender God will Alter Capital Sites according to Chassis"
 #flag "./Asgard/flag.tga"
@@ -12857,7 +12857,7 @@ Blesses: Being a destructive force against nature, Muspelheim cannot take any Na
 #copyspr 1922
 #copystats 1922
 #name "Mounted Volunteer"
-#descr "A Volunteer of the Sorus Republic, he fights for his nation without any need of compensation, as the nation already provides him and his family with everything they need to live a good life."
+#descr "A Volunteer of the Sorus Republic, he fights for his nation without any need of compensation, as the nation already provides him and his family with everything they need to live a good life. The horse however, costs significant gold to acquire."
 #gcost 0
 #rcost 15
 #rpcost 10
@@ -13225,7 +13225,7 @@ Priests: Weak"
 #invulnerable 15
 #poisonres 25
 #poisoncloud 6
-#custommagic 20480 50
+#custommagic 36864 50
 #darkvision
 #forestsurvival
 #diseaseres 75
@@ -13679,8 +13679,8 @@ Priests: Average"
 #clearmagic
 #magicskill 9 2
 #custommagic 3200 100
-#custommagic 16384 75
-#custommagic 16384 25
+#custommagic 32768 75
+#custommagic 32768 25
 #end
 
 #newmonster 5709
@@ -13696,8 +13696,8 @@ Priests: Average"
 #magicskill 8 1
 #magicskill 9 3
 #custommagic 3200 200
-#custommagic 16384 75
-#custommagic 16384 25
+#custommagic 32768 75
+#custommagic 32768 25
 #end
 
 #newmonster 5710
@@ -16260,7 +16260,7 @@ Special: Commanders and Spawns are morphed into by Rellic Drones; most Rellic Cr
 #magicskill 0 1
 #magicskill 5 1
 #magicskill 6 1
-#custommagic 13440 100
+#custommagic 28800 100
 #custommagic 2048 50
 #end
 
@@ -16530,7 +16530,7 @@ Special: Commanders and Spawns are morphed into by Rellic Drones; most Rellic Cr
 After the people of Man colonized and settled on the lands of former Machaka, they established the new state of Rhodesia and declared sovereignty from Man. The new state had the best plans for the country, allowing maximum efficiency to exploit the land of its resources and pumping the nation into a state of hypergrowth. The lesser mechanically intelligent native witch doctors and sorcerors were quickly phased out of power in the society and replaced with industrious Magistry Securitus. Soon, Rhodesia was put on the maps. The major nations of the world had to respect the growing super power as they plan on taking over more land to expand their state."
 #summary "Race: Humans from Man and Native Tribals
 Military: Slave army of tribals with outdated equipment and Well equipped but few Man elites
-Magic: Astral, Air, Nature, Fire, Earth, and some Death
+Magic: Astral, Air, Nature, Fire, Earth, and some Death and Glamour
 Priests: Weak"
 #flag "./Rhodesia/flag.tga"
 
@@ -17210,10 +17210,10 @@ Priests: Average"
 #watershape 5948
 #clearmagic
 #magicskill 0 1
-#magicskill 7 1
-#custommagic 3968 100
-#custommagic 3968 10
-#custommagic 3968 10
+#magicskill 4 1
+#custommagic 20352 100
+#custommagic 20352 10
+#custommagic 20352 10
 #custommagic 128 5
 #custommagic 128 5
 #custommagic 256 5
@@ -17235,10 +17235,10 @@ Priests: Average"
 #landshape 5947
 #clearmagic
 #magicskill 0 1
-#magicskill 7 1
-#custommagic 3968 100
-#custommagic 3968 10
-#custommagic 3968 10
+#magicskill 4 1
+#custommagic 20352 100
+#custommagic 20352 10
+#custommagic 20352 10
 #custommagic 128 5
 #custommagic 128 5
 #custommagic 256 5
@@ -17266,12 +17266,12 @@ Priests: Average"
 #name "Gambler"
 #descr "Formerly a Mystic, the Gambler has been constantly betting against fate itself in Las Pelagus. They use their Astral affinities to engage in a battle of minds against the Fate Masters in attempt to foresee the results before placing their bets. This has lead to a massive improvement of Astral abilities for both sides. As word got out, more and more Mysti would join in the act of Gambling even if they were not originally interested simply for the sake of getting stronger."
 #clearmagic
-#magicskill 7 1
-#custommagic 3968 10
-#custommagic 3968 10
-#custommagic 3968 10
-#custommagic 3968 10
-#custommagic 3968 10
+#magicskill 4 1
+#custommagic 20352 10
+#custommagic 20352 10
+#custommagic 20352 10
+#custommagic 20352 10
+#custommagic 20352 10
 #poorleader
 #gcost 10010
 #end
@@ -17285,18 +17285,18 @@ Priests: Average"
 #magicskill 4 2
 #magicskill 7 1
 #magicskill 9 2
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 3968 15
-#custommagic 3968 15
-#custommagic 3968 15
-#custommagic 3968 15
-#custommagic 3968 10
-#custommagic 3968 10
-#custommagic 3968 10
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 20352 15
+#custommagic 20352 15
+#custommagic 20352 15
+#custommagic 20352 15
+#custommagic 20352 10
+#custommagic 20352 10
+#custommagic 20352 10
 #clearspec
 #holy
 #poorleader
@@ -17316,16 +17316,16 @@ Priests: Average"
 #magicskill 4 2
 #magicskill 7 1
 #magicskill 9 1
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 32640 10
-#custommagic 32640 10
-#custommagic 32640 10
-#custommagic 32640 10
-#custommagic 32640 10
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 65408 10
+#custommagic 65408 10
+#custommagic 65408 10
+#custommagic 65408 10
+#custommagic 65408 10
 #clearspec
 #holy
 #poorleader
@@ -17346,18 +17346,18 @@ Priests: Average"
 #magicskill 4 2
 #magicskill 7 1
 #magicskill 9 2
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 3968 15
-#custommagic 3968 15
-#custommagic 3968 15
-#custommagic 3968 15
-#custommagic 3968 10
-#custommagic 3968 10
-#custommagic 3968 10
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 20352 15
+#custommagic 20352 15
+#custommagic 20352 15
+#custommagic 20352 15
+#custommagic 20352 10
+#custommagic 20352 10
+#custommagic 20352 10
 #clearspec
 #holy
 #poorleader
@@ -17377,16 +17377,16 @@ Priests: Average"
 #magicskill 4 2
 #magicskill 7 1
 #magicskill 9 1
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 3968 20
-#custommagic 32640 10
-#custommagic 32640 10
-#custommagic 32640 10
-#custommagic 32640 10
-#custommagic 32640 10
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 20352 20
+#custommagic 65408 10
+#custommagic 65408 10
+#custommagic 65408 10
+#custommagic 65408 10
+#custommagic 65408 10
 #clearspec
 #holy
 #poorleader
@@ -19195,7 +19195,7 @@ Priests: Powerful. Recalled God does not lose magic skills"
 #magicstudy 1
 #holy
 #magicskill 6 2
-#custommagic 26368 100
+#custommagic 58112 100
 #itemslots 290822 --2 hands 1 crown 3 misc
 #poorleader
 #goodmagicleader
@@ -19239,8 +19239,8 @@ Priests: Powerful. Recalled God does not lose magic skills"
 #magicstudy 1
 #holy
 #magicskill 6 3
-#custommagic 9984 100
-#custommagic 26368 100
+#custommagic 25344 100
+#custommagic 58112 100
 #itemslots 290822 --2 hands 1 crown 3 misc
 #poorleader
 #goodmagicleader
@@ -19468,7 +19468,7 @@ Priests: Powerful. Recalled God does not lose magic skills"
 The forces of the treant ruled Asphodel converts the population into primitive nature lovers, who would do everything to preserve nature exactly the way it is. There is no wasteful consumerism or casting dangerous magics, only nature. Those people would abandon everything they once loved and relied on such as housing, farming, and high fart emission horse carriages. Everything they do are always sustainable and they give back more to nature than what they take. However, this meant each forest could only sustain a rather small amount of population, and the rest would rather give up their lives than to hurt the ecosystem. They would in turn be resurrected as undead Carrion Beasts to serve nature once more."
 #summary "Race: Treants, Dryads, and Satyrs
 Military: Primitively armed military with magical carrion creatures
-Magic: Nature, Death, some Water, Air, and Earth, rarely Blood
+Magic: Nature, Death, some Water, Air, Glamour, and Earth, rarely Blood
 Priests: Powerful
 Dominion: Emigration out of non-forest provinces randomly
 Freespawn: Only in Forest provinces above 10000 population under Asphodel's Dominion, affected by Temple and Growth Scales."
@@ -19542,7 +19542,7 @@ Freespawn: Only in Forest provinces above 10000 population under Asphodel's Domi
 #spr2 "./Dasrite/mict2.tga"
 #name "OG Priest"
 #descr "The OG Priest of Das'rite. The original Mictlan people descended from Smoking Mirror (who was obviously black too). He is a skilled blood mage specializing in claiming that he is mediterranean."
-#custommagic 32640 24
+#custommagic 65408 27
 #end
 
 #newmonster 6042
@@ -19555,7 +19555,7 @@ Freespawn: Only in Forest provinces above 10000 population under Asphodel's Domi
 #magicskill 0 2
 #magicskill 8 2
 #magicskill 9 2
-#custommagic 32640 24
+#custommagic 65408 27
 #end
 
 #newmonster 6043
@@ -19568,7 +19568,7 @@ Freespawn: Only in Forest provinces above 10000 population under Asphodel's Domi
 #magicskill 6 2
 #magicskill 8 1
 #magicskill 9 2
-#custommagic 32640 24
+#custommagic 65408 27
 #end
 
 #newmonster 6044
@@ -19577,7 +19577,7 @@ Freespawn: Only in Forest provinces above 10000 population under Asphodel's Domi
 #spr2 "./Dasrite/augur2.tga"
 #name "OG Augur"
 #descr "The OG Augur of Das'rite. The original ermorian seers, the original kindle to the flames of fortune telling. Skill in astral and fire magic as well as melanin magic."
-#custommagic 32640 24
+#custommagic 65408 27
 #end
 
 #newmonster 6045
@@ -19586,7 +19586,7 @@ Freespawn: Only in Forest provinces above 10000 population under Asphodel's Domi
 #spr2 "./Dasrite/cae2.tga"
 #name "OG Seraph"
 #descr "The OG Seraph of Das'rite. The original caelian seraph, they can call upon the powers of the storms to strike down on the pretending races. Unlike the false seraph who stole their culture, they cannot fly without the help of a blessing."
-#custommagic 32640 24
+#custommagic 65408 27
 #holy
 #clearspec
 #shockres 5
@@ -19606,7 +19606,7 @@ Freespawn: Only in Forest provinces above 10000 population under Asphodel's Domi
 #magicskill 1 1
 #magicskill 5 1
 #magicskill 9 1
-#custommagic 32640 24
+#custommagic 65408 27
 #stealthy 25
 #holy
 #mountedhumanoid
@@ -19635,7 +19635,7 @@ Freespawn: Only in Forest provinces above 10000 population under Asphodel's Domi
 #spr2 "./Dasrite/yakub2.tga"
 #name "Yakubian Priest"
 #descr "The Yakubian Priest is the revered priest of the OG people and the nation of Das'rite. They follow the ancient super genius Yakub who created the white people. They believe that as OG black, it is within their duty to put an end to the menace their own people created."
-#custommagic 32640 16
+#custommagic 65408 18
 #stealthy 15
 #spy
 #end
@@ -19649,7 +19649,7 @@ Freespawn: Only in Forest provinces above 10000 population under Asphodel's Domi
 When the Voice of Yakub visits the conquered capitol of another nation, he will command the usurpers to kneel to their old masters. The solidarity rite can only be enacted once per capitol."
 #clearmagic
 #magicskill 9 3
-#custommagic 32640 40
+#custommagic 65408 45
 #end
 
 #newmonster 6051
@@ -19721,7 +19721,7 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 #holy
 #magicskill 3 2
 #magicskill 9 2
-#custommagic 32640 40
+#custommagic 65408 45
 #end
 
 #newmonster 6058
@@ -20491,8 +20491,8 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #swampsurvival
 #forestsurvival
 #darkvision 100
-#custommagic 11904 200
-#custommagic 11904 50
+#custommagic 27264 200
+#custommagic 27264 50
 #poorleader
 #end
 
@@ -20533,7 +20533,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #holy
 #magicskill 9 3
 #magicskill 2 3
-#magicskill 3 1
+#magicskill 7 1
 #magicskill 6 2
 #expertleader
 #end
@@ -20674,7 +20674,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #heal
 #stealthy 25
 #magicskill 2 4
-#custommagic 11904 100
+#custommagic 27264 100
 #poorleader
 #end
 
@@ -21039,8 +21039,8 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #swampsurvival
 #forestsurvival
 #darkvision 100
-#magicskill 3 1
-#magicskill 6 2
+#magicskill 7 2
+#magicskill 6 1
 #heretic 4
 #stealthy 5
 #seduce 12
@@ -21088,7 +21088,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 To this day, the effectiveness of the joint forces of the legless has given them significant power to be noticed by the other great nations. With that knowledge, they declared themselves as the new glorious nation of Sinpata. Their goal is to reach high for the thrones of ascension and put an end to their curse. Or if it was not possible, simply abusing the power of the thrones to bring them infinite supply of breeding males. Either way, to the matriachy of Sinpata, the only path forward is winning the Wars of Ascension."
 #summary "Race: Nagas, Mermaids, and lesser legless creatures
 Military: Naked female troops that leave enemies staring instead of fighting
-Magic: Water, Earth, Nature, Astral, and some Fire
+Magic: Water, Nature, Astral, Glamour and some Fire
 Priests: Powerful
 Naga Curse: Growth and Death scales have half effect on Population. During the breeding season of each fall, The Great Vitae Harvest produces troops in some provinces with Nagaconda Broodmothers."
 #flag "./Sinpata/flag.tga"
