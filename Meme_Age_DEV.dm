@@ -44,6 +44,7 @@
 --3004 NAGAS
 --3005 Ninja Turtles
 --3006 Merrow Fans
+--3007 turle summons
 
 --LAS PELAGUS MONTAGS
 --5000-5008
@@ -21736,7 +21737,7 @@ Priests: Weak"
 #swampsurvival
 #batstartsum1 2222 --frog
 #magicskill 6 1
-#custommagic 9472 25
+#custommagic 25856 50
 #noleader
 #twiceborn 6169
 #itemslots 14470 -- all except body
@@ -22158,7 +22159,6 @@ Priests: Weak"
 #magicskill 1 1
 #magicskill 3 1
 #magicskill 6 1
-#twiceborn 6177
 #end
 
 #newmonster 6167
@@ -22347,7 +22347,6 @@ Priests: Weak"
 #pathcost 10
 #startdom 1
 #magicskill 6 1
-#twiceborn 6172
 #end
 
 #newmonster 6172
@@ -22383,7 +22382,13 @@ Priests: Weak"
 #entangle
 #neednoteat
 #spiritsight
-#bringeroffortune 25 
+#bringeroffortune 50
+#nobadevents 10 
+#magicskill 6 4
+#magicskill 9 3
+#montag 3007
+#holy
+#unique
 #end
 
 #newmonster 6173
@@ -22569,13 +22574,20 @@ Priests: Weak"
 #trample
 #heal
 #spiritsight
+#holy
+#magicskill 1 1
+#magicskill 3 1
+#magicskill 6 1
+#magicskill 9 3
+#montag 3007
+#unique
 #end
 
 #newspell
 #copyspell 632 --slow
 #restricted 183
-#name "Mass Slow"
-#descr "This spell will slow down a large group of enemies. The slowed units will require twice as long time to move, attack or cast spells. The effect will last for the entire battle."
+#name "Group Burden"
+#descr "This spell will slow down a large group of enemies by changing their natural mass to that of a giant tortoise shell. The slowed units will require twice as long time to move, attack or cast spells. The effect will last for the entire battle."
 #researchlevel 6
 #aoe 25
 #path 0 3
@@ -22654,12 +22666,26 @@ Priests: Weak"
 #nextspell "Second Ninja Turtle"
 #end
 
+#newspell
+#restricted 183
+#name "Summon Shellbroken Ancient"
+#descr "An old summoning ritual which mimics the effects of Ancient Rebirth. This ritual opens a rift to the Tortasian afterlife, and beckons for one of two of the old protectors of the land to return. Traversal from the afterlife is difficult, so the beings take on an undead visage when they manifest."
+#school 4
+#researchlevel 8
+#path 0 6
+#pathlevel 0 6
+#effect 10021
+#damage -3007
+#nreff 1
+#fatiguecost 2500
+#end
+
 #newsite 1677
-#name "Still-Water Shore"
+#name "Overgrown Beach"
 #path 2
 #rarity 5
-#gems 2 2
-#gems 6 2
+#gems 2 1
+#gems 6 3
 #end
 
 #newsite 1678
@@ -22681,7 +22707,7 @@ In their newly founded coastal capital, Tortasians called to their eldest allies
 Tortasians wish to return to their slow lifestyles after the war is over, but first they must win one final race: To claim the Thrones of Ascension."
 #summary "Race: Cold-blooded amphibious turtles and some tortises, Prefer Heat +2
 Militarty: High protection units, only ranged weapon are javelins, large elite troops
-Magic: Water, Earth and Nature, some Fire, Air and Astral
+Magic: Water, Earth and Nature, some Fire, Air and sometimes Glamour
 Priests: Average"	
 #flag "./Tortasia/flag.tga"
 
@@ -22736,8 +22762,12 @@ Priests: Average"
 #addgod 6170
 #addgod 6171
 
+#moregrowth 1
+#moreheat 1
+#moreprod -1
+
 #clearsites
-#startsite "Still-Water Shore"
+#startsite "Overgrown Beach"
 #startsite "Blackshell Sanctuary"
 #idealcold -2
 #fortera 3
