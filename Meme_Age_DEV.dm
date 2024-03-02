@@ -240,7 +240,7 @@
 #range -1
 #armorpiercing
 #bowstr
-#ammo 8
+#ammo 1008
 #rcost 0
 #sound 21
 #flyspr 404 3
@@ -298,7 +298,7 @@
 #dmg 7
 #rcost 4
 #aoe 1
-#ammo 4
+#ammo 1010
 #dt_magic
 #bonus
 #end
@@ -487,7 +487,7 @@
 #bonus
 #range -1
 #dt_aff
-#ammo 4
+#ammo 1004
 #rcost 0
 #sound 21
 #flyspr 313 4
@@ -529,7 +529,7 @@
 #dmg 12
 #aoe 1
 #range 15
-#ammo 3
+#ammo 1024
 #bonus
 #nratt -2
 #uwok
@@ -22584,7 +22584,7 @@ Priests: Weak"
 #end
 
 #newspell
-#copyspell 632 --slow
+#copyspell 808 --slow
 #restricted 183
 #name "Group Burden"
 #descr "This spell will slow down a large group of enemies by changing their natural mass to that of a giant tortoise shell. The slowed units will require twice as long time to move, attack or cast spells. The effect will last for the entire battle."
@@ -22596,7 +22596,7 @@ Priests: Weak"
 #end
 
 #newspell
-#copyspell 632 --slow
+#copyspell 808 --slow
 #restricted 183
 #name "Burden of Tortise"
 #descr "This spell will slow down all enemies by changing their natural mass to that of a giant tortoise shell. The slowed units will require twice as long time to move, attack or cast spells. The effect will last for the entire battle."
@@ -22608,7 +22608,7 @@ Priests: Weak"
 #end
 
 #newspell
-#copyspell 904 -- Twiceborn
+#copyspell 1159 -- Twiceborn
 #restricted 183
 #name "Ancient Rebirth"
 #descr "The caster basks in the powers of nature itself to protect themselves from death. If the caster is slain, he is revived as a Shellbroke in the province where the ritual was cast, possibly gaining dark insights in the process. For the ritual to work, the province it was cast in must be in friendly hands when the caster dies. This spell requires more power to affect large beings and the cost of casting the ritual is increased with the caster's size. Undead, demons, plants or inanimates are not affected. Certain creatures will be reborn as a wight if they do not carry a shell."
