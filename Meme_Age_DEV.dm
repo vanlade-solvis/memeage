@@ -22762,9 +22762,9 @@ Priests: Average"
 #addgod 6170
 #addgod 6171
 
-#moregrowth 3
-#moreheat 3
-#moreprod -3
+#moregrowth 1
+#moreheat 1
+#moreprod -1
 
 #clearsites
 #startsite "Overgrown Beach"
