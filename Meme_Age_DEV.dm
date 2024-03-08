@@ -5832,19 +5832,21 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #newmonster 5354
 #spr1 "./TC/nj1.tga"
 #spr2 "./TC/nj2.tga"
+#unmountedspr1 "./TC/njM1.tga"
+#unmountedspr2 "./TC/njM2.tga"
 #name "Jiangshi Noble"
 #descr "The Noble warrior is something of the long past of Tienchi, however, with the new strain of plague, they were once again reanimated together with the freshly dead. The Jiangshi Noble is carried by a powerful and well armored jiangshi horse. They trample through the battlefield causing mass fear and panic."
-#ap 16
-#mapmove 22
-#hp 29
+#ap 12
+#mapmove 18
+#hp 24
 #prot 3
-#size 6
+#size 3
 #str 12
 #enc 0
 #att 12
 #def 11
 #prec 10
-#mr 10
+#mr 11
 #mor 50
 #maxage 1000
 #startage 155
@@ -5860,10 +5862,8 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #undead
 #neednoteat
 #amphibious
-#mounted
+#mountmnr 5360
 #mountedhumanoid
-#trample
-#fear 5
 #goodundeadleader
 #end
 
@@ -6043,6 +6043,41 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #amphibious
 #reform 25
 #montag 3002
+#end
+
+#newmonster 5360
+#spr1 "./TC/nj3.tga"
+#spr2 "./TC/nj4.tga"
+#name "Jiangshi Chariot"
+#descr "A jiangshi-horse-drawn chariot with scythed wheels, its role is mainly as an offensive weapon. Its charge causes tremendous damage to lightly armored troops. The horse is equipped with scale barding to protect it from harm, but this makes the chariot slower."
+#ap 16
+#mapmove 22
+#hp 29
+#prot 3
+#size 6
+#str 14
+#enc 0
+#att 11
+#def 9
+#prec 5
+#mr 8
+#mor 50
+#maxage 1000
+#startage 155
+#nametype 121
+#gcost 0
+#weapon 55 --hoof
+#armor "Rusty Cataphract Barding"
+#secondtmpshape 5341
+#coldres 5
+#poisonres 25
+#spiritsight
+#undead
+#neednoteat
+#amphibious
+#quadruped
+#trample
+#fear 5
 #end
 
 #newspell
@@ -8628,7 +8663,7 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 #aoe 3002
 #path 0 7
 #pathlevel 0 1
-#path 1 8
+#path 1 9
 #pathlevel 1 1
 #precision 100
 #casttime 100
@@ -8646,7 +8681,7 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 #aoe 3004
 #path 0 7
 #pathlevel 0 2
-#path 1 8
+#path 1 9
 #pathlevel 1 2
 #precision 100
 #casttime 100
@@ -8663,7 +8698,7 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 #researchlevel 8
 #path 0 7
 #pathlevel 0 2
-#path 1 8
+#path 1 9
 #pathlevel 1 3
 #precision 100
 #casttime 200
@@ -8678,7 +8713,7 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 #descr "The warcries are too loud. My feet hurt. I am hungry. I wish I was at home posting on AgaChan."
 #school 5
 #researchlevel 0
-#path 0 4
+#path 0 7
 #pathlevel 0 1
 #fatiguecost 0
 #sethome
@@ -8691,7 +8726,7 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 #descr "A schizophrenic is able to see many things others do not, usually this is completely irrelevant and useless. However, it seems that the magical energy emitted from sites resonate with their visions. This allows for very quick and efficient searching of magic sites."
 #school 5
 #researchlevel 6
-#path 0 4
+#path 0 7
 #pathlevel 0 1
 #fatiguecost 500
 #onlymnr 5436 --schizo
@@ -8706,9 +8741,21 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 #researchlevel 4
 #effect 10130 -- ritual self-transformation
 #damage 5440
-#path 0 4
+#path 0 7
 #pathlevel 0 1
 #fatiguecost 0
+#end
+
+#newspell
+#copyspell 1165 --simulacrum
+#restricted 161
+#name "Simulated Reality"
+#descr "Despite not having any real world experience, a foulposter is capable of becoming any subject matter expert on any topic. Via the magical powers of the cave walls, this creates a simulated image of the poster projected into the real world. However, this is not without risk, as the caves are magical and sometimes the poster will fail to return after death of the simulation."
+#school 5
+#researchlevel 3
+#path 0 7
+#pathlevel 0 1
+#fatiguecost 800
 #end
 
 #selectspell 624 --tomb oracle
@@ -8721,7 +8768,7 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 #descr "By creating a new cave painting thread with the appropriate bait, Agarthans are able to call up rare creatures to aid them."
 #school 0
 #researchlevel 3
-#path 0 4
+#path 0 7
 #pathlevel 0 1
 #effect 10001
 #damage 5444
@@ -8735,7 +8782,7 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 #descr "By creating a new cave painting thread with the appropriate bait, Agarthans are able to call up rare creatures to aid them."
 #school 0
 #researchlevel 5
-#path 0 4
+#path 0 7
 #pathlevel 0 2
 #effect 10001
 #damage 5445
@@ -8749,7 +8796,7 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 #descr "By creating a new cave painting thread with the appropriate bait, Agarthans are able to call up rare creatures to aid them."
 #school 0
 #researchlevel 7
-#path 0 4
+#path 0 7
 #pathlevel 0 4
 #effect 10021
 #damage 5446
@@ -11484,6 +11531,7 @@ The Unyielding Einhere are bestowed power by the Pretender who is Lady of Love."
 #patrolbonus 100
 #spiritsight
 #nowish
+#godsite 1655 -- "Steadfast Bifrost"
 #end
 
 #newmonster 5605
@@ -11513,6 +11561,7 @@ The Unyielding Einhere are bestowed power by the Pretender who is Lady of Love."
 #shockres 25
 #invulnerable 15
 #nowish
+#godsite 1653 -- "Thunderous Valhalla"
 #end
 
 #newmonster 5606
@@ -11544,6 +11593,7 @@ The Unyielding Einhere are bestowed power by the Pretender who is Lady of Love."
 #shockres 25
 #awe 5
 #nowish
+#godsite 1652 --"Majestic Valhalla"
 #end
 
 #newmonster 5607
@@ -11572,6 +11622,7 @@ The Unyielding Einhere are bestowed power by the Pretender who is Lady of Love."
 #maxage 3000
 #supplybonus 500
 #nowish
+#godsite 1654 --"Bountiful Folkvangr"
 #end
 
 #newmonster 5608
@@ -11606,6 +11657,7 @@ The Unyielding Einhere are bestowed power by the Pretender who is Lady of Love."
 #amphibian
 #swampsurvival
 #nowish
+#godsite 1656 --"Forsaken Grounds"
 #end
 
 #selectspell 493 --draugr
@@ -11716,10 +11768,9 @@ The Unyielding Einhere are bestowed power by the Pretender who is Lady of Love."
 #req_owncapital 1
 #req_fullowner
 #nation -2
-#req_monster 5604
-#msg "The mighty Bridge Keeper has arrived and enstated the new Heimhere Order."
+#req_site 1
+#msg "The mighty Bridge Keeper has arrived and enstated the new Heimhere Order. [Steadfast Bifrost]"
 #removesite 1651
-#addsite 1655
 #end
 
 --thor god choice event
@@ -11731,10 +11782,9 @@ The Unyielding Einhere are bestowed power by the Pretender who is Lady of Love."
 #req_owncapital 1
 #req_fullowner
 #nation -2
-#req_monster 5605
-#msg "The mighty Lord of Thunder has blessed the Valkyries with a new powerful weapon."
+#req_site 1
+#msg "The mighty Lord of Thunder has blessed the Valkyries with a new powerful weapon. [Thunderous Valhalla]"
 #removesite 1633
-#addsite 1653
 #end
 
 --odin god choice event
@@ -11746,10 +11796,9 @@ The Unyielding Einhere are bestowed power by the Pretender who is Lady of Love."
 #req_owncapital 1
 #req_fullowner
 #nation -2
-#req_monster 5606
-#msg "The mighty Lord of War has bolstered the power of Einhere of Valhalla."
+#req_site 1
+#msg "The mighty Lord of War has bolstered the power of Einhere of Valhalla. [Majestic Valhalla]"
 #removesite 1633
-#addsite 1652
 #end
 
 --freyja god choice event
@@ -11761,10 +11810,9 @@ The Unyielding Einhere are bestowed power by the Pretender who is Lady of Love."
 #req_owncapital 1
 #req_fullowner
 #nation -2
-#req_monster 5607
-#msg "The mighty Lady of Love has bolstered the power of Einhere of Folkvangr."
+#req_site 1
+#msg "The mighty Lady of Love has bolstered the power of Einhere of Folkvangr. [Bountiful Folkvangr]"
 #removesite 1634
-#addsite 1654
 #end
 
 --jormungandr god choice event
@@ -11776,13 +11824,12 @@ The Unyielding Einhere are bestowed power by the Pretender who is Lady of Love."
 #req_owncapital 1
 #req_fullowner
 #nation -2
-#req_monster 5608
-#msg "The World Serpent awakens, bringing about calamity and destruction. Many innocent lives were lost as the city is dsstroyed. The deep buried tombs of the Draugr were disturbed. The world is one step closer to Ragnarok."
+#req_site 1
+#msg "The World Serpent awakens, bringing about calamity and destruction. Many innocent lives were lost as the city is dsstroyed. The deep buried tombs of the Draugr were disturbed. The world is one step closer to Ragnarok. [Forsaken Grounds]"
 #kill 25
 #removesite 1651
 #removesite 1634
 #removesite 1633
-#addsite 1656
 #com 5586
 #6d6units 2190
 #end
@@ -11798,7 +11845,7 @@ The human army of Midgard now displaced by the powerful legions from Asgard has 
 Military: Powerful all elite troops with Sacred Valkyries
 Magic: Air, Blood, some Earth, Fire, Glamour, and Death
 Priests: Powerful
-Special: Arrival of the Pretender God will Alter Capital Sites according to Chassis"
+Special: Pretender God will Alter Capital Sites according to Chassis"
 #flag "./Asgard/flag.tga"
 
 #addreccom 426
@@ -16667,7 +16714,7 @@ Priests: Weak"
 #magicskill 1 1
 #magicskill 5 1
 #magicskill 6 2
-#custommagic 14592 100
+#custommagic 28928 100
 #researchbonus -2
 #magicstudy 1
 #poorleader
@@ -16705,7 +16752,7 @@ Priests: Weak"
 #magicskill 1 2
 #magicskill 5 2
 #magicskill 6 1
-#custommagic 14592 100
+#custommagic 28928 100
 #researchbonus -4
 #shapechange 5914
 #goodleader
@@ -16743,7 +16790,7 @@ Priests: Weak"
 #magicskill 1 2
 #magicskill 5 2
 #magicskill 6 1
-#custommagic 14592 100
+#custommagic 28928 100
 #researchbonus -8
 #shapechange 5913
 #goodleader
@@ -17084,7 +17131,7 @@ Priests: Weak"
 Not much is known about how exactly a nation who have fallen so far behind reached all of this tech. Scholars theorized that the Panther Clan simply knew how to do everything and only merely pretended to build nothing but mud huts for hundreds of pantokrator cycles. Despite having less than 13% of the researching manpower compared to most nations, Wakanda was responsible for over 50% of the violent weapon inventions. Wakandans originally intended to stay hidden and isolated, but now the new Black King wishes to contend for the throne of ascension."
 #summary "Race: Advanced Tribal Human Clans
 Military: Well equipped tribal looking yet futuristic armament
-Magic: Death, Air, Nature, Astral, some Fire and Earth
+Magic: Death, Air, Nature, Glamour, some Fire and Earth
 Priests: Average"
 #flag "./Wakanda/flag.tga"
 
@@ -17425,7 +17472,6 @@ Priests: Average"
 #weapon "Short Sword"
 #poorleader
 #mountedhumanoid
-#mounted
 #watershape 5956
 #pooramphibian
 #magicskill 2 2
@@ -19610,8 +19656,8 @@ Freespawn: Only in Forest provinces above 10000 population under Asphodel's Domi
 #custommagic 65408 27
 #stealthy 25
 #holy
+#mountmnr 3522
 #mountedhumanoid
-#mounted
 #combatcaster
 #end
 
