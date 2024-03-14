@@ -44,7 +44,8 @@
 --3004 NAGAS
 --3005 Ninja Turtles
 --3006 Merrow Fans
---3007 turle summons
+--3007 turtle summons
+--3008-3010 ragha summons
 
 --LAS PELAGUS MONTAGS
 --5000-5008
@@ -14056,99 +14057,1060 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #end
 
 --------------------------------------------------------------------------
--- Ragha
+-- Fallen Ragha
 -- currently using
 -- unit 5731-5760
--- site 1643-1644
+-- unit 6231 (tendie)
+-- site 1681-1683
+-- montag 3008-3010
 -- nation 171
 --------------------------------------------------------------------------
 
-#selectspell 363
-#restricted 171
-#end
-#selectspell 364
-#restricted 171
-#end
-#selectspell 365
-#restricted 171
-#end
-#selectspell 366
-#restricted 171
-#end
-#selectspell 367
-#restricted 171
-#end
-#selectspell 368
-#restricted 171
-#end
-#selectspell 369
-#restricted 171
-#end
-#selectspell 370
-#restricted 171
-#end
-#selectspell 371
-#restricted 171
-#end
-#selectspell 372
-#restricted 171
-#end
-#selectspell 373
-#restricted 171
+#newmonster 5731 --scout
+#copyspr 426 --scout
+#copystats 426
+#name "Scout"
+#descr "Scouts are trained to pass unseen through enemy territory and to travel efficiently even in mountainous and forested terrain. Their reports on enemy army movements and the resources in enemy lands are invaluable to the prudent warlord."
+#spy
+#shapechange 5732 --gangstalker spy
 #end
 
+#newmonster 5732 --gangstalker spy
+#copyspr 1661 --misbred
+#name "Gangstalker Spy"
+#descr "Disguised as a mere Scout, the Gangstalker Spies can inflitrate behind enemy lines and cause chaos. They are only content while having a target to follow. You rarely see them coming, but you always have an inkling that they may be closer than you think. Gangstalkers suffer from insanity, however their occasionally irrational actions make them difficult to predict. These spies have learned how to sneak back into the capital where they've been banished from."
+#ap 12
+#mapmove 22
+#hp 17
+#prot 6
+#size 4 
+#str 15
+#enc 2
+#att 13
+#def 11
+#prec 7
+#mr 10
+#mor 9
+#maxage 250
+#startage 150
+#nametype 101 
+#gcost 10015
+#rcost 1
+#rpcost 1
+#weapon 18 --"Battleaxe"
+#armor 8 --"Chainmail Cuirass"
+#stealthy 30
+#insane 20
+#fireres 10
+#darkvision 50
+#spy
+#assassin
+#flying
+#noleader
+#shapechange 5731 --scout
+#end
+
+#newmonster 5733
+#copyspr 2597 --paighan salar
+#name "Schizophrenic General"
+#descr "A distinguished previously-Turan general who has since lost his mind, but is still somehow capable of leading soldiers."
+#ap 11
+#mapmove 12
+#hp 13
+#prot 0
+#size 3 
+#str 12
+#enc 3
+#att 12
+#def 11
+#prec 6
+#mr 11
+#mor 12
+#maxage 45
+#startage 26
+#nametype 101 
+#gcost 10007
+#rcost 1
+#rpcost 1
+#weapon 8 --"Broad Sword"
+#armor 8 --"Chainmail Cuirass"
+#armor 118 --"Half Helmet"
+#armor 2 --"Shield"
+#fireres 10
+#darkvision 50
+#wastesurvival
+#mountainsurvival
+#okleader
+#insane 20
+#end
+
+#newmonster 5734
+#spr1 "./Ragha/u_gen1.tga"
+#spr2 "./Ragha/u_gen2.tga"
+#name "UN General" 
+#descr "With the recent implosion of Tur, and the rampant mental illness spreading among Abysians, many Caelin soldiers have been training their minds to resist the insanity, and been hardening their resolve. This is a distinguished Caelin general, seving the UN."
+#ap 6
+#mapmove 20
+#hp 11
+#prot 0
+#size 4 
+#str 10
+#enc 4
+#att 12
+#def 10
+#prec 12
+#mr 12
+#mor 13
+#maxage 50
+#startage 26
+#nametype 111 
+#gcost 10020
+#rcost -20
+#rpcost 1
+#weapon 77 --"Ice Sword"
+#armor 27 --"Ice Hauberk"
+#armor 124 --"Ice Helmet"
+#armor 28 --"Ice Aegis"
+#coldres 15
+#iceprot 2
+#appetite -1
+#flying
+#voidsanity 20
+#goodleader
+#end
+
+#newmonster 5735
+#copyspr 2588 --turan spahbed
+#name "Schizophrenic Cavalryman"
+#descr "Previously one of the best generals in Tur, but now has since lost his mind, along with his steed. He has retained his leadership capabilities, however."
+#mountmnr 5736
+#ap 9
+#mapmove 10
+#hp 15
+#prot 0
+#size 3 
+#str 12
+#enc 3
+#att 13
+#def 12
+#prec 10
+#mr 11
+#mor 13
+#maxage 50
+#startage 26
+#nametype 101 
+#gcost 10022
+#rcost 1
+#rpcost 1
+#weapon 4 --"Lance"
+#weapon 8 --"Broad Sword"
+#armor 199 --"Turan Plated Mail"
+#armor 21 --"Full Helmet"
+#armor 2 --"Shield"
+#fireres 15
+#darkvision 50
+#wastesurvival
+#mountainsurvival
+#insane 20
+#skilledrider 3
+#goodleader
+#end
+
+#newmonster 5736
+#copyspr 3528 --nisean horse
+#name "Schizophrenic Steed"
+#descr "A horse that has lost its sanity, but is still reguarly used for war."
+#ap 30
+#mapmove 16
+#hp 26
+#prot 4
+#size 5 
+#str 17
+#enc 2
+#att 13
+#def 12
+#prec 5
+#mr 11
+#mor 13
+#maxage 100
+#startage 60
+#gcost 10040
+#rcost 1
+#rpcost 20
+#weapon 55 --"Hoof"
+#armor 253 --"Cataphract Barding"
+#insane 20
+#end
+
+#newmonster 5737
+#spr1 "./Ragha/c_com1.tga"
+#spr2 "./Ragha/c_com2.tga"
+#name "UN Peacekeeper"
+#descr "One of the battlepriests employed by the newly-formed UN. These holymen pray for the more peaceful times, before the implosion of Tur to return one day. The mere presence of one of these priests is enough to at least somewhat soothe the minds of the people."
+#ap 9
+#mapmove 20
+#hp 11
+#prot 0
+#size 4
+#str 10
+#enc 4
+#att 13
+#def 10
+#prec 12
+#mr 12
+#mor 13
+#maxage 50
+#startage 26
+#nametype 111 
+#gcost 10006
+#rcost -20
+#rpcost 1
+#weapon 77 --"Ice Sword"
+#armor 27 --"Ice Hauberk"
+#armor 124 --"Ice Helmet"
+#armor 28 --"Ice Aegis"
+#coldres 15
+#coldrec 0
+#iceprot 2
+#appetite -1
+#magicskill 9 1
+#nametype 111
+#holy
+#flying
+#incunrest -5
+#voidsanity 20
+#end
+
+#newmonster 5738
+#copyspr 2605 --turan shah
+#name "Schizophrenic Horse-Priest"
+#descr "A crazed battlepriest who rides atop his equally-insane war horse. While he preaches the word of the One True God, his ramblings cause unease in the people around him."
+#mountmnr 5736
+#hp 15
+#prot 0
+#size 3 
+#str 12
+#enc 3
+#att 13
+#def 12
+#prec 11
+#mr 11
+#mor 13
+#maxage 50
+#startage 26
+#nametype 101 
+#gcost 10012
+#rcost 1
+#rpcost 1
+#weapon 4 --"Lance"
+#weapon 8 --"Broad Sword"
+#armor 199 --"Turan Plated Mail"
+#armor 148 --"Crown"
+#armor 2 --"Shield"
+#fireres 15
+#darkvision 50
+#wastesurvival
+#mountainsurvival
+#magicskill 9 1
+#holy
+#incunrest 5
+#insane 20
+#end
+
+#newmonster 5739
+#copyspr 240 --priest
+#copystats 240
+#name "Priest"
+#descr "Priests sometimes accompany armies, inspiring and blessing the soldiers. Priests can also banish undead beings and demons."
+#nametype 101
+#stealthy 10
+#gcost 10028
+#shapechange 5740
+#insane 20
+#end
+
+#newmonster 5740
+#spr1 "./Ragha/u_smallmage1.tga"
+#spr2 "./Ragha/u_smallmage2.tga"
+#name "Gangstalker Hitman"
+#descr "These gangstalkers dedicate their lives to their disguise, and train in the holy and magical arts. They will stalk their quarries from the shadows, and cause unease in the provinces that they inhabit. They've abandoned most of the original Turan ways, and fallen into madness."
+#ap 11
+#mapmove 14
+#hp 11
+#prot 0
+#size 3 
+#str 13
+#enc 3
+#att 10
+#def 9
+#prec 11
+#mr 13
+#mor 10
+#maxage 50
+#startage 26
+#nametype 101 
+#gcost 10028
+#rcost 1
+#rpcost 2
+#magicskill 0 1
+#magicskill 7 1
+#magicskill 9 1
+#custommagic 49280 100
+#holy
+#shapechange 5739
+#nametype 101
+#stealthy 10
+#fireres 15
+#darkvision 50
+#heatrec 0
+#wastesurvival
+#mountainsurvival
+#incunrest 5
+#insane 20
+#end
+
+#newmonster 5741
+#spr1 "./Ragha/c_untern1.tga"
+#spr2 "./Ragha/c_untern2.tga"
+#name "UN Intern"
+#descr "These UN Magepriests are barely trained in the magical arts, but are expected to research and support armies regardless. They have poor morale due to the abuse they get from their superior officers, but at least they've learned how to work efficiently under the the constant scruitiny of their superior officers. They hope that one day they will get a cushy promotion and stop handling all the paperwork. (They never will.)"
+#ap 8
+#mapmove 22
+#hp 8
+#prot 0
+#size 4
+#str 8
+#enc 4
+#att 9
+#def 8
+#prec 11
+#mr 15
+#mor 9
+#maxage 50
+#startage 26
+#nametype 111 
+#gcost 10009
+#rcost 1
+#rpcost 2
+#armor 124 --"Ice Helmet"
+#magicskill 4 1
+#magicskill 9 1
+#custommagic 2816 100
+#researchbonus 4
+#voidsanity 20
+#coldres 5
+#poorleader
+#end
+
+#newmonster 5742
+#spr1 "./Ragha/c_mage1.tga"
+#spr2 "./Ragha/c_mage2.tga"
+#name "UN Sergeant"
+#descr "A midranking UN officer, these are in charge of commanding small armies and bossing the Interns around. Most Sergeants let the power get to their head when they're called in to lead a communion. When reporting to the Generals, none are better at making the situation look better than it actually is. They are masters at bullshitting, and the locals usually believe them."
+#ap 8
+#mapmove 22
+#hp 8
+#prot 0
+#size 4
+#str 8
+#enc 4
+#att 9
+#def 8
+#prec 11
+#mr 15
+#mor 13
+#maxage 50
+#startage 26
+#nametype 111 
+#gcost 10010
+#rcost 1
+#rpcost 2
+#armor 124 --"Ice Helmet"
+#weapon 35 --"Ice Knife"
+#magicskill 1 1
+#magicskill 4 1
+#magicskill 7 1
+#magicskill 9 2
+#custommagic 19200 100
+#incunrest -5
+#voidsanity 20
+#coldres 10
+#goodleader
+#end
+
+#newmonster 5743
+#copyspr 1565 --peasant
+#copystats 1565
+#name "Peasant"
+#descr "An annoyed human peasant armed with a farming implement."
+#nametype 101
+#gcost 10180
+#rpcost 2
+#shapechange 5744
+#insane 20
+#end
+
+#newmonster 5744
+#spr1 "./Ragha/u_medmage1.tga"
+#spr2 "./Ragha/u_medmage2.tga"
+#name "Gangstalker Wizard"
+#descr "One of the esteemed hidden officers of the gangstalking cult that caused the Tur to fall into chaos. These wizards thrive in chaos and arent afraid to openly oppose UN officers, even if they do still take the form of a Peasant occasionally. While most of the gangstalkers would rather hide in the shadows and sneak, the Wizards are much more loudly and verbally noticiable. They will complain and shout and cause chaos, and are very argumentative. As their word is very openly heard, as they are high ranking priests, the gangstalker wizards are good at opposing enemy nation's heretical preachings."
+#ap 8
+#mapmove 14
+#hp 11
+#prot 0
+#size 3
+#str 13
+#enc 3
+#att 10
+#def 9
+#prec 8
+#mr 13
+#mor 10
+#maxage 50
+#startage 26
+#nametype 101 
+#gcost 10180
+#rcost 1
+#rpcost 2
+#weapon 9 --"Dagger"
+#magicskill 0 1
+#magicskill 7 1
+#magicskill 8 1
+#magicskill 9 2
+#custommagic 49280 100
+#shapechange 5743
+#inquisitor
+#fireres 15
+#darkvision 50
+#heatrec 1
+#wastesurvival
+#mountainsurvival
+#insane 20
+#end
+
+#newmonster 5745
+#spr1 "./Ragha/c_big1.tga"
+#spr2 "./Ragha/c_big2.tga"
+#name "UN Colonel"
+#descr "One of the highest ranking officers in the UN's army. Sergeants sweat and shake their feathers when one of the few and far-between Colonels arrives. A Colonel's word is absolute, and no officer would ever deviate from one's orders. The Colonels exist to maintain order. No brigand or dissident would dare show itself before a UN Colonel. Despite being officers of the highest ranking, none of them know exactly how to deal with the ever-impending threat of the Gangstalkers. Instead, they lobby and call for war with opposing nations. A few Colonels go behind their nation's back and meet with the Gangstalker Grandmasters in secret."
+#ap 8
+#mapmove 22
+#hp 8
+#prot 0
+#size 4
+#str 8
+#enc 4
+#att 9
+#def 8
+#prec 11
+#mr 15
+#mor 13
+#maxage 50
+#startage 26
+#nametype 111 
+#gcost 10010
+#rcost 1
+#rpcost 2
+#armor 124 --"Ice Helmet"
+#weapon 35 --"Ice Knife"
+#magicskill 1 3
+#magicskill 4 1
+#magicskill 7 1
+#custommagic 19200 100
+#custommagic 32896 25
+#goodleader
+#coldrec 1
+#incunrest -5
+#voidsanity 20
+#coldres 15
+#end
+
+#newmonster 5746
+#copyspr 3822 --commoner
+#copystats 3822
+#name "Commoner"
+#descr "A female commoner. She is probably tired and just wants to finish her meal."
+#gcost 10200
+#insane 20
+#shapechange 5747
+#end
+
+#newmonster 5747
+#spr1 "./Ragha/u_bigmage1.tga"
+#spr2 "./Ragha/u_bigmage2.tga"
+#name "Gangstalker Grandmaster"
+#descr "A few rogue Abysians took refuge in old Ragha after the Transbreeds took over. The only way they could escape was by taking the form of females. After seeing the potential, these insane Abysians formed the gangstalking cult, and groomed the halfbreeds into taking up their shapeshifting, stalking and dark ways. The Grandmasters rule over the rest of the Gangstalkers, and their main job is grooming more weak-minded people to join their ever-growing cult. They keep it a secret from the rest of their cult, but many of the Grandmasters are funded by a select few UN Colonels."
+#ap 9
+#mapmove 14
+#hp 15
+#prot 0
+#size 3
+#str 13
+#enc 3
+#att 11
+#def 9
+#prec 8
+#mr 15
+#mor 11
+#maxage 50
+#startage 26
+#nametype 101 
+#gcost 10200
+#rcost 1
+#rpcost 4
+#weapon 9 --"Dagger"
+#magicskill 0 2
+#magicskill 7 2
+#magicskill 8 1
+#custommagic 49280 100
+#custommagic 2560 25
+#fireres 15
+#darkvision 50
+#heatrec 0
+#wastesurvival
+#mountainsurvival
+#insane 20
+#incunrest 5
+#shapechange 5746
+#makemonsters2 5757 -SCHIZO
+#end
+
+#newmonster 5748
+#spr1 "./Ragha/c_bbird1.tga"
+#spr2 "./Ragha/c_bbird2.tga"
+#name "UN Wingless Officer"
+#descr "The Caelins of old always struggled to find a way to include their sacred non-flighted warriors in their battles. As often, they were left at home and never recruited. With the formation of the UN and the implosion of the Turs, the Caelins found that their gryffons were left behind, and the earthbound and wingless were given new purpose; in the skies. With their newfound determiniation and purpose, they find themselves able to receive their gods blessing."
+#mountmnr 6247
+#unmountedspr1 "./Ragha/c_mman1.tga"
+#unmountedspr2 "./Ragha/c_mman2.tga"
+#ap 12
+#mapmove 10
+#hp 16
+#prot 0
+#size 3
+#str 13
+#enc 3
+#att 13
+#def 12
+#prec 9
+#mr 12
+#mor 15
+#maxage 50
+#startage 22
+#nametype 111 
+#gcost 10022
+#rcost 1
+#rpcost 1
+#weapon 4 --"Lance"
+#weapon 8 --"Broad Sword"
+#armor 199 --"Turan Plated Mail"
+#armor 21 --"Full Helmet"
+#armor 2 --"Shield"
+#holycost 2
+#coldres 15
+#darkvision 50
+#coldrec 1
+#skilledrider 1
+#holy
+#wastesurvival
+#mountainsurvival
+#voidsanity 20
+#end
+
+#newmonster 5749
+#spr1 "./Ragha/c_bird1.tga"
+#spr2 "./Ragha/c_bird2.tga"
+#name "Disability Gryffon"
+#descr "These gryffons have been painted white and tattooed with the letters 'UN' on their flank. They are used in combat and also by non-flighted civilians to promote equality - as everyone should be able to fly."
+#copystats 2628
+#voidsanity 20
+#end
+
+#newmonster 5750
+#copyspr 2579 --paighan
+#copystats 2579
+#name "Schizophrenic Militia"
+#descr "These are Abysian madmen who have at least managed to teach themselves enough combat skills to be able to hold a weapon. They constantly are looking over their shoulders and fear their own shadows. They have long since lost their sanity and are much more insane than most former Turans."
+#mor 8
+#insane 40
+#end
+
+#newmonster 5751
+#copyspr 2580 --turan inf
+#copystats 2580
+#name "Schizophrenic Berserker"
+#desc "These soldiers have long since lost their sanity, previously they were given some proper military training. But now, their insanity has driven them to develop uncontrollable anger."
+#gcost 10016
+#berserk 3
+#formationfighter -2
+#insane 40
+#end
+
+#newmonster 5752
+#copyspr 2581 --turan heavy
+#copystats 2581
+#name "Schizophrenic Heavy Berserker"
+#descr "These were previously properly trained Abysian soldiers. Now, after the implosion of Tur, these soldiers have snapped mentally and have driven themselves even further into insanity. The heavy infantry unit has regressed back to their Abysian roots, and are always full of rage and are never not berserking. They are a danger to what's left of Raghan society and are scary to be around."
+#gcost 10020
+#autoberserk 1
+#formationfighter -2
+#berserk 4
+#insane 50
+#end
+
+#newmonster 5753
+#copyspr 2584 --savaran cata
+#copystats 2584
+#name "Schizophrenic Cavalryman"
+#descr "A madman soldier riding his similarly insane steed. He's just about as crazy as most of the other former Turan officers, but not as insane as his fellow insane footmen. Perhaps it's the horse that keeps him only moderately insane."
+#mountmnr 5736
+#insane 20
+#end
+
+#newmonster 5754
+#spr1 "./Ragha/u_nbow1.tga"
+#spr2 "./Ragha/u_nbow2.tga"
+#copystats 2589
+#name "UN Bowman"
+#descr "This underpaid UN Soldier wishes he could hold a beautiful Freesian assault crossbow, but the UN is too busy spending its budget on more white paint for the Disability Gryffons. Sometimes they are paid to defend forts outside of the capital. They know those are suicide missions."
+#voidsanity 20
+#end
+
+#newmonster 5755
+#copyspr 2591 --airya inf
+#copystats 2591
+#name "UN Infantryman"
+#descr "A standard UN soldier likely to die on the frontlines, since the UN only had budget for old leftover studded ice armor."
+#voidsanity 20
+#end
+
+#newmonster 5756
+#spr1 "./Ragha/c_birdman1.tga"
+#spr2 "./Ragha/c_birdman2.tga"
+#name "UN Wingless Flier"
+#descr "The Caelins of old always struggled to find a way to include their sacred non-flighted warriors in their battles. As often, they were left at home and never recruited. With the formation of the UN and the implosion of the Turs, the Caelins found that their gryffons were left behind, and the earthbound and wingless were given new purpose; in the skies. With their newfound determiniation and purpose, they find themselves able to receive their gods blessing."
+#mountmnr 5749
+#unmountedspr1 "./Ragha/c_man1.tga"
+#unmountedspr2 "./Ragha/c_man2.tga"
+#ap 12
+#mapmove 10
+#hp 15
+#prot 0
+#size 3
+#str 12
+#enc 3
+#att 12
+#def 12
+#prec 7
+#mr 11
+#mor 14
+#maxage 50
+#startage 27
+#nametype 111 
+#gcost 10022
+#rcost 1
+#rpcost 1
+#weapon 4 --"Lance"
+#weapon 8 --"Broad Sword"
+#armor 199 --"Turan Plated Mail"
+#armor 21 --"Full Helmet"
+#armor 2 --"Shield"
+#holycost 2
+#coldres 15
+#darkvision 50
+#coldrec 1
+#skilledrider 1
+#holy
+#wastesurvival
+#mountainsurvival
+#voidsanity 20
+#end
+
+#newmonster 5757
+#spr1 "./Ragha/schizo1.tga"
+#spr2 "./Ragha/schizo2.tga"
+#name "Schizo"
+#descr "A deranged schizofrenic gangstalker. No one truly knows where they come from, but they seem to appear from every corner of society. They are extremely mentally ill, and are unmatched in stealth and illusions. They have extremely unpredictable movements and have trouble following even the simplest of orders. When given an order, often they just reply with; 'N'."
+#ap 20
+#mapmove 20
+#hp 5
+#prot 0
+#size 3
+#str 10
+#enc 0
+#att 11
+#def 11
+#prec 9
+#mr 9
+#mor 50
+#maxage 50
+#startage 27
+#nametype 140 
+#gcost 10000
+#rcost 0
+#rpcost 0
+#weapon 18 --"Battleaxe"
+#insane 60
+#neednoteat
+#glamour
+#stealthy 25
+#holy
+#end
+
+#newmonster 5758
+#spr1 "./Ragha/bigschiz1.tga"
+#spr2 "./Ragha/bigschiz2.tga"
+#name "Grand Schizo"
+#descr "A deranged schizofrenic gangstalker who has transended human form. This gangstalker has been managed to manifest its own vileness into reality, and has been engulfed by it. Despite its slime-like appearance, it is still quite fast. It has been observed creating new schizos out of its own delusions. It's mere existence is enough to make people go insane."
+#ap 20
+#mapmove 20
+#hp 30
+#prot 0
+#size 5
+#str 13
+#enc 0
+#att 13
+#def 14
+#prec 10
+#mr 12
+#mor 50
+#maxage 50
+#startage 27
+#nametype 140 
+#gcost 10000
+#rcost 0
+#rpcost 0
+#weapon 835 --"Tentacle"
+#noitem
+#insane 60
+#neednoteat
+#glamour
+#stealthy 25
+#magicskill 7 3
+#custommagic 22528 50
+#makemonsters5 5757
+#insanify 5
+#holy
+#montag 3008
+#end
+
+#newmonster 5759
+#spr1 "./Ragha/fridge1.tga"
+#spr2 "./Ragha/fridge1.tga"
+#name "Fridge"
+#descr "A fridge that some useless UN Intern left open. It spreads cold. It looks like it can cast some basic magic, for whatever reason."
+#ap 1
+#mapmove 0
+#hp 50
+#prot 20
+#size 8
+#str 20
+#enc 0
+#att 13
+#def 4
+#prec 7
+#mr 12
+#mor 50
+#maxage 500
+#startage 6
+#gcost 10000
+#rcost 0
+#rpcost 0
+#noweapon 1
+#fixedname "Fridge"
+#noitem
+#immobile
+#inanimate
+#stonebeing
+#unique
+#magicbeing
+#neednoteat
+#montag 3009
+#magicskill 2 1
+#decscale 0 -5
+#incscale 2 -5
+#end
+
+#newmonster 5760
+#spr1 "./Ragha/runningfridge1.tga"
+#spr2 "./Ragha/runningfridge2.tga"
+#name "Running Fridge"
+#descr "Is your fridge running? Yes. You should be too."
+#ap 18
+#mapmove 20
+#hp 120
+#prot 22
+#size 10
+#str 22
+#enc 0
+#att 14
+#def 10
+#prec 7
+#mr 15
+#mor 50
+#maxage 500
+#startage 6
+#gcost 10000
+#rcost 0
+#rpcost 4
+#weapon 397 --"Kick"
+#weapon 397 --"Kick"
+#fixedname "Running Fridge"
+#troglodyte
+#inanimate
+#stonebeing
+#magicbeing
+#neednoteat
+#montag 3010 
+#magicskill 2 2
+#magicskill 1 2
+#magicskill 7 2
+#incscale 2 -5
+#end
+
+#newmonster 6231
+#spr1 "./Ragha/godfridge.tga"
+#name "Smartfridge"
+#descr "After being stationed in the UN meeting room for many years, this fridge gained a mind of its own. It listened to countless hours of arguing and disorderly meetings that had no real purpose, and it decided that these people needed a god to follow. The Smartfridge displayed its good word to the people of the Ununited Nations and went unnoticed for several months as someone put a 'Dont Steal Other Peoples Lunches' notice on the Smartfridge and covered up its display screen. After the notice finally got knocked over by an unpaid intern, the doctrine of the Smartfridge was finally noticed. The Smartfridge declared to feed its people, and to continue to chill the lands."
+#ap 4
+#mapmove 0
+#hp 300
+#prot 20
+#size 6
+#str 26
+#enc 0
+#att 14
+#def 0
+#prec 12
+#mr 20
+#mor 30
+#maxage 8000
+#startage 4286
+#gcost 180
+#noweapon 1
+#inanimate
+#immobile
+#stonebeing
+#neednoteat
+#supplybonus 100
+#bonusspells 1
+#invulnerable 10
+#blind
+#spiritsight
+#noitem
+#cold 10
+#mastersmith -1
+#pathcost 40
+#startdom 4
+#magicskill 2 1
+#magicskill 1 1
+#magicskill 6 1
+#end
+
+--spells
+
+#newspell
+#restricted 171
+#name "Summon Grand Schizo"
+#descr "By calling out controversial statements into the darkness of night, a mage can summon a powerful cryptid creature."
+#details "Summons Grand Schizo commander"
+#school 0
+#researchlevel 5
+#path 0 7
+#pathlevel 0 3
+#effect 10021
+#damage -3008
+#nreff 1
+#fatiguecost 1500
+#end
+
+#newspell
+#restricted 171
+#name "Open Fridge"
+#descr "A UN Intern opens the magical fridge to cool things off."
+#details "Raises cold scale."
+#school 4
+#researchlevel 0
+#path 0 2
+#pathlevel 0 1
+#fatiguecost 0 --no gems
+#onlyatsite "UN Headquarters"
+#provrange 0
+#nref 1
+#damage 94
+#effect 10042
+#end
+
+#newspell
+#restricted 171
+#name "Repair Fridge"
+#descr "This spell summons a repairman who fixes your broken Fridge."
+#details "Summons Fridge"
+#school 0
+#researchlevel 0
+#path 0 2
+#pathlevel 0 2
+#effect 10021
+#damage -3009
+#nreff 1
+#fatiguecost 1000
+#end
+
+#newspell
+#restricted 171
+#name "Running Fridge"
+#descr "This spell summons a Running Fridge, a creature of great mystique and horror."
+#details "Summons Running Fridge"
+#school 0
+#researchlevel 7
+#path 0 2
+#pathlevel 0 2
+#effect 10021
+#damage -3010
+#nreff 1
+#fatiguecost 2500
+#end
+
+#newspell
+#restricted 171
+#name "OPEN UP"
+#descr "The famous line shouted by every UN officer at least once in their career. This spell compels gates to open and walls to crumble - any barrier left in the UN's way will eventually fall."
+#details "Wall Damage: 300 + 25 for each additional Air skill level
+Half of the defenders must roll for defense or get 3 AP blunt damage."
+#school 1
+#researchlevel 6
+#path 0 1
+#pathlevel 0 5
+#effect 10070
+#damage -25175
+#nref 1
+#provrange 5
+#fatiguecost 2000
+#end
+
+--event to make it fucking cold/order in cap, only works when FRIDGE is alive
+
+#newevent
+#rarity 0
+#req_nation 171
+#req_monster 5759
+#nation 185
+#notext
+#nolog
+#incscale3 2
+#incscale3 -0
+#end
+
+--nation shit
+
+#newsite 1681
+#name "UN Headquarters"
+#path 2
+#rarity 5
+#gems 1 1
+#decscale 0 -5
+#incscale 2 -5
+#homecom 5734
+#homecom 5737
+#homecom 5741
+#homecom 5742
+#homecom 5745
+#homecom 5748
+#end
+
+#newsite 1682
+#name "UN Barracks"
+#path 4
+#rarity 5
+#gems 4 1
+#incscale 2 -5
+#decscale 0 -5
+#homemon 5754
+#homemon 5755
+#homemon 5756
+#end
+
+#newsite 1683
+#name "Skinwalker Cult"
+#path 8
+#rarity 5
+#gems 0 2
+#gems 7 2
+#end
+
+#newsite 1685
+#name "Fallen Ragha Summons"
+#path 7
+#homemon 5757
+#homemon 5758
+#homemon 5759
+#homemon 5760
+#rarity 5
+#end
+
+
 #selectnation 171
-#name "Ragha - WIP"
-#epithet "United Nations"
-#era 0 --temp disabled, dev on hold
---#era 3
-#brief "A nation famed for their success in collaboration and partnership of many different races."
-#descr "With the extreme success of united Airyans and Turans of Ragha, their reputation spread wide and far across the known world. As their military might stood tall, the nation naturally received equal amounts of negative fame and targeted attacks. One particular rumour spread by the Conspiracy Phagi from Agartha is that the Raghans have been putting modified high fructose Corn Wine inside their Endless Bags of Wine to cut costs as well as introducing microvines inside their Cauldrons. The people of Ragha did not take this well as they immediately launched counter-offensive by forming the ranks of Blue Helm Airyans and Turan Gangstalkers to deal with this slander. This of course, only exacerbated the issue as more rumours are spread and a larger group of enforcers were needed.
-Now the Blue Helms and the Gangstalkers are so prevalent they are effectively a police state. Every street corner has a miniture Eyes of God enchantment, every citizen is being followed, and every citizen is forced to comply. The Raghan society did not think this was enough as they prepare to push this ideal onto the rest of the world in the war of ascension."
-#summary "Race: Airyans, Turans.
-Military: Flying units, Heavy Land units, Police State
-Magic: Air, Water, Astral, Fire, Death, and Blood
+#name "Fallen Ragha"
+#epithet "The Ununited Nations"
+#era 3
+#brief "Militaristic cap recruits and insanity everywhere else. Mix of shapeshifters and fliers."
+#descr "The original civil war between the Abysian Tur and the Caelins has once again sparked, when the Caelins decided to try to say that they would have won the original war. This caused much uproar and intense shitflinging began, it was impossible to try and hold civil court or any holy law, and thus the Caelins banished the Abysians from the capital. In response, the Abysians began looting and rioting everywhere outside of the capital. From within the capital fortress walls, the Caelian peoples estabished an order; The Ununited Nations, where they pleged to reform and 'help' the Abysian peoples. From outside the walls, the Abysians resisted this so-called help and went insane, refusing medication and treatment from their former allies. Instead they learned new ways to inflitrate the capital and go undetected, while falling even deeper into chaos."
+#summary "Race: Flying, cold resistant, heat resistant, insane and shapeshifters
+Military: Flying units, gryphon riders, berserkers
+Magic: Air, Fire, Astral, Glamour, some Water and Blood
 Priests: Average"
 #flag "./Ragha/flag.tga"
 
-#addreccom 431
-#addreccom 15
-#addreccom 13
-#addreccom 1552
-#addreccom 746
+#addreccom 5732
+#addreccom 5733
+#addreccom 5735
+#addreccom 5738
+#addreccom 5740
+#addreccom 5744
+#addreccom 5747
 
-#addrecunit 50
-#addrecunit 201
-#addrecunit 14
-#addrecunit 1551
-#addrecunit 16
+#addrecunit 5750
+#addrecunit 5751
+#addrecunit 5752
+#addrecunit 5753
 
---#hero1 TBD
+#startcom 5734
+#startunittype1 5754
+#startunitnbrs1 25
+#startunittype2 5755
+#startunitnbrs2 25
+#startscout 5759
+#defcom1 5733
+#defcom2 5735
+#defunit1 5750
+#defunit2 5751
+#defmult1 14
+#defmult1b 14
+#defmult2 14
+#wallunit 5754
 
-#startcom 5120
-#startunittype1 5111
-#startunitnbrs1 10
-#startunittype2 5112
-#startunitnbrs2 10
-#startscout 5115
-#defcom1 5120
-#defcom2 5121
-#defunit1 5111
-#defunit2 5116
-#defmult1 20
-#defmult1b 15
-#defmult2 20
-#wallunit 5113
+#addgod 6231
+
+#defchaos 1
+#moreorder -1
+#moreheat 1
 
 #clearsites
-#startsite "Cerulean Council"
-#idealcold 0
+#startsite "UN Headquarters"
+#startsite "UN Barracks"
+#startsite "Skinwalker Cult"
+#futuresite "Fallen Ragha Summons"
+#idealcold -1
+#cavenation 0
 #fortera 3
-#templepic 15
-#homerealm 5
+#templepic 17
 #homerealm 10
-#color 0.54 0 0
-#secondarycolor 0.54 0 0
+#homerealm 5
+#homerealm 8
+#color 0.0 0.5 1.0
+#secondarycolor 0.0 0.6 1.0
+
 #end
 
 --------------------------------------------------------------------------
@@ -22350,7 +23312,7 @@ Priests: Weak"
 #fear 5
 #expertleader
 #expertmagicleader
-#pathcost 20
+#pathcost 60
 #startdom 2
 #magicskill 1 1
 #magicskill 2 1
@@ -24278,1052 +25240,6 @@ Ends by passing a very difficult (+8) morale check (results in a permanent curse
 -- nation 185
 --------------------------------------------------------------------------
 
-
-#newmonster 6229
-#copyspr 426 --scout
-#copystats 426
-#name "Scout"
-#descr "Scouts are trained to pass unseen through enemy territory and to travel efficiently even in mountainous and forested terrain. Their reports on enemy army movements and the resources in enemy lands are invaluable to the prudent warlord."
-#spy
-#shapechange 6230
-#end
-
-#newmonster 6230
-#copyspr 1661 --misbred
-#name "Gangstalker Spy"
-#descr "Disguised as a mere Scout, the Gangstalker Spies can inflitrate behind enemy lines and cause chaos. They are only content while having a target to follow. You rarely see them coming, but you always have an inkling that they may be closer than you think. Gangstalkers suffer from insanity, however their occasionally irrational actions make them difficult to predict. These spies have learned how to sneak back into the capital where they've been banished from."
-#ap 12
-#mapmove 22
-#hp 17
-#prot 6
-#size 4 
-#str 15
-#enc 2
-#att 13
-#def 11
-#prec 7
-#mr 10
-#mor 9
-#maxage 250
-#startage 150
-#nametype 101 
-#gcost 10015
-#rcost 1
-#rpcost 1
-#weapon 18 --"Battleaxe"
-#armor 8 --"Chainmail Cuirass"
-#stealthy 30
-#insane 20
-#fireres 10
-#darkvision 50
-#spy
-#assassin
-#flying
-#noleader
-#shapechange 6229
-#end
-
-#newmonster 6231
-#copyspr 2597 --paighan salar
-#name "Schizophrenic General"
-#descr "A distinguished previously-Turan general who has since lost his mind, but is still somehow capable of leading soldiers."
-#ap 11
-#mapmove 12
-#hp 13
-#prot 0
-#size 3 
-#str 12
-#enc 3
-#att 12
-#def 11
-#prec 6
-#mr 11
-#mor 12
-#maxage 45
-#startage 26
-#nametype 101 
-#gcost 10007
-#rcost 1
-#rpcost 1
-#weapon 8 --"Broad Sword"
-#armor 8 --"Chainmail Cuirass"
-#armor 118 --"Half Helmet"
-#armor 2 --"Shield"
-#fireres 10
-#darkvision 50
-#wastesurvival
-#mountainsurvival
-#okleader
-#insane 20
-#end
-
-#newmonster 6232
-#spr1 "./Ragha/u_gen1.tga"
-#spr2 "./Ragha/u_gen2.tga"
-#name "UN General" 
-#descr "With the recent implosion of Tur, and the rampant mental illness spreading among Abysians, many Caelin soldiers have been training their minds to resist the insanity, and been hardening their resolve. This is a distinguished Caelin general, seving the UN."
-#ap 6
-#mapmove 20
-#hp 11
-#prot 0
-#size 4 
-#str 10
-#enc 4
-#att 12
-#def 10
-#prec 12
-#mr 12
-#mor 13
-#maxage 50
-#startage 26
-#nametype 111 
-#gcost 10020
-#rcost -20
-#rpcost 1
-#weapon 77 --"Ice Sword"
-#armor 27 --"Ice Hauberk"
-#armor 124 --"Ice Helmet"
-#armor 28 --"Ice Aegis"
-#coldres 15
-#iceprot 2
-#appetite -1
-#flying
-#voidsanity 20
-#goodleader
-#end
-
-#newmonster 6233
-#copyspr 2588 --turan spahbed
-#name "Schizophrenic Cavalryman"
-#descr "Previously one of the best generals in Tur, but now has since lost his mind, along with his steed. He has retained his leadership capabilities, however."
-#mountmnr 6234
-#ap 9
-#mapmove 10
-#hp 15
-#prot 0
-#size 3 
-#str 12
-#enc 3
-#att 13
-#def 12
-#prec 10
-#mr 11
-#mor 13
-#maxage 50
-#startage 26
-#nametype 101 
-#gcost 10022
-#rcost 1
-#rpcost 1
-#weapon 4 --"Lance"
-#weapon 8 --"Broad Sword"
-#armor 199 --"Turan Plated Mail"
-#armor 21 --"Full Helmet"
-#armor 2 --"Shield"
-#fireres 15
-#darkvision 50
-#wastesurvival
-#mountainsurvival
-#insane 20
-#skilledrider 3
-#goodleader
-#end
-
-#newmonster 6234
-#copyspr 3528 --nisean horse
-#name "Schizophrenic Steed"
-#descr "A horse that has lost its sanity, but is still reguarly used for war."
-#ap 30
-#mapmove 16
-#hp 26
-#prot 4
-#size 5 
-#str 17
-#enc 2
-#att 13
-#def 12
-#prec 5
-#mr 11
-#mor 13
-#maxage 100
-#startage 60
-#gcost 10040
-#rcost 1
-#rpcost 20
-#weapon 55 --"Hoof"
-#armor 253 --"Cataphract Barding"
-#insane 20
-#end
-
-#newmonster 6235
-#spr1 "./Ragha/c_com1.tga"
-#spr2 "./Ragha/c_com2.tga"
-#name "UN Peacekeeper"
-#descr "One of the battlepriests employed by the newly-formed UN. These holymen pray for the more peaceful times, before the implosion of Tur to return one day. The mere presence of one of these priests is enough to at least somewhat soothe the minds of the people."
-#ap 9
-#mapmove 20
-#hp 11
-#prot 0
-#size 4
-#str 10
-#enc 4
-#att 13
-#def 10
-#prec 12
-#mr 12
-#mor 13
-#maxage 50
-#startage 26
-#nametype 111 
-#gcost 10006
-#rcost -20
-#rpcost 1
-#weapon 77 --"Ice Sword"
-#armor 27 --"Ice Hauberk"
-#armor 124 --"Ice Helmet"
-#armor 28 --"Ice Aegis"
-#coldres 15
-#coldrec 0
-#iceprot 2
-#appetite -1
-#magicskill 9 1
-#nametype 111
-#holy
-#flying
-#incunrest -5
-#voidsanity 20
-#end
-
-#newmonster 6236
-#copyspr 2605 --turan shah
-#name "Schizophrenic Horse-Priest"
-#descr "A crazed battlepriest who rides atop his equally-insane war horse. While he preaches the word of the One True God, his ramblings cause unease in the people around him."
-#mountmnr 6234
-#hp 15
-#prot 0
-#size 3 
-#str 12
-#enc 3
-#att 13
-#def 12
-#prec 11
-#mr 11
-#mor 13
-#maxage 50
-#startage 26
-#nametype 101 
-#gcost 10012
-#rcost 1
-#rpcost 1
-#weapon 4 --"Lance"
-#weapon 8 --"Broad Sword"
-#armor 199 --"Turan Plated Mail"
-#armor 148 --"Crown"
-#armor 2 --"Shield"
-#fireres 15
-#darkvision 50
-#wastesurvival
-#mountainsurvival
-#magicskill 9 1
-#holy
-#incunrest 5
-#insane 20
-#end
-
-#newmonster 6237
-#copyspr 240 --priest
-#copystats 240
-#name "Priest"
-#descr "Priests sometimes accompany armies, inspiring and blessing the soldiers. Priests can also banish undead beings and demons."
-#nametype 101
-#stealthy 10
-#gcost 10028
-#shapechange 6238
-#insane 20
-#end
-
-#newmonster 6238
-#spr1 "./Ragha/u_smallmage1.tga"
-#spr2 "./Ragha/u_smallmage2.tga"
-#name "Gangstalker Hitman"
-#descr "These gangstalkers dedicate their lives to their disguise, and train in the holy and magical arts. They will stalk their quarries from the shadows, and cause unease in the provinces that they inhabit. They've abandoned most of the original Turan ways, and fallen into madness."
-#ap 11
-#mapmove 14
-#hp 11
-#prot 0
-#size 3 
-#str 13
-#enc 3
-#att 10
-#def 9
-#prec 11
-#mr 13
-#mor 10
-#maxage 50
-#startage 26
-#nametype 101 
-#gcost 10028
-#rcost 1
-#rpcost 2
-#magicskill 0 1
-#magicskill 7 1
-#magicskill 9 1
-#custommagic 49280 100
-#holy
-#shapechange 6237
-#nametype 101
-#stealthy 10
-#fireres 15
-#darkvision 50
-#heatrec 0
-#wastesurvival
-#mountainsurvival
-#incunrest 5
-#insane 20
-#end
-
-#newmonster 6239
-#spr1 "./Ragha/c_untern1.tga"
-#spr2 "./Ragha/c_untern2.tga"
-#name "UN Intern"
-#descr "These UN Magepriests are barely trained in the magical arts, but are expected to research and support armies regardless. They have poor morale due to the abuse they get from their superior officers, but at least they've learned how to work efficiently under the the constant scruitiny of their superior officers. They hope that one day they will get a cushy promotion and stop handling all the paperwork. (They never will.)"
-#ap 8
-#mapmove 22
-#hp 8
-#prot 0
-#size 4
-#str 8
-#enc 4
-#att 9
-#def 8
-#prec 11
-#mr 15
-#mor 9
-#maxage 50
-#startage 26
-#nametype 111 
-#gcost 10009
-#rcost 1
-#rpcost 2
-#armor 124 --"Ice Helmet"
-#magicskill 4 1
-#magicskill 9 1
-#custommagic 2816 100
-#researchbonus 4
-#voidsanity 20
-#coldres 5
-#poorleader
-#end
-
-#newmonster 6240
-#spr1 "./Ragha/c_mage1.tga"
-#spr2 "./Ragha/c_mage2.tga"
-#name "UN Sergeant"
-#descr "A midranking UN officer, these are in charge of commanding small armies and bossing the Interns around. Most Sergeants let the power get to their head when they're called in to lead a communion. When reporting to the Generals, none are better at making the situation look better than it actually is. They are masters at bullshitting, and the locals usually believe them."
-#ap 8
-#mapmove 22
-#hp 8
-#prot 0
-#size 4
-#str 8
-#enc 4
-#att 9
-#def 8
-#prec 11
-#mr 15
-#mor 13
-#maxage 50
-#startage 26
-#nametype 111 
-#gcost 10010
-#rcost 1
-#rpcost 2
-#armor 124 --"Ice Helmet"
-#weapon 35 --"Ice Knife"
-#magicskill 1 1
-#magicskill 4 1
-#magicskill 7 1
-#magicskill 9 2
-#custommagic 19200 100
-#incunrest -5
-#voidsanity 20
-#coldres 10
-#goodleader
-#end
-
-#newmonster 6241
-#copyspr 1565 --peasant
-#copystats 1565
-#name "Peasant"
-#descr "An annoyed human peasant armed with a farming implement."
-#nametype 101
-#gcost 10180
-#rpcost 2
-#shapechange 6242
-#insane 20
-#end
-
-#newmonster 6242
-#spr1 "./Ragha/u_medmage1.tga"
-#spr2 "./Ragha/u_medmage2.tga"
-#name "Gangstalker Wizard"
-#descr "One of the esteemed hidden officers of the gangstalking cult that caused the Tur to fall into chaos. These wizards thrive in chaos and arent afraid to openly oppose UN officers, even if they do still take the form of a Peasant occasionally. While most of the gangstalkers would rather hide in the shadows and sneak, the Wizards are much more loudly and verbally noticiable. They will complain and shout and cause chaos, and are very argumentative. As their word is very openly heard, as they are high ranking priests, the gangstalker wizards are good at opposing enemy nation's heretical preachings."
-#ap 8
-#mapmove 14
-#hp 11
-#prot 0
-#size 3
-#str 13
-#enc 3
-#att 10
-#def 9
-#prec 8
-#mr 13
-#mor 10
-#maxage 50
-#startage 26
-#nametype 101 
-#gcost 10180
-#rcost 1
-#rpcost 2
-#weapon 9 --"Dagger"
-#magicskill 0 1
-#magicskill 7 1
-#magicskill 8 1
-#magicskill 9 2
-#custommagic 49280 100
-#shapechange 6241
-#inquisitor
-#fireres 15
-#darkvision 50
-#heatrec 1
-#wastesurvival
-#mountainsurvival
-#insane 20
-#end
-
-#newmonster 6243
-#spr1 "./Ragha/c_big1.tga"
-#spr2 "./Ragha/c_big2.tga"
-#name "UN Colonel"
-#descr "One of the highest ranking officers in the UN's army. Sergeants sweat and shake their feathers when one of the few and far-between Colonels arrives. A Colonel's word is absolute, and no officer would ever deviate from one's orders. The Colonels exist to maintain order. No brigand or dissident would dare show itself before a UN Colonel. Despite being officers of the highest ranking, none of them know exactly how to deal with the ever-impending threat of the Gangstalkers. Instead, they lobby and call for war with opposing nations. A few Colonels go behind their nation's back and meet with the Gangstalker Grandmasters in secret."
-#ap 8
-#mapmove 22
-#hp 8
-#prot 0
-#size 4
-#str 8
-#enc 4
-#att 9
-#def 8
-#prec 11
-#mr 15
-#mor 13
-#maxage 50
-#startage 26
-#nametype 111 
-#gcost 10010
-#rcost 1
-#rpcost 2
-#armor 124 --"Ice Helmet"
-#weapon 35 --"Ice Knife"
-#magicskill 1 3
-#magicskill 4 1
-#magicskill 7 1
-#custommagic 19200 100
-#custommagic 32896 25
-#goodleader
-#coldrec 1
-#incunrest -5
-#voidsanity 20
-#coldres 15
-#end
-
-#newmonster 6244
-#copyspr 3822 --commoner
-#copystats 3822
-#name "Commoner"
-#descr "A female commoner. She is probably tired and just wants to finish her meal."
-#gcost 10200
-#insane 20
-#shapechange 6245
-#end
-
-#newmonster 6245
-#spr1 "./Ragha/u_bigmage1.tga"
-#spr2 "./Ragha/u_bigmage2.tga"
-#name "Gangstalker Grandmaster"
-#descr "A few rogue Abysians took refuge in old Ragha after the Transbreeds took over. The only way they could escape was by taking the form of females. After seeing the potential, these insane Abysians formed the gangstalking cult, and groomed the halfbreeds into taking up their shapeshifting, stalking and dark ways. The Grandmasters rule over the rest of the Gangstalkers, and their main job is grooming more weak-minded people to join their ever-growing cult. They keep it a secret from the rest of their cult, but many of the Grandmasters are funded by a select few UN Colonels."
-#ap 9
-#mapmove 14
-#hp 15
-#prot 0
-#size 3
-#str 13
-#enc 3
-#att 11
-#def 9
-#prec 8
-#mr 15
-#mor 11
-#maxage 50
-#startage 26
-#nametype 101 
-#gcost 10200
-#rcost 1
-#rpcost 4
-#weapon 9 --"Dagger"
-#magicskill 0 2
-#magicskill 7 2
-#magicskill 8 1
-#custommagic 49280 100
-#custommagic 2560 25
-#fireres 15
-#darkvision 50
-#heatrec 0
-#wastesurvival
-#mountainsurvival
-#insane 20
-#incunrest 5
-#shapechange 6244
-#makemonsters2 6255
-#end
-
-#newmonster 6246
-#spr1 "./Ragha/c_bbird1.tga"
-#spr2 "./Ragha/c_bbird2.tga"
-#name "UN Wingless Officer"
-#descr "The Caelins of old always struggled to find a way to include their sacred non-flighted warriors in their battles. As often, they were left at home and never recruited. With the formation of the UN and the implosion of the Turs, the Caelins found that their gryffons were left behind, and the earthbound and wingless were given new purpose; in the skies. With their newfound determiniation and purpose, they find themselves able to receive their gods blessing."
-#mountmnr 6247
-#unmountedspr1 "./Ragha/c_mman1.tga"
-#unmountedspr2 "./Ragha/c_mman2.tga"
-#ap 12
-#mapmove 10
-#hp 16
-#prot 0
-#size 3
-#str 13
-#enc 3
-#att 13
-#def 12
-#prec 9
-#mr 12
-#mor 15
-#maxage 50
-#startage 22
-#nametype 111 
-#gcost 10022
-#rcost 1
-#rpcost 1
-#weapon 4 --"Lance"
-#weapon 8 --"Broad Sword"
-#armor 199 --"Turan Plated Mail"
-#armor 21 --"Full Helmet"
-#armor 2 --"Shield"
-#holycost 2
-#coldres 15
-#darkvision 50
-#coldrec 1
-#skilledrider 1
-#holy
-#wastesurvival
-#mountainsurvival
-#voidsanity 20
-#end
-
-#newmonster 6247
-#spr1 "./Ragha/c_bird1.tga"
-#spr2 "./Ragha/c_bird2.tga"
-#name "Disability Gryffon"
-#descr "These gryffons have been painted white and tattooed with the letters 'UN' on their flank. They are used in combat and also by non-flighted civilians to promote equality - as everyone should be able to fly."
-#copystats 2628
-#voidsanity 20
-#end
-
-#newmonster 6248
-#copyspr 2579 --paighan
-#copystats 2579
-#name "Schizophrenic Militia"
-#descr "These are Abysian madmen who have at least managed to teach themselves enough combat skills to be able to hold a weapon. They constantly are looking over their shoulders and fear their own shadows. They have long since lost their sanity and are much more insane than most former Turans."
-#mor 8
-#insane 40
-#end
-
-#newmonster 6249
-#copyspr 2580 --turan inf
-#copystats 2580
-#name "Schizophrenic Berserker"
-#desc "These soldiers have long since lost their sanity, previously they were given some proper military training. But now, their insanity has driven them to develop uncontrollable anger."
-#gcost 10016
-#berserk 3
-#formationfighter -2
-#insane 40
-#end
-
-#newmonster 6250
-#copyspr 2581 --turan heavy
-#copystats 2581
-#name "Schizophrenic Heavy Berserker"
-#descr "These were previously properly trained Abysian soldiers. Now, after the implosion of Tur, these soldiers have snapped mentally and have driven themselves even further into insanity. The heavy infantry unit has regressed back to their Abysian roots, and are always full of rage and are never not berserking. They are a danger to what's left of Raghan society and are scary to be around."
-#gcost 10020
-#autoberserk 1
-#formationfighter -2
-#berserk 4
-#insane 50
-#end
-
-#newmonster 6251
-#copyspr 2584 --savaran cata
-#copystats 2584
-#name "Schizophrenic Cavalryman"
-#descr "A madman soldier riding his similarly insane steed. He's just about as crazy as most of the other former Turan officers, but not as insane as his fellow insane footmen. Perhaps it's the horse that keeps him only moderately insane."
-#mountmnr 6234
-#insane 20
-#end
-
-#newmonster 6252
-#spr1 "./Ragha/u_nbow1.tga"
-#spr2 "./Ragha/u_nbow2.tga"
-#copystats 2589
-#name "UN Bowman"
-#descr "This underpaid UN Soldier wishes he could hold a beautiful Freesian assault crossbow, but the UN is too busy spending its budget on more white paint for the Disability Gryffons. Sometimes they are paid to defend forts outside of the capital. They know those are suicide missions."
-#voidsanity 20
-#end
-
-#newmonster 6253
-#copyspr 2591 --airya inf
-#copystats 2591
-#name "UN Infantryman"
-#descr "A standard UN soldier likely to die on the frontlines, since the UN only had budget for old leftover studded ice armor."
-#voidsanity 20
-#end
-
-#newmonster 6254
-#spr1 "./Ragha/c_birdman1.tga"
-#spr2 "./Ragha/c_birdman2.tga"
-#name "UN Wingless Flier"
-#descr "The Caelins of old always struggled to find a way to include their sacred non-flighted warriors in their battles. As often, they were left at home and never recruited. With the formation of the UN and the implosion of the Turs, the Caelins found that their gryffons were left behind, and the earthbound and wingless were given new purpose; in the skies. With their newfound determiniation and purpose, they find themselves able to receive their gods blessing."
-#mountmnr 6247
-#unmountedspr1 "./Ragha/c_man1.tga"
-#unmountedspr2 "./Ragha/c_man2.tga"
-#ap 12
-#mapmove 10
-#hp 15
-#prot 0
-#size 3
-#str 12
-#enc 3
-#att 12
-#def 12
-#prec 7
-#mr 11
-#mor 14
-#maxage 50
-#startage 27
-#nametype 111 
-#gcost 10022
-#rcost 1
-#rpcost 1
-#weapon 4 --"Lance"
-#weapon 8 --"Broad Sword"
-#armor 199 --"Turan Plated Mail"
-#armor 21 --"Full Helmet"
-#armor 2 --"Shield"
-#holycost 2
-#coldres 15
-#darkvision 50
-#coldrec 1
-#skilledrider 1
-#holy
-#wastesurvival
-#mountainsurvival
-#voidsanity 20
-#end
-
-#newmonster 6255
-#spr1 "./Ragha/schizo1.tga"
-#spr2 "./Ragha/schizo2.tga"
-#name "Schizo"
-#descr "A deranged schizofrenic gangstalker. No one truly knows where they come from, but they seem to appear from every corner of society. They are extremely mentally ill, and are unmatched in stealth and illusions. They have extremely unpredictable movements and have trouble following even the simplest of orders. When given an order, often they just reply with; 'N'."
-#ap 20
-#mapmove 20
-#hp 5
-#prot 0
-#size 3
-#str 10
-#enc 0
-#att 11
-#def 11
-#prec 9
-#mr 9
-#mor 50
-#maxage 50
-#startage 27
-#nametype 140 
-#gcost 10000
-#rcost 0
-#rpcost 0
-#weapon 18 --"Battleaxe"
-#insane 60
-#neednoteat
-#glamour
-#stealthy 25
-#holy
-#end
-
-#newmonster 6256
-#spr1 "./Ragha/bigschiz1.tga"
-#spr2 "./Ragha/bigschiz2.tga"
-#name "Grand Schizo"
-#descr "A deranged schizofrenic gangstalker who has transended human form. This gangstalker has been managed to manifest its own vileness into reality, and has been engulfed by it. Despite its slime-like appearance, it is still quite fast. It has been observed creating new schizos out of its own delusions. It's mere existence is enough to make people go insane."
-#ap 20
-#mapmove 20
-#hp 30
-#prot 0
-#size 5
-#str 13
-#enc 0
-#att 13
-#def 14
-#prec 10
-#mr 12
-#mor 50
-#maxage 50
-#startage 27
-#nametype 140 
-#gcost 10000
-#rcost 0
-#rpcost 0
-#weapon 835 --"Tentacle"
-#noitem
-#insane 60
-#neednoteat
-#glamour
-#stealthy 25
-#magicskill 7 3
-#custommagic 22528 50
-#makemonsters5 6255
-#insanify 5
-#holy
-#montag 3008
-#end
-
-#newmonster 6257
-#spr1 "./Ragha/fridge1.tga"
-#spr2 "./Ragha/fridge1.tga"
-#name "Fridge"
-#descr "A fridge that some useless UN Intern left open. It spreads cold. It looks like it can cast some basic magic, for whatever reason."
-#ap 1
-#mapmove 0
-#hp 50
-#prot 20
-#size 8
-#str 20
-#enc 0
-#att 13
-#def 4
-#prec 7
-#mr 12
-#mor 50
-#maxage 500
-#startage 6
-#gcost 10000
-#rcost 0
-#rpcost 0
-#noweapon 1
-#fixedname "Fridge"
-#noitem
-#immobile
-#inanimate
-#stonebeing
-#unique
-#magicbeing
-#neednoteat
-#magicskill 2 1
-#decscale 0 -5
-#incscale 2 -5
-#end
-
-#newmonster 6258
-#spr1 "./Ragha/runningfridge1.tga"
-#spr2 "./Ragha/runningfridge2.tga"
-#name "Running Fridge"
-#descr "Is your fridge running? Yes. You should be too."
-#ap 18
-#mapmove 20
-#hp 120
-#prot 22
-#size 10
-#str 22
-#enc 0
-#att 14
-#def 10
-#prec 7
-#mr 15
-#mor 50
-#maxage 500
-#startage 6
-#gcost 10000
-#rcost 0
-#rpcost 4
-#weapon 397 --"Kick"
-#weapon 397 --"Kick"
-#fixedname "Running Fridge"
-#troglodyte
-#inanimate
-#stonebeing
-#magicbeing
-#neednoteat
-#magicskill 2 2
-#magicskill 1 2
-#magicskill 7 2
-#incscale 2 -5
-#end
-
-#newmonster 6259
-#spr1 "./Ragha/godfridge.tga"
-#name "Smartfridge"
-#descr "After being stationed in the UN meeting room for many years, this fridge gained a mind of its own. It listened to countless hours of arguing and disorderly meetings that had no real purpose, and it decided that these people needed a god to follow. The Smartfridge displayed its good word to the people of the Ununited Nations and went unnoticed for several months as someone put a 'Dont Steal Other Peoples Lunches' notice on the Smartfridge and covered up its display screen. After the notice finally got knocked over by an unpaid intern, the doctrine of the Smartfridge was finally noticed. The Smartfridge declared to feed its people, and to continue to chill the lands."
-#ap 4
-#mapmove 0
-#hp 300
-#prot 20
-#size 6
-#str 26
-#enc 0
-#att 14
-#def 0
-#prec 12
-#mr 20
-#mor 30
-#maxage 8000
-#startage 4286
-#gcost 180
-#noweapon 1
-#inanimate
-#immobile
-#stonebeing
-#neednoteat
-#supplybonus 100
-#bonusspells 1
-#invulnerable 10
-#blind
-#spiritsight
-#noitem
-#cold 10
-#mastersmith -1
-#pathcost 40
-#startdom 4
-#magicskill 2 1
-#magicskill 1 1
-#magicskill 6 1
-#end
-
---spells
-
-#newspell
-#restricted 185
-#name "Summon Grand Schizo"
-#descr "By calling out controversial statements into the darkness of night, a mage can summon a powerful cryptid creature."
-#details "Summons Grand Schizo commander"
-#school 0
-#researchlevel 5
-#path 0 7
-#pathlevel 0 3
-#effect 10021
-#damage -3008
-#nreff 1
-#fatiguecost 1500
-#end
-
-#newspell
-#restricted 185
-#name "Open Fridge"
-#descr "A UN Intern opens the magical fridge to cool things off."
-#details "Raises cold scale."
-#school 4
-#researchlevel 0
-#path 0 2
-#pathlevel 0 1
-#fatiguecost 0 --no gems
-#onlyatsite "UN Headquarters"
-#provrange 0
-#nref 1
-#damage 94
-#effect 10042
-#end
-
-#newspell
-#restricted 185
-#name "Repair Fridge"
-#descr "This spell summons a repairman who fixes your broken Fridge."
-#details "Summons Fridge"
-#school 0
-#researchlevel 0
-#path 0 2
-#pathlevel 0 2
-#effect 10021
-#damage -3008
-#nreff 1
-#fatiguecost 1000
-#end
-
-#newspell
-#restricted 185
-#name "Running Fridge"
-#descr "This spell summons a Running Fridge, a creature of great mystique and horror."
-#details "Summons Running Fridge"
-#school 0
-#researchlevel 7
-#path 0 2
-#pathlevel 0 2
-#effect 10021
-#damage -3008
-#nreff 1
-#fatiguecost 2500
-#end
-
-#newspell
-#restricted 185
-#name "OPEN UP"
-#descr "The famous line shouted by every UN officer at least once in their career. This spell compels gates to open and walls to crumble - any barrier left in the UN's way will eventually fall."
-#details "Wall Damage: 300 + 25 for each additional Air skill level
-Half of the defenders must roll for defense or get 3 AP blunt damage."
-#school 1
-#researchlevel 6
-#path 0 1
-#pathlevel 0 5
-#effect 10070
-#damage -25175
-#nref 1
-#provrange 5
-#fatiguecost 2000
-#end
-
---event to make it fucking cold/order in cap, only works when FRIDGE is alive
-
-#newevent
-#rarity 0
-#req_nation 185
-#req_monster 6257
-#nation 185
-#notext
-#nolog
-#incscale3 2
-#incscale3 -0
-#end
-
---nation shit
-
-#newsite 1681
-#name "UN Headquarters"
-#path 2
-#rarity 5
-#gems 1 1
-#decscale 0 -5
-#incscale 2 -5
-#homecom 6232
-#homecom 6235
-#homecom 6239
-#homecom 6240
-#homecom 6243
-#homecom 6246
-#end
-
-#newsite 1682
-#name "UN Barracks"
-#path 4
-#rarity 5
-#gems 4 1
-#incscale 2 -5
-#decscale 0 -5
-#homemon 6252
-#homemon 6253
-#homemon 6254
-#end
-
-#newsite 1683
-#name "Skinwalker Cult"
-#path 8
-#rarity 5
-#gems 0 2
-#gems 7 2
-#end
-
-#newsite 1685
-#name "Fallen Ragha Summons"
-#path 7
-#homemon 6255
-#homemon 6256
-#homemon 6257
-#homemon 6258
-#rarity 5
-#end
-
-
-#selectnation 185
-#name "Fallen Ragha"
-#epithet "The Ununited Nations"
-#era 3
-#brief "Militaristic cap recruits and insanity everywhere else. Mix of shapeshifters and fliers."
-#descr "The original civil war between the Abysian Tur and the Caelins has once again sparked, when the Caelins decided to try to say that they would have won the original war. This caused much uproar and intense shitflinging began, it was impossible to try and hold civil court or any holy law, and thus the Caelins banished the Abysians from the capital. In response, the Abysians began looting and rioting everywhere outside of the capital. From within the capital fortress walls, the Caelian peoples estabished an order; The Ununited Nations, where they pleged to reform and 'help' the Abysian peoples. From outside the walls, the Abysians resisted this so-called help and went insane, refusing medication and treatment from their former allies. Instead they learned new ways to inflitrate the capital and go undetected, while falling even deeper into chaos."
-#summary "Race: Flying, cold resistant, heat resistant, insane and shapeshifters
-Military: Flying units, gryphon riders, berserkers
-Magic: Air, Fire, Astral, Glamour, some Water and Blood
-Priests: Average"
-#flag "./Ragha/flag.tga"
-
-#addreccom 6230
-#addreccom 6231
-#addreccom 6233
-#addreccom 6236
-#addreccom 6238
-#addreccom 6242
-#addreccom 6245
-
-#addrecunit 6248
-#addrecunit 6249
-#addrecunit 6250
-#addrecunit 6251
-
-#startcom 6232
-#startunittype1 6252
-#startunitnbrs1 20
-#startunittype2 6253
-#startunitnbrs2 20
-#startscout 6231
-#startscout 6257
-#defcom1 6232
-#defcom2 6234
-#defunit1 6248
-#defunit2 6251
-#defmult1 14
-#defmult1b 14
-#defmult2 14
-#wallunit 6252
-
-#addgod 6259
-
-#defchaos 1
-#moreorder -1
-#moreheat 1
-
-#clearsites
-#startsite "UN Headquarters"
-#startsite "UN Barracks"
-#startsite "Skinwalker Cult"
-#futuresite "Fallen Ragha Summons"
-#idealcold -1
-#cavenation 0
-#fortera 3
-#templepic 17
-#homerealm 10
-#homerealm 5
-#homerealm 8
-#color 0.0 0.5 1.0
-#secondarycolor 0.0 0.6 1.0
-
-#end
 
 
 
