@@ -45,7 +45,6 @@
 --3005 Ninja Turtles
 --3006 Merrow Fans
 --3007 turtle summons
---3008-3010 ragha summons
 
 --LAS PELAGUS MONTAGS
 --5000-5008
@@ -14062,7 +14061,6 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 -- unit 5731-5760
 -- unit 6231 (tendie)
 -- site 1681-1683
--- montag 3008-3010
 -- nation 171
 --------------------------------------------------------------------------
 
@@ -14094,7 +14092,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #maxage 250
 #startage 150
 #nametype 101 
-#gcost 10015
+#gcost 10005
 #rcost 1
 #rpcost 1
 #weapon 18 --"Battleaxe"
@@ -14128,8 +14126,8 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #mor 12
 #maxage 45
 #startage 26
-#nametype 101 
-#gcost 10007
+#nametype 101
+#gcost 9995
 #rcost 1
 #rpcost 1
 #weapon 8 --"Broad Sword"
@@ -14164,7 +14162,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #maxage 50
 #startage 26
 #nametype 111 
-#gcost 10020
+#gcost 10010
 #rcost -20
 #rpcost 1
 #weapon 77 --"Ice Sword"
@@ -14184,6 +14182,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #name "Schizophrenic Cavalryman"
 #descr "Previously one of the best generals in Tur, but now has since lost his mind, along with his steed. He has retained his leadership capabilities, however."
 #mountmnr 5736
+#mountedhumanoid
 #ap 9
 #mapmove 10
 #hp 15
@@ -14199,7 +14198,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #maxage 50
 #startage 26
 #nametype 101 
-#gcost 10022
+#gcost 9995
 #rcost 1
 #rpcost 1
 #weapon 4 --"Lance"
@@ -14261,8 +14260,8 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #mor 13
 #maxage 50
 #startage 26
-#nametype 111 
-#gcost 10006
+#nametype 111
+#gcost 10010
 #rcost -20
 #rpcost 1
 #weapon 77 --"Ice Sword"
@@ -14286,6 +14285,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #name "Schizophrenic Horse-Priest"
 #descr "A crazed battlepriest who rides atop his equally-insane war horse. While he preaches the word of the One True God, his ramblings cause unease in the people around him."
 #mountmnr 5736
+#mountedhumanoid
 #hp 15
 #prot 0
 #size 3 
@@ -14299,7 +14299,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #maxage 50
 #startage 26
 #nametype 101 
-#gcost 10012
+#gcost 10010
 #rcost 1
 #rpcost 1
 #weapon 4 --"Lance"
@@ -14324,9 +14324,13 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #descr "Priests sometimes accompany armies, inspiring and blessing the soldiers. Priests can also banish undead beings and demons."
 #nametype 101
 #stealthy 10
-#gcost 10028
+#gcost 10012
 #shapechange 5740
 #insane 20
+#magicskill 0 1
+#magicskill 7 1
+#magicskill 9 1
+#custommagic 49280 100
 #end
 
 #newmonster 5740
@@ -14349,7 +14353,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #maxage 50
 #startage 26
 #nametype 101 
-#gcost 10028
+#gcost 10012
 #rcost 1
 #rpcost 2
 #magicskill 0 1
@@ -14444,10 +14448,16 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #name "Peasant"
 #descr "An annoyed human peasant armed with a farming implement."
 #nametype 101
-#gcost 10180
+#gcost 10010
 #rpcost 2
 #shapechange 5744
 #insane 20
+#magicskill 0 1
+#magicskill 7 1
+#magicskill 8 1
+#magicskill 9 2
+#custommagic 49280 100
+#shapechange 5743
 #end
 
 #newmonster 5744
@@ -14470,7 +14480,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #maxage 50
 #startage 26
 #nametype 101 
-#gcost 10180
+#gcost 10010
 #rcost 1
 #rpcost 2
 #weapon 9 --"Dagger"
@@ -14511,7 +14521,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #nametype 111 
 #gcost 10010
 #rcost 1
-#rpcost 2
+#rpcost 4
 #armor 124 --"Ice Helmet"
 #weapon 35 --"Ice Knife"
 #magicskill 1 3
@@ -14531,7 +14541,12 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #copystats 3822
 #name "Commoner"
 #descr "A female commoner. She is probably tired and just wants to finish her meal."
-#gcost 10200
+#gcost 10025
+#magicskill 0 2
+#magicskill 7 2
+#magicskill 8 1
+#custommagic 49280 100
+#custommagic 2560 25
 #insane 20
 #shapechange 5747
 #end
@@ -14556,7 +14571,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #maxage 50
 #startage 26
 #nametype 101 
-#gcost 10200
+#gcost 10035
 #rcost 1
 #rpcost 4
 #weapon 9 --"Dagger"
@@ -14573,7 +14588,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #insane 20
 #incunrest 5
 #shapechange 5746
-#makemonsters2 5757 -SCHIZO
+#makemonsters2 5757 --SCHIZO
 #end
 
 #newmonster 5748
@@ -14581,7 +14596,8 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #spr2 "./Ragha/c_bbird2.tga"
 #name "UN Wingless Officer"
 #descr "The Caelins of old always struggled to find a way to include their sacred non-flighted warriors in their battles. As often, they were left at home and never recruited. With the formation of the UN and the implosion of the Turs, the Caelins found that their gryffons were left behind, and the earthbound and wingless were given new purpose; in the skies. With their newfound determiniation and purpose, they find themselves able to receive their gods blessing."
-#mountmnr 6247
+#mountmnr 5749
+#mountedhumanoid
 #unmountedspr1 "./Ragha/c_mman1.tga"
 #unmountedspr2 "./Ragha/c_mman2.tga"
 #ap 12
@@ -14598,8 +14614,8 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #mor 15
 #maxage 50
 #startage 22
-#nametype 111 
-#gcost 10022
+#nametype 111
+#gcost 10015
 #rcost 1
 #rpcost 1
 #weapon 4 --"Lance"
@@ -14625,6 +14641,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #descr "These gryffons have been painted white and tattooed with the letters 'UN' on their flank. They are used in combat and also by non-flighted civilians to promote equality - as everyone should be able to fly."
 #copystats 2628
 #voidsanity 20
+#gcost 110
 #end
 
 #newmonster 5750
@@ -14634,6 +14651,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #descr "These are Abysian madmen who have at least managed to teach themselves enough combat skills to be able to hold a weapon. They constantly are looking over their shoulders and fear their own shadows. They have long since lost their sanity and are much more insane than most former Turans."
 #mor 8
 #insane 40
+#gcost 7
 #end
 
 #newmonster 5751
@@ -14641,7 +14659,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #copystats 2580
 #name "Schizophrenic Berserker"
 #desc "These soldiers have long since lost their sanity, previously they were given some proper military training. But now, their insanity has driven them to develop uncontrollable anger."
-#gcost 10016
+#gcost 10013
 #berserk 3
 #formationfighter -2
 #insane 40
@@ -14652,7 +14670,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #copystats 2581
 #name "Schizophrenic Heavy Berserker"
 #descr "These were previously properly trained Abysian soldiers. Now, after the implosion of Tur, these soldiers have snapped mentally and have driven themselves even further into insanity. The heavy infantry unit has regressed back to their Abysian roots, and are always full of rage and are never not berserking. They are a danger to what's left of Raghan society and are scary to be around."
-#gcost 10020
+#gcost 10015
 #autoberserk 1
 #formationfighter -2
 #berserk 4
@@ -14691,6 +14709,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #name "UN Wingless Flier"
 #descr "The Caelins of old always struggled to find a way to include their sacred non-flighted warriors in their battles. As often, they were left at home and never recruited. With the formation of the UN and the implosion of the Turs, the Caelins found that their gryffons were left behind, and the earthbound and wingless were given new purpose; in the skies. With their newfound determiniation and purpose, they find themselves able to receive their gods blessing."
 #mountmnr 5749
+#mountedhumanoid
 #unmountedspr1 "./Ragha/c_man1.tga"
 #unmountedspr2 "./Ragha/c_man2.tga"
 #ap 12
@@ -14708,7 +14727,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #maxage 50
 #startage 27
 #nametype 111 
-#gcost 10022
+#gcost 10015
 #rcost 1
 #rpcost 1
 #weapon 4 --"Lance"
@@ -14792,7 +14811,6 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #makemonsters5 5757
 #insanify 5
 #holy
-#montag 3008
 #end
 
 #newmonster 5759
@@ -14826,7 +14844,6 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #unique
 #magicbeing
 #neednoteat
-#montag 3009
 #magicskill 2 1
 #decscale 0 -5
 #incscale 2 -5
@@ -14862,7 +14879,6 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #stonebeing
 #magicbeing
 #neednoteat
-#montag 3010 
 #magicskill 2 2
 #magicskill 1 2
 #magicskill 7 2
@@ -14920,7 +14936,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #path 0 7
 #pathlevel 0 3
 #effect 10021
-#damage -3008
+#damage 5758
 #nreff 1
 #fatiguecost 1500
 #end
@@ -14952,7 +14968,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #path 0 2
 #pathlevel 0 2
 #effect 10021
-#damage -3009
+#damage 5759
 #nreff 1
 #fatiguecost 1000
 #end
@@ -14967,7 +14983,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #path 0 2
 #pathlevel 0 2
 #effect 10021
-#damage -3010
+#damage 5760
 #nreff 1
 #fatiguecost 2500
 #end
@@ -14995,7 +15011,7 @@ Half of the defenders must roll for defense or get 3 AP blunt damage."
 #rarity 0
 #req_nation 171
 #req_monster 5759
-#nation 185
+#nation -2
 #notext
 #nolog
 #incscale3 2
@@ -25232,23 +25248,5 @@ Ends by passing a very difficult (+8) morale check (results in a permanent curse
 
 --End of memeage Kernou-Ys
 ---------------------------------
-
-
---------------------------------------------------------------------------
--- Fallen Ragha
--- currently using
--- unit 6229-6259
--- site 1681-1685
--- montag 3008 (grand schizo)
--- nation 185
---------------------------------------------------------------------------
-
-
-
-
-
-
-
-
 
 
