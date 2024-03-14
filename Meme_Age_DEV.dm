@@ -13884,7 +13884,7 @@ Priests: Average"
 #name "Shadow Puppet"
 #descr "Black clouds billow forth and cover the lands of your Dominion. All enemies under your Dominion will perceive the heavens as dark and oppressing. The stronger the Dominion is, the more fearful the skies. The dark skies severely lower the morale of those affected. The darkness also gives slightly lowered attack and defense skills to units without darkvision."
 #restricted 170
-#school 7
+#school 6
 #researchlevel 7
 #path 0 8
 #pathlevel 0 5
@@ -16284,8 +16284,11 @@ Special: Commanders and Spawns are morphed into by Rellic Drones; most Rellic Cr
 #copystats 895
 #name "Zimba Priest"
 #descr "The many clans of of native tribals of Rhodesia are collectively dubbed as Zimbas. The Zimba Priest is a preacher of old Machakan faith that has since been converted to spreading the faith of Rhodesia. However, since many of them still hold attachment to their old fath, they have a small chance of deserting."
-#gcost 40
+#gcost 30
 #rpcost 1
+#clearmagic
+#magicskill 9 1
+#holy
 #slave
 #deserter 5
 #end
