@@ -1747,7 +1747,7 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #immortal
 #magicskill 4 2
 #magicskill 5 2
-#itemslots 12416 --1head2misc
+#itemslots 794624 --1head2misc
 #end
 
 #newmonster 5141
@@ -4065,7 +4065,7 @@ The Earthenblood Lord's trusty ride is now also an immortal Earthenblood horse. 
 #flying
 #norivercross
 #neednoteat
-
+#quadruped
 #end
 
 #newmonster 5231
@@ -6734,6 +6734,7 @@ While the rider is mundane mage commander of Tenki, the Dragon steed is held in 
 #weapon 20 --claw
 #animal
 #bravemount 33
+#quadruped
 #end
 
 #newmonster 5380
@@ -6999,6 +7000,7 @@ While the rider is mundane mage commander of Tenki, the Dragon steed is held in 
 #darkvision 50
 #stealthy 0
 #bravemount 50
+#quadruped
 #end
 
 #newmonster 5389
@@ -7029,6 +7031,7 @@ While the rider is mundane mage commander of Tenki, the Dragon steed is held in 
 #awe 1
 #nothrowoff
 #smartmount 100
+#quadruped
 #end
 
 #newsite 1619
@@ -7607,7 +7610,7 @@ This Shogun has mounted the greatest Mobile Suit forged by many skilled Construc
 --#magicskill 9 3
 #magicboost 53 2
 #combatcaster
-#itemslots 61446 --2 hand 4 misc
+#itemslots 3932166 --2 hand 4 misc
 #woundfend 5
 #awe 3
 #ambidextrous 4
@@ -7641,7 +7644,7 @@ This Shogun has mounted the greatest Mobile Suit forged by many skilled Construc
 #holy
 #okleader
 #combatcaster
-#itemslots 61446 --2 hand 4 misc
+#itemslots 3932166 --2 hand 4 misc
 #woundfend 1
 #awe 1
 #ambidextrous 2
@@ -7670,6 +7673,7 @@ This Shogun has mounted the greatest Mobile Suit forged by many skilled Construc
 #nametype 134
 #weapon 55 --hoof
 #nobarding
+#quadruped
 #end
 
 #newmonster 5417
@@ -7699,6 +7703,7 @@ This Shogun has mounted the greatest Mobile Suit forged by many skilled Construc
 #woundfend 1
 #invulnerable 10
 #reinvigoration 2
+#quadruped
 #end
 
 #selectspell 290
@@ -12159,7 +12164,7 @@ The Father of Flame is an utmost powerful priest that spreads the belief via fea
 #magicskill 0 2
 #magicskill 3 1
 #magicskill 5 1
-#itemslots 12288
+#itemslots 786432 --2 misc
 #maxage 5000
 #fireres 50
 #poisonres 25
@@ -12317,7 +12322,7 @@ The Father of Flame is an utmost powerful priest that spreads the belief via fea
 #magicskill 0 1
 #magicskill 1 1
 #magicskill 8 1
-#itemslots 12288
+#itemslots 786432 -- 2misc
 #maxage 5000
 #fireres 50
 #poisonres 25
@@ -14239,6 +14244,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #weapon 55 --"Hoof"
 #armor 253 --"Cataphract Barding"
 #insane 20
+#quadruped
 #end
 
 #newmonster 5737
@@ -16839,7 +16845,7 @@ The Rellic Titan requires a Rellic Queen to be nurtured. Due to their massive si
 #berserk 3
 #fear 10
 #reclimit 1
-#itemslots 15362
+#itemslots 983042 --1 hand 1 body 1 feet 2 misc
 #end
 
 #newmonster 5852
@@ -16870,7 +16876,7 @@ The Rellic Titan requires a Rellic Queen to be nurtured. Due to their massive si
 #spiritsight
 #berserk 5
 #fear 10
-#itemslots 15362
+#itemslots 983042 --1 hand 1 body 1 feet 2 misc
 #magicskill 0 1
 #magicskill 9 3
 #end
@@ -18330,7 +18336,7 @@ Priests: Average"
 #holy
 #poorleader
 #pooramphibian
-#itemslots 31878
+#itemslots 2040326 --standard but with 3 misc
 #startage 16
 #startitem 656 --"Las Pelagus Coin"
 #watershape 5953
@@ -18360,7 +18366,7 @@ Priests: Average"
 #poorleader
 #pooramphibian
 #female
-#itemslots 31878
+#itemslots 2040326 --standard but with 3 misc
 #startage 16
 #startitem 656 --"Las Pelagus Coin"
 #watershape 5954
@@ -18391,7 +18397,7 @@ Priests: Average"
 #holy
 #poorleader
 #pooramphibian
-#itemslots 31878
+#itemslots 1909254 --standard but with 3 misc NO FEET
 #startage 16
 #startitem 656 --"Las Pelagus Coin"
 #landshape 5951
@@ -18421,7 +18427,7 @@ Priests: Average"
 #poorleader
 #pooramphibian
 #female
-#itemslots 31878
+#itemslots 1909254 --standard but with 3 misc NO FEET
 #startage 16
 #startitem 656 --"Las Pelagus Coin"
 #landshape 5952
@@ -20181,7 +20187,7 @@ Priests: Powerful. Recalled God does not lose magic skills"
 #magicstudy 1
 #holy
 #magicskill 6 1
-#itemslots 290822 --2 hands 1 crown 3 misc
+#itemslots 18612230 --2 hands 1 crown 3 misc
 #poorleader
 #end
 
@@ -20224,7 +20230,7 @@ Priests: Powerful. Recalled God does not lose magic skills"
 #holy
 #magicskill 6 2
 #custommagic 58112 100
-#itemslots 290822 --2 hands 1 crown 3 misc
+#itemslots 18612230 --2 hands 1 crown 3 misc
 #poorleader
 #goodmagicleader
 #end
@@ -20269,7 +20275,7 @@ Priests: Powerful. Recalled God does not lose magic skills"
 #magicskill 6 3
 #custommagic 25344 100
 #custommagic 58112 100
-#itemslots 290822 --2 hands 1 crown 3 misc
+#itemslots 18612230 --2 hands 1 crown 3 misc
 #poorleader
 #goodmagicleader
 #end
@@ -21206,7 +21212,7 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 #nation -2
 #req_site 1
 #msg "The Short Kangz of Manletia show their Solidarity with the original people of Das'rite! [The Manlet Pit]"
-#5com 6112 --triple stack short king
+#5com 6111 --short kings
 #end
 
 #newevent
@@ -22335,68 +22341,75 @@ Naga Curse: Growth and Death scales have half effect on Population. During the b
 #end
 
 #newmonster 6111
-#spr1 "./Manletia/bakemono_chieflet1.tga"
-#spr2 "./Manletia/bakemono_chieflet2.tga"
-#name "Bakemono Chief"
-#descr "Two bakemonos stacked one atop the other. They tower over their piers making capable commanders. Their stature gives them sacred status on top of their great leadership. If they are slain, they are still able to lead. After battle if one survives, they are able to resume their sacred position.
-On the rare occasion that this chief is promoted he is able to assume an even more monstrous form."
-#weapon "Dagger"
-#weapon "Dagger"
-#weapon "Short Bow"
-#armor "Furs"
-
-#hp 12
-#ambidextrous 4
-#formationfighter -2
-#unsurr 2
+#spr1 "./Manletia/bakemonostack1.tga"
+#spr2 "./Manletia/bakemonostack2.tga"
+#unmountedspr1 "./Manletia/bakemonostackM1.tga"
+#unmountedspr2 "./Manletia/bakemonostackM2.tga"
+#name "Bakemono Warchief"
+#descr "The warchief of the Manletian Bakemono is a giant stack of bakemono. Reaching the amazing height of a Jotun, they provide great morale boost to all troops under their command. This height also grants them incredible advantage of extremely high amount of stsrikes of the individual bakemono that make up the stack."
 #ap 8
-#mapmove 12
-#size 3
-#def 12
+#mapmove 10
+#hp 12
+#prot 0
+#size 2
+#str 12
+#enc 3
+#att 11
+#def 11
 #prec 10
-#mor 14
-#goodleader
+#mr 10
+#mor 13
+#maxage 50
+#startage 39
+#nametype 151
+#gcost 10008
+#rcost 1
+#rpcost 7
+#weapon "Wakizashi"
+#weapon "Crossbow"
+#armor "Ashigaru Armor"
 #holy
-#rpcost 2
-#gcost 9990
+#darkvision 50
+#stealthy 0
 #mountainsurvival
-#itemslots 7582
-#xpshape 20
+#forestsurvival
+#mountedhumanoid
+#expertleader
+#inspirational 2
+#mountmnr 6112
+#nofriders 4
+#coridermnr 6113
+#xspr1 "./Manletia/bakemonostack3.tga"
+#xspr2 "./Manletia/bakemonostack4.tga"
+#xspr1 "./Manletia/bakemonostack5.tga"
+#xspr2 "./Manletia/bakemonostack6.tga"
+#xspr1 "./Manletia/bakemonostack7.tga"
+#xspr2 "./Manletia/bakemonostack8.tga"
 #end
 
 #newmonster 6112
-#spr1 "./Manletia/bakemono_warlord1.tga"
-#spr2 "./Manletia/bakemono_warlord2.tga"
-#name "Bakemono Warlord"
-#descr "The pinacle of Manletia. A bakemono combination inspired by the most influential oriental man'gua and me'cka scriptures. A towering commander who is the supreme inspiration to all manlets across time and space. Their increased height gives them sacred status as well as their rigorous training to fight in this stance gives them many abilities on the battlefield."
+#copystats 2467 --bakemono chief
+#spr1 "./Manletia/bakemonomount1.tga"
+#spr2 "./Manletia/bakemonomount2.tga"
+#name "Bottom Bakemono"
+#descr "The bottom bakemono are extremely strong manlets who have trained every day in attempts to grow taller but to no effect. Instead they shoulder the task of bringing others up taller. A noble task within Manletia and their eternal sacrifices will always be remembered."
+#clearweapons
+#cleararmor
 #weapon "Yari"
-#weapon "Wakizashi"
-#weapon "Dagger"
-#weapon "Crossbow"
 #armor "Ashigaru Armor"
-#hp 16
-#ambidextrous 6
-#formationfighter -2
-#unsurr 2
-#ap 10
-#mapmove 12
-#size 5
-#def 12
-#prec 12
-#mor 16
-#expertleader
 #holy
-#itemslots 8190
-#secondshape 6113
+#nobarding
+#itemslots 860678 -- doesnt work. mounts wont have slots, maybe it will down the line
+#nothrowoff
+#smartmount 100
+#bravemount 100
 #end
 
 #newmonster 6113
 #copystats 2467
 #copyspr 2467
-#descr "He is unbelievably pissed to be back at 5'11."
-#hp 12
-#berserk 6
-#firstshape 6112
+#name "Bakemono Co-rider"
+#descr "A corider of the gloriously tall Bakemono stack. They are just helpers to the chief and the rider and are thus not considered sacred."
 #end
 
 #newmonster 6114
@@ -22656,7 +22669,7 @@ Priests: Weak"
 #stealthy 5
 #assassin
 #scalewalls
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6152
@@ -22691,7 +22704,7 @@ Priests: Weak"
 #swimming
 #swampsurvival
 #goodleader
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6153
@@ -22728,7 +22741,7 @@ Priests: Weak"
 #holy
 #magicskill 9 1
 #combatcaster
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6154
@@ -22767,7 +22780,7 @@ Priests: Weak"
 #custommagic 25856 50
 #noleader
 #twiceborn 6169
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6155
@@ -22801,7 +22814,7 @@ Priests: Weak"
 #magicskill 2 2
 #custommagic 1920 200
 #custommagic 1920 10
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6156
@@ -22840,7 +22853,7 @@ Priests: Weak"
 #custommagic 9472 100
 #custommagic 9472 25
 #twiceborn 6168
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6157
@@ -22873,7 +22886,7 @@ Priests: Weak"
 #coldblood
 #swimming
 #swampsurvival
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6158
@@ -22906,7 +22919,7 @@ Priests: Weak"
 #coldblood
 #swimming
 #swampsurvival
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6159
@@ -22939,7 +22952,7 @@ Priests: Weak"
 #coldblood
 #swimming
 #swampsurvival
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6160
@@ -22973,7 +22986,7 @@ Priests: Weak"
 #coldblood
 #swimming
 #swampsurvival
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6161
@@ -23007,7 +23020,7 @@ Priests: Weak"
 #coldblood
 #swimming
 #swampsurvival
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6162
@@ -23041,7 +23054,7 @@ Priests: Weak"
 #coldblood
 #swimming
 #swampsurvival
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6163
@@ -23077,7 +23090,7 @@ Priests: Weak"
 #swimming
 #swampsurvival
 #standard 1
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6164
@@ -23111,7 +23124,7 @@ Priests: Weak"
 #swimming
 #swampsurvival
 #mountainsurvival
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6165
@@ -23145,7 +23158,7 @@ Priests: Weak"
 #swimming
 #swampsurvival
 #holy
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6166
@@ -23223,7 +23236,7 @@ Priests: Weak"
 #magicskill 9 2
 #reinvigoration 1
 #combatcaster
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6168
@@ -23258,7 +23271,7 @@ Priests: Weak"
 #neednoteat
 #spiritsight
 #entangle
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6169
@@ -23293,7 +23306,7 @@ Priests: Weak"
 #spiritsight
 #entangle
 #batstartsum1 "Frog" 2222
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6170
@@ -23336,7 +23349,7 @@ Priests: Weak"
 #magicskill 1 1
 #magicskill 2 1
 #magicskill 5 1
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6171
@@ -23452,7 +23465,7 @@ Priests: Weak"
 #magicskill 1 1
 #magicskill 5 1
 #montag 3005
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6174
@@ -23491,7 +23504,7 @@ Priests: Weak"
 #magicskill 2 1
 #magicskill 5 1
 #montag 3005
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6175
@@ -23528,7 +23541,7 @@ Priests: Weak"
 #magicskill 3 1
 #magicskill 5 1
 #montag 3005
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6176
@@ -23567,7 +23580,7 @@ Priests: Weak"
 #magicskill 0 1
 #magicskill 5 1
 #montag 3005
-#itemslots 14470 -- all except body
+#itemslots 926214 -- all except body
 #end
 
 #newmonster 6177
