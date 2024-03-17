@@ -10901,7 +10901,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
 #forestsurvival
 #heal
 #awe 2
-#reclimit 3
+#reclimit 4
 #end
 
 #selectmonster 2154
@@ -12631,7 +12631,7 @@ The Father of Flame is an utmost powerful priest that spreads the belief via fea
 #effect 10001
 #damage 5625
 #nreff 1
-#fatiguecost 1500
+#fatiguecost 1000
 #end
 
 #newspell
@@ -12645,9 +12645,9 @@ The Father of Flame is an utmost powerful priest that spreads the belief via fea
 #path 1 3
 #pathlevel 1 2
 #effect 10001
-#damage 5625
+#damage 5626
 #nreff 1
-#fatiguecost 1000
+#fatiguecost 700
 #end
 
 #newevent --BUILD MOLTEN CORE
@@ -13027,7 +13027,7 @@ Blesses: Being a destructive force against nature, Muspelheim cannot take any Na
 #msg "Commissar Engineer quickly constructed the fort and left."
 #req_fort 0
 #fort 1
-#killmon 5647
+#killcom 5647
 #end
 
 #newsite 1637
@@ -15298,7 +15298,7 @@ Priests: Average"
 #size 3
 #gcost 40
 #rcost 10
-#reclimit 3
+#reclimit 4
 #end
 
 #newmonster 5772
@@ -16661,7 +16661,7 @@ The Tidester requires a Relltide Fountain to be nurtured."
 #amphibian
 #spiritsight
 #miscshape
-#regeneration 10
+#reconst 10
 #slashres
 #bluntres
 #pierceres
@@ -22502,6 +22502,7 @@ He is a wielder of manlet magic, passed down to him by shamans and other short m
 #magicskill 6 1
 #magicskill 1 1
 #gcost 10010
+#rpcost 2
 #goodleader
 #end
 
@@ -22573,7 +22574,7 @@ He is a wielder of manlet magic, passed down to him by shamans and other short m
 #level 0
 #rarity 5
 #gems 6 2
-#homecom 345
+#homecom 411
 #homecom 2836
 #homecom 6118
 #end
