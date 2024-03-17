@@ -1250,7 +1250,7 @@ Being very dedicated to the nation, they demand no upfront payment to fit with t
 #armor "Buckler"
 #animal
 #forestsurvival
-#formationfighter 2
+#formationfighter 4
 #end
 
 #selectmonster 3128 --orphic mystic
@@ -1843,7 +1843,7 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #berserk 2
 #undisciplined
 #supplybonus -1
-#formationfighter -2
+#formationfighter -3
 #skirmisher 10
 #end
 
@@ -2184,7 +2184,7 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #end
 
 #newspell
-#copyspell 200
+#copyspell 271 --orgy
 #restricted 151
 #name "Food Orgy"
 #descr "The Gastromancers of Pythium is able to cook up some of the best tasting dishes to entice the sex crazed Satyr to come out from the wilds and initiate an orgy. During the orgy six women will be struck by the madness of the wild, shedding all clothes and civilized manners and turning to the wild as raging maenads. The satyr will remain after the orgy to lure more women into the wild."
@@ -2260,7 +2260,7 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #end
 
 #newspell
-#copyspell 771 --fire ele 
+#copyspell 992 --fire ele 
 #restricted 151
 #name "Summon Lesser Salt Elemental"
 #descr "The Gastromancer summons a Lesser Salt Elemental to aid him in a battle. Salt Elementals are powerful but shrink when taking heavy damage."
@@ -2273,7 +2273,7 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #end
 
 #newspell
-#copyspell 771 --fire ele 
+#copyspell 992 --fire ele 
 #restricted 151
 #name "Summon Salt Elemental"
 #descr "The Gastromancer summons a Lesser Salt Elemental to aid him in a battle. Salt Elementals are powerful but shrink when taking heavy damage."
@@ -2296,7 +2296,7 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #end
 
 #newspell
-#copyspell 191
+#copyspell 698 --gifts from heaven
 #restricted 151
 #name "Meatball from Heaven"
 #descr "The Gastromancers decided that summoning a giant magical ball to roll over the enemies is a great way to reuse the discarded ingredient from gastromancy. They will summon the ingredients and form it into a massive meatball to drop from the skies. Once they land, they will continue to roll around and crush enemies with their sheer mass."
@@ -4574,7 +4574,7 @@ Priests: Weak"
 #end
 
 #newspell
-#copyspell 1085 --bind demon knight
+#copyspell 1414 --bind demon knight
 #restricted 155
 #name "Bind Goetia Knight"
 #descr "The Knight of Goetia is a demonic knight from hell riding a demonic steed causing fear among everyone around him. They are annointed as sacred by the unholy inquisition of Masquerading Demons of Marignon."
@@ -5078,7 +5078,7 @@ Big Boss, Punished Macac, is a mercenary leader from and one of the founders of 
 #end
 
 #newspell
-#copyspell 770 -- Will o' Wisp
+#copyspell 991 -- Will o' Wisp
 #restricted 156
 #name "Sermon of the Jungle"
 #descr "The inquisition of Rio brings out the jungle drums and calls upon the forces of nature to assist in their conquest. Groups of untrained Wild Macacs will emerge from the edge of the battlefield and fight for their cause."
@@ -9241,7 +9241,7 @@ Priests: Powerful"
 #darkvision 50
 #wastesurvival
 #almostundead
-#formationfighter -2
+#formationfighter -3
 #end
 
 #newmonster 5478
@@ -10341,6 +10341,7 @@ AAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 
 #newspell
 #copyspell 1340 --growing fury
+#restricted 164
 #name "Portfolio Crash"
 #descr "Dump the value of all soldiers portfolios, sending them into a berserking rage."
 #path 0 5
@@ -13517,7 +13518,7 @@ Priests: Weak"
 #end
 
 #newspell
-#copyspell 1078 -- rain of toads
+#copyspell 1418 -- rain of toads
 #restricted 169
 #name "Designate Waste Street"
 #descr "The Bandar Shakti superpower can designate a new waste area in a remote province. The target province of this spell will experience 'toads' falling from their skies."
@@ -13527,7 +13528,7 @@ Priests: Weak"
 #end
 
 #newspell
-#copyspell 927 --arrow fend
+#copyspell 874 --arrow fend
 #restricted 169
 #name "Cricket Season"
 #descr "A bandar thaumascript expert can spoof a cricket season, causing all allies to bring out their cricket bats to cheer for their favourite teams. Instinctively allowing them to hit projectiles out of the air."
@@ -16822,7 +16823,7 @@ The Rellic Titan requires a Rellic Queen to be nurtured. Due to their massive si
 #mapmove 18
 #hp 144
 #prot 6
-#size 8
+#size 9
 #str 24
 #enc 4
 #att 14
@@ -16857,7 +16858,7 @@ The Rellic Titan requires a Rellic Queen to be nurtured. Due to their massive si
 #mapmove 18
 #hp 144
 #prot 6
-#size 8
+#size 9
 #str 26
 #enc 4
 #att 16
@@ -17998,7 +17999,7 @@ Priests: Weak"
 #rpcost 25
 #weapon "Meteorite Dagger"
 #weapon "Meteorite Dagger"
-#formationfighter -2
+#formationfighter -3
 #secondshape 5927
 #end
 
@@ -19961,7 +19962,7 @@ A Chosen Coomur is required in the province to erect this Idol."
 #armor "Shield"
 #female
 #standard 2
-#formationfighter 3
+#formationfighter 5
 #heal
 #holy
 #end
@@ -20005,7 +20006,7 @@ A Chosen Coomur is required in the province to erect this Idol."
 #end
 
 #newspell
-#copyspell 964 --mass regen
+#copyspell 1231 --mass regen
 #restricted 178
 #researchlevel 7
 #name "Gift of Life"
@@ -20015,7 +20016,7 @@ A Chosen Coomur is required in the province to erect this Idol."
 #end
 
 #newspell
-#copyspell 996 --teleport
+#copyspell 1303 --teleport
 #restricted 178
 #path 0 6
 #pathlevel 0 2
@@ -21085,6 +21086,18 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 #req_site 1
 #msg "The Chosen People of Zion show their Solidarity with the original people of Das'rite! [Asherite Merchant's Guild]"
 #exactgold 1
+#end
+
+#newevent
+#rarity 5
+#req_unique 1
+#req_fullowner 1
+#req_fornation 180
+#req_monster 6050 --yakub
+#nation -2
+#req_site 1
+#msg "The Blue Helmets of Fallen Ragha show their Solidarity with the original people of Das'rite! [UN Headquarters]"
+#2d6units 5748
 #end
 
 #newevent
@@ -22255,7 +22268,7 @@ Naga Curse: Growth and Death scales have half effect on Population. During the b
 #armor "Buckler"
 #armor "Iron Cap"
 #mor 10
-#reclimit 5
+#reclimit 8
 #xpshape 15
 #end
 
@@ -22269,7 +22282,7 @@ Naga Curse: Growth and Death scales have half effect on Population. During the b
 #armor "Buckler"
 #armor "Iron Cap"
 #armor "Full Chain Mail"
-#formationfighter 2
+#formationfighter 3
 #holy
 #size 3
 #ap 6
@@ -22282,7 +22295,7 @@ Naga Curse: Growth and Death scales have half effect on Population. During the b
 #copystats 3405
 #name "Hirdvaetti rejects"
 #descr "Once the personal guards of a Jarl, now swordmasters at the service of disgraced races such as themselves. When improved a coexisting dependacy forms with a wolf that boosts their height and grants them sacred status."
-#reclimit 3
+#reclimit 5
 #xpshape 20
 #end
 
@@ -22543,11 +22556,6 @@ He is a wielder of manlet magic, passed down to him by shamans and other short m
 #fatiguecost 800
 #end
 
-#newspell
-#restricted 182
-#copyspell 1172
-#end
-
 #newsite 1674
 #name "Mountain of Growth"
 #path 3
@@ -22604,7 +22612,7 @@ Priests: Weak"
 #addreccom 6115
 #addreccom 1608
 #addreccom 2836
-#addreccom 345
+#addreccom 411
 #addreccom 3407
 #addreccom 3408
 #addreccom 6118
