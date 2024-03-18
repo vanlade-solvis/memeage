@@ -502,7 +502,7 @@
 #blunt
 #bonus
 #dmg -2
-#att -1
+#att -3
 #len 1
 #sound 10
 #charge
@@ -742,6 +742,17 @@
 #sound 13
 #flyspr 109 1
 #range0
+#end
+
+#newweapon 1650
+#copyweapon 262
+#name "Sticky Shot"
+#att -2
+#nratt 3
+#range 3
+#ammo 1
+#rcost 0
+#natural
 #end
 
 --- Lucky Fish Weapons ---
@@ -2199,7 +2210,7 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #name "Sculpt Chocolate Golem"
 #descr "With a delicate hand and love for gourmet, a Gastromancer is capable of creating a magically animated chocolate golem to destroy his enemies."
 #school 3
-#researchlevel 5
+#researchlevel 4
 #path 0 3
 #pathlevel 0 2
 #path 1 2
@@ -2215,7 +2226,7 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #name "Cook the Noodle that Flies"
 #descr "The recipe attempts to create perfection in the noodle arts. Once created, the dish will instantly spring into life and start targetting the enemies of gastromancy."
 #school 3
-#researchlevel 9
+#researchlevel 8
 #path 0 0
 #pathlevel 0 3
 #path 1 2
@@ -2232,7 +2243,7 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #name "Uma Delicia"
 #descr "The recipe cooks the controversial and partially forbidden recipe Sopa de Macac. Requiring a sentient and magically potent life of Macac as its sacrifice for this ultimate delicacy. The remains of such a feast still contains the magical powers of the sacrificed Macac and can be magically bound to serve the chef."
 #school 3
-#researchlevel 7
+#researchlevel 6
 #path 0 6
 #pathlevel 0 3
 #path 1 3
@@ -2248,7 +2259,7 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #name "Living Butter"
 #descr "The Gastromancers have discovered the means to animate the butter used in their recipes. The butter is extremely slippery and difficult to hit, even when surrounded by large amounts of enemies. This makes them a highly formidable fighter."
 #school 3
-#researchlevel 5
+#researchlevel 4
 #path 0 2
 #pathlevel 0 1
 #path 1 1
@@ -2382,6 +2393,8 @@ Priests: Powerful"
 #hero1 5135
 #hero2 5136
 #hero3 5137
+
+#addgod 6231 --fridge
 
 #startcom 1869
 #startunittype1 5141
@@ -3067,7 +3080,7 @@ They should never join the actual military as their duty is to defend their home
 #startdom 2
 #gcost 160
 #rcost 1
-#size 8
+#size 10
 #hp 110
 #str 23
 #att 17
@@ -3126,7 +3139,7 @@ They should never join the actual military as their duty is to defend their home
 #name "Construct Warthog"
 #descr "Creates the ultimate fully automatic crossbow carrier capable of extreme high rate of fire."
 #school 3
-#researchlevel 7
+#researchlevel 6
 #path 0 3
 #pathlevel 0 2
 #path 1 1
@@ -3142,7 +3155,7 @@ They should never join the actual military as their duty is to defend their home
 #name "Construct Wargator"
 #descr "Creates the ultimate redneck ballista carrier capable of extreme penetration."
 #school 3
-#researchlevel 7
+#researchlevel 6
 #path 0 3
 #pathlevel 0 2
 #path 1 1
@@ -8635,7 +8648,7 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 #path 0 7
 #pathlevel 0 3
 #effect 10082
-#hiddenench
+#hiddenench 1
 #damage 600
 #nreff 1
 #fatiguecost 0
@@ -8645,7 +8658,7 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 #newspell
 #restricted 161
 #name "Rally Terrorist"
-#descr "A powerful astral mage can use information warfare to influence the minds of many to act in the interest of the caster. However, an Agent must be present in that province for this to work."
+#descr "A powerful glamour mage can use information warfare to influence the minds of many to act in the interest of the caster. However, an Agent must be present in that province for this to work."
 #school 5
 #researchlevel 5
 #path 0 7
@@ -10948,7 +10961,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
 #name "Construct Power Gym"
 #descr "Construction of the Power Gym in captured capitols grants all sacreds of Pangaea more Strength. However, if taken and claimed by another nation, the bonus will also be granted to them."
 #school 3
-#researchlevel 5
+#researchlevel 4
 #path 0 3
 #pathlevel 0 1
 #effect 10083
@@ -10992,7 +11005,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
 #name "Construct Dryad Gym"
 #descr "Construction of the Dryad Gym in captured capitols grants all sacreds of Pangaea more defense and reinvigoration. However, if taken and claimed by another nation, the bonus will also be granted to them."
 #school 3
-#researchlevel 5
+#researchlevel 4
 #path 0 3
 #pathlevel 0 1
 #effect 10083
@@ -11640,7 +11653,7 @@ The Unyielding Einhere are bestowed power by the Pretender who is Lady of Love."
 #startdom 2
 #gcost 270
 #rcost 1
-#size 8
+#size 10
 #hp 155
 #str 27
 #att 17
@@ -12389,6 +12402,7 @@ The Father of Flame is an utmost powerful priest that spreads the belief via fea
 #ethereal
 #magicbeing
 #firepower 1
+#float
 #addupkeep -45
 #end
 
@@ -12607,7 +12621,7 @@ The Father of Flame is an utmost powerful priest that spreads the belief via fea
 #name "Molten Construct"
 #descr "Using the magical sparks of Muspel, a fire mage can string together bodies of the dead and reanimate them into fleshly constructs."
 #school 3
-#researchlevel 1
+#researchlevel 2
 #path 0 0
 #pathlevel 0 1
 #path 1 5
@@ -12623,7 +12637,7 @@ The Father of Flame is an utmost powerful priest that spreads the belief via fea
 #name "Create Molten Monstra"
 #descr "Using the magical sparks of Muspel, a flying beast form by molten rocks can be created. Albeit expensive, they are designed to provide air superiority to the Muspel army."
 #school 3
-#researchlevel 5
+#researchlevel 4
 #path 0 0
 #pathlevel 0 3
 #path 1 3
@@ -12639,7 +12653,7 @@ The Father of Flame is an utmost powerful priest that spreads the belief via fea
 #name "Magma Golem"
 #descr "A magma golem is a giant construct made of the molten materials from the rivers of Muspelheim. The construct is constantly burning with extreme heat, often melting anything it touches."
 #school 3
-#researchlevel 7
+#researchlevel 6
 #path 0 0
 #pathlevel 0 5
 #path 1 3
@@ -14331,7 +14345,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #descr "Priests sometimes accompany armies, inspiring and blessing the soldiers. Priests can also banish undead beings and demons."
 #nametype 101
 #stealthy 10
-#gcost 10012
+#gcost 9980
 #shapechange 5740
 #insane 20
 #magicskill 0 1
@@ -14360,7 +14374,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #maxage 50
 #startage 26
 #nametype 101 
-#gcost 10012
+#gcost 9980
 #rcost 1
 #rpcost 2
 #magicskill 0 1
@@ -14455,7 +14469,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #name "Peasant"
 #descr "An annoyed human peasant armed with a farming implement."
 #nametype 101
-#gcost 10010
+#gcost 9980
 #rpcost 2
 #shapechange 5744
 #insane 20
@@ -14487,7 +14501,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #maxage 50
 #startage 26
 #nametype 101 
-#gcost 10010
+#gcost 9980
 #rcost 1
 #rpcost 2
 #weapon 9 --"Dagger"
@@ -14548,7 +14562,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #copystats 3822
 #name "Commoner"
 #descr "A female commoner. She is probably tired and just wants to finish her meal."
-#gcost 10025
+#gcost 9985
 #magicskill 0 2
 #magicskill 7 2
 #magicskill 8 1
@@ -14578,7 +14592,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #maxage 50
 #startage 26
 #nametype 101 
-#gcost 10035
+#gcost 9985
 #rcost 1
 #rpcost 4
 #weapon 9 --"Dagger"
@@ -15113,7 +15127,7 @@ Priests: Average"
 #defmult2 14
 #wallunit 5754
 
-#addgod 6231
+#addgod 6231 --fridge
 
 #defchaos 1
 #moreorder -1
@@ -15499,6 +15513,8 @@ Priests: Powerful"
 #defmult2 16
 #wallunit 2740
 
+#cavenation 2
+
 #clearsites
 #startsite "Flooded Depths"
 #startsite "Noshur Vivors"
@@ -15750,7 +15766,7 @@ The Tunalik can spend 1 month fishing for semi-intelligent creatures to bolster 
 #mapmove 18
 #hp 83
 #prot 26
-#size 8
+#size 9
 #str 19
 #enc 4
 #att 14
@@ -16062,7 +16078,7 @@ Priests: Average"
 #mapmove 0
 #hp 146
 #prot 6
-#size 8
+#size 10
 #str 12
 #enc 1
 #att 4
@@ -19479,6 +19495,7 @@ Priests: Average"
 #rpcost 1
 #weapon "Arm Charge"
 #weapon "Fist"
+#weapon "Sticky Shot"
 #armor "Furs"
 #reinvigoration -1
 #stealthy 0
@@ -19513,6 +19530,7 @@ Priests: Average"
 #rpcost 2
 #weapon "Arm Charge"
 #weapon "Quarterstaff"
+#weapon "Sticky Shot"
 #armor "Furs"
 #holy
 #lanceok
@@ -19560,6 +19578,9 @@ Priests: Average"
 #rpcost 2
 #weapon "Arm Charge"
 #weapon "Quarterstaff"
+#weapon "Sticky Shot"
+#weapon "Sticky Shot"
+#weapon "Sticky Shot"
 #armor "Furs"
 #holy
 #lanceok
@@ -19595,6 +19616,7 @@ Priests: Average"
 #rpcost 4
 #weapon "Arm Charge"
 #weapon "Quarterstaff"
+#weapon "Sticky Shot"
 #armor "Furs"
 #holy
 #lanceok
@@ -19704,7 +19726,7 @@ A Chosen Coomur is required in the province to erect this Idol."
 #mapmove 0
 #hp 166
 #prot 10
-#size 8
+#size 9
 #str 12
 #enc 0
 #att 6
@@ -19767,6 +19789,7 @@ A Chosen Coomur is required in the province to erect this Idol."
 #rpcost 1
 #weapon "Arm Charge"
 #weapon "Halberd"
+#weapon "Sticky Shot"
 #armor "Bronze Cap"
 #armor "Scale Mail Hauberk"
 #armor "Light Buckler"
@@ -19800,6 +19823,7 @@ A Chosen Coomur is required in the province to erect this Idol."
 #rpcost 9
 #weapon "Arm Charge"
 #weapon "Halberd"
+#weapon "Sticky Shot"
 #armor "Furs"
 #reinvigoration -1
 #lanceok
@@ -19862,6 +19886,7 @@ A Chosen Coomur is required in the province to erect this Idol."
 #rpcost 13
 #weapon "Arm Charge"
 #weapon "Great Sword"
+#weapon "Sticky Shot"
 #armor "Furs"
 #reinvigoration -1
 #lanceok
@@ -20245,7 +20270,7 @@ Priests: Powerful. Recalled God does not lose magic skills"
 #mapmove 6
 #hp 177
 #prot 18
-#size 8
+#size 9
 #str 15
 #enc 1
 #att 9
@@ -20765,7 +20790,7 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 #name "Floating Pyramid"
 #descr "The great pyramid is a flying contraption built by the original kangs of the world. They were memorial grounds of the ancient pantokrator after they left the universe. Their antitheft life drain technology is extremely powerful when combined with the fact that the object is built of solid stone and very difficult to damage. While powered by magic, the chassis itself is created with raw slave work and mundane materials. They are very slow moving when in combat mode as the weapon systems are costly, however when all the magicka is directed into the thrusters, they are able to move quickly across the world."
 #gcost 0
-#size 8
+#size 10
 #hp 260
 #str 20
 #att 5
@@ -20799,13 +20824,13 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 #name "Construct Pyrmaid"
 #descr "Creates the most iconic hallmark of OG black civilization."
 #school 3
-#researchlevel 7
+#researchlevel 8
 #path 0 3
 #pathlevel 0 4
 #effect 10001
 #damage 6058
 #nreff 1
-#fatiguecost 4000
+#fatiguecost 3000
 #onlymnr 6057
 #end
 
@@ -22359,7 +22384,7 @@ Naga Curse: Growth and Death scales have half effect on Population. During the b
 #unmountedspr1 "./Manletia/bakemonostackM1.tga"
 #unmountedspr2 "./Manletia/bakemonostackM2.tga"
 #name "Bakemono Warchief"
-#descr "The warchief of the Manletian Bakemono is a giant stack of bakemono. Reaching the amazing height of a Jotun, they provide great morale boost to all troops under their command. This height also grants them incredible advantage of extremely high amount of stsrikes of the individual bakemono that make up the stack."
+#descr "The warchief of the Manletian Bakemono is a giant stack of bakemono. Reaching the amazing height of a Jotun, they provide great morale boost to all troops under their command. This height also grants them incredible advantage of extremely high amount of stsrikes of the individual bakemono that make up the stack. The Warchief being of highest and tallest status within Manletia is naturally adorned with large amounts of jewelry."
 #ap 8
 #mapmove 10
 #hp 12
@@ -22375,9 +22400,9 @@ Naga Curse: Growth and Death scales have half effect on Population. During the b
 #maxage 50
 #startage 39
 #nametype 151
-#gcost 10008
+#gcost 9950
 #rcost 1
-#rpcost 7
+#rpcost 1
 #weapon "Wakizashi"
 #weapon "Crossbow"
 #armor "Ashigaru Armor"
@@ -22392,6 +22417,7 @@ Naga Curse: Growth and Death scales have half effect on Population. During the b
 #mountmnr 6112
 #nofriders 4
 #coridermnr 6113
+#itemslots 4006406 -- standard slots no feet with 4 misc
 #xspr1 "./Manletia/bakemonostack3.tga"
 #xspr2 "./Manletia/bakemonostack4.tga"
 #xspr1 "./Manletia/bakemonostack5.tga"
@@ -22412,10 +22438,9 @@ Naga Curse: Growth and Death scales have half effect on Population. During the b
 #armor "Ashigaru Armor"
 #holy
 #nobarding
-#itemslots 860678 -- doesnt work. mounts wont have slots, maybe it will down the line
 #nothrowoff
-#smartmount 100
 #bravemount 100
+#itemslots 860678 -- doesnt work. mounts wont have slots, maybe it will down the line
 #end
 
 #newmonster 6113
@@ -22476,6 +22501,7 @@ He is a wielder of manlet magic, passed down to him by shamans and other short m
 #armor "Leather Cap"
 #armor "Robes"
 #gcost 0
+#xpshape 20
 #end
 
 #newmonster 6117
@@ -22520,7 +22546,69 @@ He is a wielder of manlet magic, passed down to him by shamans and other short m
 #armor "Full Plate Mail"
 #armor "Full Helmet"
 #gcost 16
-#rcost 10 --without this, it is 19 resources for a 23 protection size 1
+#rcost 8 --without this, it is 19 resources for a 23 protection size 1
+#end
+
+#newmonster 6120
+#spr1 "./Manletia/bakemonostack5.tga"
+#spr2 "./Manletia/bakemonostack6.tga"
+#unmountedspr1 "./Manletia/bakemonostackM1.tga"
+#unmountedspr2 "./Manletia/bakemonostackM2.tga"
+#name "Bakemono Warstack"
+#descr "The Warstack consists of many bakemono sitting on each other's shoulders to achieve greater heights. Without proper training of the Warchief stacks, these bakemono can only reach the stack height of 3, matching the average human and are thus visible in the eyes of beings with the #female tag. This granted the top rider of the stack sacred status within Manletia society, albeit it is contested due to the unstable nature of such a creation. The lack of formal training also makes it impossible for the stack to reform after being broken down."
+#ap 8
+#mapmove 10
+#hp 10
+#prot 0
+#size 2
+#str 11
+#enc 3
+#att 11
+#def 11
+#prec 10
+#mr 10
+#mor 13
+#maxage 50
+#startage 39
+#nametype 151
+#gcost 25
+#rcost 1
+#rpcost 10
+#reclimit 3
+#weapon "Wakizashi"
+#armor "Ashigaru Armor"
+#holy
+#darkvision 50
+#stealthy 0
+#mountainsurvival
+#forestsurvival
+#mountedhumanoid
+#inspirational 1
+#mountmnr 6121
+#nofriders 2
+#coridermnr 6113
+#noremount
+#xspr1 "./Manletia/bakemonostack7.tga"
+#xspr2 "./Manletia/bakemonostack8.tga"
+#end
+
+#newmonster 6121
+#copystats 2467 --bakemono chief
+#spr1 "./Manletia/bakemonomount1.tga"
+#spr2 "./Manletia/bakemonomount2.tga"
+#name "Bottom Bakemono"
+#descr "The bottom bakemono are extremely strong manlets who have trained every day in attempts to grow taller but to no effect. Instead they shoulder the task of bringing others up taller. A noble task within Manletia and their eternal sacrifices will always be remembered."
+#clearweapons
+#cleararmor
+#gcost 6
+#rcost 1
+#rpcost 1
+#weapon "Yari"
+#armor "Ashigaru Armor"
+#nobarding
+#itemslots 860678 -- doesnt work. mounts wont have slots, maybe it will down the line
+#nothrowoff
+#bravemount 100
 #end
 
 #newspell
@@ -22565,6 +22653,7 @@ He is a wielder of manlet magic, passed down to him by shamans and other short m
 #gems 3 2
 #gems 1 1
 #homecom 6111
+#homemon 6120
 #decscale 3
 #end
 
@@ -23179,7 +23268,7 @@ Priests: Weak"
 #mapmove 16
 #hp 165
 #prot 20
-#size 8
+#size 10
 #str 26
 #enc 0
 #att 14
@@ -23601,7 +23690,7 @@ Priests: Weak"
 #mapmove 20
 #hp 165
 #prot 20
-#size 8
+#size 10
 #str 18
 #enc 10
 #att 16
