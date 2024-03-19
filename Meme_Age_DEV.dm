@@ -13033,7 +13033,7 @@ Blesses: Being a destructive force against nature, Muspelheim cannot take any Na
 
 #newevent
 #rarity 5
-#req_mnr 5647 --engineer
+#req_commander 5647 --engineer
 #req_pop0ok
 #req_fornation 168
 #nolog
