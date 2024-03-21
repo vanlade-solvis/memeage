@@ -14979,6 +14979,15 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 
 #newspell
 #restricted 171
+#name "Close Fridge"
+#school -1
+#effect 10084
+#damage 94
+#fatiguecost 0
+#end
+
+#newspell
+#restricted 171
 #name "Open Fridge"
 #descr "A UN Intern opens the magical fridge to cool things off."
 #details "Raises cold scale."
@@ -14993,15 +15002,6 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #damage 94
 #effect 10042
 #nextspell "Close Fridge"
-#end
-
-#newspell
-#restricted 171
-#name "Close Fridge"
-#school -1
-#effect 10084
-#damage 94
-#fatiguecost 0
 #end
 
 #newspell
@@ -15542,6 +15542,14 @@ Priests: Powerful"
 #hero5 2760
 #hero6 2761
 #hero7 2762
+
+#addgod 3192 -- great camazotz
+#addgod 653 -- snakenigger
+#addgod 657 -- monolith
+#addgod 3639 -- crystal
+#addgod 3876 -- geyser lmao
+#addgod 269 -- wyrm
+#addgod 606 -- great mommy
 
 #startcom 2675
 #startunittype1 2738
@@ -17872,7 +17880,7 @@ Priests: Weak"
 #maxage 50
 #startage 22
 #nametype 126
-#gcost 10010
+#gcost 10005
 #rcost 7
 #rpcost 1
 #weapon "Meteorite Spear"
@@ -17938,7 +17946,7 @@ Priests: Weak"
 #enc 2
 #att 10
 #def 10
-#prec 10
+#prec 11
 #mr 10
 #mor 10
 #maxage 50
@@ -17973,7 +17981,7 @@ Priests: Weak"
 #maxage 50
 #startage 22
 #nametype 126
-#gcost 15
+#gcost 13
 #rcost 5
 #rpcost 10
 #weapon "Meteorite Spear"
@@ -18001,7 +18009,7 @@ Priests: Weak"
 #maxage 50
 #startage 22
 #nametype 126
-#gcost 15
+#gcost 14
 #rcost 7
 #rpcost 10
 #weapon "Meteorite Spear"
@@ -18028,7 +18036,7 @@ Priests: Weak"
 #maxage 50
 #startage 22
 #nametype 126
-#gcost 15
+#gcost 14
 #rcost 7
 #rpcost 10
 #weapon "Meteorite Baton"
@@ -18055,8 +18063,8 @@ Priests: Weak"
 #maxage 50
 #startage 22
 #nametype 126
-#gcost 29
-#rcost 1
+#gcost 28
+#rcost 5
 #rpcost 25
 #weapon "Meteorite Dagger"
 #weapon "Meteorite Dagger"
@@ -18085,7 +18093,7 @@ Priests: Weak"
 #startage 22
 #nametype 126
 #gcost 28
-#rcost 1
+#rcost 5
 #rpcost 15
 #weapon "Meteorite Claws"
 #berserk 1
