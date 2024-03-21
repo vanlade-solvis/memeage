@@ -14193,6 +14193,8 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #coldres 15
 #iceprot 2
 #appetite -1
+#orderrecscale 0
+#coldrec 0
 #flying
 #voidsanity 20
 #goodleader
@@ -14292,6 +14294,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #armor 28 --"Ice Aegis"
 #coldres 15
 #coldrec 0
+#orderrecscale 0
 #iceprot 2
 #appetite -1
 #magicskill 9 1
@@ -14389,6 +14392,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #fireres 15
 #darkvision 50
 #heatrec 0
+#chaosrecscale 0
 #wastesurvival
 #mountainsurvival
 #incunrest 5
@@ -14423,6 +14427,8 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #magicskill 9 1
 #custommagic 2816 100
 #researchbonus 4
+#coldrec 0
+#orderrecscale 0
 #voidsanity 20
 #coldres 5
 #poorleader
@@ -14458,6 +14464,8 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #magicskill 7 1
 #magicskill 9 2
 #custommagic 19200 100
+#coldrec 1
+#orderrecscale 1
 #incunrest -5
 #voidsanity 20
 #coldres 10
@@ -14516,6 +14524,7 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #fireres 15
 #darkvision 50
 #heatrec 1
+#chaosrecscale 1
 #wastesurvival
 #mountainsurvival
 #insane 20
@@ -14546,13 +14555,14 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #rpcost 4
 #armor 124 --"Ice Helmet"
 #weapon 35 --"Ice Knife"
-#magicskill 1 3
-#magicskill 4 1
+#magicskill 1 2 --so you stop bitching about a4 access
+#magicskill 4 2
 #magicskill 7 1
 #custommagic 19200 100
 #custommagic 32896 25
 #goodleader
 #coldrec 1
+#orderrecscale 1
 #incunrest -5
 #voidsanity 20
 #coldres 15
@@ -14680,9 +14690,11 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #copyspr 2580 --turan inf
 #copystats 2580
 #name "Schizophrenic Berserker"
-#desc "These soldiers have long since lost their sanity, previously they were given some proper military training. But now, their insanity has driven them to develop uncontrollable anger."
+#desc "These soldiers have long since lost their sanity, previously they were given some proper military training. But now, their insanity has driven them to develop uncontrollable anger. Some of them have lingering injuries from the chaos that they've caused."
 #gcost 10013
+#startaff 20
 #berserk 3
+#chaosrecscale 1
 #formationfighter -2
 #insane 40
 #end
@@ -14691,10 +14703,12 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #copyspr 2581 --turan heavy
 #copystats 2581
 #name "Schizophrenic Heavy Berserker"
-#descr "These were previously properly trained Abysian soldiers. Now, after the implosion of Tur, these soldiers have snapped mentally and have driven themselves even further into insanity. The heavy infantry unit has regressed back to their Abysian roots, and are always full of rage and are never not berserking. They are a danger to what's left of Raghan society and are scary to be around."
+#descr "These were previously properly trained Abysian soldiers. Now, after the implosion of Tur, these soldiers have snapped mentally and have driven themselves even further into insanity. The heavy infantry unit has regressed back to their Abysian roots, and are always full of rage and are never not berserking. They are a danger to what's left of Raghan society and are scary to be around. Many of them have lingering injuries from the chaos that they've caused."
 #gcost 10015
 #autoberserk 1
 #formationfighter -2
+#chaosrecscale 1
+#startaff 40
 #berserk 4
 #insane 50
 #end
@@ -14978,6 +14992,16 @@ Dominion: Forted and templed provinces will automatically kill heathens and conv
 #nref 1
 #damage 94
 #effect 10042
+#nextspell "Close Fridge"
+#end
+
+#newspell
+#restricted 171
+#name "Close Fridge"
+#school -1
+#effect 10084
+#damage 94
+#fatiguecost 0
 #end
 
 #newspell
@@ -15027,7 +15051,7 @@ Half of the defenders must roll for defense or get 3 AP blunt damage."
 #fatiguecost 2000
 #end
 
---event to make it fucking cold/order in cap, only works when FRIDGE is alive
+--events to make it fucking cold/order in cap, only works when FRIDGE is alive
 
 #newevent
 #rarity 0
@@ -15037,7 +15061,17 @@ Half of the defenders must roll for defense or get 3 AP blunt damage."
 #notext
 #nolog
 #incscale3 2
-#incscale3 -0
+#end
+
+#newevent
+#rarity 0
+#req_nation 171
+#req_monster 5759
+#nation -2
+#notext
+#nolog
+#incscale3 2
+#decscale3 0
 #end
 
 --nation shit
@@ -15129,6 +15163,8 @@ Priests: Average"
 #wallunit 5754
 
 #addgod 6231 --fridge
+#addgod 486 --great warlock
+#addgod 509 --seraph bitch
 
 #defchaos 1
 #moreorder -1
@@ -15490,6 +15526,14 @@ Priests: Powerful"
 #forestrec 2739
 #caverec 2738
 #caverec 2739
+
+#addgod 3192 --great camazotz
+#addgod 635 --serpent king
+#addgod 657 --monolith
+#addgod 3639 --crystal
+#addgod 3876 --geyser
+#addgod 269 --wyrm
+#addgod 606 --great mother
 
 #hero1 2692
 #hero2 2757
@@ -21122,7 +21166,7 @@ When the Voice of Yakub visits the conquered capitol of another nation, he will 
 #req_monster 6050 --yakub
 #nation -2
 #req_site 1
-#msg "The Blue Helmets of Fallen Ragha show their Solidarity with the original people of Das'rite! [UN Headquarters]"
+#msg "The Blue Helmets of Fallen Ragha finally admit to funding the original people of Das'rite! [UN Headquarters]"
 #2d6units 5748
 #end
 
