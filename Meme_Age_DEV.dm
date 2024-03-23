@@ -9960,7 +9960,6 @@ The current decision is to (BUY). The Stonks King will make small profits in the
 #magicskill 9 3
 #maxage 60
 #immobile
-#homesick 50
 #swimming
 #coldblood
 #swampsurvival
@@ -9994,7 +9993,6 @@ The current decision is to (SELL). The Stonks King will make small profits in th
 #magicskill 9 3
 #maxage 60
 #immobile
-#homesick 50
 #swimming
 #coldblood
 #swampsurvival
