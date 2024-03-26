@@ -5924,7 +5924,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #hp 22
 #prot 3
 #size 3
-#str 12
+#str 14
 #enc 0
 #att 13
 #def 11
@@ -5935,8 +5935,8 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #startage 155
 #nametype 121
 #gcost 0
-#weapon 29 --claw
-#weapon 29 --claw
+#weapon 236 --claw
+#weapon 236 --claw
 #weapon 20 --bite
 #holy
 #secondtmpshape 5341
@@ -6043,8 +6043,8 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #startage 155
 #nametype 121
 #gcost 0
-#weapon 29 --claw
-#weapon 29 --claw
+#weapon 236 --claw
+#weapon 236 --claw
 #weapon 142 --touch of leprosy
 #holy
 #secondtmpshape 5341
@@ -8533,7 +8533,7 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 #maxage 50
 #startage 14
 #gcost 0
-#weapon 29 -- "Claw"
+#weapon 236 -- "Claw"
 #amphibian
 #darkvision 50
 #poisonskin 50
@@ -8593,7 +8593,7 @@ Humanity... All of my suffering on this world has been at the hands of humanity,
 #maxage 50
 #startage 38
 #gcost 0
-#weapon 29 -- "Claw"
+#weapon 236 -- "Claw"
 #amphibian
 #darkvision 50
 #poisonskin 50
@@ -13882,8 +13882,8 @@ Priests: Average"
 #def 14
 #clearweapons
 #weapon "Beak"
-#weapon 29 --claw
-#weapon 29 --claw
+#weapon 236 --claw
+#weapon 236 --claw
 #end
 
 #newspell
@@ -16589,7 +16589,7 @@ The Greater Relling requires a Rellic Pit to be nurtured."
 #rcost 1
 #rpcost 7
 #weapon 20 --bite
-#weapon 29 --claw
+#weapon 236 --claw
 #amphibian
 #spiritsight
 #heal
@@ -16621,7 +16621,7 @@ The Greater Relling requires a Rellic Pit to be nurtured."
 #rcost 1
 #rpcost 7
 #weapon "Caustic Spit"
-#weapon 29 --claw
+#weapon 236 --claw
 #amphibian
 #spiritsight
 #quadruped
@@ -16655,7 +16655,7 @@ The Rellic Barrager requires a Rellic Nest to be nurtured."
 #rpcost 9
 #weapon "Caustic Spit"
 #weapon "Gooey Spit"
-#weapon 29 --claw
+#weapon 236 --claw
 #amphibian
 #spiritsight
 #quadruped
@@ -16870,7 +16870,7 @@ The Rellic Hostess requires a Rellic Queen to be nurtured."
 #rcost 1
 #rpcost 25
 #weapon "Caustic Spit"
-#weapon 29 --claw
+#weapon 236 --claw
 #female
 #amphibian
 #spiritsight
@@ -16906,7 +16906,7 @@ The Rellic Titan requires a Rellic Queen to be nurtured. Due to their massive si
 #rpcost 25
 #weapon 636 --life drain tentacle
 #weapon 600 --crab claw
-#weapon 29 --claw
+#weapon 236 --claw
 #amphibian
 #spiritsight
 #monpresentrec 5824
@@ -16939,7 +16939,7 @@ The Rellic Titan requires a Rellic Queen to be nurtured. Due to their massive si
 #gcost 0
 #weapon 636 --life drain tentacle
 #weapon 600 --crab claw
-#weapon 29 --claw
+#weapon 236 --claw
 #amphibian
 #spiritsight
 #berserk 5
@@ -21446,7 +21446,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #gcost 10012
 #rcost 1
 #rpcost 1
-#weapon 29 --"Claw"
+#weapon 236 --"Claw"
 #weapon 30 --venomous bite
 #female
 #amphibian
@@ -21521,7 +21521,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #gcost 10018
 #rcost 1
 #rpcost 2
-#weapon 29 --"Claw"
+#weapon 236 --"Claw"
 #weapon 20 --bite
 #female
 #amphibian
@@ -21562,7 +21562,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #rcost 1
 #rpcost 2
 #weapon "Quarterstaff"
-#weapon 29 --"Claw"
+#weapon 236 --"Claw"
 #weapon 20 --bite
 #female
 #amphibian
@@ -21603,7 +21603,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #rcost 1
 #rpcost 2
 #weapon "Quarterstaff"
-#weapon 29 --"Claw"
+#weapon 236 --"Claw"
 #weapon 20 --bite
 #female
 #amphibian
@@ -21642,7 +21642,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #gcost 10018
 #rcost 1
 #rpcost 4
-#weapon 29 --"Claw"
+#weapon 236 --"Claw"
 #weapon 20 --bite
 #female
 #amphibian
@@ -22151,7 +22151,7 @@ Solidarity: When a Voice of Yakub visits another conquered Capitol with Das'rite
 #gcost 10018
 #rcost 1
 #rpcost 2
-#weapon 29 --"Claw"
+#weapon 236 --"Claw"
 #weapon 20 --bite
 #female
 #amphibian
@@ -23481,7 +23481,7 @@ Priests: Weak"
 #gcost 240
 #weapon 20 --"Bite"
 #weapon 65 --"Venomous Fangs"
-#weapon 29 --"Claw"
+#weapon 236 --"Claw"
 #amphibian
 #swimming
 #swampsurvival
