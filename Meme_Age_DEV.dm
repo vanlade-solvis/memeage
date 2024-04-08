@@ -14,6 +14,7 @@
 -- nation 150-185
 -- enchantment 600-630
 -- magic item 650-700
+-- event codes -400 - -300
 -----------------------------------------
 
 ----------------------------------------------------------------------------------
@@ -45,6 +46,7 @@
 --3005 Ninja Turtles
 --3006 Merrow Fans
 --3007 turtle summons
+--3008 gambler fallacy throne
 
 --LAS PELAGUS MONTAGS
 --5000-5008
@@ -54,6 +56,12 @@
 --RESTRICTED ITEM IDS
 --1500 earthenblood vamp
 --1501 seraphine
+--1502 PEASANT SUPER COMBATANT
+----------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------
+--EVENT CODE IDS
+--300 Failed Expansions
 ----------------------------------------------------------------------------------
 
 
@@ -73,6 +81,621 @@
 --#end
 
 --new weapons
+
+
+--MEME Thrones--------------------------------------------------------------------------
+
+#selectsite 1359		-- first age throne
+#clear
+#name "Throne of Gambler's Fallacy"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17119				-- can appear in any land province, and is unique
+#claim					-- once claimed...
+#dominion 1 			-- generates 1 temple checks
+#decscale 4				-- increases luck
+#goddommisfortune -1	-- dominion gets luck 1
+-- 10 roll of 1% iron angel 99% militia
+#summon -3008
+#summon -3008
+#summon -3008
+#summon -3008
+#summon -3008
+#summon -3008
+#summon -3008
+#summon -3008
+#summon -3008
+#summon -3008
+#end
+
+#selectsite 1360		-- law throne
+#clear
+#name "Throne of Endless Sobbing"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#claim					-- once claimed...
+#dominion 3 			-- generates 3 temple checks
+#recallgod 5			-- +5 recall value
+#end
+
+#selectsite 1361		-- gaia throne
+#clear
+#name "It's Thronver"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#cluster 1888			-- likely to show up with We're Backrone
+#claim					-- once claimed...
+#dominion 1 			-- generates 1 temple checks
+#gem 5 3
+#end
+
+--THRONVER EVENTS --------------------------------------------------
+#newevent
+#rarity 13				-- instant global
+#req_unique 1
+#msg "It's so fucking thronver. The faithful has fallen. [It's Thronver]"
+#req_site 1
+#req_claimedthrone 1
+#revealprov 			-- event reveals the province to the world
+#worldincdom -1			-- everywhere candle -1
+#worldunrest 10			-- everywhere unrest
+#worlddarkness			-- darkness
+#linger 3				-- lingers 3 turns
+#end
+------------------------------------------------------------------------
+
+#selectsite 1362		-- crystal throne
+#clear
+#name "We're Backrone"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#cluster 1888			-- likely to show up with It's Thronver
+#claim					-- once claimed...
+#dominion 1 			-- generates 1 temple checks
+#gem 4 3
+#end
+
+--BACK EVENTS --------------------------------------------------
+#newevent
+#rarity 13				-- instant global
+#req_unique 1
+#msg "When everything was so over, I found it within me, an invincible we're so back. [We're Backrone]"
+#req_site 1
+#req_claimedthrone 1
+#revealprov 			-- event reveals the province to the world
+#worldheal 100			-- heal everything
+#worldincdom 1			-- everywhere candle +1
+#end
+------------------------------------------------------------------------
+
+#selectsite 1363		-- iron throne
+#clear
+#name "Throne of Trampling Bloodslaves"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17119				-- can appear in any land province, and is unique
+--all the elephants recruitable
+#mon 1147
+#mon 1555
+#mon 2261
+#mon 2307
+#mon 2586
+#mon 419
+#claim					-- once claimed...
+#dominion 2 			-- generates 2 temple checks
+#blessmor 2
+#decunrest 100
+#end
+
+-- Trampling Bloodslaves throne extra defenders
+#newevent
+#rarity 0
+#req_unique 1
+#msg "[Throne of Trampling Bloodslaves]"
+#req_site 1
+#req_indepok 1
+#notext
+#nolog
+#4d6units 1147
+#4d6units 1555
+#4d6units 2261
+#4d6units 2307
+#4d6units 2586
+#4d6units 419
+#end
+
+#selectsite 1364		-- silver throne
+#clear
+#name "Throne of The Threat"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#evil
+#claim					-- once claimed...
+#dominion 5 			-- generates 5 temple checks
+#domwar 5				-- dom conflict bonus +5
+#end
+
+--THRONVER EVENTS --------------------------------------------------
+#newevent
+#rarity 13				-- instant global
+#req_unique 1
+#msg "We hereby declare war on your unholy nation! [Throne of The Threat]"
+#req_site 1
+#req_claimedthrone 1
+#end
+------------------------------------------------------------------------
+
+#selectsite 1365		-- golden throne
+#clear
+#name "Throne of Cursed Impregnation"
+#path 8					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#decscale 3				-- increases growth
+#popgrowth 500			-- +50.0% pop to province
+#claim					-- once claimed...
+#dominion 1 			-- generates 1 temple checks
+#goddomdeath -1			-- +1 growth
+#gems 8 10				-- prints blood slaves
+#gold -100
+#end
+
+#selectsite 1366		-- bureaucracy throne
+#clear
+#name "Throne of Woodyboi"
+#path 6					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#claim					-- once claimed...
+#dominion 1 			-- generates 1 temple checks
+#com 5004				-- 100g LUMBER CONSTRUCTS
+#end
+
+#selectsite 1367		-- knowledge throne
+#clear
+#name "Throne of Virgin Researcher"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#cluster 1889			-- likely to show up with Chad Troop Masser
+#lab					-- builds a lab
+#claim					-- once claimed...
+#dominion 1				-- generates 1 temple checks
+#goddomdrain -2			-- +2 magic
+#com 478 				-- recruitable sage
+#end
+
+#selectsite 1368		-- life throne
+#clear
+#name "Throne of Chad Troop Masser"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#cluster 1889			-- likely to show up with Virgin Researcher
+#claim					-- once claimed...
+#dominion 1				-- generates 1 temple checks
+#goddomlazy -2			-- +2 prod
+#res 1000
+#end
+
+#selectsite 1369		-- death throne
+#clear
+#name "Throne of Hellbless"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#evil					-- evil defenders
+#claim					-- once claimed...
+#goddomchaos 1			-- +1 chaos
+#goddomlazy 1			-- +1 sloth
+#goddomdeath 1			-- +1 death
+#goddommisfortune 1		-- +1 misf
+#goddomdrain 1			-- +1 drain
+-- big bless
+#blesshp 5
+#blessstr 3
+#blessatt 2
+#blessdef 2
+#blessdtv 10
+#end
+
+#selectsite 1370		-- fortune throne
+#clear
+#name "Throne of Diabetes"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#decscale 3				-- increases growth
+#claim					-- once claimed...
+#dominion 1				-- generates 1 temple checks
+#disease 5				-- 5% disease chance
+#gem 5 3				-- 3 D gem
+#gem 6 3				-- 3 N gem
+#summon 903				-- celestial servant
+#end
+
+-- Diabetes throne extra defenders
+#newevent
+#rarity 0
+#req_unique 1
+#msg "[Throne of Diabetes]"
+#req_site 1
+#req_indepok 1
+#notext
+#nolog
+#16d6units 2230 --hill giant
+#end
+
+#selectsite 1371		-- misfortune throne
+#clear
+#name "Throne of PATROOOOLER"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17119				-- can appear in any land province, and is unique
+#cluster 1890			-- likely to show up with SCOOOOOUTER
+#claim					-- once claimed...
+#dominion 1				-- generates 1 temple checks
+#blessprec 2			-- +2 prec bless
+#decunrest 1000			-- gets rid of all unrest every turn
+#com 805 				-- eunuch
+#mon 1900				-- imperial city guard
+#end
+
+#selectsite 1372		-- chains throne
+#clear
+#name "Throne of SCOOOOOUTER"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17119				-- can appear in any land province, and is unique
+#cluster 1890			-- likely to show up with PATROOOOLER
+#claim					-- once claimed...
+#dominion 1				-- generates 1 temple checks
+#scry 5					-- 5 month duration free scry
+#scryrange 10			-- 10 prov range
+#com 5003				-- super scout
+#end
+
+#selectsite 1373		-- inner throne
+#clear
+#name "Throne of Universal Healthcare"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#claim					-- once claimed...
+#dominion 3				-- generates 3 temple checks
+#heal 50				-- heal 50% of units
+#goddomlazy 1			-- +1 sloth
+#end
+
+#selectsite 1374		-- outer throne
+#clear
+#name "Throne of Women Fear Me Fish Want Me"
+#path 2					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 16672				-- sea + deep sea, and is unique
+#claim					-- once claimed...
+#dominion 1				-- generates 1 temple checks
+#gem 2 3				-- 3 W gem
+#summon -3003			-- Atlantis Fish
+#summon -3003			-- Atlantis Fish
+#summon -3003			-- Atlantis Fish
+#end
+
+#selectsite 1375		-- moon throne
+#clear
+#name "Throne of Cancer Removal"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#claim					-- once claimed...
+#dominion 3				-- generates 3 temple checks
+#holyfire 100			-- 100% chance to hit demon/undead for 10 AN
+#enchcost 25			-- 25% ench discount
+#gem 0 4
+#end
+
+#selectsite 1376		-- dream throne
+#clear
+#name "Throne of Well Maintained Militia"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#claim					-- once claimed...
+#dominion 1				-- generates 1 temple checks
+#defunit 49				-- crossbowman
+#defmult 100			-- 10x as much per PD point
+#pdconscript 10			-- 10 free pd / not sure if works
+#end
+
+#selectsite 1377		-- churning ocean throne
+#clear
+#name "Throne of DRN Loser"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17119				-- can appear in any land province, and is unique
+#claim					-- once claimed...
+#dominion 1				-- generates 1 temple checks
+#summon 5149			-- salt elemental
+#end
+
+#selectsite 1378		-- artificer throne
+#clear
+#name "Throne of Tienchi Sweatshops"
+#path 5					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#incscale 3				-- increases death
+#claim					-- once claimed...
+#dominion 1				-- generates 1 temple checks
+#constcost 50			-- 50% cons discount
+#goddomdeath 1			-- +1 death scales
+#end
+
+#selectsite 1379		-- fire throne
+#clear
+#name "Throne of Failed Expansions"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17119				-- can appear in any land province, and is unique
+#claim					-- once claimed...
+#dominion 1				-- generates 1 temple checks
+#gem 5 2
+#end
+
+-- Failed Expansions throne extra defenders
+#newevent
+#rarity 0
+#req_unique 1
+#msg "[Throne of Failed Expansions]"
+#req_site 1
+#req_indepok 1
+#notext
+#nolog
+#8d6units 3277 --cyno
+#8d6units 139 --barb
+#8d6units 423 --lizard warrior
+#8d6units 21 --heavy cav
+#8d6units 2818 --bone tribe
+#8d6units 49 --xbows
+#8d6units 447 --trogs
+#end
+
+--FAIL EXPAND EVENTS --------------------------------------------------
+#newevent
+#rarity 13				-- instant global
+#req_unique 1
+#msg "The Throne of Failed Expansions has been claimed by a clueless pretender. As the magic is released from ##landname##, thousands of indepedent elites emerged from hiding to take back what was once theirs! [Throne of Failed Expansions]"
+#req_site 1
+#req_claimedthrone 1
+#req_code 0				-- requires no event chains in progress
+#code -300
+#revealprov 			-- event reveals the province to the world
+#delay 1				-- next event next turn
+#end
+
+#newevent
+#rarity 13
+#msg "The indepedents have subsided after a long struggle to retake their lands."
+#resetcode -300
+#end
+
+#newevent
+#rarity 0				-- province event, always
+#req_rare 5				-- 5% chance
+#req_claimedthrone 1	-- requires throne claimed
+#req_anycode -300 		-- failed expansion throne event code
+#req_land 1 			-- land province
+#msg "The independents have come back to reclaim their land!
+[Throne of Failed Expansions]"
+#com 3276 -- cyno hunter
+#8d6units 3277 -- cyno warrior
+#end
+
+#newevent
+#rarity 0				-- province event, always
+#req_rare 5				-- 5% chance
+#req_claimedthrone 1	-- requires throne claimed
+#req_anycode -300 		-- failed expansion throne event code
+#req_land 1 			-- land province
+#msg "The independents have come back to reclaim their land!
+[Throne of Failed Expansions]"
+#com 141 -- barb chief
+#12d6units 139 -- barb
+#end
+
+#newevent
+#rarity 0				-- province event, always
+#req_rare 5				-- 5% chance
+#req_claimedthrone 1	-- requires throne claimed
+#req_anycode -300 		-- failed expansion throne event code
+#req_land 1 			-- land province
+#msg "The independents have come back to reclaim their land!
+[Throne of Failed Expansions]"
+#com 23 -- knight commander
+#4d6units 22 -- knight
+#end
+
+#newevent
+#rarity 0				-- province event, always
+#req_rare 15			-- 15% chance
+#req_claimedthrone 1	-- requires throne claimed
+#req_anycode -300 		-- failed expansion throne event code
+#req_land 0 			-- sea province
+#msg "The independents have come back to reclaim their waters!
+[Throne of Failed Expansions]"
+#com 545 -- shark knight
+#8d6units 2472 -- shark tribe
+#end
+-----------------------------------------------------------------------------
+
+#selectsite 1380		-- earth throne
+#clear
+#name "Throne of Anal Circumference"
+#path 8					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#adventureruin 50		-- 50% success adventure
+#horrormark 5			-- 5% horror mark
+#claim					-- once claimed...
+#dominion 1				-- generates 1 temple checks
+#sorceryrange 4			-- +4 sorcery range
+#end
+
+#selectsite 1381		-- water throne
+#clear
+#name "Throne of Insanity"
+#path 9					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#voidgate 100			-- 100% success void gate
+#claim					-- once claimed...
+#dominion 2				-- generates 1 temple checks
+#gem 4 2				-- 2 S pearls
+#gem 7 2				-- 2 G gem
+#end
+
+#selectsite 1382		-- air throne
+#clear
+#name "Throne of Hyperbolic Time Chamber"
+#path 4					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#claim					-- once claimed...
+#dominion 1				-- generates 1 temple checks
+#xp 100
+#end
+
+#selectsite 1383		-- splendor throne
+#clear
+#name "Throne of Cherry Popping"
+#path 8					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#claim					-- once claimed...
+#dominion 1				-- generates 1 temple checks
+#altcost 25				-- 25% alt discount
+#end
+
+--CHERRY POPPING EVENTS --------------------------------------------------
+#newevent
+#rarity 13				-- instant global
+#req_unique 1
+#msg "The Throne of Cherry Poppping has been claimed by a clueless pretender. As the magic is released from ##landname##, blood emerged from between the legs of virgins! [Throne of Failed Expansions]"
+#req_site 1
+#req_claimedthrone 1
+#req_code 0				-- requires no event chains in progress
+#code -301
+#revealprov 			-- event reveals the province to the world
+#delay 3				-- ends after 3 turns
+#end
+
+#newevent
+#rarity 13
+#msg "The red tides from the fairer sex have subsided."
+#resetcode -301
+#end
+
+#newevent
+#rarity 0				-- province event, always
+#req_rare 5				-- 5% chance
+#req_claimedthrone 1	-- requires throne claimed
+#req_anycode -301 		-- failed expansion throne event code
+#req_lab 1				-- requires lab
+#req_gem 8				-- require having blood slaves
+#msg "Suddenly, shrieks of pain echos from the Laboratory. Following the trail of foul smelling blood, the local warlock keeping guard found that some of the virgins under your control have lost their value!
+[Throne of Cherry Popping]"
+#gemlosssmall 8			-- 1d6 loss of bloodslaves
+#end
+---------------------------------------------------------------------------
+
+#selectsite 1384		-- pankoman throne
+#clear
+#name "Throne of Super Combatant"
+#path 8					-- holy site
+#level 0				-- automatically discovered
+#rarity 12				-- level 2 throne
+#loc 17407				-- can appear in any province type, and is unique
+#claim					-- once claimed...
+#dominion 1				-- generates 1 temple checks
+#com 5005				-- super combatant peasant
+#end
+
+--SUPER COMBATANT GEAR EVENTS --------------------------------------------------
+#newevent
+#rarity 5				-- province event, always, unlimited
+#req_rare 25			-- 25% chance to trigger
+#req_claimedthrone 1	-- requires throne claimed
+#req_site 1				-- on the throne site
+#nation -2				-- owning nation
+#msg "[Throne of Super Combatant]"
+#nolog
+#notxt
+#delay 1				-- next event next turn
+#magicitem 9
+#end
+
+#newevent
+#rarity 5				-- province event, always, unlimited
+#nation -2				-- owning nation
+#msg "[Super Armor]"
+#nolog
+#notxt
+#magicitem 9
+#end
+
+#newevent
+#rarity 5				-- province event, always, unlimited
+#req_rare 25			-- 25% chance to trigger
+#req_claimedthrone 1	-- requires throne claimed
+#req_site 1				-- on the throne site
+#nation -2				-- owning nation
+#msg "[Throne of Super Combatant]"
+#nolog
+#notxt
+#delay 1				-- next event next turn
+#magicitem 9
+#end
+
+#newevent
+#rarity 5				-- province event, always, unlimited
+#nation -2				-- owning nation
+#msg "[Super Pitchfork]"
+#nolog
+#notxt
+#magicitem 9
+#end
+---------------------------------------------------------------------------
+
+--MEME THRONES END----------------------------------------------------------------------
 
 #newweapon 1600
 #name "Hunting Crossbow"
@@ -755,6 +1378,20 @@
 #natural
 #end
 
+#newweapon 1651
+#name "Super Pitchfork"
+#sound 8
+#rcost 0
+#dmg 10
+#def -1
+#len 3
+#pierce
+#armornegating
+#magic
+#ironweapon
+#twohanded
+#end
+
 --- Lucky Fish Weapons ---
 
 #newweapon 1995 -- Enchanted Long Spear
@@ -879,6 +1516,15 @@
 #ironarmor
 #end
 
+#newarmor 429
+#name "Super Armor"
+#type 5
+#rcost 0
+#prot 25
+#enc 1
+#magicarmor
+#end
+
 -----------------------------------------------------------------------------------------------------
 --ITEMS
 -----------------------------------------------------------------------------------------------------
@@ -889,7 +1535,7 @@
 
 #selectitem 650
 #restricted 154 --Ulm only
-#constlevel 4
+#constlevel 5
 #mainpath 3
 #mainlevel 2
 #copyspr 397 --bloodstone
@@ -911,7 +1557,7 @@
 #end
 
 #selectitem 651
-#constlevel 2
+#constlevel 3
 #mainpath 1
 #mainlevel 1
 #spr "./TC/mask.tga"
@@ -924,7 +1570,7 @@ Use Masks to Slow the Spread of Tienchi Plague - Nature Magic Experts"
 
 #selectitem 652
 #restricted 151 --Pyth only
-#constlevel 4
+#constlevel 5
 #mainpath 2
 #mainlevel 2
 #secondarypath 4
@@ -943,7 +1589,7 @@ Use Masks to Slow the Spread of Tienchi Plague - Nature Magic Experts"
 
 #selectitem 653
 #restricted 159 --Tenki only
-#constlevel 4
+#constlevel 5
 #mainpath 2
 #mainlevel 1
 #spr "./Tenki/turbo.tga"
@@ -958,7 +1604,7 @@ Use Masks to Slow the Spread of Tienchi Plague - Nature Magic Experts"
 
 #selectitem 654
 #restricted 163 --Caeliss only
-#constlevel 4
+#constlevel 5
 #mainpath 0
 #mainlevel 2
 #secondarypath 1
@@ -975,7 +1621,7 @@ Use Masks to Slow the Spread of Tienchi Plague - Nature Magic Experts"
 
 #selectitem 655
 #restricted 173 --altantis only
-#constlevel 2
+#constlevel 3
 #mainpath 2
 #mainlevel 1
 #spr "./Atlantis/barrelf.tga"
@@ -988,7 +1634,7 @@ Use Masks to Slow the Spread of Tienchi Plague - Nature Magic Experts"
 
 #selectitem 656
 #restricted 177 --LasPelagus Only
-#constlevel 2
+#constlevel 3
 #mainpath 4
 #mainlevel 1
 #spr "./LasPel/coin.tga"
@@ -1002,7 +1648,7 @@ Use Masks to Slow the Spread of Tienchi Plague - Nature Magic Experts"
 
 #selectitem 657
 #restricted 167 --Muspelheim Only
-#constlevel 2
+#constlevel 3
 #mainpath 0
 #mainlevel 1
 #spr "./Muspelheim/spark.tga"
@@ -1014,7 +1660,7 @@ Use Masks to Slow the Spread of Tienchi Plague - Nature Magic Experts"
 
 #selectitem 658
 #restricted 182 --Manletia Only
-#constlevel 2
+#constlevel 3
 #mainpath 3
 #secondarypath 6
 #mainlevel 2
@@ -1033,7 +1679,7 @@ EVERYONE WILL KNOW WHAT IT FEELS TO BE 5,11!"
 
 #selectitem 659
 #restricted 182 --Manletia Only
-#constlevel 0
+#constlevel 1
 #mainpath 3
 #mainlevel 2
 #itemcost1 -50
@@ -1048,9 +1694,9 @@ EVERYONE WILL KNOW WHAT IT FEELS TO BE 5,11!"
 #end
 
 #selectitem 660
-#copyspr 389 --midget's revenge
+#copyspr 459 --midget's revenge
 #restricted 182 --Manletia Only
-#constlevel 6
+#constlevel 7
 #mainpath 3
 #secondarypath 6
 #mainlevel 2
@@ -1070,8 +1716,8 @@ EVERYONE WILL KNOW WHAT IT FEELS TO BE 5,11!"
 
 --ITEM
 #selectitem 661
-#copyspr 117 --Winter Bringer
-#constlevel 4
+#copyspr 102 --Winter Bringer
+#constlevel 5
 #mainpath 4       --Astral
 #mainlevel 1
 #secondarypath 3  --Earth
@@ -1082,6 +1728,40 @@ EVERYONE WILL KNOW WHAT IT FEELS TO BE 5,11!"
 #morale 1
 #spellsinger
 #restricted 184 --Memeage Ys
+#end
+
+#selectitem 662
+#spr "./Generic/supercombat.tga"
+#constlevel 11
+#mainpath 3
+#mainlevel 2
+#type 5
+#name "Super Armor"
+#descr "The utmost powerful armor that only the most worthy super combatant can put on. It provides unparalleled protection against all types of harm yet remains nimble to move in."
+#nofind
+#def 2
+#att 2
+#hp 15
+#fireres 5
+#coldres 5
+#shockres 5
+#poisonres 5
+#armor "Super Armor"
+#restricteditem 1502
+#end
+
+#selectitem 663
+#spr "./Generic/trident.tga"
+#constlevel 11
+#mainpath 3
+#mainlevel 2
+#type 5
+#name "Super Pitchfork"
+#descr "The utmost powerful weapon that only the most worthy super combatant can wield. It provides unparalleled penetration against all types of armor yet remains practical for everyday farming."
+#nofind
+#att 5
+#weapon "Super Pitchfork"
+#restricteditem 1502
 #end
 
 --------------------------------------------------------------------------
@@ -1106,6 +1786,53 @@ I just want to be happy..."
 #animal
 #patrolbonus 1
 #spiritsight
+#end
+
+#newmonster 5001
+#copyspr 18 --militia
+#copystats 18 --militia
+#name "Loser"
+#descr "Better luck next time"
+#gcost 0
+#montag 3008
+#montagweight 99
+#end
+
+#newmonster 5002
+#copyspr 1975 --iron angel
+#copystats 1975 --iron angel
+#name "SSR Angel"
+#descr "Most gamblers quit before they are about to win big."
+#gcost 0
+#montag 3008
+#end
+
+#newmonster 5003
+#copyspr 426 --scout
+#copystats 426 --scout
+#name "Super Scout"
+#descr "Super scouts are equipped with cursed cloaks of invisibility that allows them to sneak past almost anything. However, they will die if you pull it off."
+#gcost 25
+#invisible
+#end
+
+#newmonster 5004
+#copyspr 476 --lumber construct
+#copystats 476 --lumber construct
+#gcost 100
+#rcost 1
+#rpcost 1
+#end
+
+#newmonster 5005
+#copyspr 1565 --peasant
+#copystats 1565 --peasant
+#name "Peasant (forma de super combatiente)"
+#descr "An annoyed human peasant armed with a farming implement. But there is something special about him..."
+#gcost 10005
+#rcost 1
+#rpcost 1
+#userestricteditem 1502
 #end
 
 #newspell
@@ -2331,13 +3058,13 @@ Loan & Debt: Mages cost very little to recruit, but high in upkeep."
 #nextspell "Rolling Meatball"
 #end
 
-#selectspell 201
+#selectspell 272
 #restricted 151
 #end
-#selectspell 203
+#selectspell 274
 #restricted 151
 #end
-#selectspell 204
+#selectspell 275
 #restricted 151
 #end
 
@@ -4646,11 +5373,11 @@ Priests: Weak"
 #custommagic 32896 100
 #end
 
-#selectspell 383 --bind harlequin
+#selectspell 483 --bind harlequin
 #restricted 155
 #end
 
-#selectspell 384 --reascendance
+#selectspell 485 --reascendance
 #restricted 155
 #end
 
@@ -6101,7 +6828,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #researchlevel 0
 #path 0 5
 #pathlevel 0 2
-#path 1 8
+#path 1 9
 #pathlevel 1 1
 #effect 10021
 #damage 5343
@@ -6117,7 +6844,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #researchlevel 0
 #path 0 5
 #pathlevel 0 2
-#path 1 8
+#path 1 9
 #pathlevel 1 1
 #effect 10021
 #damage 5344
@@ -6133,7 +6860,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #researchlevel 0
 #path 0 5
 #pathlevel 0 2
-#path 1 8
+#path 1 9
 #pathlevel 1 1
 #effect 10021
 #damage 5345
@@ -6149,7 +6876,7 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #researchlevel 0
 #path 0 5
 #pathlevel 0 3
-#path 1 8
+#path 1 9
 #pathlevel 1 1
 #effect 10021
 #damage 5346
@@ -6205,29 +6932,35 @@ Dominion: Dying Dominion, Cannot Preach, must Blood Sacrifice to spread."
 #fatiguecost 2000
 #end
 
-#selectspell 420
+#selectspell 534
 #restricted 158
 #end
-#selectspell 421
+#selectspell 535
 #restricted 158
 #end
-#selectspell 551
+#selectspell 206
 #restricted 158
 #end
 
-#selectspell 282
+#selectspell 373
 #restricted 158
 #end
-#selectspell 283
+#selectspell 374
 #restricted 158
 #end
-#selectspell 285
+#selectspell 375
 #restricted 158
 #end
-#selectspell 286
+#selectspell 376
 #restricted 158
 #end
-#selectspell 289
+#selectspell 377
+#restricted 158
+#end
+#selectspell 379
+#restricted 158
+#end
+#selectspell 380
 #restricted 158
 #end
 
@@ -7101,6 +7834,12 @@ Priests: Average"
 #addforeignunit 939
 
 --#hero1 TBD
+
+-- add mounted tendies
+#addgod 246 --freak lord
+#addgod 501 --allfather
+#addgod 874 --emperor
+#addgod 3926 --devi of strength
 
 #startcom 5372
 #startunittype1 938
@@ -19351,7 +20090,7 @@ Priests: Average"
 #school 4
 #researchlevel 6
 #pathlevel 0 4
-#path 1 8
+#path 1 9
 #pathlevel 1 2
 #aoe 666
 #fatiguecost 100
@@ -19367,7 +20106,7 @@ Priests: Average"
 #school 1
 #researchlevel 6
 #pathlevel 0 4
-#path 1 8
+#path 1 9
 #pathlevel 1 2
 #aoe 666
 #fatiguecost 100
@@ -20162,6 +20901,8 @@ Priests: Powerful. Recalled God does not lose magic skills"
 #addrecunit 5995
 
 #hero1 2433
+
+#addgod 3190 --bone mother
 
 #startcom 5989
 #startunittype1 5991
@@ -22241,6 +22982,8 @@ Naga Curse: Growth and Death scales have half effect on Population. During the b
 #uwrec 6089
 
 --#hero1 861
+
+#addgod 157 --mother of monsters
 
 #startcom 6072
 #startunittype1 6081
